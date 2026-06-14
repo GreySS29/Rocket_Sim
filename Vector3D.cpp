@@ -28,4 +28,4 @@ class Vector3D {
         //                                              лучше сравнивать с маленьким эпсилоном, например if (mag < 1e-10).
         return Vector3D(x/mag, y/mag, z/mag);
     }
-}
+};
