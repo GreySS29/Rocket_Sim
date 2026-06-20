@@ -5,5 +5,6 @@
 
 class Display {
     public:
+    Display(){};
     void printStatus(const Rocket& rocket);
 };

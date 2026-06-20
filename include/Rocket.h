@@ -1,5 +1,6 @@
-#include "../RocketState.cpp"
-#include "../Vector3D.cpp"
+#pragma once
+#include "RocketState.h"
+#include "Vector3D.h"
 
 class Rocket {
 private:
@@ -9,24 +10,19 @@ private:
     double rocket_mass; // kg
     double tx,ty,tz;
 public:
-    Rocket(double thrust = 1500000, double fuel_cons= 500)
-    : thrust(thrust) , fuel_consumption(fuel_cons) {
+    Rocket(double mass , double fuel)
+    : state(mass,fuel),thrust(1500000.0) , fuel_consumption(500.0) {
         rocket_mass = state.mass - state.fuel;
         //exception
-        tx=0 ; ty= 1 ; tz=0; // up
+        tx=0.0 ; ty= 1.0 ; tz=0.0; // up
     }
 
-    RocketState getState() const {return state;};
+    const RocketState& getState() const  {return  state;};
+    RocketState& getState()   {return  state;};
     double getFuel_consuption() const {return fuel_consumption;};
     double getRocket_mass() const {return rocket_mass; }
     Vector3D getThrustForce() const {
-        if (state.fuel = 0) return Vector3D(0,0,0);
-        return Vector3D(thrust *tx, thrust*ty, thrust*tz);
+        if (state.fuel == 0) return Vector3D(0,0,0);
+        return Vector3D(tx,ty,tz)*thrust;
     }
-
-    
-
-
-
-
-}
+};

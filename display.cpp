@@ -1,10 +1,12 @@
 #include "Display.h"
 #include "Rocket.h"
+#include "Enviroment.h"
+#include <iomanip>
 
 
 void Display::printStatus(const Rocket& rocket) {
     
-    RocketState& state = rocket.getState();
+    const RocketState& state = rocket.getState();
     std::cout << std::fixed << std::setprecision(2);
         std::cout << "=== Состояние ракеты ===\n";
         std::cout << "Время: " << state.time << " с\n";

@@ -1,5 +1,5 @@
 #pragma once
-#include "../Vector3D.cpp"
+#include "Vector3D.h"
 #include "Rocket.h"
 const double GRAVITY = 9.81;//m/c2
 const double EARTH_RADIUS = 6371000;//m
@@ -19,8 +19,8 @@ const double V_ORBITAL = std::sqrt(GRAVITY * EARTH_RADIUS);
 class Enviroment {
     public:
     double getAirDensity(double height) const ; // // Плотность воздуха на высоте (экспоненциальная модель)
-    Vector3D getGravityForce(Rocket& rocket) const;
-    Vector3D getDragForce(Rocket& rocket) const;
+    Vector3D getGravityForce(const Rocket& rocket) const;
+    Vector3D getDragForce(const Rocket& rocket) const;
     void step(Rocket& rocket); // Шаг симуляции (метод Эйлера)
 };
 

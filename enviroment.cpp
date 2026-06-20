@@ -10,7 +10,7 @@ double Enviroment::getAirDensity(double height) const
 
 Vector3D Enviroment::getGravityForce(const Rocket& rocket) const
 {
-    RocketState& state = rocket.getState();
+    const RocketState& state = rocket.getState();
     double r = EARTH_RADIUS + state.position.y;
     double g = GRAVITY * (EARTH_RADIUS/r) * (EARTH_RADIUS/r);
     return Vector3D(0, -g*state.mass,0);
@@ -18,8 +18,8 @@ Vector3D Enviroment::getGravityForce(const Rocket& rocket) const
 
 Vector3D Enviroment::getDragForce(const Rocket& rocket) const 
 {
-    RocketState& state = rocket.getState();
-    double density = get_AirDensity(state.position.y);
+    const RocketState& state = rocket.getState();
+    double density = getAirDensity(state.position.y);
     if (density ==0) return Vector3D(0,0,0);
     double v = state.velocity.magnitude();
     double drag = 0.5 * density * v * v * C_D * AREA;
