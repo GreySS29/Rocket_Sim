@@ -153,29 +153,29 @@ display.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/display.cpp.s
 .PHONY : display.cpp.s
 
-enviroment.o: enviroment.cpp.o
-.PHONY : enviroment.o
+environment.o: environment.cpp.o
+.PHONY : environment.o
 
 # target to build an object file
-enviroment.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/enviroment.cpp.o
-.PHONY : enviroment.cpp.o
+environment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/environment.cpp.o
+.PHONY : environment.cpp.o
 
-enviroment.i: enviroment.cpp.i
-.PHONY : enviroment.i
+environment.i: environment.cpp.i
+.PHONY : environment.i
 
 # target to preprocess a source file
-enviroment.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/enviroment.cpp.i
-.PHONY : enviroment.cpp.i
+environment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/environment.cpp.i
+.PHONY : environment.cpp.i
 
-enviroment.s: enviroment.cpp.s
-.PHONY : enviroment.s
+environment.s: environment.cpp.s
+.PHONY : environment.s
 
 # target to generate assembly for a file
-enviroment.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/enviroment.cpp.s
-.PHONY : enviroment.cpp.s
+environment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/environment.cpp.s
+.PHONY : environment.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -213,9 +213,9 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
-	@echo "... enviroment.o"
-	@echo "... enviroment.i"
-	@echo "... enviroment.s"
+	@echo "... environment.o"
+	@echo "... environment.i"
+	@echo "... environment.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,7 +1,7 @@
-CMakeFiles/app.dir/enviroment.cpp.o: \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp \
+CMakeFiles/app.dir/environment.cpp.o: \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp \
  /usr/include/stdc-predef.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Enviroment.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Environment.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Vector3D.h \
  /usr/include/c++/16.1.1/math.h /usr/include/c++/16.1.1/cmath \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \

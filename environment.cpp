@@ -1,4 +1,4 @@
-#include "Enviroment.h"
+#include "Environment.h"
 #include "Rocket.h"
 #include <math.h>
 
@@ -29,6 +29,20 @@ Vector3D Enviroment::getDragForce(const Rocket& rocket) const
 void Enviroment::step(Rocket& rocket) 
 {
     RocketState& state = rocket.getState();
+    if (state.position.y > 50000) {
+        rocket.setThrustDirection(0.707, 0.707, 0);  // 45°
+    }
+    
+    if (state.position.y > 100000) {
+        rocket.setThrustDirection(0.866, 0.5, 0);  // 60°
+    }
+    
+    if (state.position.y > 150000) {
+        rocket.setThrustDirection(0.985, 0.174, 0);  // 80°
+    }
+
+
+    
     if (state.fuel ==0) {
         state.acceleration = getGravityForce(rocket) / state.mass;
     }

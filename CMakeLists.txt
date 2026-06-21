@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-add_executable(app main.cpp display.cpp enviroment.cpp)
+add_executable(app main.cpp display.cpp environment.cpp)
 
 target_include_directories(app PRIVATE
     ${CMAKE_SOURCE_DIR}/include

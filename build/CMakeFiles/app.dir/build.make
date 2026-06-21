@@ -100,32 +100,32 @@ CMakeFiles/app.dir/display.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/display.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/display.cpp -o CMakeFiles/app.dir/display.cpp.s
 
-CMakeFiles/app.dir/enviroment.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/enviroment.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp
-CMakeFiles/app.dir/enviroment.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/enviroment.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/enviroment.cpp.o -MF CMakeFiles/app.dir/enviroment.cpp.o.d -o CMakeFiles/app.dir/enviroment.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp
+CMakeFiles/app.dir/environment.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/environment.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp
+CMakeFiles/app.dir/environment.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/environment.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/environment.cpp.o -MF CMakeFiles/app.dir/environment.cpp.o.d -o CMakeFiles/app.dir/environment.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp
 
-CMakeFiles/app.dir/enviroment.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/enviroment.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp > CMakeFiles/app.dir/enviroment.cpp.i
+CMakeFiles/app.dir/environment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/environment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp > CMakeFiles/app.dir/environment.cpp.i
 
-CMakeFiles/app.dir/enviroment.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/enviroment.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp -o CMakeFiles/app.dir/enviroment.cpp.s
+CMakeFiles/app.dir/environment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/environment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp -o CMakeFiles/app.dir/environment.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/main.cpp.o" \
 "CMakeFiles/app.dir/display.cpp.o" \
-"CMakeFiles/app.dir/enviroment.cpp.o"
+"CMakeFiles/app.dir/environment.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
 app: CMakeFiles/app.dir/main.cpp.o
 app: CMakeFiles/app.dir/display.cpp.o
-app: CMakeFiles/app.dir/enviroment.cpp.o
+app: CMakeFiles/app.dir/environment.cpp.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/compiler_depend.ts
 app: CMakeFiles/app.dir/link.txt

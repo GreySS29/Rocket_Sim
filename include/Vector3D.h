@@ -1,6 +1,7 @@
 #pragma once
 #include <math.h>
 #include <assert.h>
+#include <iostream>
 
 class Vector3D {
     public:
@@ -35,3 +36,9 @@ class Vector3D {
         return Vector3D(x/mag, y/mag, z/mag);
     }
 };
+
+
+inline std::ostream& operator<<(std::ostream& ost, const Vector3D& vec)
+{
+    return ost << "(" << vec.x << "," << vec.y << "," << vec.z << ")";
+}

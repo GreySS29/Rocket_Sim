@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/display.cpp" "CMakeFiles/app.dir/display.cpp.o" "gcc" "CMakeFiles/app.dir/display.cpp.o.d"
-  "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/enviroment.cpp" "CMakeFiles/app.dir/enviroment.cpp.o" "gcc" "CMakeFiles/app.dir/enviroment.cpp.o.d"
+  "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/environment.cpp" "CMakeFiles/app.dir/environment.cpp.o" "gcc" "CMakeFiles/app.dir/environment.cpp.o.d"
   "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/main.cpp" "CMakeFiles/app.dir/main.cpp.o" "gcc" "CMakeFiles/app.dir/main.cpp.o.d"
   "" "app" "gcc" "CMakeFiles/app.dir/link.d"
   )
