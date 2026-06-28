@@ -1,0 +1,6 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/Rock_sim.dir/main.cpp.o: dyndep
+
+build CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o | CMakeFiles/Rock_sim.dir/gravity.gcm: dyndep
+  restat = 1
+

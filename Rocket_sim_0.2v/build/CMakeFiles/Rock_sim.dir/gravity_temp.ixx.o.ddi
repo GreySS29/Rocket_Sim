@@ -1,0 +1,17 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o",
+"provides": [
+{
+"logical-name": "gravity",
+"is-interface": true
+}
+],
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

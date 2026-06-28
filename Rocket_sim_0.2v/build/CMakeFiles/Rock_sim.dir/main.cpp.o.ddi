@@ -1,0 +1,14 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/Rock_sim.dir/main.cpp.o",
+"requires": [
+{
+"logical-name": "gravity_temp"
+}
+]
+}
+],
+"version": 0,
+"revision": 0
+}
