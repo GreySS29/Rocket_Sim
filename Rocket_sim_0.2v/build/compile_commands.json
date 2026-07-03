@@ -1,14 +1,8 @@
 [
 {
   "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++ -std=c++23 -fmodules-ts -fmodule-mapper=CMakeFiles/Rock_sim.dir/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles/Rock_sim.dir/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp",
+  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_sim.dir/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp",
   "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp",
-  "output": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles/Rock_sim.dir/main.cpp.o"
-},
-{
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++ -std=c++23 -fmodules-ts -fmodule-mapper=CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/gravity_temp.ixx",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/gravity_temp.ixx",
-  "output": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o"
+  "output": "CMakeFiles/Rock_sim.dir/main.cpp.o"
 }
 ]

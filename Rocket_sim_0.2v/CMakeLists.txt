@@ -7,14 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(Rock_sim)
+add_executable(Rock_sim main.cpp)
 
-target_sources(Rock_sim
-    PRIVATE
-        main.cpp
-    PUBLIC
-        FILE_SET cxx_modules TYPE CXX_MODULES FILES
-        gravity_temp.ixx
+
+
+target_include_directories(Rock_sim PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
 )
 
 target_compile_features(Rock_sim PRIVATE cxx_std_23)

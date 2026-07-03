@@ -14,8 +14,8 @@ protected:
 
 public:
 
-    double getMass() const { return mass; }
-    Vector3D getPosition() const { return position; }
+    double get_mass() const { return mass; }
+    Vector3D get_position() const { return position; }
     
     
 };

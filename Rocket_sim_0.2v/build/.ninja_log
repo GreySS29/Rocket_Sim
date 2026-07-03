@@ -1,9 +1,0 @@
-# ninja log v7
-1	7	1782618104421972220	CMakeFiles/Rock_sim.dir/main.cpp.o.ddi	ab08aa01a31384b1
-0	20	1782618294567947406	CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o.ddi	21599f3390491daf
-20	27	1782618294595479771	CMakeFiles/Rock_sim.dir/CXX.dd	e73225f37404a0d1
-20	27	1782618294595479771	CMakeFiles/Rock_sim.dir/CXXModules.json	e73225f37404a0d1
-20	27	1782618294595479771	CMakeFiles/Rock_sim.dir/main.cpp.o.modmap	e73225f37404a0d1
-20	27	1782618294595479771	CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o.modmap	e73225f37404a0d1
-27	69	1782618294637376292	CMakeFiles/Rock_sim.dir/gravity_temp.ixx.o	9b082fde39638a28
-27	69	1782618294637376292	CMakeFiles/Rock_sim.dir/gravity.gcm	9b082fde39638a28
