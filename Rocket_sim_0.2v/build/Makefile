@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/stage.o: src/stage.cpp.o
+.PHONY : src/stage.o
+
+# target to build an object file
+src/stage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.o
+.PHONY : src/stage.cpp.o
+
+src/stage.i: src/stage.cpp.i
+.PHONY : src/stage.i
+
+# target to preprocess a source file
+src/stage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.i
+.PHONY : src/stage.cpp.i
+
+src/stage.s: src/stage.cpp.s
+.PHONY : src/stage.s
+
+# target to generate assembly for a file
+src/stage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.s
+.PHONY : src/stage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/stage.o"
+	@echo "... src/stage.i"
+	@echo "... src/stage.s"
 .PHONY : help
 
 

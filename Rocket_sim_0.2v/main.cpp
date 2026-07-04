@@ -16,10 +16,10 @@ int main() {
     //     double s = gravity_magnitude (earth, engine);
     //     std::cout << s << '\n';
     // }   
-    Engine engine {20000,100,earth.surfacePoint(2), 50};
+    Engine engine {20000.0,100.0,earth.surfacePoint(2), 50.0};
     Tank tank {earth.surfacePoint(10), 50,20};
-    Stage stage {earth.surfacePoint(10000),&engine,&tank};
-    std::cout<<stage.get_mass() << "\t" <<stage.get_position()<<'\n';
-    std::cout<<gravity_magnitude(earth,stage);
-
+    std::unique_ptr stage = Stage::creat_stage(engine, tank, earth);
+    double s = gravity_magnitude (earth, *stage);
+    std::cout << "grav: "<< s<< '\n';
+    return 0;
 } 
