@@ -24,6 +24,11 @@ class Vector3D {
         assert(division!=0);
         return Vector3D(x/division ,y/division ,z/division);
     }
+    Vector3D operator+=(const Vector3D& other){
+        return Vector3D(x+=other.x, y+=other.y, z+=other.z);
+
+    }
+    
 
     double magnitude() const {
         return std::sqrt(x*x+y*y+z*z);

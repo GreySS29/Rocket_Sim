@@ -24,7 +24,19 @@ class Earth : public Physic_object
 
     Vector3D get_dragForce_vec(const auto& object)
     {
-        double density = getAirDensity(object.get_position().y);
-        if (density ==0) return Vector3D(0,0,0);
+        double density = get_air_density(object.get_position_above_surface().y);
+        if (density <=0) return Vector3D(0,0,0);
+
+        Vector3D v_vec = object.get_velocity();
+        double v = v_vec.magnitude();
+
+        if(v==0) {
+            std::cout<<"v=0";
+            return Vector3D(0,0,0); 
+            
+        }
+        double drag = 0.5 * density * v * v * object.get_C_D() * object.get_AREA();
+        
+        return v_vec.normalize() * (-drag);
     }
 };

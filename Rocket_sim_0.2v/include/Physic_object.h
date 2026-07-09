@@ -16,8 +16,8 @@ protected:
 public:
 
     double get_mass() const { return mass; }
-    Vector3D get_position() const { return (position-Vector3D {0,6371000.0,0}) ; } // above surface
-    Vector3D get_position_to_earth() const { return position ; }
+    Vector3D get_position() const { return position ; } 
+    Vector3D get_position_above_surface() const { return (position-Vector3D {0,6371000.0,0}); }
     
 };
 

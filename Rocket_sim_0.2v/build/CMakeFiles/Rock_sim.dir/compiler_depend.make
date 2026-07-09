@@ -6,6 +6,7 @@ CMakeFiles/Rock_sim.dir/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rock
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Earth.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Engine.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Gravity_temp.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Tank.h \
@@ -721,6 +722,8 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/bits/wctype-wchar.h:
 
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Payload.h:
+
 /usr/include/c++/16.1.1/bits/codecvt.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Stage.h:
@@ -813,12 +816,6 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/bits/stdlib-float.h:
 
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/lib/libmvec.so.1:
-
-/usr/include/c++/16.1.1/bits/allocated_ptr.h:
-
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h:
 
 /usr/include/bits/typesizes.h:
@@ -830,6 +827,12 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/bits/byteswap.h:
 
 /usr/include/assert.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/lib/libmvec.so.1:
+
+/usr/include/c++/16.1.1/bits/allocated_ptr.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
@@ -855,15 +858,7 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/c++/16.1.1/math.h:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/16.1.1/bits/stl_construct.h:
-
-/usr/include/c++/16.1.1/bits/version.h:
-
-/usr/include/c++/16.1.1/tr1/poly_hermite.tcc:
-
-/usr/include/bits/types/__locale_t.h:
+/usr/include/asm-generic/errno.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -872,6 +867,34 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/c++/16.1.1/cstdint:
 
 /usr/include/c++/16.1.1/initializer_list:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/16.1.1/bits/stl_construct.h:
+
+/usr/include/c++/16.1.1/bits/version.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/c++/16.1.1/bits/enable_special_members.h:
+
+/usr/include/c++/16.1.1/tr1/poly_hermite.tcc:
+
+/usr/include/bits/types/__locale_t.h:
+
+/usr/lib/libatomic_asneeded.so:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/c++/16.1.1/optional:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp:
+
+/usr/include/c++/16.1.1/bits/basic_string.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o:
+
+/usr/include/c++/16.1.1/bits/memory_resource.h:
 
 /usr/include/c++/16.1.1/pstl/glue_memory_defs.h:
 
@@ -892,14 +915,6 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/c++/16.1.1/memory:
 
 /usr/include/bits/stdint-least.h:
-
-/usr/include/c++/16.1.1/bits/invoke.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/c++/16.1.1/bits/enable_special_members.h:
-
-/usr/include/bits/fp-logb.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -946,16 +961,6 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
 /usr/include/bits/iscanonical.h:
-
-/usr/include/c++/16.1.1/bits/basic_string.tcc:
-
-/usr/include/c++/16.1.1/optional:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o:
-
-/usr/include/c++/16.1.1/bits/memory_resource.h:
 
 /usr/include/c++/16.1.1/bits/istream.tcc:
 
@@ -1045,10 +1050,6 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 
 /usr/include/bits/types/error_t.h:
 
-/usr/lib/libatomic_asneeded.so:
-
-/usr/include/bits/types/struct_timeval.h:
-
 /usr/include/features.h:
 
 /usr/include/bits/sched.h:
@@ -1060,6 +1061,8 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
 /usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/16.1.1/bits/invoke.h:
 
 /usr/include/c++/16.1.1/bits/iterator_concepts.h:
 
@@ -1259,12 +1262,12 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 
 /usr/include/c++/16.1.1/tr1/exp_integral.tcc:
 
+/usr/include/c++/16.1.1/typeinfo:
+
+/usr/include/c++/16.1.1/tr1/poly_laguerre.tcc:
+
 /usr/include/bits/types/__sigset_t.h:
 
 /usr/include/c++/16.1.1/bits/atomic_wait.h:
 
 /usr/include/c++/16.1.1/tuple:
-
-/usr/include/c++/16.1.1/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/16.1.1/typeinfo:

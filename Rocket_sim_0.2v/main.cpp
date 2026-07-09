@@ -4,6 +4,7 @@
 #include "include/Tank.h"
 #include "include/Engine.h"
 #include "include/Stage.h"
+#include "include/Payload.h"
 
 
 
@@ -19,9 +20,10 @@ int main() {
     Engine engine {20000.0,100.0,earth.surfacePoint(2), 50.0};
     Tank tank {earth.surfacePoint(10), 50,20};
     std::unique_ptr stage = Stage::creat_stage(engine, tank, earth);
-    double s = gravity_magnitude (*stage,earth);
-    std::cout << "grav: "<< s<< '\n';
-    Vector3D grav_vec = gravity_vec(*stage, earth);
-    std::cout << "grav_vec: "<< grav_vec<< '\n';
+    Payload payload {earth.surfacePoint(10000),10,{0,300,0}};
+    
+    stage->set_velocity(0.5);
+    std::cout<<stage->get_velocity();
+    
     return 0;
 } 
