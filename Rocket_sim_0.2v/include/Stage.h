@@ -5,6 +5,8 @@
 #include "Earth.h"
 #include "Templates.h"
 #include <memory>
+#include "Gravity_temp.h"
+#include "Payload.h"
 
 
 
@@ -23,7 +25,7 @@ class Stage : public Physic_object {
         tank(std::move(t)) // give this object to Stage
         {
             velocity = Vector3D(0,0,0);
-            acceleration = Vector3D(0,5,0);
+            acceleration = Vector3D(0,0,0);
             
         };
 
@@ -34,8 +36,11 @@ class Stage : public Physic_object {
     Vector3D get_velocity() const {return velocity;};
     Vector3D get_acceleration() const {return acceleration;}
 
-
-
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
+    void set_acceleration(Vector3D& f_total) {acceleration= f_total/this->get_mass();}; 
+    
+
+
+    void launch_stage(const Earth&, const Payload&);
 };

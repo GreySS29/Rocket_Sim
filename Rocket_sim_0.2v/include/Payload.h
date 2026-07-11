@@ -1,3 +1,4 @@
+#pragma once
 #include "Physic_object.h"
 
 class Payload : public Physic_object {

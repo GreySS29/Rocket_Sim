@@ -207,6 +207,7 @@ CMakeFiles/Rock_sim.dir/main.cpp.o: \
  /usr/include/assert.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Earth.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Tank.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Engine.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Stage.h \

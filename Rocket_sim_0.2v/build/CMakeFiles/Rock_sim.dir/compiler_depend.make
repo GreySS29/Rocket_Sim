@@ -9,6 +9,7 @@ CMakeFiles/Rock_sim.dir/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rock
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Stage.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Tank.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Templates.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h \
@@ -305,10 +306,14 @@ CMakeFiles/Rock_sim.dir/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rock
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdint.h
 
 CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Constants.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Earth.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Engine.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Gravity_temp.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Stage.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Tank.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Templates.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h \
@@ -704,8 +709,6 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
-/usr/include/c++/16.1.1/bits/hash_bytes.h:
-
 /usr/include/c++/16.1.1/bits/exception.h:
 
 /usr/include/c++/16.1.1/bits/basic_string.h:
@@ -816,6 +819,10 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/bits/stdlib-float.h:
 
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/include/bits/thread-shared-types.h:
+
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h:
 
 /usr/include/bits/typesizes.h:
@@ -868,12 +875,6 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/include/c++/16.1.1/initializer_list:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/16.1.1/bits/stl_construct.h:
-
-/usr/include/c++/16.1.1/bits/version.h:
-
 /usr/include/bits/fp-logb.h:
 
 /usr/include/c++/16.1.1/bits/enable_special_members.h:
@@ -889,6 +890,8 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/c++/16.1.1/optional:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h:
 
 /usr/include/c++/16.1.1/bits/basic_string.tcc:
 
@@ -915,6 +918,12 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/c++/16.1.1/memory:
 
 /usr/include/bits/stdint-least.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/16.1.1/bits/stl_construct.h:
+
+/usr/include/c++/16.1.1/bits/version.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -1058,9 +1067,7 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 
 /usr/include/c++/16.1.1/bits/range_access.h:
 
-/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
-
-/usr/include/bits/thread-shared-types.h:
+/usr/include/c++/16.1.1/bits/hash_bytes.h:
 
 /usr/include/c++/16.1.1/bits/invoke.h:
 

@@ -8,7 +8,7 @@ class Vector3D {
     double x,y,z;
 
     Vector3D(double x=0, double y=0, double z=0) : x(x), y(y),z(z) { //{0,0,0}  - place above sea's level
-        //if (x<0 || y < 0 || z < 0)  error hundle
+       
     };
 
     Vector3D operator+(const Vector3D& other) const{

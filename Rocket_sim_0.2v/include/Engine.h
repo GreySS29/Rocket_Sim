@@ -3,13 +3,13 @@
 
 class Engine : public Physic_object {
 private:
-    double _thrust;
-    double _fuel_consumption;
-    Vector3D _thrust_direction;
+    double _thrust; //H
+    double _fuel_consumption;// kg/s
+    Vector3D _thrust_direction; 
     bool _fuel = true;
 
 public:
-    Engine(double thrust, double fuel_consumption, Vector3D position, double mass)
+    Engine(Vector3D position, double mass,double thrust, double fuel_consumption)
         : Physic_object{position, mass},
           _thrust(thrust),
           _fuel_consumption(fuel_consumption),

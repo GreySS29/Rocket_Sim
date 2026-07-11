@@ -17,13 +17,14 @@ int main() {
     //     double s = gravity_magnitude (earth, engine);
     //     std::cout << s << '\n';
     // }   
-    Engine engine {20000.0,100.0,earth.surfacePoint(2), 50.0};
-    Tank tank {earth.surfacePoint(10), 50,20};
+    Engine engine {earth.surfacePoint(5),10000,1500000,500};
+    Tank tank {earth.surfacePoint(10), 5000,40000};
     std::unique_ptr stage = Stage::creat_stage(engine, tank, earth);
-    Payload payload {earth.surfacePoint(10000),10,{0,300,0}};
+    Payload payload {earth.surfacePoint(10000),10000,{0,300,0}};
+  
+    stage->launch_stage(earth, payload);
     
-    stage->set_velocity(0.5);
-    std::cout<<stage->get_velocity();
+
     
     return 0;
 } 
