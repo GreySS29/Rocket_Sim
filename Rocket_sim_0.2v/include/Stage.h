@@ -19,8 +19,8 @@ class Stage : public Physic_object {
     Vector3D acceleration; //m/s2
 
     public:
-    Stage (Vector3D position, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t) :
-        Physic_object{position, eng->get_mass() + t->get_mass()}, 
+    Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t) :
+        Physic_object{position, eng->get_mass() + t->get_mass(), c_d, area}, 
         engine(std::move(eng)),
         tank(std::move(t)) // give this object to Stage
         {
@@ -42,5 +42,6 @@ class Stage : public Physic_object {
     
 
 
-    void launch_stage(const Earth&, const Payload&);
+    void launch_stage(const Earth&, double pace);
+    void print_status();
 };

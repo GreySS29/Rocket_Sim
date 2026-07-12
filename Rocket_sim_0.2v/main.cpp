@@ -20,11 +20,43 @@ int main() {
     Engine engine {earth.surfacePoint(5),10000,1500000,500};
     Tank tank {earth.surfacePoint(10), 5000,40000};
     std::unique_ptr stage = Stage::creat_stage(engine, tank, earth);
-    Payload payload {earth.surfacePoint(10000),10000,{0,300,0}};
+    //Payload payload {earth.surfacePoint(10000),10000, 0.3, 10,{0,300,0}};
   
-    stage->launch_stage(earth, payload);
     
 
-    
+    const int max_steps = 10; //s 
+    double target_height = 100000.0; //m
+    const double PACE = 0.1; //s 
+    const double V_ORBITAL = earth.get_orbital_velocity(target_height);
+    std::cout << V_ORBITAL;
+
+    std::cout << "\n=== Начальное состояние ===\n";
+    stage->print_status();
+
+    for(int i=0; i<max_steps; ++i)
+    {
+        if(stage->get_position_above_surface().y > target_height && stage->get_velocity().magnitude() >V_ORBITAL)
+        {
+            std::cout << "\n*** РАКЕТА ДОСТИГЛА ОРБИТЫ! ***\n";
+            break;
+        }
+
+        if(stage->get_position_above_surface().y <0 && stage->get_velocity().y <0 && i > 10 ) 
+        {
+            std::cout << "\n*** РАКЕТА НАЧИНАЕТ ПАДАТЬ ***\n";
+            break;
+        }  
+        stage->launch_stage(earth,PACE*i);
+
+        if (i % 1 ==0)
+        {
+            stage->print_status();
+        }
+
+    }
+
+    std::cout << "\n=== Финальное состояние ===\n";
+    stage->print_status();
     return 0;
+
 } 

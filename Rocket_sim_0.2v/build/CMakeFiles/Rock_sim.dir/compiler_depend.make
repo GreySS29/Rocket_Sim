@@ -462,6 +462,7 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect
   /usr/include/c++/16.1.1/bits/postypes.h \
   /usr/include/c++/16.1.1/bits/predefined_ops.h \
   /usr/include/c++/16.1.1/bits/ptr_traits.h \
+  /usr/include/c++/16.1.1/bits/quoted_string.h \
   /usr/include/c++/16.1.1/bits/range_access.h \
   /usr/include/c++/16.1.1/bits/ranges_algobase.h \
   /usr/include/c++/16.1.1/bits/ranges_base.h \
@@ -474,6 +475,7 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect
   /usr/include/c++/16.1.1/bits/shared_ptr_atomic.h \
   /usr/include/c++/16.1.1/bits/shared_ptr_base.h \
   /usr/include/c++/16.1.1/bits/specfun.h \
+  /usr/include/c++/16.1.1/bits/sstream.tcc \
   /usr/include/c++/16.1.1/bits/std_abs.h \
   /usr/include/c++/16.1.1/bits/stdexcept_except.h \
   /usr/include/c++/16.1.1/bits/stdexcept_throw.h \
@@ -528,6 +530,7 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect
   /usr/include/c++/16.1.1/ext/type_traits.h \
   /usr/include/c++/16.1.1/format \
   /usr/include/c++/16.1.1/initializer_list \
+  /usr/include/c++/16.1.1/iomanip \
   /usr/include/c++/16.1.1/ios \
   /usr/include/c++/16.1.1/iosfwd \
   /usr/include/c++/16.1.1/iostream \
@@ -544,6 +547,7 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect
   /usr/include/c++/16.1.1/pstl/glue_memory_defs.h \
   /usr/include/c++/16.1.1/pstl/pstl_config.h \
   /usr/include/c++/16.1.1/span \
+  /usr/include/c++/16.1.1/sstream \
   /usr/include/c++/16.1.1/stdexcept \
   /usr/include/c++/16.1.1/streambuf \
   /usr/include/c++/16.1.1/string \
@@ -653,6 +657,10 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 
 /usr/lib/Scrt1.o:
 
+/usr/include/c++/16.1.1/bits/sstream.tcc:
+
+/usr/include/c++/16.1.1/bits/quoted_string.h:
+
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdint.h:
@@ -756,6 +764,8 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/c++/16.1.1/bits/ranges_cmp.h:
+
+/usr/include/c++/16.1.1/iomanip:
 
 /usr/include/c++/16.1.1/bits/unicode-data.h:
 
@@ -1120,6 +1130,8 @@ CMakeFiles/Rock_sim.dir/main.cpp.o:
 /usr/include/c++/16.1.1/bits/ostream.h:
 
 /usr/include/c++/16.1.1/bits/ostream_insert.h:
+
+/usr/include/c++/16.1.1/sstream:
 
 /usr/include/c++/16.1.1/bits/memoryfwd.h:
 

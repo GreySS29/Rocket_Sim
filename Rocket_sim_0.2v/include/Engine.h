@@ -27,12 +27,12 @@ public:
         return _thrust_direction * _thrust;
     }
 
-    Vector3D setThrustDirection(double x, double y, double z) {
+    Vector3D set_thrust_direction(double x, double y, double z) {
         _thrust_direction = Vector3D{x, y, z};
         return _thrust_direction;
     }
 
-    Vector3D getThrustDirection() const {
+    Vector3D get_thrust_direction() const {
         return _thrust_direction;
     }
 };
