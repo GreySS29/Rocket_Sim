@@ -23,13 +23,15 @@
 
 void Stage ::launch_stage(const Earth& earth , double pace)
 {
-    // std::cout << engine->get_thrust_force()<< "\n";
-    // std::cout << gravity_vec(*this, earth) << "\n";
-    // std::cout <<  earth.get_dragForce_vec(*this)<< "\n";
+     //std::cout << engine->get_thrust_force()<< "\n";
+     std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
+     std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
 
     if (tank->get_fuel_mass() ==0){
         acceleration = earth.get_dragForce_vec(*this); //falling
     } else{
+    
+
 
     Vector3D F_total = 
         engine->get_thrust_force()+
@@ -38,7 +40,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
     set_acceleration(F_total);
 
-    double consum = engine->get_fuel_consumption() * pace;
+    double consum = engine->get_fuel_consumption();
     tank->reduce_fuel_mass(consum);
     if(tank->get_fuel_mass() <0) 
         {
@@ -69,12 +71,11 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
 void Stage::print_status(){
     std::cout << std::fixed << std::setprecision(2);
-        std::cout << "=== Состояние ракеты ===\n";
-        std::cout << "Высота: " << this->get_position_above_surface().y << " м( " << this->get_position_above_surface().y/1000.0 << " км)\n";
-        std::cout << "Скорость: " << this->get_velocity().magnitude() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
-        std::cout << "Ускорение: " << this->get_acceleration().magnitude() << " м/с \n";
-        std::cout << "Масса: " <<this->get_mass() << " кг\n";
-        std::cout << "Топливо: " << tank->get_fuel_mass() << " кг\n";
-        std::cout << "Направление : "<<engine->get_thrust_direction() << '\n';
+        std::cout << "Height: " << this->get_position_above_surface().y << " м( " << this->get_position_above_surface().y/1000.0 << " км)\n";
+        std::cout << "Velocity: " << this->get_velocity().magnitude() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
+        std::cout << "Acceleration: " << this->get_acceleration().magnitude() << " м/с \n";
+        std::cout << "Mass: " <<this->get_mass() << " кг\n";
+        std::cout << "Fuel: " << tank->get_fuel_mass() << " кг\n";
+        //std::cout << "Направление : "<<engine->get_thrust_direction() << '\n';
         std::cout << "=========================\n";
 }
