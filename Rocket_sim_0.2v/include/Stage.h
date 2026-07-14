@@ -30,18 +30,21 @@ class Stage : public Physic_object {
         };
 
         
-    static std::unique_ptr<Stage> creat_stage(Engine&, Tank&, Earth& earth);
+    
 
     //getters
     Vector3D get_velocity() const {return velocity;};
     Vector3D get_acceleration() const {return acceleration;}
+    double get_thrust() const {return engine->get_thrust();}
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
     void set_acceleration(Vector3D& f_total) {acceleration= f_total/this->get_mass();}; 
     
 
-
+    static std::unique_ptr<Stage> creat_stage(Engine&, Tank&, Earth& earth);
     void launch_stage(const Earth&, double pace);
-    void print_status();
+    void print_status_flight() const;
+    void print_status() const;
+   
 };

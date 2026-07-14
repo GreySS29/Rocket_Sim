@@ -6,16 +6,10 @@
     std::unique_ptr<Stage> stage = std::make_unique<Stage> (
         earth.surfacePoint(5.0),
         0.3,
-        20.0,
+        10.0,
         std::make_unique<Engine>(eng),
         std::make_unique<Tank>(t)
     );
-    std::cout<<"Engine_thrust: " <<eng.get_thrust()<<'\n'
-        <<"Engine_mass:" <<eng.get_mass()<<'\n'
-        <<"Tank mass(with fuel):" <<t.get_mass() <<'\n'
-        <<"Fuel mass:" << t.get_fuel_mass() <<'\n'
-        <<"Stage mass :" << stage->get_mass() << '\n'
-        <<"Start_position :" << stage->get_position() << '\n';
     return stage;
 }
 
@@ -69,7 +63,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
 
 
-void Stage::print_status(){
+void Stage::print_status_flight() const{
     std::cout << std::fixed << std::setprecision(2);
         std::cout << "Height: " << this->get_position_above_surface().y << " м( " << this->get_position_above_surface().y/1000.0 << " км)\n";
         std::cout << "Velocity: " << this->get_velocity().magnitude() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
@@ -78,4 +72,15 @@ void Stage::print_status(){
         std::cout << "Fuel: " << tank->get_fuel_mass() << " кг\n";
         //std::cout << "Направление : "<<engine->get_thrust_direction() << '\n';
         std::cout << "=========================\n";
+}
+
+
+void Stage::print_status() const {
+
+    std::cout<<"Engine_thrust: " <<engine->get_thrust()<<'\n'
+        <<"Engine_mass:" <<engine->get_mass()<<'\n'
+        <<"Tank mass(with fuel):" <<tank->get_mass() <<'\n'
+        <<"Fuel mass:" << tank->get_fuel_mass() <<'\n'
+        <<"Stage mass :" << this->get_mass() << '\n'
+        <<"Start_position :" << this->get_position() << '\n';
 }

@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/rocket.o: src/rocket.cpp.o
+.PHONY : src/rocket.o
+
+# target to build an object file
+src/rocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.o
+.PHONY : src/rocket.cpp.o
+
+src/rocket.i: src/rocket.cpp.i
+.PHONY : src/rocket.i
+
+# target to preprocess a source file
+src/rocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.i
+.PHONY : src/rocket.cpp.i
+
+src/rocket.s: src/rocket.cpp.s
+.PHONY : src/rocket.s
+
+# target to generate assembly for a file
+src/rocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.s
+.PHONY : src/rocket.cpp.s
+
 src/stage.o: src/stage.cpp.o
 .PHONY : src/stage.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/rocket.o"
+	@echo "... src/rocket.i"
+	@echo "... src/rocket.s"
 	@echo "... src/stage.o"
 	@echo "... src/stage.i"
 	@echo "... src/stage.s"

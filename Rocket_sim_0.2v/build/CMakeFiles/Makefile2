@@ -85,12 +85,12 @@ clean: CMakeFiles/Rock_sim.dir/clean
 CMakeFiles/Rock_sim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=1,2,3 "Built target Rock_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=1,2,3,4 "Built target Rock_sim"
 .PHONY : CMakeFiles/Rock_sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Rock_sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Rock_sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles 0
 .PHONY : CMakeFiles/Rock_sim.dir/rule
@@ -102,7 +102,7 @@ Rock_sim: CMakeFiles/Rock_sim.dir/rule
 # codegen rule for target.
 CMakeFiles/Rock_sim.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target Rock_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target Rock_sim"
 .PHONY : CMakeFiles/Rock_sim.dir/codegen
 
 # clean rule for target.
