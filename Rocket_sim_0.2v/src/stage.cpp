@@ -1,10 +1,10 @@
 #include "../include/Stage.h"
 #include <iomanip>
 
- std::unique_ptr<Stage> Stage::creat_stage(Engine& eng, Tank& t , Earth& earth)
+ std::unique_ptr<Stage> Stage::creat_stage(double position_h, Engine& eng, Tank& t , Earth& earth)
  {
     std::unique_ptr<Stage> stage = std::make_unique<Stage> (
-        earth.surfacePoint(5.0),
+        earth.surfacePoint(position_h),
         0.3,
         10.0,
         std::make_unique<Engine>(eng),
@@ -24,9 +24,8 @@ void Stage ::launch_stage(const Earth& earth , double pace)
     if (tank->get_fuel_mass() ==0){
         acceleration = earth.get_dragForce_vec(*this); //falling
     } else{
+
     
-
-
     Vector3D F_total = 
         engine->get_thrust_force()+
         gravity_vec(*this, earth)+
@@ -34,11 +33,10 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
     set_acceleration(F_total);
 
-    double consum = engine->get_fuel_consumption();
+    double consum = engine->get_fuel_consumption(pace);
     tank->reduce_fuel_mass(consum);
-    if(tank->get_fuel_mass() <0) 
+    if(tank->get_fuel_mass() == 0) 
         {
-            tank->set_fuel_mass(0); 
             engine->set_fuel(false);
         };
 
@@ -76,11 +74,12 @@ void Stage::print_status_flight() const{
 
 
 void Stage::print_status() const {
-
-    std::cout<<"Engine_thrust: " <<engine->get_thrust()<<'\n'
+    std::cout << "=========================\n" 
+        <<"Engine_thrust: " <<engine->get_thrust()<<'\n'
         <<"Engine_mass:" <<engine->get_mass()<<'\n'
         <<"Tank mass(with fuel):" <<tank->get_mass() <<'\n'
         <<"Fuel mass:" << tank->get_fuel_mass() <<'\n'
         <<"Stage mass :" << this->get_mass() << '\n'
-        <<"Start_position :" << this->get_position() << '\n';
+        <<"Start_position :" << this->get_position_above_surface()<<'\n'
+        << "=========================\n";
 }

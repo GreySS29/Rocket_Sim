@@ -28,3 +28,25 @@ void Rocket::print_status() const{
     cout << "Payload" << '\n' <<
     payload_.get_mass() << '\n';
 }
+
+void Rocket::launch(const Earth& earth, double pace)
+{
+    booster_->run_engine(true);
+
+    std::cout << "thrust :" << booster_->get_thrust_force() << '\n'
+    << "gravity" <<gravity_vec(*this, earth) << '\n'
+    << "drag : " << earth.get_dragForce_vec(*this) <<'\n';
+
+
+    Vector3D F_total =
+        booster_->get_thrust_force() +
+        gravity_vec(*this, earth) +
+        earth.get_dragForce_vec(*this);
+
+    std::cout << F_total << '\n';
+
+    set_acceleration(F_total);
+    booster_->reduce_tank_fuel(pace);
+    std::cout<< "accel : " << get_acceleration() << '\n'
+    << booster_->get_fuel_mass() << '\n';
+}

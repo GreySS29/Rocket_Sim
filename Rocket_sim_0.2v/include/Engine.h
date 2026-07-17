@@ -3,36 +3,48 @@
 
 class Engine : public Physic_object {
 private:
-    double _thrust; //H
-    double _fuel_consumption;// kg/s
-    Vector3D _thrust_direction; 
-    bool _fuel = true;
+    double thrust_; //H
+    double fuel_consumption_;// kg/s
+    Vector3D thrust_direction_; 
+    bool fuel_ = true; // fluel from tank 
+    bool status_ = false; // enable or disable 
 
 public:
     Engine(Vector3D position, double mass,double thrust, double fuel_consumption)
         : Physic_object{position, mass},
-          _thrust(thrust),
-          _fuel_consumption(fuel_consumption),
-          _thrust_direction{0.0, 1.0, 0.0}
+          thrust_(thrust),
+          fuel_consumption_(fuel_consumption),
+          thrust_direction_{0.0, 1.0, 0.0}
     {
     }
 
-    double get_thrust() const { return _thrust; }
-    double get_fuel_consumption() const { return _fuel_consumption; }
+    double get_thrust() const { return thrust_; }
+    void run_engine(bool command) {
+        if (command == true) {
+            status_ = true;
+            std::cout<<"Engine was run"<<'\n';
+        } else {
+            status_ == false;
+            thrust_ = 0;
+            std::cout<<"Engine was turn off"<<'\n';
+        }
+        
+    }
+    double get_fuel_consumption(double pace) const { return fuel_consumption_ * pace; }
 
-    void set_fuel(bool fuel) { _fuel = fuel; }
+    void set_fuel(double fuel) { fuel_ = fuel; }
 
     Vector3D get_thrust_force() const {
-        if (!_fuel) return Vector3D{0, 0, 0};
-        return _thrust_direction * _thrust;
+        if (fuel_ == false) return Vector3D{0, 0, 0};
+        return thrust_direction_ * thrust_;
     }
 
     Vector3D set_thrust_direction(double x, double y, double z) {
-        _thrust_direction = Vector3D{x, y, z};
-        return _thrust_direction;
+        thrust_direction_ = Vector3D{x, y, z};
+        return thrust_direction_;
     }
 
     Vector3D get_thrust_direction() const {
-        return _thrust_direction;
+        return thrust_direction_;
     }
 };

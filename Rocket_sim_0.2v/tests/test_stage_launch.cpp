@@ -1,10 +1,10 @@
 #include "iostream"
-#include "include/Gravity_temp.h"
-#include "include/Earth.h"
-#include "include/Tank.h"
-#include "include/Engine.h"
-#include "include/Stage.h"
-#include "include/Payload.h"
+#include "../include/Gravity_temp.h"
+#include "../include/Earth.h"
+#include "../include/Tank.h"
+#include "../include/Engine.h"
+#include "../include/Stage.h"
+#include "../include/Payload.h"
 
 
 
@@ -24,9 +24,11 @@ int main() {
 
     std::cout << "\n=== Начальное состояние ===\n";
     stage->print_status();
+    stage->run_engine(true);
 
     for(int i=0; i<max_steps; ++i)
     {
+
         if(stage->get_position_above_surface().y > target_height && stage->get_velocity().magnitude() >V_ORBITAL)
         {
             std::cout << "\n*** РАКЕТА ДОСТИГЛА ОРБИТЫ! ***\n";

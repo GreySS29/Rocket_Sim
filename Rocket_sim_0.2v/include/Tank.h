@@ -11,7 +11,13 @@ class Tank : public Physic_object
     Physic_object(pos, mass+fuel_m), fuel_mass(fuel_m) {};
 
     double get_fuel_mass() const {return fuel_mass;} ; 
-    void reduce_fuel_mass(double amount) {fuel_mass -= amount;};
-    void set_fuel_mass(double n) {fuel_mass = n;}
+    void reduce_fuel_mass(double amount) {
+        if(fuel_mass <0) 
+            {fuel_mass = 0;
+            std::cout<< "Tank is empty" << '\n';
+            };
+        fuel_mass -= amount;
+            };
+    
 
 };

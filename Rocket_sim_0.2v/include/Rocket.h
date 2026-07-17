@@ -32,11 +32,11 @@ class Rocket : public Physic_object {
     Vector3D get_acceleration() const {return acceleration_;}
 
     //setters
-    void set_velocity(double pace) { velocity+=acceleration * pace;}
-    void set_acceleration(Vector3D& f_total) {acceleration= f_total/this->get_mass();}; 
+    void set_velocity(double pace) { velocity_+=acceleration_ * pace;}
+    void set_acceleration(Vector3D& f_total) {acceleration_= f_total/this->get_mass();}; 
     
     
-    void rocker_launch (const Earth&, double pace);
+    void launch (const Earth&, double pace);
          
 
 
