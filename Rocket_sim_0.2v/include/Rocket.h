@@ -37,11 +37,35 @@ class Rocket : public Physic_object {
     
     
     void launch (const Earth&, double pace);
+    void launch_booster (const Earth& earth, double pace){
+        //Vector3D grav = gravity_vec(*this,earth);
+        this->booster_->launch_stage(gravity_vec(*this,earth), earth , pace ); // gravity_vec for all Rocket_mass
+    }
          
 
 
 
    static std::unique_ptr<Rocket> create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload& payload, Earth& earth);
    void print_status() const;
+
+
+   //command
+   void run_engine(bool command, int stage) {
+        switch (stage)
+        {
+        case 1:
+            if(command == true) {booster_->run_engine(true);}
+            else booster_->run_engine(false);
+            break;
+
+        case 2:
+            if(command == true) {upper_stage_->run_engine(true);}
+            else upper_stage_->run_engine(false);
+            break;
+        
+        default:
+            break;
+        }
+   }
 
 };

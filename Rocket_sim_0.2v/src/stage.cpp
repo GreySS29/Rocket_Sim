@@ -1,6 +1,8 @@
 #include "../include/Stage.h"
 #include <iomanip>
 
+
+
  std::unique_ptr<Stage> Stage::creat_stage(double position_h, Engine& eng, Tank& t , Earth& earth)
  {
     std::unique_ptr<Stage> stage = std::make_unique<Stage> (
@@ -15,20 +17,21 @@
 
 
 
-void Stage ::launch_stage(const Earth& earth , double pace)
+void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace)
 {
      //std::cout << engine->get_thrust_force()<< "\n";
-     std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
-     std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
+     //std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
+    //  std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
+    //  std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
 
     if (tank->get_fuel_mass() ==0){
         acceleration = earth.get_dragForce_vec(*this); //falling
     } else{
 
-    
+   
     Vector3D F_total = 
-        engine->get_thrust_force()+
-        gravity_vec(*this, earth)+
+        (engine->get_thrust_force())+ 
+        gravity_v +
         earth.get_dragForce_vec(*this);
 
     set_acceleration(F_total);
@@ -43,20 +46,26 @@ void Stage ::launch_stage(const Earth& earth , double pace)
     this->reduce_mass(consum);
     }
     
-    set_velocity(pace);
-    update_position(velocity, pace);
+    this ->set_velocity(pace);
+   
+    this ->update_position(velocity, pace);
+
+}
 
 
-    // std::cout<< "*********"<<'\n'
-        
-       
-    //     <<"Tank mass(with fuel):" <<tank->get_mass() <<'\n'
-    //     <<"Fuel mass:" << tank->get_fuel_mass() <<'\n'
-    //     <<"Stage mass :" << this->get_mass() << '\n'
-    //     <<"Position :" << this->get_position() << '\n'
-    //     <<"Velocity :" << this->get_velocity() << '\n'
-    //     <<"Acceleration :" << this->get_acceleration() << '\n';
+void Stage::reduce_tank_fuel(double pace){
+    if (tank->get_fuel_mass() == 0) {
+            engine->set_fuel(false);
+            return;
+        }
+        tank -> reduce_fuel_mass(engine->get_fuel_consumption(pace));
+}
 
+void Stage::run_engine(bool command) const {
+     engine->run_engine(command);
+    };
+    Vector3D get_thrust_force(){
+        return engine->get_thrust_force();
 }
 
 
@@ -80,6 +89,6 @@ void Stage::print_status() const {
         <<"Tank mass(with fuel):" <<tank->get_mass() <<'\n'
         <<"Fuel mass:" << tank->get_fuel_mass() <<'\n'
         <<"Stage mass :" << this->get_mass() << '\n'
-        <<"Start_position :" << this->get_position_above_surface()<<'\n'
+        <<"Position :" << this->get_position_above_surface()<<'\n'
         << "=========================\n";
 }

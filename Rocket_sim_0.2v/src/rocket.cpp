@@ -31,22 +31,30 @@ void Rocket::print_status() const{
 
 void Rocket::launch(const Earth& earth, double pace)
 {
-    booster_->run_engine(true);
+    //run booster
+    
+    this->launch_booster(earth,pace);
+    position = booster_->get_position(); //get Rocket position after changing boouster's position above fun   
+    booster_ ->print_status_flight();
+    
+    //update_position(pos,pace);
 
-    std::cout << "thrust :" << booster_->get_thrust_force() << '\n'
-    << "gravity" <<gravity_vec(*this, earth) << '\n'
-    << "drag : " << earth.get_dragForce_vec(*this) <<'\n';
+    //std::cout << "rock_pos: " << get_position_above_surface()<< '\n';
+
+    // std::cout << "thrust :" << (booster_->get_thrust_force()*pace) << '\n'
+    // << "gravity" <<gravity_vec(*this, earth) << '\n'
+    // << "drag : " << earth.get_dragForce_vec(*this) <<'\n';
 
 
-    Vector3D F_total =
-        booster_->get_thrust_force() +
-        gravity_vec(*this, earth) +
-        earth.get_dragForce_vec(*this);
+    // Vector3D F_total =
+    //     (booster_->get_thrust_force()*pace) +
+    //     gravity_vec(*this, earth) +
+    //     earth.get_dragForce_vec(*this);
 
-    std::cout << F_total << '\n';
+    // std::cout << F_total << '\n';
 
-    set_acceleration(F_total);
-    booster_->reduce_tank_fuel(pace);
-    std::cout<< "accel : " << get_acceleration() << '\n'
-    << booster_->get_fuel_mass() << '\n';
+    // set_acceleration(F_total);
+    // booster_->reduce_tank_fuel(pace);
+    // std::cout<< "accel : " << get_acceleration() << '\n'
+    // << booster_->get_fuel_mass() << '\n';
 }
