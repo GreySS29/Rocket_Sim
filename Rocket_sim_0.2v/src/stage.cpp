@@ -36,35 +36,29 @@ void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace)
 
     set_acceleration(F_total);
 
-    double consum = engine->get_fuel_consumption(pace);
+    double consum = engine->get_fuel_consumption();
     tank->reduce_fuel_mass(consum);
     if(tank->get_fuel_mass() == 0) 
         {
             engine->set_fuel(false);
+            engine->run_engine(false);
         };
 
-    this->reduce_mass(consum);
+    reduce_mass(consum);
     }
     
-    this ->set_velocity(pace);
+    set_velocity(pace);
    
-    this ->update_position(velocity, pace);
+    update_position(velocity, pace);
 
 }
 
-
-void Stage::reduce_tank_fuel(double pace){
-    if (tank->get_fuel_mass() == 0) {
-            engine->set_fuel(false);
-            return;
-        }
-        tank -> reduce_fuel_mass(engine->get_fuel_consumption(pace));
-}
 
 void Stage::run_engine(bool command) const {
      engine->run_engine(command);
     };
-    Vector3D get_thrust_force(){
+   
+Vector3D Stage::get_thrust_force(){
         return engine->get_thrust_force();
 }
 

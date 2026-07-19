@@ -18,7 +18,7 @@ std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, st
 
 void Rocket::print_status() const{
     cout << "Rocket" << '\n' <<
-    "Rocket_mass: " << this->get_mass() << '\n';
+    "Rocket_mass: " << get_mass() << '\n';
 
     cout << "Booster" << '\n';
     booster_->print_status();
@@ -27,34 +27,20 @@ void Rocket::print_status() const{
     cout << "*****************" << '\n';
     cout << "Payload" << '\n' <<
     payload_.get_mass() << '\n';
+    cout << "*****************" << '\n'<<
+    "Position: " << get_position_above_surface()<<'\n'<<
+    "Acceleration: " << get_acceleration().magnitude() << " m/sec2 \n" <<
+    "Velocity: " << get_velocity().magnitude() << " m/sec (" << get_velocity().magnitude()*3.6 << " km/h)\n";
 }
 
 void Rocket::launch(const Earth& earth, double pace)
 {
     //run booster
     
-    this->launch_booster(earth,pace);
-    position = booster_->get_position(); //get Rocket position after changing boouster's position above fun   
+    launch_booster(earth,pace);
+    //position = booster_->get_position(); //get Rocket position after changing boouster's position above fun   
+    update_condition(pace);
     booster_ ->print_status_flight();
     
-    //update_position(pos,pace);
 
-    //std::cout << "rock_pos: " << get_position_above_surface()<< '\n';
-
-    // std::cout << "thrust :" << (booster_->get_thrust_force()*pace) << '\n'
-    // << "gravity" <<gravity_vec(*this, earth) << '\n'
-    // << "drag : " << earth.get_dragForce_vec(*this) <<'\n';
-
-
-    // Vector3D F_total =
-    //     (booster_->get_thrust_force()*pace) +
-    //     gravity_vec(*this, earth) +
-    //     earth.get_dragForce_vec(*this);
-
-    // std::cout << F_total << '\n';
-
-    // set_acceleration(F_total);
-    // booster_->reduce_tank_fuel(pace);
-    // std::cout<< "accel : " << get_acceleration() << '\n'
-    // << booster_->get_fuel_mass() << '\n';
 }

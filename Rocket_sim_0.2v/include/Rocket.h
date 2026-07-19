@@ -30,16 +30,32 @@ class Rocket : public Physic_object {
      //getters
     Vector3D get_velocity() const {return velocity_;};
     Vector3D get_acceleration() const {return acceleration_;}
+   
 
     //setters
     void set_velocity(double pace) { velocity_+=acceleration_ * pace;}
-    void set_acceleration(Vector3D& f_total) {acceleration_= f_total/this->get_mass();}; 
-    
+    //void set_acceleration(Vector3D& f_total) {acceleration_= f_total/this->get_mass();}; 
+    void set_acceleration() {
+        if(booster_!=nullptr) {acceleration_=booster_->get_acceleration();}
+        else acceleration_=upper_stage_->get_acceleration();
+    }
+    void update_mass(){
+        if (booster_!= nullptr){
+            mass = booster_->get_mass()+upper_stage_->get_mass()+payload_.get_mass();
+        }
+        else mass = upper_stage_->get_mass()+payload_.get_mass();
+    }
+    void update_condition(double pace){
+        update_mass();
+        set_acceleration();
+        set_velocity(pace);
+        update_position(velocity_,pace);
+    }
     
     void launch (const Earth&, double pace);
     void launch_booster (const Earth& earth, double pace){
         //Vector3D grav = gravity_vec(*this,earth);
-        this->booster_->launch_stage(gravity_vec(*this,earth), earth , pace ); // gravity_vec for all Rocket_mass
+        booster_->launch_stage(gravity_vec(*this,earth), earth , pace ); // gravity_vec for all Rocket_mass
     }
          
 

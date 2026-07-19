@@ -30,9 +30,9 @@ public:
         }
         
     }
-    double get_fuel_consumption(double pace) const { return fuel_consumption_ * pace; }
+    double get_fuel_consumption() const { return fuel_consumption_; }
 
-    void set_fuel(double fuel) { fuel_ = fuel; }
+    void set_fuel(bool fuel) { fuel_ = fuel; }
 
     Vector3D get_thrust_force() const {
         if (fuel_ == false) return Vector3D{0, 0, 0};

@@ -38,8 +38,7 @@ int main() {
        
      }
 
-     rocket->print_status();
-     std::cout << rocket->get_position_above_surface();
+    rocket->print_status();
 
     
     return 0;

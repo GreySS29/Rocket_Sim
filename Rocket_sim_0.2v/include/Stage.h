@@ -35,14 +35,15 @@ class Stage : public Physic_object {
     //getters
     Vector3D get_velocity() const {return velocity;};
     Vector3D get_acceleration() const {return acceleration;}
+    Vector3D get_thrust_force();
     double get_thrust() const {return engine->get_thrust();}
     void run_engine(bool command) const;
     double get_fuel_mass() const { return tank -> get_fuel_mass();};
 
+
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
     void set_acceleration(Vector3D& f_total) {acceleration= f_total/this->get_mass();}; 
-    void reduce_tank_fuel (double pace);
     
 
 
