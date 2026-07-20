@@ -43,7 +43,8 @@ class Stage : public Physic_object {
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
-    void set_acceleration(Vector3D& f_total) {acceleration= f_total/this->get_mass();}; 
+    void set_acceleration(Vector3D& f_total) {acceleration= f_total/get_mass();}; 
+    void set_acceleration_from_other_object(Vector3D& other) {acceleration = other;}
     
 
 

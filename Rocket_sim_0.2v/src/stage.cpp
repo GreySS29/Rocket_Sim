@@ -25,7 +25,9 @@ void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace)
     //  std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
 
     if (tank->get_fuel_mass() ==0){
-        acceleration = earth.get_dragForce_vec(*this); //falling
+        Vector3D F_total = gravity_v + earth.get_dragForce_vec(*this);
+        set_acceleration(F_total);
+        std::cout << "Falling!" << '\n';
     } else{
 
    
@@ -38,7 +40,7 @@ void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace)
 
     double consum = engine->get_fuel_consumption();
     tank->reduce_fuel_mass(consum);
-    if(tank->get_fuel_mass() == 0) 
+    if(tank->get_fuel_mass() <= 0) 
         {
             engine->set_fuel(false);
             engine->run_engine(false);
@@ -77,8 +79,7 @@ void Stage::print_status_flight() const{
 
 
 void Stage::print_status() const {
-    std::cout << "=========================\n" 
-        <<"Engine_thrust: " <<engine->get_thrust()<<'\n'
+    std::cout << "Engine_thrust: " <<engine->get_thrust()<<'\n'
         <<"Engine_mass:" <<engine->get_mass()<<'\n'
         <<"Tank mass(with fuel):" <<tank->get_mass() <<'\n'
         <<"Fuel mass:" << tank->get_fuel_mass() <<'\n'
