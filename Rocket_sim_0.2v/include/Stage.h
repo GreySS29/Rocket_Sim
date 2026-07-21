@@ -10,6 +10,7 @@
 
 
 
+
 class Stage : public Physic_object {
     private:
     //std::vector<std::unique_ptr<T> for plenty Engines and tanks
@@ -43,13 +44,16 @@ class Stage : public Physic_object {
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
-    void set_acceleration(Vector3D& f_total) {acceleration= f_total/get_mass();}; 
+    void set_acceleration(Vector3D& f_total, double mass) {acceleration= f_total/mass;
+    std::cout << "f_total" << f_total<<
+    "mass" << mass << '\n';
+    }; 
     void set_acceleration_from_other_object(Vector3D& other) {acceleration = other;}
     
 
 
     static std::unique_ptr<Stage> creat_stage(double position_h, Engine&, Tank&, Earth& earth);
-    void launch_stage(Vector3D gravity_v,const Earth&, double pace); //gravity_v - for all object, ect. Rocket_system
+    void launch_stage(Vector3D gravity_v,const Earth&, double pace, double mass); //gravity_v - for all object, ect. Rocket_system
 
 
 

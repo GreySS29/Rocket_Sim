@@ -13,7 +13,7 @@ int main() {
 
     //booster
     Engine engine {earth.surfacePoint(5.0),5000.0,1200000.0, 547.0};
-    Tank tank {earth.surfacePoint(10.0), 5000.0,4000.0};
+    Tank tank {earth.surfacePoint(10.0), 5000.0,40000.0};
     std::unique_ptr booster = Stage::creat_stage(5.0,engine, tank, earth);
 
     //upper_stage
@@ -29,7 +29,7 @@ int main() {
     
     rocket->print_status();
     
-     const int max_steps = 30;
+     const int max_steps = 10;
      const int PACE = 1;
      int last_step = 0;
 

@@ -58,7 +58,7 @@ class Rocket : public Physic_object {
     
     void launch_booster (const Earth& earth, double pace){
         //Vector3D grav = gravity_vec(*this,earth);
-        booster_->launch_stage(gravity_vec(*this,earth), earth , pace ); // gravity_vec for all Rocket_mass
+        booster_->launch_stage(gravity_vec(*this,earth), earth , pace , mass ); // gravity_vec for all Rocket_mass
         booster_ ->print_status_flight();
     }
 
