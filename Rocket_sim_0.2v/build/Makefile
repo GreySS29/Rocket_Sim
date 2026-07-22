@@ -129,30 +129,6 @@ Rock_sim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/build
 .PHONY : Rock_sim/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 src/rocket.o: src/rocket.cpp.o
 .PHONY : src/rocket.o
 
@@ -201,6 +177,30 @@ src/stage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.s
 .PHONY : src/stage.cpp.s
 
+tests/test_stage_launch.o: tests/test_stage_launch.cpp.o
+.PHONY : tests/test_stage_launch.o
+
+# target to build an object file
+tests/test_stage_launch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o
+.PHONY : tests/test_stage_launch.cpp.o
+
+tests/test_stage_launch.i: tests/test_stage_launch.cpp.i
+.PHONY : tests/test_stage_launch.i
+
+# target to preprocess a source file
+tests/test_stage_launch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.i
+.PHONY : tests/test_stage_launch.cpp.i
+
+tests/test_stage_launch.s: tests/test_stage_launch.cpp.s
+.PHONY : tests/test_stage_launch.s
+
+# target to generate assembly for a file
+tests/test_stage_launch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.s
+.PHONY : tests/test_stage_launch.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,15 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Rock_sim"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... src/rocket.o"
 	@echo "... src/rocket.i"
 	@echo "... src/rocket.s"
 	@echo "... src/stage.o"
 	@echo "... src/stage.i"
 	@echo "... src/stage.s"
+	@echo "... tests/test_stage_launch.o"
+	@echo "... tests/test_stage_launch.i"
+	@echo "... tests/test_stage_launch.s"
 .PHONY : help
 
 

@@ -36,25 +36,23 @@ class Stage : public Physic_object {
     //getters
     Vector3D get_velocity() const {return velocity;};
     Vector3D get_acceleration() const {return acceleration;}
-    Vector3D get_thrust_force();
+    // Vector3D get_thrust_force();
     double get_thrust() const {return engine->get_thrust();}
-    void run_engine(bool command) const;
     double get_fuel_mass() const { return tank -> get_fuel_mass();};
 
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
-    void set_acceleration(Vector3D& f_total, double mass) {acceleration= f_total/mass;
-    std::cout << "f_total" << f_total<<
-    "mass" << mass << '\n';
+    void set_acceleration(Vector3D& f_total) {acceleration= f_total/get_mass();
     }; 
-    void set_acceleration_from_other_object(Vector3D& other) {acceleration = other;}
+    
     
 
 
     static std::unique_ptr<Stage> creat_stage(double position_h, Engine&, Tank&, Earth& earth);
-    void launch_stage(Vector3D gravity_v,const Earth&, double pace, double mass); //gravity_v - for all object, ect. Rocket_system
-
+    void launch_stage(const Earth&, double pace);  
+    Vector3D run_engine(bool command) ;
+    
 
 
     //print

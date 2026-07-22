@@ -17,36 +17,36 @@
 
 
 
-void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace ,double mass)
+void Stage ::launch_stage(const Earth& earth , double pace)
 {
      //std::cout << engine->get_thrust_force()<< "\n";
-     //std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
+     std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
      std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
-     std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
+     //std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
 
     if (tank->get_fuel_mass() ==0){
-        Vector3D F_total = gravity_v + earth.get_dragForce_vec(*this);
-        set_acceleration(F_total, mass);
+        Vector3D F_total = gravity_vec(earth,*this) + earth.get_dragForce_vec(*this);
+        set_acceleration(F_total);
         std::cout << "Falling!" << '\n';
     } else{
 
    
     Vector3D F_total = 
-        (engine->get_thrust_force())+ 
-        gravity_v +
+        run_engine(true)+ // reduce tank fluel_mass and mass_stage
+        gravity_vec(earth,*this)+
         earth.get_dragForce_vec(*this);
 
-    set_acceleration(F_total, mass);
+    set_acceleration(F_total);
 
-    double consum = engine->get_fuel_consumption();
-    tank->reduce_fuel_mass(consum);
-    if(tank->get_fuel_mass() <= 0) 
-        {
-            engine->set_fuel(false);
-            engine->run_engine(false);
-        };
+    // double consum = engine->get_fuel_consumption();
+    // tank->reduce_fuel_mass(consum);
+    // if(tank->get_fuel_mass() <= 0) 
+    //     {
+    //         engine->set_fuel(false);
+    //         engine->run_engine(false);
+    //     };
 
-    reduce_mass(consum);
+    // reduce_mass(consum);
     }
     
     set_velocity(pace);
@@ -56,13 +56,22 @@ void Stage ::launch_stage(Vector3D gravity_v,const Earth& earth , double pace ,d
 }
 
 
-void Stage::run_engine(bool command) const {
-     engine->run_engine(command);
+Vector3D Stage::run_engine(bool command) {
+     if(command==true) {
+        if(tank->get_fuel_mass()==0) return Vector3D {0,0,0};
+        tank->reduce_fuel_mass(engine->get_fuel_consumption());
+        reduce_mass(engine->get_fuel_consumption()); 
+        return engine->get_thrust_vec();
+    }
+        
+    else return Vector3D {0,0,0};
     };
    
-Vector3D Stage::get_thrust_force(){
-        return engine->get_thrust_force();
-}
+// Vector3D Stage::get_thrust_force(){
+//         if()
+//         run_engine(true);
+//         return engine->get_thrust_force();
+// }
 
 
 

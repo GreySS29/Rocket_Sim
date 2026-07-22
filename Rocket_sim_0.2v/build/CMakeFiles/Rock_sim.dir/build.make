@@ -72,19 +72,19 @@ include CMakeFiles/Rock_sim.dir/flags.make
 CMakeFiles/Rock_sim.dir/codegen:
 .PHONY : CMakeFiles/Rock_sim.dir/codegen
 
-CMakeFiles/Rock_sim.dir/main.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
-CMakeFiles/Rock_sim.dir/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp
-CMakeFiles/Rock_sim.dir/main.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_sim.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/main.cpp.o -MF CMakeFiles/Rock_sim.dir/main.cpp.o.d -o CMakeFiles/Rock_sim.dir/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp
+CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp
+CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o -MF CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o.d -o CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp
 
-CMakeFiles/Rock_sim.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp > CMakeFiles/Rock_sim.dir/main.cpp.i
+CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp > CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.i
 
-CMakeFiles/Rock_sim.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp -o CMakeFiles/Rock_sim.dir/main.cpp.s
+CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp -o CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.s
 
 CMakeFiles/Rock_sim.dir/src/stage.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
 CMakeFiles/Rock_sim.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp
@@ -116,14 +116,14 @@ CMakeFiles/Rock_sim.dir/src/rocket.cpp.s: cmake_force
 
 # Object files for target Rock_sim
 Rock_sim_OBJECTS = \
-"CMakeFiles/Rock_sim.dir/main.cpp.o" \
+"CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o" \
 "CMakeFiles/Rock_sim.dir/src/stage.cpp.o" \
 "CMakeFiles/Rock_sim.dir/src/rocket.cpp.o"
 
 # External object files for target Rock_sim
 Rock_sim_EXTERNAL_OBJECTS =
 
-Rock_sim: CMakeFiles/Rock_sim.dir/main.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/tests/test_stage_launch.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/src/stage.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/src/rocket.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/build.make
