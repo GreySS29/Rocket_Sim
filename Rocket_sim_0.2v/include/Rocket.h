@@ -34,7 +34,7 @@ class Rocket : public Physic_object {
 
     //setters
     void set_velocity(double pace) { velocity_+=acceleration_ * pace;}
-    //void set_acceleration(Vector3D& f_total) {acceleration_= f_total/this->get_mass();}; 
+    void set_acceleration(Vector3D& f_total) {acceleration_= f_total/get_mass();}; 
     // void set_acceleration() {
     //     if(booster_!=nullptr) {
     //         acceleration_=booster_->get_acceleration();
@@ -56,11 +56,7 @@ class Rocket : public Physic_object {
     }
     
     
-    void launch_booster (const Earth& earth, double pace){
-
-        // booster_->launch_stage(gravity_vec(*this,earth), earth , pace , mass ); // gravity_vec for all Rocket_mass
-        booster_ ->print_status_flight();
-    }
+    void launch_booster (const Earth& earth, double pace);
 
     std::unique_ptr<Stage> separate_booster(){
         std::unique_ptr<Stage> booster = std::move(booster_);
@@ -76,6 +72,7 @@ class Rocket : public Physic_object {
 
    static std::unique_ptr<Rocket> create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload& payload, Earth& earth);
    void print_status() const;
+   void print_status_flight() const;
 
 
    //command

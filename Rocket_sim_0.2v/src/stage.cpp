@@ -20,13 +20,14 @@
 void Stage ::launch_stage(const Earth& earth , double pace)
 {
      //std::cout << engine->get_thrust_force()<< "\n";
-     std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
-     std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
+     //std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
+     //std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
      //std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
 
-    if (tank->get_fuel_mass() ==0){
-        Vector3D F_total = gravity_vec(earth,*this) + earth.get_dragForce_vec(*this);
+    if (velocity <= Vector3D{0,0,0} && tank->get_fuel_mass()==0){ //falling
+        Vector3D F_total = gravity_vec(earth,*this) - earth.get_dragForce_vec(*this);
         set_acceleration(F_total);
+        std::cout << "F_total" << F_total << '\n';
         std::cout << "Falling!" << '\n';
     } else{
 
@@ -36,17 +37,10 @@ void Stage ::launch_stage(const Earth& earth , double pace)
         gravity_vec(earth,*this)+
         earth.get_dragForce_vec(*this);
 
+        std::cout << "F_total" << F_total << '\n';
+        
     set_acceleration(F_total);
 
-    // double consum = engine->get_fuel_consumption();
-    // tank->reduce_fuel_mass(consum);
-    // if(tank->get_fuel_mass() <= 0) 
-    //     {
-    //         engine->set_fuel(false);
-    //         engine->run_engine(false);
-    //     };
-
-    // reduce_mass(consum);
     }
     
     set_velocity(pace);
@@ -55,7 +49,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
 }
 
-
+//reduce tank and stage mass for 1 second 
 Vector3D Stage::run_engine(bool command) {
      if(command==true) {
         if(tank->get_fuel_mass()==0) return Vector3D {0,0,0};
@@ -67,19 +61,13 @@ Vector3D Stage::run_engine(bool command) {
     else return Vector3D {0,0,0};
     };
    
-// Vector3D Stage::get_thrust_force(){
-//         if()
-//         run_engine(true);
-//         return engine->get_thrust_force();
-// }
-
 
 
 void Stage::print_status_flight() const{
     std::cout << std::fixed << std::setprecision(2);
         std::cout << "Height: " << this->get_position_above_surface().y << " м( " << this->get_position_above_surface().y/1000.0 << " км)\n";
-        std::cout << "Velocity: " << this->get_velocity().magnitude() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
-        std::cout << "Acceleration: " << this->get_acceleration().magnitude() << " м/с \n";
+        std::cout << "Velocity: " << this->get_velocity() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
+        std::cout << "Acceleration: " << this->get_acceleration() << " м/с \n";
         std::cout << "Mass: " <<this->get_mass() << " кг\n";
         std::cout << "Fuel: " << tank->get_fuel_mass() << " кг\n";
         //std::cout << "Направление : "<<engine->get_thrust_direction() << '\n';

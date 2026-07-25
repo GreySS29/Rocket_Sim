@@ -29,18 +29,18 @@ int main() {
     
     rocket->print_status();
     
-     const int max_steps = 10;
+     const int max_steps = 120;
      const int PACE = 1;
      int last_step = 0;
 
     //1 stage 0-10 s , 
-    rocket->run_engine(true,1);
+    
      for(int step=0; step<=max_steps; ++step)
      {
         double t = step* PACE;
         std::cout << "Time : " << t << " s" << '\n';
-        rocket ->launch_booster(earth,t);
-        rocket ->update_condition(t);
+        rocket ->launch_booster(earth,PACE);
+        //rocket ->update_condition(t);
         
         last_step = t;
      }
@@ -49,6 +49,7 @@ int main() {
     
     rocket->print_status();
 
+    
     
     return 0;
 
