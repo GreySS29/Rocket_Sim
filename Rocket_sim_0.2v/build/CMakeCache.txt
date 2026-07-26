@@ -196,13 +196,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Rock_sim_BINARY_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build
+Rock_sim_BINARY_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests
 
 //Value Computed by CMake
-Rock_sim_IS_TOP_LEVEL:STATIC=ON
+Rock_sim_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Rock_sim_SOURCE_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v
+Rock_sim_SOURCE_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests
 
 
 ########################
@@ -302,7 +302,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

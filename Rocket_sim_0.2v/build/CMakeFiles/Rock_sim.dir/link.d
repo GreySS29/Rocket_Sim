@@ -3,8 +3,7 @@ Rock_sim: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   CMakeFiles/Rock_sim.dir/main.cpp.o \
-  CMakeFiles/Rock_sim.dir/src/stage.cpp.o \
-  CMakeFiles/Rock_sim.dir/src/rocket.cpp.o \
+  libRock_core.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
@@ -45,9 +44,7 @@ Rock_sim: \
 
 CMakeFiles/Rock_sim.dir/main.cpp.o:
 
-CMakeFiles/Rock_sim.dir/src/stage.cpp.o:
-
-CMakeFiles/Rock_sim.dir/src/rocket.cpp.o:
+libRock_core.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
 

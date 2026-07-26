@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -117,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Rock_core
+
+# Build rule for target.
+Rock_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rock_core
+.PHONY : Rock_core
+
+# fast build rule for target.
+Rock_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/build
+.PHONY : Rock_core/fast
+
+#=============================================================================
 # Target rules for targets named Rock_sim
 
 # Build rule for target.
@@ -128,6 +151,19 @@ Rock_sim: cmake_check_build_system
 Rock_sim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/build
 .PHONY : Rock_sim/fast
+
+#=============================================================================
+# Target rules for targets named Rock_sim_tests
+
+# Build rule for target.
+Rock_sim_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rock_sim_tests
+.PHONY : Rock_sim_tests
+
+# fast build rule for target.
+Rock_sim_tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Rock_sim_tests.dir/build.make tests/CMakeFiles/Rock_sim_tests.dir/build
+.PHONY : Rock_sim_tests/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -158,7 +194,7 @@ src/rocket.o: src/rocket.cpp.o
 
 # target to build an object file
 src/rocket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket.cpp.o
 .PHONY : src/rocket.cpp.o
 
 src/rocket.i: src/rocket.cpp.i
@@ -166,7 +202,7 @@ src/rocket.i: src/rocket.cpp.i
 
 # target to preprocess a source file
 src/rocket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket.cpp.i
 .PHONY : src/rocket.cpp.i
 
 src/rocket.s: src/rocket.cpp.s
@@ -174,7 +210,7 @@ src/rocket.s: src/rocket.cpp.s
 
 # target to generate assembly for a file
 src/rocket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/rocket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket.cpp.s
 .PHONY : src/rocket.cpp.s
 
 src/stage.o: src/stage.cpp.o
@@ -182,7 +218,7 @@ src/stage.o: src/stage.cpp.o
 
 # target to build an object file
 src/stage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/stage.cpp.o
 .PHONY : src/stage.cpp.o
 
 src/stage.i: src/stage.cpp.i
@@ -190,7 +226,7 @@ src/stage.i: src/stage.cpp.i
 
 # target to preprocess a source file
 src/stage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/stage.cpp.i
 .PHONY : src/stage.cpp.i
 
 src/stage.s: src/stage.cpp.s
@@ -198,7 +234,7 @@ src/stage.s: src/stage.cpp.s
 
 # target to generate assembly for a file
 src/stage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/stage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/stage.cpp.s
 .PHONY : src/stage.cpp.s
 
 # Help Target
@@ -209,7 +245,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... Rock_core"
 	@echo "... Rock_sim"
+	@echo "... Rock_sim_tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,7 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/cmake_install.cmake"
+		"/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/cmake_install.cmake",
+		"/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

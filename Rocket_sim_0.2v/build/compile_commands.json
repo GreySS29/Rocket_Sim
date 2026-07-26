@@ -1,20 +1,26 @@
 [
 {
   "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
+  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/stage.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/stage.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
+  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/rocket.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/rocket.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
   "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_sim.dir/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp",
   "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main.cpp",
   "output": "CMakeFiles/Rock_sim.dir/main.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/stage.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
-  "output": "CMakeFiles/Rock_sim.dir/src/stage.cpp.o"
-},
-{
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/rocket.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
-  "output": "CMakeFiles/Rock_sim.dir/src/rocket.cpp.o"
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests",
+  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -std=c++23 -o CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp",
+  "output": "tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o"
 }
 ]

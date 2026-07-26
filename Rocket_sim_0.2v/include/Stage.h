@@ -38,25 +38,27 @@ class Stage : public Physic_object {
     Vector3D get_acceleration() const {return acceleration;}
     // Vector3D get_thrust_force();
     double get_thrust() const {return engine->get_thrust();}
-    double get_fuel_mass() const { return tank -> get_fuel_mass();};
+    double get_fuel_mass() const { return tank -> get_fuel_mass();}
 
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
     void set_acceleration(Vector3D& f_total) {acceleration= f_total/get_mass();
-    }; 
+    }
+    void set_direction(double angle) {engine->set_thrust_direction(angle);}
     
     
 
 
     static std::unique_ptr<Stage> creat_stage(double position_h, Engine&, Tank&, Earth& earth);
     void launch_stage(const Earth&, double pace);  
-    Vector3D run_engine(bool command) ;
+    Vector3D run_engine(bool command);
     
 
 
     //print
     void print_status_flight() const;
     void print_status() const;
+    void print_status_flight_short() const;
    
 };

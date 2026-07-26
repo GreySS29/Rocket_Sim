@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/CMakeLists.txt"
   "CMakeFiles/4.4.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.4.0/CMakeSystem.cmake"
+  "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
@@ -43,9 +44,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/Rock_core.dir/DependInfo.cmake"
   "CMakeFiles/Rock_sim.dir/DependInfo.cmake"
+  "tests/CMakeFiles/Rock_sim_tests.dir/DependInfo.cmake"
   )

@@ -63,14 +63,25 @@ Vector3D Stage::run_engine(bool command) {
    
 
 
+void Stage::print_status_flight_short() const{
+     std::cout << std::fixed << std::setprecision(2);
+        std::cout << "H: " << this->get_position_above_surface().y << " m "  << '\t' <<
+        "V: " << this->get_velocity() << " m/s " <<  "||" <<
+        "A: " << this->get_acceleration() << " m/s2 "<< "||" <<
+        "D: "<<engine -> get_thrust_direction() << '\n'<<
+        "M: " <<this->get_mass() << " kg" << "||" <<
+        "F: " << get_fuel_mass() << " kg\n";
+        std::cout << "=========================\n";
+}
+
 void Stage::print_status_flight() const{
-    std::cout << std::fixed << std::setprecision(2);
-        std::cout << "Height: " << this->get_position_above_surface().y << " м( " << this->get_position_above_surface().y/1000.0 << " км)\n";
-        std::cout << "Velocity: " << this->get_velocity() << " м/с (" <<  this->get_velocity().magnitude()*3.6 << " км/ч)\n";
-        std::cout << "Acceleration: " << this->get_acceleration() << " м/с \n";
-        std::cout << "Mass: " <<this->get_mass() << " кг\n";
-        std::cout << "Fuel: " << tank->get_fuel_mass() << " кг\n";
-        //std::cout << "Направление : "<<engine->get_thrust_direction() << '\n';
+     std::cout << std::fixed << std::setprecision(2);
+        std::cout << "H: " << this->get_position_above_surface().y << " m( " << this->get_position_above_surface().y/1000.0 << " km)" << '\t' <<
+        "V: " << this->get_velocity().magnitude() << " m/s (" <<  this->get_velocity().magnitude()*3.6 << " km/h)" << "||" <<
+        "A: " << this->get_acceleration().magnitude() << " m/s2 "<< '\t' <<
+        "M: " <<this->get_mass() << " kg" << "||" <<
+        "F: " << get_fuel_mass() << " kg\n"
+        << "Направление : "<<engine -> get_thrust_direction() << '\n';
         std::cout << "=========================\n";
 }
 

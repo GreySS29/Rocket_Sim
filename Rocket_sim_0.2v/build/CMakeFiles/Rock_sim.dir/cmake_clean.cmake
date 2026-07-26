@@ -2,10 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Rock_sim.dir/link.d"
   "CMakeFiles/Rock_sim.dir/main.cpp.o"
   "CMakeFiles/Rock_sim.dir/main.cpp.o.d"
-  "CMakeFiles/Rock_sim.dir/src/rocket.cpp.o"
-  "CMakeFiles/Rock_sim.dir/src/rocket.cpp.o.d"
-  "CMakeFiles/Rock_sim.dir/src/stage.cpp.o"
-  "CMakeFiles/Rock_sim.dir/src/stage.cpp.o.d"
   "Rock_sim"
   "Rock_sim.pdb"
 )
