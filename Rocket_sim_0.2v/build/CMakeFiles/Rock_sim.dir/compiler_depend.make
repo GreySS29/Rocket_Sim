@@ -310,6 +310,7 @@ Rock_sim: /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
   /usr/lib/crtn.o \
   /usr/lib/libc.so \
+  /usr/lib/libdl.a \
   /usr/lib/libgcc_s.so.1 \
   /usr/lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
@@ -320,21 +321,54 @@ Rock_sim: /usr/lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libgcc_s.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so \
   /usr/lib/ld-linux-x86-64.so.2 \
+  /usr/lib/libGLX.so \
+  /usr/lib/libGLdispatch.so.0 \
+  /usr/lib/libOpenGL.so \
+  /usr/lib/libX11.so.6 \
+  /usr/lib/libXau.so.6 \
+  /usr/lib/libXdmcp.so.6 \
   /usr/lib/libc.so.6 \
   /usr/lib/libc_nonshared.a \
   /usr/lib/libm.so.6 \
   /usr/lib/libmvec.so.1 \
+  /usr/lib/librt.a \
+  /usr/lib/libxcb.so.1 \
+  /usr/lib32/libGLdispatch.so.0 \
+  /usr/lib32/libX11.so.6 \
+  /usr/lib32/libXau.so.6 \
+  /usr/lib32/libXdmcp.so.6 \
+  /usr/lib32/libxcb.so.1 \
   CMakeFiles/Rock_sim.dir/main.cpp.o \
-  libRock_core.a
+  glfw-build/src/libglfw3.a \
+  libRock_core.a \
+  libglad.a
 
+
+glfw-build/src/libglfw3.a:
+
+/usr/lib32/libxcb.so.1:
 
 libRock_core.a:
+
+/usr/lib32/libX11.so.6:
+
+/usr/lib32/libGLdispatch.so.0:
+
+/usr/lib/librt.a:
 
 /usr/lib/libmvec.so.1:
 
 /usr/lib/libm.so.6:
 
 /usr/lib/libc_nonshared.a:
+
+/usr/lib/libXdmcp.so.6:
+
+/usr/lib/libXau.so.6:
+
+/usr/lib/libX11.so.6:
+
+/usr/lib/libOpenGL.so:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
@@ -421,6 +455,8 @@ libRock_core.a:
 /usr/include/c++/16/bits/exception.h:
 
 /usr/include/c++/16/bits/out_ptr.h:
+
+/usr/lib/libGLX.so:
 
 /usr/include/bits/types/struct_sched_param.h:
 
@@ -548,6 +584,8 @@ libRock_core.a:
 
 /usr/include/c++/16/bits/locale_facets_nonio.tcc:
 
+/usr/lib/libdl.a:
+
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/c++/16/bits/allocated_ptr.h:
@@ -585,6 +623,8 @@ libRock_core.a:
 /usr/include/bits/fp-logb.h:
 
 /usr/include/c++/16/bits/cxxabi_init_exception.h:
+
+/usr/lib32/libXdmcp.so.6:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket.h:
 
@@ -732,6 +772,8 @@ libRock_core.a:
 
 /usr/include/c++/16/bits/invoke.h:
 
+libglad.a:
+
 /usr/include/c++/16/cctype:
 
 /usr/include/c++/16/bits/iterator_concepts.h:
@@ -784,11 +826,15 @@ libRock_core.a:
 
 /usr/include/c++/16/bits/postypes.h:
 
+/usr/lib32/libXau.so.6:
+
 /usr/include/c++/16/bits/range_access.h:
 
 /usr/include/sys/types.h:
 
 /usr/include/c++/16/bits/ranges_algobase.h:
+
+/usr/lib/libGLdispatch.so.0:
 
 /usr/include/c++/16/bits/ranges_base.h:
 
@@ -847,6 +893,8 @@ libRock_core.a:
 /usr/include/c++/16/bits/stl_pair.h:
 
 /usr/include/c++/16/bits/streambuf_iterator.h:
+
+/usr/lib/libxcb.so.1:
 
 /usr/include/bits/endian.h:
 

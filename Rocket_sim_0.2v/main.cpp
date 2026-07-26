@@ -12,13 +12,13 @@ int main() {
     Earth earth;
 
     //booster
-    Engine engine {earth.surfacePoint(5.0),5000.0,1200000.0, 547.0};
-    Tank tank {earth.surfacePoint(10.0), 5000.0,40000.0};
+    Engine engine {earth.surfacePoint(5.0),5000.0,1300000.0, 547.0};
+    Tank tank {earth.surfacePoint(10.0), 5000.0,45000.0};
     std::unique_ptr booster = Stage::creat_stage(5.0,engine, tank, earth);
 
     //upper_stage
-    Engine engine_up {earth.surfacePoint(15.0),3000.0,300000.0, 200.0};
-    Tank tank_up {earth.surfacePoint(20.0), 1000.0,11000.0};
+    Engine engine_up {earth.surfacePoint(15.0),2000.0,400000.0, 200.0};
+    Tank tank_up {earth.surfacePoint(20.0), 1000.0,12000.0};
     std::unique_ptr upper_stage = Stage::creat_stage(15.0,engine_up, tank_up, earth);
     
     
@@ -29,25 +29,41 @@ int main() {
     
     rocket->print_status();
     
-     const int max_steps = 120;
+     const int max_steps = 140;
+     const int separation_time = 72;
      const int PACE = 1;
      int last_step = 0;
 
     //1 stage 0-10 s , 
     
-     for(int step=0; step<=max_steps; ++step)
+     for(int step=0; step<=separation_time; ++step)
      {
+        
+
         double t = step* PACE;
         std::cout << "Time : " << t << " s" << '\n';
         rocket ->launch_booster(earth,PACE);
-        //rocket ->update_condition(t);
+        
         
         last_step = t;
      }
     std::cout << "time of separate Booster : " << last_step << '\n';
     std::unique_ptr<Stage> booster_single =rocket->separate_booster();  
-    
     rocket->print_status();
+
+     for(int step=last_step; step<=max_steps; ++step)
+     {
+        
+
+        double t = step* PACE;
+        std::cout << "Time : " << t << " s" << '\n';
+        rocket ->run_upper_stage(earth,PACE);
+        
+        
+        last_step = t;
+     }
+
+    rocket->print_status(); 
 
     
     

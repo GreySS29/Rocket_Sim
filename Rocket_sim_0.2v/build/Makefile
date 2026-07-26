@@ -95,6 +95,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build//CMakeFiles/progress.marks
@@ -127,6 +172,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named glad
+
+# Build rule for target.
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
+
+# fast build rule for target.
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
+.PHONY : glad/fast
+
+#=============================================================================
 # Target rules for targets named Rock_core
 
 # Build rule for target.
@@ -153,6 +211,45 @@ Rock_sim/fast:
 .PHONY : Rock_sim/fast
 
 #=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f glfw-build/CMakeFiles/uninstall.dir/build.make glfw-build/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) $(MAKESILENT) -f glfw-build/src/CMakeFiles/glfw.dir/build.make glfw-build/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named update_mappings
+
+# Build rule for target.
+update_mappings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
+.PHONY : update_mappings
+
+# fast build rule for target.
+update_mappings/fast:
+	$(MAKE) $(MAKESILENT) -f glfw-build/src/CMakeFiles/update_mappings.dir/build.make glfw-build/src/CMakeFiles/update_mappings.dir/build
+.PHONY : update_mappings/fast
+
+#=============================================================================
 # Target rules for targets named Rock_sim_tests
 
 # Build rule for target.
@@ -164,6 +261,30 @@ Rock_sim_tests: cmake_check_build_system
 Rock_sim_tests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Rock_sim_tests.dir/build.make tests/CMakeFiles/Rock_sim_tests.dir/build
 .PHONY : Rock_sim_tests/fast
+
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.o: home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.o
+
+# target to build an object file
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o
+
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.i: home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.i
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.i
+
+# target to preprocess a source file
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.i
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.i
+
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.s: home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.s
+
+# target to generate assembly for a file
+home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
+.PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -244,11 +365,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... uninstall"
+	@echo "... update_mappings"
 	@echo "... Rock_core"
 	@echo "... Rock_sim"
 	@echo "... Rock_sim_tests"
+	@echo "... glad"
+	@echo "... glfw"
+	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
+	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
+	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

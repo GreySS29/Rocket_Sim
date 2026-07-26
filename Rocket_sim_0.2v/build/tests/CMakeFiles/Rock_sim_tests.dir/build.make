@@ -97,6 +97,12 @@ tests/Rock_sim_tests: tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.
 tests/Rock_sim_tests: tests/CMakeFiles/Rock_sim_tests.dir/build.make
 tests/Rock_sim_tests: tests/CMakeFiles/Rock_sim_tests.dir/compiler_depend.ts
 tests/Rock_sim_tests: libRock_core.a
+tests/Rock_sim_tests: libglad.a
+tests/Rock_sim_tests: glfw-build/src/libglfw3.a
+tests/Rock_sim_tests: /usr/lib/librt.a
+tests/Rock_sim_tests: /usr/lib/libm.so
+tests/Rock_sim_tests: /usr/lib/libGLX.so
+tests/Rock_sim_tests: /usr/lib/libOpenGL.so
 tests/Rock_sim_tests: tests/CMakeFiles/Rock_sim_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Rock_sim_tests"
 	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rock_sim_tests.dir/link.txt --verbose=$(VERBOSE)

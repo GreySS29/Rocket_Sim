@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include
+CXX_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include
 
 CXX_FLAGS = -std=c++23
 

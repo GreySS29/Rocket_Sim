@@ -36,9 +36,9 @@ class Stage : public Physic_object {
     //getters
     Vector3D get_velocity() const {return velocity;};
     Vector3D get_acceleration() const {return acceleration;}
-    // Vector3D get_thrust_force();
     double get_thrust() const {return engine->get_thrust();}
     double get_fuel_mass() const { return tank -> get_fuel_mass();}
+    Vector3D get_thrust_direction() const {return engine->get_thrust_direction();}
 
 
     //setters
