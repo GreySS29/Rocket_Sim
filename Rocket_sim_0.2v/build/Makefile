@@ -286,29 +286,29 @@ home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 .PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+main_new.o: main_new.cpp.o
+.PHONY : main_new.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.o
-.PHONY : main.cpp.o
+main_new.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.o
+.PHONY : main_new.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+main_new.i: main_new.cpp.i
+.PHONY : main_new.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.i
-.PHONY : main.cpp.i
+main_new.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.i
+.PHONY : main_new.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+main_new.s: main_new.cpp.s
+.PHONY : main_new.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main.cpp.s
-.PHONY : main.cpp.s
+main_new.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.s
+.PHONY : main_new.cpp.s
 
 src/rocket.o: src/rocket.cpp.o
 .PHONY : src/rocket.o
@@ -381,9 +381,9 @@ help:
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main_new.o"
+	@echo "... main_new.i"
+	@echo "... main_new.s"
 	@echo "... src/rocket.o"
 	@echo "... src/rocket.i"
 	@echo "... src/rocket.s"

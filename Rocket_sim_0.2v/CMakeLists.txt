@@ -37,7 +37,7 @@ target_link_libraries(Rock_core PUBLIC
     OpenGL::GL
 )
 
-add_executable(Rock_sim main.cpp)
+add_executable(Rock_sim main_new.cpp)
 
 target_link_libraries(Rock_sim PRIVATE
     Rock_core

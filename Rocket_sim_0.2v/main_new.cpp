@@ -22,7 +22,7 @@ int main() {
     std::unique_ptr upper_stage = Stage::creat_stage(15.0,engine_up, tank_up, earth);
     
     
-    Payload payload {earth.surfacePoint(25.0),10000, 0.3, 10,{0,300,0}};
+    Payload payload {earth.surfacePoint(25.0),5000, 0.3, 10,{0,300,0}};
 
     std::unique_ptr rocket = Rocket::create_rocket(std::move(booster),std::move(upper_stage),payload,earth);
 
@@ -39,17 +39,17 @@ int main() {
      for(int step=0; step<=separation_time; ++step)
      {
         
-         if(step >10) rocket->set_direction(100.0-step,1);
+        //  if(step >10) rocket->set_direction(100.0-step,1);
         double t = step* PACE;
         std::cout << "Time : " << t << " s" << '\n';
-        rocket ->launch_booster(earth,PACE);
+        rocket ->run(earth,PACE);
         
         
         last_step = t;
      }
     std::cout << "time of separate Booster : " << last_step << '\n';
     std::unique_ptr<Stage> booster_single =rocket->separate_booster();  
-    rocket->set_direction(30.0,2); // for upper_stage
+    // rocket->set_direction(30.0,2); // for upper_stage
     rocket->print_status();
 
 
@@ -59,7 +59,7 @@ int main() {
 
         double t = step* PACE;
         std::cout << "Time : " << t << " s" << '\n';
-        rocket ->run_upper_stage(earth,PACE);
+        rocket ->run(earth,PACE);
         
         
         last_step = t;

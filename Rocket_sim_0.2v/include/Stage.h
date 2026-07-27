@@ -34,7 +34,7 @@ class Stage : public Physic_object {
     
 
     //getters
-    Vector3D get_velocity() const {return velocity;};
+    Vector3D get_velocity() const {return velocity;}
     Vector3D get_acceleration() const {return acceleration;}
     double get_thrust() const {return engine->get_thrust();}
     double get_fuel_mass() const { return tank -> get_fuel_mass();}
@@ -47,6 +47,10 @@ class Stage : public Physic_object {
     }
     void set_direction(double angle) {engine->set_thrust_direction(angle);}
     
+    void move_parameters (const Stage& booster){
+        velocity = booster.get_velocity();
+        position = booster.get_position();
+    }
     
 
 

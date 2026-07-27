@@ -32,6 +32,7 @@ public:
     //setters
     void reduce_mass(double amount) {mass-=amount;}
     void update_position(Vector3D& velocity , double pace) {position+=velocity*pace;}
+    void set_position(Vector3D& pos) {position=pos;}
 };
 
 

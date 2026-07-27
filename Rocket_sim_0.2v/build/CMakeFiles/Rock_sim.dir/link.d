@@ -2,7 +2,7 @@ Rock_sim: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
-  CMakeFiles/Rock_sim.dir/main.cpp.o \
+  CMakeFiles/Rock_sim.dir/main_new.cpp.o \
   libRock_core.a \
   libglad.a \
   glfw-build/src/libglfw3.a \
@@ -58,7 +58,7 @@ Rock_sim: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o:
 
-CMakeFiles/Rock_sim.dir/main.cpp.o:
+CMakeFiles/Rock_sim.dir/main_new.cpp.o:
 
 libRock_core.a:
 

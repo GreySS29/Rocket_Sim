@@ -25,7 +25,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
      //std::cout <<"Gravity_Rocket :" << gravity_v << '\n';
 
     if (velocity <= Vector3D{0,0,0} && tank->get_fuel_mass()==0){ //falling
-        Vector3D F_total = gravity_vec(earth,*this) - earth.get_dragForce_vec(*this);
+        Vector3D F_total = gravity_vec(earth,*this) - earth.get_dragForce_vec(this);
         set_acceleration(F_total);
         std::cout << "F_total" << F_total << '\n';
         std::cout << "Falling!" << '\n';
@@ -35,7 +35,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
     Vector3D F_total = 
         run_engine(true)+ // reduce tank fluel_mass and mass_stage
         gravity_vec(earth,*this)+
-        earth.get_dragForce_vec(*this);
+        earth.get_dragForce_vec(this);
 
         std::cout << "F_total" << F_total << '\n';
         
