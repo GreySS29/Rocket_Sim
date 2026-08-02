@@ -25,6 +25,8 @@ target_include_directories(glad PUBLIC
 add_library(Rock_core STATIC
     src/stage.cpp
     src/rocket.cpp
+    src/fabric.cpp
+    src/launch_bay.cpp
 )
 
 target_include_directories(Rock_core PUBLIC
@@ -37,7 +39,7 @@ target_link_libraries(Rock_core PUBLIC
     OpenGL::GL
 )
 
-add_executable(Rock_sim main_new.cpp)
+add_executable(Rock_sim src/main.cpp)
 
 target_link_libraries(Rock_sim PRIVATE
     Rock_core

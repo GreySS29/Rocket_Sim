@@ -1,16 +1,15 @@
 #include "iostream"
 #include "../include/Gravity_temp.h"
 #include "../include/Earth.h"
-#include "../include/Tank.h"
-#include "../include/Engine.h"
-#include "../include/Stage.h"
-#include "../include/Payload.h"
+
+#include "../include/Rocket_components/Stage.h"
+
 
 void test_stage_vertical () {
     Earth earth;  
     Engine engine {earth.surfacePoint(5.0),10000.0,1500000.0, 547.0};
     Tank tank {earth.surfacePoint(10.0), 5000.0,40000.0};
-    std::unique_ptr stage = Stage::creat_stage(10.0,engine, tank, earth);
+    std::unique_ptr stage = Stage::creat_stage(10.0,0.3,10,engine, tank, earth);
     
   
 
@@ -56,7 +55,7 @@ void test_stage_orbital()
     Earth earth;  
     Engine engine {earth.surfacePoint(5.0),10000.0,1500000.0, 547.0};
     Tank tank {earth.surfacePoint(10.0), 5000.0,40000.0};
-    std::unique_ptr stage = Stage::creat_stage(10.0,engine, tank, earth);
+    std::unique_ptr stage = Stage::creat_stage(10.0,0.3,10.0,engine, tank, earth);
     
   
 

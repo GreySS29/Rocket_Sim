@@ -1,12 +1,13 @@
 #pragma once 
-#include "Physic_object.h"
+#include "../Physic_object.h"
 #include "Engine.h"
-#include "Tank.h"
-#include "Earth.h"
-#include "Templates.h"
-#include <memory>
-#include "Gravity_temp.h"
 #include "Payload.h"
+#include "Tank.h"
+#include "../Earth.h"
+#include "../Gravity_temp.h"
+
+#include <memory>
+
 
 
 
@@ -43,18 +44,19 @@ class Stage : public Physic_object {
 
     //setters
     void set_velocity(double pace) { velocity+=acceleration * pace;}
-    void set_acceleration(Vector3D& f_total) {acceleration= f_total/get_mass();
+    void set_acceleration(Vector3D& f_total, double mass) {acceleration= f_total/mass;
     }
     void set_direction(double angle) {engine->set_thrust_direction(angle);}
     
     void move_parameters (const Stage& booster){
         velocity = booster.get_velocity();
         position = booster.get_position();
+
     }
     
 
 
-    static std::unique_ptr<Stage> creat_stage(double position_h, Engine&, Tank&, Earth& earth);
+    static std::unique_ptr<Stage> creat_stage(double position_h,double c_d , double area, Engine&, Tank&, const Earth& earth);
     void launch_stage(const Earth&, double pace);  
     Vector3D run_engine(bool command);
     

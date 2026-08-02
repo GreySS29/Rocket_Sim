@@ -72,28 +72,28 @@ include CMakeFiles/Rock_sim.dir/flags.make
 CMakeFiles/Rock_sim.dir/codegen:
 .PHONY : CMakeFiles/Rock_sim.dir/codegen
 
-CMakeFiles/Rock_sim.dir/main_new.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
-CMakeFiles/Rock_sim.dir/main_new.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main_new.cpp
-CMakeFiles/Rock_sim.dir/main_new.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_sim.dir/main_new.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/main_new.cpp.o -MF CMakeFiles/Rock_sim.dir/main_new.cpp.o.d -o CMakeFiles/Rock_sim.dir/main_new.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main_new.cpp
+CMakeFiles/Rock_sim.dir/src/main.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp
+CMakeFiles/Rock_sim.dir/src/main.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_sim.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/src/main.cpp.o -MF CMakeFiles/Rock_sim.dir/src/main.cpp.o.d -o CMakeFiles/Rock_sim.dir/src/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp
 
-CMakeFiles/Rock_sim.dir/main_new.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/main_new.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main_new.cpp > CMakeFiles/Rock_sim.dir/main_new.cpp.i
+CMakeFiles/Rock_sim.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp > CMakeFiles/Rock_sim.dir/src/main.cpp.i
 
-CMakeFiles/Rock_sim.dir/main_new.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/main_new.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/main_new.cpp -o CMakeFiles/Rock_sim.dir/main_new.cpp.s
+CMakeFiles/Rock_sim.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp -o CMakeFiles/Rock_sim.dir/src/main.cpp.s
 
 # Object files for target Rock_sim
 Rock_sim_OBJECTS = \
-"CMakeFiles/Rock_sim.dir/main_new.cpp.o"
+"CMakeFiles/Rock_sim.dir/src/main.cpp.o"
 
 # External object files for target Rock_sim
 Rock_sim_EXTERNAL_OBJECTS =
 
-Rock_sim: CMakeFiles/Rock_sim.dir/main_new.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/src/main.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/build.make
 Rock_sim: CMakeFiles/Rock_sim.dir/compiler_depend.ts
 Rock_sim: libRock_core.a

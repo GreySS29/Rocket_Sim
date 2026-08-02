@@ -1,5 +1,5 @@
 #pragma once
-#include "Physic_object.h"
+#include "../Physic_object.h"
 
 class Tank : public Physic_object
 {

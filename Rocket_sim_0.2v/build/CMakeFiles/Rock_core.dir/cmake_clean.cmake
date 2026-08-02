@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Rock_core.dir/src/fabric.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/fabric.cpp.o.d"
+  "CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/rocket.cpp.o"
   "CMakeFiles/Rock_core.dir/src/rocket.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/stage.cpp.o"

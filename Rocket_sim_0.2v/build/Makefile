@@ -286,29 +286,77 @@ home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 .PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 
-main_new.o: main_new.cpp.o
-.PHONY : main_new.o
+src/fabric.o: src/fabric.cpp.o
+.PHONY : src/fabric.o
 
 # target to build an object file
-main_new.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.o
-.PHONY : main_new.cpp.o
+src/fabric.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/fabric.cpp.o
+.PHONY : src/fabric.cpp.o
 
-main_new.i: main_new.cpp.i
-.PHONY : main_new.i
+src/fabric.i: src/fabric.cpp.i
+.PHONY : src/fabric.i
 
 # target to preprocess a source file
-main_new.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.i
-.PHONY : main_new.cpp.i
+src/fabric.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/fabric.cpp.i
+.PHONY : src/fabric.cpp.i
 
-main_new.s: main_new.cpp.s
-.PHONY : main_new.s
+src/fabric.s: src/fabric.cpp.s
+.PHONY : src/fabric.s
 
 # target to generate assembly for a file
-main_new.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/main_new.cpp.s
-.PHONY : main_new.cpp.s
+src/fabric.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/fabric.cpp.s
+.PHONY : src/fabric.cpp.s
+
+src/launch_bay.o: src/launch_bay.cpp.o
+.PHONY : src/launch_bay.o
+
+# target to build an object file
+src/launch_bay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o
+.PHONY : src/launch_bay.cpp.o
+
+src/launch_bay.i: src/launch_bay.cpp.i
+.PHONY : src/launch_bay.i
+
+# target to preprocess a source file
+src/launch_bay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/launch_bay.cpp.i
+.PHONY : src/launch_bay.cpp.i
+
+src/launch_bay.s: src/launch_bay.cpp.s
+.PHONY : src/launch_bay.s
+
+# target to generate assembly for a file
+src/launch_bay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/launch_bay.cpp.s
+.PHONY : src/launch_bay.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/rocket.o: src/rocket.cpp.o
 .PHONY : src/rocket.o
@@ -381,9 +429,15 @@ help:
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
-	@echo "... main_new.o"
-	@echo "... main_new.i"
-	@echo "... main_new.s"
+	@echo "... src/fabric.o"
+	@echo "... src/fabric.i"
+	@echo "... src/fabric.s"
+	@echo "... src/launch_bay.o"
+	@echo "... src/launch_bay.i"
+	@echo "... src/launch_bay.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/rocket.o"
 	@echo "... src/rocket.i"
 	@echo "... src/rocket.s"

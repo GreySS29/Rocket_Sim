@@ -1,14 +1,14 @@
-#include "../include/Stage.h"
+#include "../include/Rocket_components/Stage.h"
 #include <iomanip>
 
 
 
- std::unique_ptr<Stage> Stage::creat_stage(double position_h, Engine& eng, Tank& t , Earth& earth)
+ std::unique_ptr<Stage> Stage::creat_stage(double position_h, double c_d , double area, Engine& eng, Tank& t , const Earth& earth)
  {
     std::unique_ptr<Stage> stage = std::make_unique<Stage> (
         earth.surfacePoint(position_h),
-        0.3,
-        10.0,
+        c_d, 
+        area,
         std::make_unique<Engine>(eng),
         std::make_unique<Tank>(t)
     );
@@ -26,7 +26,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
     if (velocity <= Vector3D{0,0,0} && tank->get_fuel_mass()==0){ //falling
         Vector3D F_total = gravity_vec(earth,*this) - earth.get_dragForce_vec(this);
-        set_acceleration(F_total);
+        set_acceleration(F_total,get_mass());
         std::cout << "F_total" << F_total << '\n';
         std::cout << "Falling!" << '\n';
     } else{
@@ -39,7 +39,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
         std::cout << "F_total" << F_total << '\n';
         
-    set_acceleration(F_total);
+    set_acceleration(F_total, get_mass());
 
     }
     

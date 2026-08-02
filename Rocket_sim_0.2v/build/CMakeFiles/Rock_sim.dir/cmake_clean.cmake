@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Rock_sim.dir/link.d"
-  "CMakeFiles/Rock_sim.dir/main_new.cpp.o"
-  "CMakeFiles/Rock_sim.dir/main_new.cpp.o.d"
+  "CMakeFiles/Rock_sim.dir/src/main.cpp.o"
+  "CMakeFiles/Rock_sim.dir/src/main.cpp.o.d"
   "Rock_sim"
   "Rock_sim.pdb"
 )

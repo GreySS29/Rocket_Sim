@@ -13,17 +13,17 @@ private:
 protected:
     Vector3D position;
     double mass; //kg 
-    const double C_D; //Коэффициент сопротивления
-    const double AREA ; //  m2  upper surface
-    Physic_object(Vector3D pos, double m, double c_d = 0, double area = 0) : position(pos), mass(m) , C_D(c_d) , AREA (area) {};
+    const double c_d; //Коэффициент сопротивления
+    const double area ; //  m2  upper surface
+    Physic_object(Vector3D pos, double m, double cd = 0, double ar = 0) : position(pos), mass(m) , c_d(cd) , area (ar) {};
     virtual ~Physic_object() = default;
 
 public:
 
     //getters
     double get_mass() const { return mass; }
-    double get_AREA() const {return AREA;}
-    double get_C_D() const {return C_D;}
+    double get_AREA() const {return area;}
+    double get_C_D() const {return c_d;}
     Vector3D get_position() const { return position ; } 
     Vector3D get_position_above_surface() const { return (position-Vector3D {0,RADIUS_E,0}); }
     

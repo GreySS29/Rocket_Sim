@@ -1,5 +1,5 @@
 #pragma once
-#include "Physic_object.h"
+#include "../Physic_object.h"
 
 class Payload : public Physic_object {
     private:
@@ -7,9 +7,9 @@ class Payload : public Physic_object {
 
 
     public:
-    Payload(Vector3D pos, double mas, double c_d, double area,  Vector3D vel): Physic_object {pos,mas,c_d,area} 
+    Payload(Vector3D pos, double mas, double c_d, double area): Physic_object {pos,mas,c_d,area} 
     {
-        velocity = Vector3D(vel);
+        velocity = Vector3D{0,0,0};
     };
 
     

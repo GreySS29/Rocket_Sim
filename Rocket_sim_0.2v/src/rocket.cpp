@@ -1,9 +1,9 @@
 #include "../include/Rocket.h"
-#include <iomanip>
+
 using std::cout;
 
 
-std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload& payload, Earth& earth)
+std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload, const Earth& earth)
 {
     std::unique_ptr<Rocket> rocket = std::make_unique<Rocket> (
         std::move(booster),
@@ -24,50 +24,19 @@ void Rocket::run(const Earth& earth , double pace)
         
         earth.get_dragForce_vec(active());
          
-         //std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
-         //std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
+        //  std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
+        //  std::cout <<"drag_vec" << earth.get_dragForce_vec(active())<< "\n";
 
-        //std::cout << "F_total" << F_total << '\n';
-        print_status_flight_short();
+        // std::cout << "F_total" << F_total << '\n';
+       // print_status_flight_short();
         
-    active()->set_acceleration(F_total);
+    active()->set_acceleration(F_total, get_mass());
 
     active()->set_velocity(pace);
     Vector3D vel = active()->get_velocity();
     active()->update_position(vel, pace);
   
 }
-
-// void Rocket::run_upper_stage(const Earth& earth , double pace)
-// {
-//     // std::cout << "Direction" << upper_stage_->get_thrust_direction()<< '\n';
-//     // if (get_position_above_surface().y > 55000.0) upper_stage_->set_direction(25.0);
-//     // else if (get_position_above_surface().y > 35000.0) 
-//     // {
-//     //     double angle  = 100 - get_position_above_surface().y/1000;
-//     //     upper_stage_->set_direction(angle);
-//     //     std::cout << "angle: "<< angle << '\n'; 
-//     // }
-//     Vector3D F_total = 
-//         upper_stage_->run_engine(true)+ // vector thrust_vorce (reduce tank fluel_mass and mass_stage)
-//         gravity_vec(earth,*this)+
-//         earth.get_dragForce_vec(*this);
-//          std::cout <<"Thrust:" << upper_stage_->get_thrust() << '\n';
-//          std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
-//          std::cout <<"drag_vec" << earth.get_dragForce_vec(*this)<< "\n";
-
-//         std::cout << "F_total" << F_total << '\n';
-        
-        
-//     set_acceleration(F_total);
-
-//     set_velocity(pace);
-   
-//     update_position(velocity_, pace);
-    
-//     update_mass();
-//     print_status_flight_short();
-// }
 
 
 
@@ -114,3 +83,22 @@ void Rocket::print_status_flight_short() const{
         //"F: " << booster_ ->get_fuel_mass() << " kg\n";
         std::cout << "=========================\n";
 }
+
+void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
+        ofs << std::fixed << std::setprecision(2);
+        ofs << "Time : " << time <<  "  |" <<
+        "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "V: " << active()->get_velocity().magnitude() << " m/s " <<  "/" <<
+        active()->get_velocity()<< "||"
+        "A: " << active()->get_acceleration().magnitude() << " m/s2 "<< "/" <<
+        active()->get_acceleration() << "||" <<
+        "D: "<< active()->get_thrust_direction() << '\n'<<
+        "M: " <<get_mass() << " kg" << "||"  <<
+        "F: " << active() ->get_fuel_mass() << " kg\n" <<
+        "=========================\n";
+}
+
+// std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket){
+//     ofs << rocket.print_status_flight_short();
+
+// }
