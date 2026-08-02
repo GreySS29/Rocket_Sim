@@ -218,4 +218,7 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: \
  /usr/include/c++/16/bits/sstream.tcc /usr/include/c++/16/fstream \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/16/bits/fstream.tcc
+ /usr/include/c++/16/bits/fstream.tcc /usr/include/c++/16/vector \
+ /usr/include/c++/16/bits/stl_vector.h \
+ /usr/include/c++/16/bits/stl_bvector.h \
+ /usr/include/c++/16/bits/vector.tcc

@@ -103,9 +103,13 @@ void test_stage_orbital()
     stage ->print_status_flight();
     stage->print_status_flight();
 }
+
+
 int main() {
     
     test_stage_orbital();
+
+    
     return 0;
 
 } 

@@ -2,6 +2,7 @@
 #include "Rocket_components/Stage.h"
 #include <iomanip>
 #include <fstream>
+#include <vector>
 
 class Rocket  {
     private:
@@ -34,7 +35,7 @@ class Rocket  {
     Vector3D get_velocity() const {return active()->get_velocity();};
     Vector3D get_acceleration() const {return  active()->get_acceleration();}
     Vector3D get_position() const {return active()->get_position();}
-
+    Vector3D get_position_above_face() const {return active()->get_position_above_surface();}
     
     void run (const Earth& earth, double pace);
  
@@ -54,6 +55,10 @@ class Rocket  {
    void print_status_flight() const;
    void print_status_flight_short() const;
    void print_status_flight_short(std::ofstream& ofs, int time) const;
+
+
+   //for render
+   
 
 //    friend std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket);
 

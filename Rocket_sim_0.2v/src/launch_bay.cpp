@@ -1,8 +1,10 @@
 #include "../include/Launch_bay.h"
 
-void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket)
+void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , RocketRender& roc_render)
 {
-    
+
+   
+
 
    std::ofstream ofs("../Log/log.txt");
 
@@ -27,13 +29,12 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket)
         
         rocket ->run(earth,PACE);
         rocket ->print_status_flight_short(ofs, step);
-        if(step % 20 == 0) {
-         std::cout << "Time : " << t << " s" << '\n';
-         rocket->print_status_flight_short();
-        }
+      //   if(step % 20 == 0) {
+      //    std::cout << "Time : " << t << " s" << '\n';
+      //    rocket->print_status_flight_short();
+      //   }
         
-        
-        
+        roc_render.add_trajectory(rocket->get_position().x, rocket->get_position_above_face().y);
         last_step = t;
      }
     std::cout << "time of separate Booster : " << last_step << '\n';
@@ -50,18 +51,19 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket)
         
         rocket ->run(earth,PACE);
         rocket ->print_status_flight_short(ofs,step);
-        if(step % 40 == 0) 
-        {
-         std::cout << "Time : " << t << " s" << '\n';
-         rocket->print_status_flight_short();
-        }
+      //   if(step % 40 == 0) 
+      //   {
+      //    std::cout << "Time : " << t << " s" << '\n';
+      //    rocket->print_status_flight_short();
+      //   }
        
         
-        
-        last_step = t;
+      roc_render.add_trajectory(rocket->get_position().x, rocket->get_position_above_face().y);
      }
 
     rocket->print_status(); 
+
+    
 };
 
 void Launch_bay::launch_def_rock(Earth& earth,std::unique_ptr<Rocket>& rocket){
