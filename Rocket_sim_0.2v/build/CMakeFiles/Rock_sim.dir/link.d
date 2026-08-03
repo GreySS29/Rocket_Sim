@@ -10,6 +10,9 @@ Rock_sim: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a \
   /usr/lib/libGLX.so \
   /usr/lib/libOpenGL.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGL.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGLU.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libglut.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
@@ -44,9 +47,16 @@ Rock_sim: \
   /usr/lib/libGLdispatch.so.0 \
   /usr/lib32/libX11.so.6 \
   /usr/lib/libX11.so.6 \
+  /usr/lib/libXrandr.so.2 \
+  /usr/lib32/libXxf86vm.so.1 \
+  /usr/lib/libXxf86vm.so.1 \
+  /usr/lib/libXi.so.6 \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib32/libxcb.so.1 \
   /usr/lib/libxcb.so.1 \
+  /usr/lib32/libXext.so.6 \
+  /usr/lib/libXext.so.6 \
+  /usr/lib/libXrender.so.1 \
   /usr/lib32/libXau.so.6 \
   /usr/lib/libXau.so.6 \
   /usr/lib32/libXdmcp.so.6 \
@@ -73,6 +83,12 @@ glfw-build/src/libglfw3.a:
 /usr/lib/libGLX.so:
 
 /usr/lib/libOpenGL.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGL.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGLU.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libglut.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
 
@@ -142,11 +158,25 @@ glfw-build/src/libglfw3.a:
 
 /usr/lib/libX11.so.6:
 
+/usr/lib/libXrandr.so.2:
+
+/usr/lib32/libXxf86vm.so.1:
+
+/usr/lib/libXxf86vm.so.1:
+
+/usr/lib/libXi.so.6:
+
 /usr/lib/ld-linux-x86-64.so.2:
 
 /usr/lib32/libxcb.so.1:
 
 /usr/lib/libxcb.so.1:
+
+/usr/lib32/libXext.so.6:
+
+/usr/lib/libXext.so.6:
+
+/usr/lib/libXrender.so.1:
 
 /usr/lib32/libXau.so.6:
 

@@ -382,6 +382,30 @@ src/rocket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket.cpp.s
 .PHONY : src/rocket.cpp.s
 
+src/rocket_render.o: src/rocket_render.cpp.o
+.PHONY : src/rocket_render.o
+
+# target to build an object file
+src/rocket_render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o
+.PHONY : src/rocket_render.cpp.o
+
+src/rocket_render.i: src/rocket_render.cpp.i
+.PHONY : src/rocket_render.i
+
+# target to preprocess a source file
+src/rocket_render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.i
+.PHONY : src/rocket_render.cpp.i
+
+src/rocket_render.s: src/rocket_render.cpp.s
+.PHONY : src/rocket_render.s
+
+# target to generate assembly for a file
+src/rocket_render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.s
+.PHONY : src/rocket_render.cpp.s
+
 src/stage.o: src/stage.cpp.o
 .PHONY : src/stage.o
 
@@ -441,6 +465,9 @@ help:
 	@echo "... src/rocket.o"
 	@echo "... src/rocket.i"
 	@echo "... src/rocket.s"
+	@echo "... src/rocket_render.o"
+	@echo "... src/rocket_render.i"
+	@echo "... src/rocket_render.s"
 	@echo "... src/stage.o"
 	@echo "... src/stage.i"
 	@echo "... src/stage.s"

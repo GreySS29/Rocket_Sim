@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/rocket.cpp.o"
   "CMakeFiles/Rock_core.dir/src/rocket.cpp.o.d"
+  "CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/stage.cpp.o"
   "CMakeFiles/Rock_core.dir/src/stage.cpp.o.d"
   "libRock_core.a"

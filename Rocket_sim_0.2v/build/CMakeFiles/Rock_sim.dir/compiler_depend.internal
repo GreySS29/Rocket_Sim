@@ -3,13 +3,14 @@
 
 CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp
+ /home/greys/Documents/Doc/C+/openGL/glad/include/KHR/khrplatform.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Constants.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Earth.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Fabric.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/RocketRender.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Launch_bay.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket.h
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/RocketRender.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Gravity_temp.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Engine.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Payload.h
@@ -17,6 +18,11 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Tank.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glext.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glut.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -254,6 +260,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /usr/include/c++/16/span
  /usr/include/c++/16/sstream
  /usr/include/c++/16/stdexcept
+ /usr/include/c++/16/stdlib.h
  /usr/include/c++/16/streambuf
  /usr/include/c++/16/string
  /usr/include/c++/16/string_view
@@ -325,9 +332,12 @@ Rock_sim
  /usr/lib/Scrt1.o
  /usr/lib/crti.o
  /usr/lib/crtn.o
+ /usr/lib/libGL.so
+ /usr/lib/libGLU.so
  /usr/lib/libc.so
  /usr/lib/libdl.a
  /usr/lib/libgcc_s.so.1
+ /usr/lib/libglut.so
  /usr/lib/libm.so
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o
@@ -343,6 +353,11 @@ Rock_sim
  /usr/lib/libX11.so.6
  /usr/lib/libXau.so.6
  /usr/lib/libXdmcp.so.6
+ /usr/lib/libXext.so.6
+ /usr/lib/libXi.so.6
+ /usr/lib/libXrandr.so.2
+ /usr/lib/libXrender.so.1
+ /usr/lib/libXxf86vm.so.1
  /usr/lib/libc.so.6
  /usr/lib/libc_nonshared.a
  /usr/lib/libm.so.6
@@ -353,6 +368,8 @@ Rock_sim
  /usr/lib32/libX11.so.6
  /usr/lib32/libXau.so.6
  /usr/lib32/libXdmcp.so.6
+ /usr/lib32/libXext.so.6
+ /usr/lib32/libXxf86vm.so.1
  /usr/lib32/libxcb.so.1
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/libglfw3.a

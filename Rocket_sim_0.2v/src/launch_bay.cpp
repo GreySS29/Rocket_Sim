@@ -3,9 +3,6 @@
 void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , RocketRender& roc_render)
 {
 
-   
-
-
    std::ofstream ofs("../Log/log.txt");
 
     if (!ofs.is_open()) {
@@ -24,7 +21,7 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
     
      for(int step=0; step<=separation_time; ++step)
      {
-        if(step >40 && step <120) rocket->set_direction(130.0-step);
+        if(step >100 && step <160) rocket->set_direction(190.0-step);
         double t = step* PACE;
         
         rocket ->run(earth,PACE);
@@ -39,13 +36,13 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
      }
     std::cout << "time of separate Booster : " << last_step << '\n';
     std::unique_ptr<Stage> booster_single =rocket->separate_booster();  
-    rocket->set_direction(10.0); 
+    rocket->set_direction(30.0); 
     rocket->print_status();
 
 
      for(int step=last_step; step<=max_steps; ++step)
      {
-
+      if(step >170 && step <200) rocket->set_direction(200.0-step);
 
         double t = step* PACE;
         

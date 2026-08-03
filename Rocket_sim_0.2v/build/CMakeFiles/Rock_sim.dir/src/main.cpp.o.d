@@ -220,4 +220,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/vector.tcc \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Fabric.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Launch_bay.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/RocketRender.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/GUI/RocketRender.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include/KHR/khrplatform.h \
+ /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h

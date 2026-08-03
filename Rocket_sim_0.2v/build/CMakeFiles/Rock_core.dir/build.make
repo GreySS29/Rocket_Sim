@@ -128,12 +128,27 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_core.dir/src/launch_bay.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/launch_bay.cpp -o CMakeFiles/Rock_core.dir/src/launch_bay.cpp.s
 
+CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o: CMakeFiles/Rock_core.dir/flags.make
+CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp
+CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o: CMakeFiles/Rock_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o -MF CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o.d -o CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp
+
+CMakeFiles/Rock_core.dir/src/rocket_render.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_core.dir/src/rocket_render.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp > CMakeFiles/Rock_core.dir/src/rocket_render.cpp.i
+
+CMakeFiles/Rock_core.dir/src/rocket_render.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_core.dir/src/rocket_render.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp -o CMakeFiles/Rock_core.dir/src/rocket_render.cpp.s
+
 # Object files for target Rock_core
 Rock_core_OBJECTS = \
 "CMakeFiles/Rock_core.dir/src/stage.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/rocket.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/fabric.cpp.o" \
-"CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o"
+"CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o" \
+"CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o"
 
 # External object files for target Rock_core
 Rock_core_EXTERNAL_OBJECTS =
@@ -142,9 +157,10 @@ libRock_core.a: CMakeFiles/Rock_core.dir/src/stage.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/rocket.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/fabric.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o
+libRock_core.a: CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/build.make
 libRock_core.a: CMakeFiles/Rock_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libRock_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libRock_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Rock_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rock_core.dir/link.txt --verbose=$(VERBOSE)
 

@@ -31,6 +31,12 @@
 },
 {
   "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
+  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket_render.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
   "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp",
   "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp",
   "output": "CMakeFiles/Rock_sim.dir/src/main.cpp.o"

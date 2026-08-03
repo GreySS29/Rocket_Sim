@@ -312,9 +312,12 @@ tests/Rock_sim_tests
  /usr/lib/Scrt1.o
  /usr/lib/crti.o
  /usr/lib/crtn.o
+ /usr/lib/libGL.so
+ /usr/lib/libGLU.so
  /usr/lib/libc.so
  /usr/lib/libdl.a
  /usr/lib/libgcc_s.so.1
+ /usr/lib/libglut.so
  /usr/lib/libm.so
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o
@@ -330,6 +333,11 @@ tests/Rock_sim_tests
  /usr/lib/libX11.so.6
  /usr/lib/libXau.so.6
  /usr/lib/libXdmcp.so.6
+ /usr/lib/libXext.so.6
+ /usr/lib/libXi.so.6
+ /usr/lib/libXrandr.so.2
+ /usr/lib/libXrender.so.1
+ /usr/lib/libXxf86vm.so.1
  /usr/lib/libc.so.6
  /usr/lib/libc_nonshared.a
  /usr/lib/libm.so.6
@@ -340,6 +348,8 @@ tests/Rock_sim_tests
  /usr/lib32/libX11.so.6
  /usr/lib32/libXau.so.6
  /usr/lib32/libXdmcp.so.6
+ /usr/lib32/libXext.so.6
+ /usr/lib32/libXxf86vm.so.1
  /usr/lib32/libxcb.so.1
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o
 

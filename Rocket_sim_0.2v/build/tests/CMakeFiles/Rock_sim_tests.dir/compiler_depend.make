@@ -310,9 +310,12 @@ tests/Rock_sim_tests: glfw-build/src/libglfw3.a \
   /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
   /usr/lib/crtn.o \
+  /usr/lib/libGL.so \
+  /usr/lib/libGLU.so \
   /usr/lib/libc.so \
   /usr/lib/libdl.a \
   /usr/lib/libgcc_s.so.1 \
+  /usr/lib/libglut.so \
   /usr/lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o \
@@ -328,6 +331,11 @@ tests/Rock_sim_tests: glfw-build/src/libglfw3.a \
   /usr/lib/libX11.so.6 \
   /usr/lib/libXau.so.6 \
   /usr/lib/libXdmcp.so.6 \
+  /usr/lib/libXext.so.6 \
+  /usr/lib/libXi.so.6 \
+  /usr/lib/libXrandr.so.2 \
+  /usr/lib/libXrender.so.1 \
+  /usr/lib/libXxf86vm.so.1 \
   /usr/lib/libc.so.6 \
   /usr/lib/libc_nonshared.a \
   /usr/lib/libm.so.6 \
@@ -338,6 +346,8 @@ tests/Rock_sim_tests: glfw-build/src/libglfw3.a \
   /usr/lib32/libX11.so.6 \
   /usr/lib32/libXau.so.6 \
   /usr/lib32/libXdmcp.so.6 \
+  /usr/lib32/libXext.so.6 \
+  /usr/lib32/libXxf86vm.so.1 \
   /usr/lib32/libxcb.so.1 \
   tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o
 
@@ -352,11 +362,23 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 
 /usr/lib/librt.a:
 
-/usr/lib/libmvec.so.1:
-
 /usr/lib/libm.so.6:
 
 /usr/lib/libc_nonshared.a:
+
+/usr/lib32/libXext.so.6:
+
+/usr/lib/libXxf86vm.so.1:
+
+/usr/lib/libXrender.so.1:
+
+/usr/lib/libmvec.so.1:
+
+/usr/lib/libXrandr.so.2:
+
+/usr/lib/libXi.so.6:
+
+/usr/lib/libXext.so.6:
 
 /usr/lib/libXdmcp.so.6:
 
@@ -372,7 +394,11 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 
 /usr/lib/libm.so:
 
+/usr/lib/libglut.so:
+
 /usr/lib/libgcc_s.so.1:
+
+/usr/lib/libGL.so:
 
 /usr/lib/crti.o:
 
@@ -534,6 +560,8 @@ glfw-build/src/libglfw3.a:
 
 /usr/include/c++/16/bits/memory_resource.h:
 
+/usr/lib32/libXxf86vm.so.1:
+
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libgcc_s.so:
@@ -667,6 +695,8 @@ glfw-build/src/libglfw3.a:
 /usr/include/alloca.h:
 
 /usr/include/c++/16/bits/exception_defines.h:
+
+/usr/lib/libGLU.so:
 
 /usr/include/bits/floatn.h:
 

@@ -4,10 +4,10 @@
 #include "../include/Rocket.h"
 #include "../include/Fabric.h"
 #include "../include/Launch_bay.h"
-#include "../include/RocketRender.h"
+#include "../include/GUI/RocketRender.h"
 
 
-int main() {
+int main(int argc, char** argv) {
     Earth earth;
     Fabric fabric;
     Launch_bay launch_bay;
@@ -20,7 +20,10 @@ int main() {
 //    std::unique_ptr<Rocket> rocket = fabric.create_def_rock(earth);
 //    launch_bay.launch_def_rock(earth,rocket);
         
-    render.print();
+    //render.print();
+    RocketRender::instance = &render;
+    render.run(argc, argv);
+
 
     return 0;
 

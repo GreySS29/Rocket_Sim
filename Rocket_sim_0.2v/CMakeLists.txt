@@ -13,6 +13,7 @@ add_subdirectory(
 )
 
 find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
 
 add_library(glad STATIC
     ${CMAKE_SOURCE_DIR}/../../../openGL/glad/src/glad.c
@@ -27,6 +28,7 @@ add_library(Rock_core STATIC
     src/rocket.cpp
     src/fabric.cpp
     src/launch_bay.cpp
+    src/rocket_render.cpp
 )
 
 target_include_directories(Rock_core PUBLIC
@@ -37,6 +39,9 @@ target_link_libraries(Rock_core PUBLIC
     glad
     glfw
     OpenGL::GL
+    GL
+    GLU
+    glut
 )
 
 add_executable(Rock_sim src/main.cpp)

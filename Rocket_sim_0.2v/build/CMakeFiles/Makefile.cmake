@@ -41,6 +41,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/FindDoxygen.cmake"
   "/usr/share/cmake/Modules/FindFontconfig.cmake"
   "/usr/share/cmake/Modules/FindFreetype.cmake"
+  "/usr/share/cmake/Modules/FindGLUT.cmake"
   "/usr/share/cmake/Modules/FindOpenGL.cmake"
   "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake/Modules/FindPackageMessage.cmake"
