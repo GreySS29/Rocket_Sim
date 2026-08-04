@@ -6,6 +6,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Constants.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Earth.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Fabric.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/Display.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Launch_bay.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h \
@@ -511,21 +512,9 @@ libRock_core.a:
 
 /usr/include/c++/16/streambuf:
 
-/usr/lib/libGLX.so:
-
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/c++/16/sstream:
 
 /usr/include/c++/16/bits/concept_check.h:
-
-/usr/include/c++/16/bits/basic_string.tcc:
-
-/usr/include/wctype.h:
-
-/usr/include/sched.h:
-
-/usr/include/c++/16/tr1/hypergeometric.tcc:
-
-/usr/include/bits/fp-fast.h:
 
 /usr/include/c++/16/bits/basic_string.h:
 
@@ -580,10 +569,6 @@ libRock_core.a:
 /usr/include/gnu/stubs.h:
 
 /usr/include/c++/16/bits/std_abs.h:
-
-/usr/include/c++/16/bits/cxxabi_forced.h:
-
-/usr/include/c++/16/cwctype:
 
 /usr/include/bits/types/sigset_t.h:
 
@@ -659,19 +644,35 @@ libRock_core.a:
 
 /usr/include/bits/select.h:
 
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/c++/16/ext/aligned_buffer.h:
+
+/usr/include/c++/16/bits/atomic_base.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/c++/16/bits/memoryfwd.h:
+
+/usr/include/c++/16/bits/stl_construct.h:
+
 /usr/lib32/libXdmcp.so.6:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket.h:
 
-/usr/include/c++/16/bits/atomic_base.h:
-
 /usr/include/asm-generic/int-ll64.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Stage.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic.so:
 
 /usr/include/bits/mathcalls-macros.h:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Stage.h:
 
 /usr/include/c++/16/clocale:
 
@@ -680,6 +681,14 @@ libRock_core.a:
 /usr/include/GL/glut.h:
 
 /usr/include/bits/waitflags.h:
+
+/usr/lib/libGLX.so:
+
+/usr/include/bits/types/struct_sched_param.h:
+
+/usr/include/c++/16/cwctype:
+
+/usr/include/c++/16/bits/cxxabi_forced.h:
 
 /usr/include/c++/16/bits/uniform_int_dist.h:
 
@@ -690,6 +699,30 @@ libRock_core.a:
 /usr/include/c++/16/iostream:
 
 /usr/include/c++/16/bits/iterator_concepts.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/libintl.h:
+
+/usr/include/bits/endianness.h:
+
+/usr/include/c++/16/tr1/bessel_function.tcc:
+
+/usr/include/c++/16/bits/algorithmfwd.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/16/bits/basic_string.tcc:
+
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
+
+/usr/include/c++/16/tr1/hypergeometric.tcc:
+
+/usr/include/bits/fp-fast.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Engine.h:
 
 /usr/include/alloca.h:
 
@@ -715,23 +748,13 @@ libRock_core.a:
 
 /usr/include/asm/posix_types.h:
 
+/usr/include/bits/fp-logb.h:
+
 /usr/include/bits/libc-header-start.h:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Fabric.h:
-
-/usr/include/bits/types.h:
-
-/usr/include/libintl.h:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/c++/16/tr1/bessel_function.tcc:
-
-/usr/include/c++/16/bits/algorithmfwd.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
@@ -744,10 +767,6 @@ libRock_core.a:
 /usr/include/c++/16/ostream:
 
 /usr/include/c++/16/pstl/pstl_config.h:
-
-/usr/include/asm/bitsperlong.h:
-
-/usr/include/bits/fp-logb.h:
 
 /usr/include/c++/16/bits/locale_classes.tcc:
 
@@ -771,8 +790,6 @@ libRock_core.a:
 
 /usr/include/bits/types/__locale_t.h:
 
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Engine.h:
-
 /usr/include/c++/16/bits/quoted_string.h:
 
 /usr/include/c++/16/locale:
@@ -786,6 +803,8 @@ libRock_core.a:
 /usr/include/bits/iscanonical.h:
 
 /usr/include/c++/16/bits/ios_base.h:
+
+/usr/include/asm/bitsperlong.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -887,22 +906,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/c++/16/ext/aligned_buffer.h:
-
-/usr/include/features.h:
-
-/usr/include/bits/types/__FILE.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/c++/16/bits/memoryfwd.h:
-
-/usr/include/c++/16/bits/stl_construct.h:
-
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/RocketRender.h:
 
 /usr/include/c++/16/bits/cxxabi_init_exception.h:
@@ -916,6 +919,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/c++/16/bits/utility.h:
 
 /usr/include/c++/16/bits/exception_defines.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/Display.h:
 
 /usr/include/c++/16/bits/formatfwd.h:
 
@@ -1114,5 +1119,3 @@ libglad.a:
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Gravity_temp.h:
 
 /usr/include/c++/16/optional:
-
-/usr/include/c++/16/sstream:

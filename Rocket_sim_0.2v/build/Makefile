@@ -286,6 +286,30 @@ home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 .PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 
+src/display.o: src/display.cpp.o
+.PHONY : src/display.o
+
+# target to build an object file
+src/display.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.o
+.PHONY : src/display.cpp.o
+
+src/display.i: src/display.cpp.i
+.PHONY : src/display.i
+
+# target to preprocess a source file
+src/display.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.i
+.PHONY : src/display.cpp.i
+
+src/display.s: src/display.cpp.s
+.PHONY : src/display.s
+
+# target to generate assembly for a file
+src/display.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.s
+.PHONY : src/display.cpp.s
+
 src/fabric.o: src/fabric.cpp.o
 .PHONY : src/fabric.o
 
@@ -382,30 +406,6 @@ src/rocket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket.cpp.s
 .PHONY : src/rocket.cpp.s
 
-src/rocket_render.o: src/rocket_render.cpp.o
-.PHONY : src/rocket_render.o
-
-# target to build an object file
-src/rocket_render.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.o
-.PHONY : src/rocket_render.cpp.o
-
-src/rocket_render.i: src/rocket_render.cpp.i
-.PHONY : src/rocket_render.i
-
-# target to preprocess a source file
-src/rocket_render.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.i
-.PHONY : src/rocket_render.cpp.i
-
-src/rocket_render.s: src/rocket_render.cpp.s
-.PHONY : src/rocket_render.s
-
-# target to generate assembly for a file
-src/rocket_render.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/rocket_render.cpp.s
-.PHONY : src/rocket_render.cpp.s
-
 src/stage.o: src/stage.cpp.o
 .PHONY : src/stage.o
 
@@ -453,6 +453,9 @@ help:
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
+	@echo "... src/display.o"
+	@echo "... src/display.i"
+	@echo "... src/display.s"
 	@echo "... src/fabric.o"
 	@echo "... src/fabric.i"
 	@echo "... src/fabric.s"
@@ -465,9 +468,6 @@ help:
 	@echo "... src/rocket.o"
 	@echo "... src/rocket.i"
 	@echo "... src/rocket.s"
-	@echo "... src/rocket_render.o"
-	@echo "... src/rocket_render.i"
-	@echo "... src/rocket_render.s"
 	@echo "... src/stage.o"
 	@echo "... src/stage.i"
 	@echo "... src/stage.s"

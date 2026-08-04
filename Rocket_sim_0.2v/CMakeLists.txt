@@ -28,7 +28,7 @@ add_library(Rock_core STATIC
     src/rocket.cpp
     src/fabric.cpp
     src/launch_bay.cpp
-    src/rocket_render.cpp
+    src/display.cpp
 )
 
 target_include_directories(Rock_core PUBLIC
