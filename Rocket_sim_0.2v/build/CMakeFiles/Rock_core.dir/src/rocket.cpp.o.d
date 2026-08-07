@@ -221,4 +221,9 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: \
  /usr/include/c++/16/bits/fstream.tcc /usr/include/c++/16/vector \
  /usr/include/c++/16/bits/stl_vector.h \
  /usr/include/c++/16/bits/stl_bvector.h \
- /usr/include/c++/16/bits/vector.tcc
+ /usr/include/c++/16/bits/vector.tcc \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/GUI/RocketRender.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include/KHR/khrplatform.h \
+ /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h

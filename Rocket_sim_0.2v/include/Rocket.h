@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
+#include "GUI/RocketRender.h"
 
 class Rocket  {
     private:
@@ -37,7 +38,7 @@ class Rocket  {
     Vector3D get_position() const {return active()->get_position();}
     Vector3D get_position_above_face() const {return active()->get_position_above_surface();}
     
-    void run (const Earth& earth, double pace);
+    void run (const Earth& earth, double pace,RocketRender& roc_render);
  
 
     std::unique_ptr<Stage> separate_booster(){

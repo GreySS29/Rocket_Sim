@@ -92,7 +92,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
     );
     
     Payload payload {earth.surfacePoint(25.0),
-        10000,
+        5000,
         0.3,
         10
     };

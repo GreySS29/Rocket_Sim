@@ -217,8 +217,13 @@ CMakeFiles/Rock_core.dir/src/display.cpp.o: \
  /usr/include/c++/16/pstl/execution_defs.h /usr/include/c++/16/vector \
  /usr/include/c++/16/bits/stl_vector.h \
  /usr/include/c++/16/bits/stl_bvector.h \
- /usr/include/c++/16/bits/vector.tcc /usr/include/GL/glut.h \
+ /usr/include/c++/16/bits/vector.tcc /usr/include/c++/16/fstream \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/16/bits/fstream.tcc /usr/include/GL/glut.h \
  /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h
+ /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
+ /usr/include/c++/16/iomanip /usr/include/c++/16/bits/quoted_string.h \
+ /usr/include/c++/16/sstream /usr/include/c++/16/bits/sstream.tcc

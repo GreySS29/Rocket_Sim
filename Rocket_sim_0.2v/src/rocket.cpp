@@ -16,25 +16,23 @@ std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, st
 
 
 
-void Rocket::run(const Earth& earth , double pace)
+void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
 {
-    Vector3D F_total = 
-        active()->run_engine(true)+ // vector thrust_vorce (reduce tank fluel_mass and mass_stage)
-        gravity_vec(earth,*this)+
-        
-        earth.get_dragForce_vec(active());
-         
-        //  std::cout <<"grav_vec" << gravity_vec(*this, earth) << "\n";
-        //  std::cout <<"drag_vec" << earth.get_dragForce_vec(active())<< "\n";
-
-        // std::cout << "F_total" << F_total << '\n';
-       // print_status_flight_short();
+    Vector3D G_force = gravity_vec(earth, *this);
+    Vector3D A_force = earth.get_dragForce_vec(active());
+    Vector3D F_total = active()->run_engine(true)+ // vector thrust_vorce (reduce tank fluel_mass and mass_stage)
+        G_force+A_force;
         
     active()->set_acceleration(F_total, get_mass());
-
     active()->set_velocity(pace);
     Vector3D vel = active()->get_velocity();
     active()->update_position(vel, pace);
+
+    //fill vector RocketRender
+    roc_render.add_G_force(G_force);
+    roc_render.add_A_force(A_force);
+    roc_render.add_F_force(F_total);
+    roc_render.add_trajectory(this->get_position().x, this->get_position_above_face().y);
   
 }
 
