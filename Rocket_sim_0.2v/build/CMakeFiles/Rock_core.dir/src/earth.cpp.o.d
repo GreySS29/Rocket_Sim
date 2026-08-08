@@ -1,7 +1,7 @@
-CMakeFiles/Rock_sim.dir/src/stage.cpp.o: \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp \
+CMakeFiles/Rock_core.dir/src/earth.cpp.o: \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/earth.cpp \
  /usr/include/stdc-predef.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Stage.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Earth.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Physic_object.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Vector3D.h \
  /usr/include/c++/16/math.h /usr/include/c++/16/cmath \
@@ -188,31 +188,4 @@ CMakeFiles/Rock_sim.dir/src/stage.cpp.o: \
  /usr/include/c++/16/bits/ostream_print.h \
  /usr/include/c++/16/bits/ostream.tcc /usr/include/c++/16/istream \
  /usr/include/c++/16/bits/istream.tcc \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/System_numbers.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Constants.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Engine.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Tank.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Earth.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Templates.h \
- /usr/include/c++/16/memory /usr/include/c++/16/bits/stl_uninitialized.h \
- /usr/include/c++/16/bits/stl_raw_storage_iter.h \
- /usr/include/c++/16/bits/align.h /usr/include/c++/16/bits/unique_ptr.h \
- /usr/include/c++/16/bits/shared_ptr.h \
- /usr/include/c++/16/bits/shared_ptr_base.h \
- /usr/include/c++/16/bits/allocated_ptr.h \
- /usr/include/c++/16/bits/refwrap.h \
- /usr/include/c++/16/ext/aligned_buffer.h \
- /usr/include/c++/16/ext/concurrence.h \
- /usr/include/c++/16/bits/shared_ptr_atomic.h \
- /usr/include/c++/16/bits/atomic_base.h \
- /usr/include/c++/16/bits/atomic_lockfree_defines.h \
- /usr/include/c++/16/bits/atomic_wait.h \
- /usr/include/c++/16/backward/auto_ptr.h \
- /usr/include/c++/16/bits/ranges_uninitialized.h \
- /usr/include/c++/16/bits/out_ptr.h \
- /usr/include/c++/16/pstl/glue_memory_defs.h \
- /usr/include/c++/16/pstl/execution_defs.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Gravity_temp.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Payload.h \
- /usr/include/c++/16/iomanip /usr/include/c++/16/bits/quoted_string.h \
- /usr/include/c++/16/sstream /usr/include/c++/16/bits/sstream.tcc
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Constants.h

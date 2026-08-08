@@ -310,6 +310,30 @@ src/display.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.s
 .PHONY : src/display.cpp.s
 
+src/earth.o: src/earth.cpp.o
+.PHONY : src/earth.o
+
+# target to build an object file
+src/earth.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/earth.cpp.o
+.PHONY : src/earth.cpp.o
+
+src/earth.i: src/earth.cpp.i
+.PHONY : src/earth.i
+
+# target to preprocess a source file
+src/earth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/earth.cpp.i
+.PHONY : src/earth.cpp.i
+
+src/earth.s: src/earth.cpp.s
+.PHONY : src/earth.s
+
+# target to generate assembly for a file
+src/earth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/earth.cpp.s
+.PHONY : src/earth.cpp.s
+
 src/fabric.o: src/fabric.cpp.o
 .PHONY : src/fabric.o
 
@@ -456,6 +480,9 @@ help:
 	@echo "... src/display.o"
 	@echo "... src/display.i"
 	@echo "... src/display.s"
+	@echo "... src/earth.o"
+	@echo "... src/earth.i"
+	@echo "... src/earth.s"
 	@echo "... src/fabric.o"
 	@echo "... src/fabric.i"
 	@echo "... src/fabric.s"

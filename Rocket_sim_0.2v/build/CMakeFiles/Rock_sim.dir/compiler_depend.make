@@ -16,7 +16,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket_components/Tank.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Vector3D.h \
   /usr/include/GL/freeglut_std.h \
   /usr/include/GL/gl.h \
@@ -512,7 +511,9 @@ libRock_core.a:
 
 /usr/include/c++/16/streambuf:
 
-/usr/include/c++/16/sstream:
+/usr/lib/libGLX.so:
+
+/usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/c++/16/bits/concept_check.h:
 
@@ -569,6 +570,10 @@ libRock_core.a:
 /usr/include/gnu/stubs.h:
 
 /usr/include/c++/16/bits/std_abs.h:
+
+/usr/include/c++/16/bits/cxxabi_forced.h:
+
+/usr/include/c++/16/cwctype:
 
 /usr/include/bits/types/sigset_t.h:
 
@@ -644,27 +649,11 @@ libRock_core.a:
 
 /usr/include/bits/select.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/c++/16/ext/aligned_buffer.h:
-
-/usr/include/c++/16/bits/atomic_base.h:
-
-/usr/include/features.h:
-
-/usr/include/bits/types/__FILE.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/c++/16/bits/memoryfwd.h:
-
-/usr/include/c++/16/bits/stl_construct.h:
-
 /usr/lib32/libXdmcp.so.6:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Rocket.h:
+
+/usr/include/c++/16/bits/atomic_base.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
@@ -682,14 +671,6 @@ libRock_core.a:
 
 /usr/include/bits/waitflags.h:
 
-/usr/lib/libGLX.so:
-
-/usr/include/bits/types/struct_sched_param.h:
-
-/usr/include/c++/16/cwctype:
-
-/usr/include/c++/16/bits/cxxabi_forced.h:
-
 /usr/include/c++/16/bits/uniform_int_dist.h:
 
 /usr/include/bits/struct_rwlock.h:
@@ -699,6 +680,8 @@ libRock_core.a:
 /usr/include/c++/16/iostream:
 
 /usr/include/c++/16/bits/iterator_concepts.h:
+
+/usr/include/GL/glu.h:
 
 /usr/include/bits/types.h:
 
@@ -768,9 +751,7 @@ libRock_core.a:
 
 /usr/include/c++/16/pstl/pstl_config.h:
 
-/usr/include/c++/16/bits/locale_classes.tcc:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h:
+/usr/include/asm/bitsperlong.h:
 
 /usr/include/GL/gl.h:
 
@@ -780,13 +761,9 @@ libRock_core.a:
 
 /usr/include/bits/long-double.h:
 
-/usr/include/GL/glu.h:
+/usr/include/c++/16/bits/locale_classes.tcc:
 
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/System_numbers.h:
-
-/usr/include/c++/16/bits/stl_uninitialized.h:
-
-/usr/include/c++/16/bits/string_view.tcc:
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Physic_object.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -803,8 +780,6 @@ libRock_core.a:
 /usr/include/bits/iscanonical.h:
 
 /usr/include/c++/16/bits/ios_base.h:
-
-/usr/include/asm/bitsperlong.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -905,6 +880,22 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/lib/libc.so:
 
 /usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/c++/16/ext/aligned_buffer.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/c++/16/bits/memoryfwd.h:
+
+/usr/include/c++/16/bits/stl_construct.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/GUI/RocketRender.h:
 
@@ -1034,6 +1025,10 @@ libglad.a:
 
 /usr/include/c++/16/bits/stl_iterator_base_types.h:
 
+/usr/include/c++/16/bits/stl_uninitialized.h:
+
+/usr/include/c++/16/bits/string_view.tcc:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/16/bits/stl_vector.h:
@@ -1119,3 +1114,5 @@ libglad.a:
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include/Gravity_temp.h:
 
 /usr/include/c++/16/optional:
+
+/usr/include/c++/16/sstream:
