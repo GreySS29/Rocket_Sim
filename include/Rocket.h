@@ -1,36 +1,68 @@
 #pragma once
-#include "RocketState.h"
-#include "Vector3D.h"
+#include "Rocket_components/Stage.h"
+#include <iomanip>
+#include <fstream>
+#include <vector>
+#include "GUI/RocketRender.h"
 
-class Rocket {
-private:
-    RocketState state;
-    double _thrust; //H
-    double _fuel_consumption; // kg/s
-    double _rocket_mass; // kg
-    Vector3D _thrust_dir;
-public:
-    Rocket(double mass , double fuel , double thrust, double fuel_consumption)
-    : state(mass,fuel),_thrust(thrust) , _fuel_consumption(fuel_consumption) {
-        _rocket_mass = state.mass - state.fuel;
-        //exception
-        _thrust_dir = Vector3D(0.0,1.0,0.0); // up
+class Rocket  {
+    private:
+    std::unique_ptr<Stage> booster_;
+    std::unique_ptr<Stage> upper_stage_;
+    Payload payload_;
+    
+    public:
+    Rocket (std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload ) :
+    
+         booster_(std::move(booster)),
+         upper_stage_(std::move(upper_stage)),
+         payload_(payload)
+         {
+         };
+
+    Stage* active() const {
+    if (booster_) return booster_.get();
+    if (upper_stage_) return upper_stage_.get();
+    return nullptr;
     }
 
-    const RocketState& getState() const  {return  state;};
-    RocketState& getState()   {return  state;};
-    double getFuel_consuption() const {return _fuel_consumption;};
-    double getRocket_mass() const {return _rocket_mass; }
-    Vector3D getThrustForce() const {
-        if (state.fuel == 0) return Vector3D(0,0,0);
-        return _thrust_dir*_thrust;
+     //getters
+    double get_mass() const {
+    if (booster_)
+        return booster_->get_mass() + upper_stage_->get_mass() + payload_.get_mass();
+    return upper_stage_->get_mass() + payload_.get_mass();
+}
+
+    Vector3D get_velocity() const {return active()->get_velocity();};
+    Vector3D get_acceleration() const {return  active()->get_acceleration();}
+    Vector3D get_position() const {return active()->get_position();}
+    Vector3D get_position_above_face() const {return active()->get_position_above_surface();}
+    
+    void run (const Earth& earth, double pace,RocketRender& roc_render);
+ 
+
+    std::unique_ptr<Stage> separate_booster(){
+        upper_stage_->move_parameters(*booster_);
+        std::unique_ptr<Stage> booster = std::move(booster_);
+        booster_ = nullptr;
+        return booster;
     }
-    Vector3D setThrustDirection (double x, double y, double z) 
-    {
-        return _thrust_dir = Vector3D(x,y,z);
-    }
-    const Vector3D getThustDirection () const
-    {
-        return _thrust_dir;
-    }
+
+    void set_direction(double angle) { active()->set_direction(angle);};
+    Vector3D get_direction() const { return active() ->get_thrust_direction();} 
+
+   static std::unique_ptr<Rocket> create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload, const Earth& earth);
+   void print_status() const;
+   void print_status_flight() const;
+   void print_status_flight_short() const;
+   void print_status_flight_short(std::ofstream& ofs, int time) const;
+
+
+   //for render
+   
+
+//    friend std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket);
+
+
 };
+
