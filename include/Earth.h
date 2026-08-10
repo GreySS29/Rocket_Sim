@@ -1,6 +1,7 @@
 #pragma once
 #include "Physic_object.h"
 
+
 class Earth : public Physic_object
 {
     private:

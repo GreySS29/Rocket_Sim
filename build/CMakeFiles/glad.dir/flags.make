@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include
+C_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include
 
 C_FLAGS = 
 

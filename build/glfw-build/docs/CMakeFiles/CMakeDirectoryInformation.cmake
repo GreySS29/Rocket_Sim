@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/greys/Documents/Doc/C+/openGL/glfw")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

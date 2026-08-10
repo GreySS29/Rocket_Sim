@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v
+CMAKE_SOURCE_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build
+CMAKE_BINARY_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include glfw-build/CMakeFiles/uninstall.dir/compiler_depend.make
 include glfw-build/CMakeFiles/uninstall.dir/progress.make
 
 glfw-build/CMakeFiles/uninstall:
-	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build && /usr/bin/cmake -P /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/cmake_uninstall.cmake
+	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build && /usr/bin/cmake -P /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/cmake_uninstall.cmake
 
 glfw-build/CMakeFiles/uninstall.dir/codegen:
 .PHONY : glfw-build/CMakeFiles/uninstall.dir/codegen
@@ -81,10 +81,10 @@ glfw-build/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : glfw-build/CMakeFiles/uninstall.dir/build
 
 glfw-build/CMakeFiles/uninstall.dir/clean:
-	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : glfw-build/CMakeFiles/uninstall.dir/clean
 
 glfw-build/CMakeFiles/uninstall.dir/depend:
-	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v /home/greys/Documents/Doc/C+/openGL/glfw /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
+	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim /home/greys/Documents/Doc/C+/openGL/glfw /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
 .PHONY : glfw-build/CMakeFiles/uninstall.dir/depend
 

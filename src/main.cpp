@@ -6,9 +6,9 @@
 #include "../include/Launch_bay.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
+#include "../include/Enviroment/Atmosphere.h"
 
-
-int main(int argc, char** argv) {
+void m_main(int argc, char** argv){
     Earth earth;
     Fabric fabric;
     Launch_bay launch_bay;
@@ -28,6 +28,19 @@ int main(int argc, char** argv) {
     display.run(argc, argv);
 
 
-    return 0;
+    
+}
+
+
+
+
+int main(int argc, char** argv) {
+   Atmosphere atm;
+   atm.temperature = delta<K>(-10); // ??
+   atm.pressure = 101325.0 * Pa;
+
+   auto rho = atm.density();
+   std::cout << rho << '\n'
+   << atm.temperature.in(deg_C) ; 
 
 } 

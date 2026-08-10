@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v
+CMAKE_SOURCE_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build
+CMAKE_BINARY_DIR = /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build
 
 # Utility rule file for update_mappings.
 
@@ -67,7 +67,7 @@ include glfw-build/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include glfw-build/src/CMakeFiles/update_mappings.dir/progress.make
 
 glfw-build/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
 	cd /home/greys/Documents/Doc/C+/openGL/glfw/src && /usr/bin/cmake -P /home/greys/Documents/Doc/C+/openGL/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 glfw-build/src/CMakeFiles/update_mappings.dir/codegen:
@@ -82,10 +82,10 @@ glfw-build/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : glfw-build/src/CMakeFiles/update_mappings.dir/build
 
 glfw-build/src/CMakeFiles/update_mappings.dir/clean:
-	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : glfw-build/src/CMakeFiles/update_mappings.dir/clean
 
 glfw-build/src/CMakeFiles/update_mappings.dir/depend:
-	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v /home/greys/Documents/Doc/C+/openGL/glfw/src /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)" update_mappings
+	cd /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim /home/greys/Documents/Doc/C+/openGL/glfw/src /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)" update_mappings
 .PHONY : glfw-build/src/CMakeFiles/update_mappings.dir/depend
 

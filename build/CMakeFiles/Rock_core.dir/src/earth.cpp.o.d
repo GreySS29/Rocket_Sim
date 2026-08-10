@@ -1,9 +1,9 @@
 CMakeFiles/Rock_core.dir/src/earth.cpp.o: \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/earth.cpp \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/earth.cpp \
  /usr/include/stdc-predef.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Earth.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Physic_object.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Vector3D.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Earth.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Physic_object.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Vector3D.h \
  /usr/include/c++/16/math.h /usr/include/c++/16/cmath \
  /usr/include/c++/16/bits/requires_hosted.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -188,4 +188,4 @@ CMakeFiles/Rock_core.dir/src/earth.cpp.o: \
  /usr/include/c++/16/bits/ostream_print.h \
  /usr/include/c++/16/bits/ostream.tcc /usr/include/c++/16/istream \
  /usr/include/c++/16/bits/istream.tcc \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/../include/Constants.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Constants.h
