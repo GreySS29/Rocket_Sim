@@ -2,6 +2,7 @@
 #include "Physic_object.h"
 
 
+
 class Earth : public Physic_object
 {
     private:
@@ -10,8 +11,12 @@ class Earth : public Physic_object
     const double AIR_DENSITY_SURFACE = 1.225; // kg/m3
     const double MU_EARTH = 3.986004418e14; // м^3/с^2
     
+    inline static constexpr quantity<m> equatorial_radius =6'378'137 * m;
+    inline static constexpr quantity<m> polar_radius =6'356'752.3 * m;
 
     public:
+
+    inline static constexpr quantity<m> mean_radius = 6'371'000 * m;
     Earth () :Physic_object ({0,0,0}, 5.972E+24) {};
 
     Vector3D surfacePoint(double height_above_surface) const // for objects' construction 
