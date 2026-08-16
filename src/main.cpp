@@ -37,13 +37,12 @@ void m_main(int argc, char** argv){
 int main(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
-   atm.temperature = delta<K>(293.15); // ??
-   atm.pressure = 101325.0 * Pa;
+//    atm.temperature = delta<K>(293.15); // ??
+//    atm.pressure = 101325.0 * Pa;
 
-   auto rho = atm.density();
-   quantity<m> geom_al = 34'000 * m;
+//    auto rho = atm.density();
+   quantity<m> geom_al = 85000 * m;
    atm.set_tempeture(geom_al);
-   std::cout << rho << '\n'
-   << atm.temperature << '\n' ; 
+    std::cout << atm.get_temperature() << '\n' ; 
 
 } 

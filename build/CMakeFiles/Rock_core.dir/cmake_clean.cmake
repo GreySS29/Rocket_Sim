@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/display.cpp.o"
   "CMakeFiles/Rock_core.dir/src/display.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/earth.cpp.o"

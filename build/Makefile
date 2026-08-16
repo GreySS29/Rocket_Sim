@@ -325,6 +325,30 @@ home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 .PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.s
 
+src/Enviroment/atmosphere.o: src/Enviroment/atmosphere.cpp.o
+.PHONY : src/Enviroment/atmosphere.o
+
+# target to build an object file
+src/Enviroment/atmosphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o
+.PHONY : src/Enviroment/atmosphere.cpp.o
+
+src/Enviroment/atmosphere.i: src/Enviroment/atmosphere.cpp.i
+.PHONY : src/Enviroment/atmosphere.i
+
+# target to preprocess a source file
+src/Enviroment/atmosphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.i
+.PHONY : src/Enviroment/atmosphere.cpp.i
+
+src/Enviroment/atmosphere.s: src/Enviroment/atmosphere.cpp.s
+.PHONY : src/Enviroment/atmosphere.s
+
+# target to generate assembly for a file
+src/Enviroment/atmosphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.s
+.PHONY : src/Enviroment/atmosphere.cpp.s
+
 src/display.o: src/display.cpp.o
 .PHONY : src/display.o
 
@@ -519,6 +543,9 @@ help:
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
+	@echo "... src/Enviroment/atmosphere.o"
+	@echo "... src/Enviroment/atmosphere.i"
+	@echo "... src/Enviroment/atmosphere.s"
 	@echo "... src/display.o"
 	@echo "... src/display.i"
 	@echo "... src/display.s"

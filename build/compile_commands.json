@@ -43,6 +43,12 @@
 },
 {
   "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
   "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/main.cpp",
   "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/main.cpp",
   "output": "CMakeFiles/Rock_sim.dir/src/main.cpp.o"

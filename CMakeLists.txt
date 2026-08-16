@@ -36,6 +36,7 @@ add_library(Rock_core STATIC
     src/fabric.cpp
     src/launch_bay.cpp
     src/display.cpp
+    src/Enviroment/atmosphere.cpp
     
 )
 
