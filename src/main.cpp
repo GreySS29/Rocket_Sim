@@ -7,8 +7,9 @@
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
 #include "../include/Enviroment/Atmosphere.h"
+#include "../include/Enviroment/Atmo_layer_termosphere.h"
 
-int main(int argc, char** argv){
+int main_m(int argc, char** argv){
     Earth earth;
     Fabric fabric;
     Launch_bay launch_bay;
@@ -35,15 +36,20 @@ int main(int argc, char** argv){
 
 
 
-int main_m(int argc, char** argv) {
+int main(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
+   
 //    atm.temperature = delta<K>(293.15); // ??
 //    atm.pressure = 101325.0 * Pa;
 
 //    auto rho = atm.density();
-   quantity<m> geom_al = 85000 * m;
-   atm.set_tempeture(geom_al);
-    std::cout << atm.get_temperature() << '\n' ; 
+//    quantity<m> geom_al = 85000 * m;
+//    atm.set_tempeture(geom_al);
+//     std::cout << atm.get_temperature() << '\n' ; 
+Atmo_layer_termosphere atmo;
+
+    constexpr quantity<K>  T = atmo.get_exospheric_temp();
+    std::cout << T << '\n' ; 
 
 } 
