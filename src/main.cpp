@@ -8,7 +8,7 @@
 #include "../include/GUI/RocketRender.h"
 #include "../include/Enviroment/Atmosphere.h"
 
-void m_main(int argc, char** argv){
+int main(int argc, char** argv){
     Earth earth;
     Fabric fabric;
     Launch_bay launch_bay;
@@ -24,17 +24,18 @@ void m_main(int argc, char** argv){
         
     //render.print();
     Display display {render};
-    Display::instance = &display;
+    Display::setInstance(display);
+    display.setAnimationSpeed(10.0);
     display.run(argc, argv);
 
-
+    return 0;
     
 }
 
 
 
 
-int main(int argc, char** argv) {
+int main_m(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
 //    atm.temperature = delta<K>(293.15); // ??

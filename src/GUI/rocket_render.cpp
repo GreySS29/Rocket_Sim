@@ -69,6 +69,13 @@ void RocketRender::drawRocket() const
     glPopMatrix();
 }
 
+void RocketRender::drawRocket(float x, float y) const{
+    glPointSize(8.0f);
+    glBegin(GL_POINTS);
+    glVertex2f(x, y);
+    glEnd();
+}
+
 void RocketRender::drawTrajectory() const
 {
     if (trajectory.size() < 2) {

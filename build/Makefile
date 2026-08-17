@@ -349,29 +349,53 @@ src/Enviroment/atmosphere.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.s
 .PHONY : src/Enviroment/atmosphere.cpp.s
 
-src/display.o: src/display.cpp.o
-.PHONY : src/display.o
+src/GUI/display.o: src/GUI/display.cpp.o
+.PHONY : src/GUI/display.o
 
 # target to build an object file
-src/display.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.o
-.PHONY : src/display.cpp.o
+src/GUI/display.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o
+.PHONY : src/GUI/display.cpp.o
 
-src/display.i: src/display.cpp.i
-.PHONY : src/display.i
+src/GUI/display.i: src/GUI/display.cpp.i
+.PHONY : src/GUI/display.i
 
 # target to preprocess a source file
-src/display.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.i
-.PHONY : src/display.cpp.i
+src/GUI/display.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/display.cpp.i
+.PHONY : src/GUI/display.cpp.i
 
-src/display.s: src/display.cpp.s
-.PHONY : src/display.s
+src/GUI/display.s: src/GUI/display.cpp.s
+.PHONY : src/GUI/display.s
 
 # target to generate assembly for a file
-src/display.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/display.cpp.s
-.PHONY : src/display.cpp.s
+src/GUI/display.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/display.cpp.s
+.PHONY : src/GUI/display.cpp.s
+
+src/GUI/rocket_render.o: src/GUI/rocket_render.cpp.o
+.PHONY : src/GUI/rocket_render.o
+
+# target to build an object file
+src/GUI/rocket_render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o
+.PHONY : src/GUI/rocket_render.cpp.o
+
+src/GUI/rocket_render.i: src/GUI/rocket_render.cpp.i
+.PHONY : src/GUI/rocket_render.i
+
+# target to preprocess a source file
+src/GUI/rocket_render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.i
+.PHONY : src/GUI/rocket_render.cpp.i
+
+src/GUI/rocket_render.s: src/GUI/rocket_render.cpp.s
+.PHONY : src/GUI/rocket_render.s
+
+# target to generate assembly for a file
+src/GUI/rocket_render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s
+.PHONY : src/GUI/rocket_render.cpp.s
 
 src/earth.o: src/earth.cpp.o
 .PHONY : src/earth.o
@@ -546,9 +570,12 @@ help:
 	@echo "... src/Enviroment/atmosphere.o"
 	@echo "... src/Enviroment/atmosphere.i"
 	@echo "... src/Enviroment/atmosphere.s"
-	@echo "... src/display.o"
-	@echo "... src/display.i"
-	@echo "... src/display.s"
+	@echo "... src/GUI/display.o"
+	@echo "... src/GUI/display.i"
+	@echo "... src/GUI/display.s"
+	@echo "... src/GUI/rocket_render.o"
+	@echo "... src/GUI/rocket_render.i"
+	@echo "... src/GUI/rocket_render.s"
 	@echo "... src/earth.o"
 	@echo "... src/earth.i"
 	@echo "... src/earth.s"

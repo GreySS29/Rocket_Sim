@@ -31,6 +31,7 @@ class RocketRender {
 
     void drawHeightOverTime(double dt) const;
     void drawRocket() const;
+    void drawRocket(float x, float y) const;
     void drawTrajectory() const;
 
 

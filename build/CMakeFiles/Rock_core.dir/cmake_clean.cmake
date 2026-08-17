@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
   "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o.d"
-  "CMakeFiles/Rock_core.dir/src/display.cpp.o"
-  "CMakeFiles/Rock_core.dir/src/display.cpp.o.d"
+  "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o.d"
+  "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/earth.cpp.o"
   "CMakeFiles/Rock_core.dir/src/earth.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/fabric.cpp.o"
