@@ -32,7 +32,7 @@ inline constexpr  std::array<quantity<K>, atmo_layers.size()> layer_base_temp = 
         return temps;
 }();
 
-
+// Tb + L(H-Hb)
 inline const quantity<K> Atmo_layer_isa::compute_temperature(quantity<m> geopot_al) { 
     size_t res = 0;
     for (size_t i = 0; i < atmo_layers.size(); ++i) {

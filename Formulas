@@ -11,3 +11,8 @@ Accelleration: a = F / m
             m/s    H   kg
 
 Orbit velocity: v = sqrt(G * M / r)
+
+
+
+
+Atmospheric temperature up to the 82 km  = Tb + L(H-Hb)

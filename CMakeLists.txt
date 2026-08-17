@@ -35,7 +35,8 @@ add_library(Rock_core STATIC
     src/rocket.cpp
     src/fabric.cpp
     src/launch_bay.cpp
-    src/display.cpp
+    src/GUI/display.cpp
+    src/GUI/rocket_render.cpp
     src/Enviroment/atmosphere.cpp
     
 )
