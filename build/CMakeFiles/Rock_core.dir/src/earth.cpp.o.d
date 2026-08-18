@@ -308,4 +308,5 @@ CMakeFiles/Rock_core.dir/src/earth.cpp.o: \
  /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/compare.h \
  /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/quantity_cast.h \
  /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/quantity_traits.h \
- /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/unit_symbols.h
+ /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/unit_symbols.h \
+ /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/math.h

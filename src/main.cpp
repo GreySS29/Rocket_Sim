@@ -47,9 +47,12 @@ int main(int argc, char** argv) {
 //    quantity<m> geom_al = 85000 * m;
 //    atm.set_tempeture(geom_al);
 //     std::cout << atm.get_temperature() << '\n' ; 
-Atmo_layer_termosphere atmo;
 
-    constexpr quantity<K>  T = atmo.get_exospheric_temp();
-    std::cout << T << '\n' ; 
+
+    atm.set_tempeture(86000 * m);
+    std::cout << atm.get_temperature() << '\n' ; 
+    atm.set_tempeture(87000*m);
+     std::cout << atm.get_temperature() << '\n' ; 
+
 
 } 

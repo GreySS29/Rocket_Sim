@@ -65,6 +65,7 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o: /home/greys/Documen
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit_text.h \
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/value_cast.h \
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/vector_components.h \
+  /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/math.h \
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/overflow_policies.h \
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/utility/format.h \
   /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/utility/unspecified.h \
@@ -675,8 +676,6 @@ libglad.a:
 
 /usr/include/c++/16/bits/string_view.tcc:
 
-/usr/include/c++/16/bits/streambuf_iterator.h:
-
 /usr/include/c++/16/bits/streambuf.tcc:
 
 /usr/include/c++/16/bits/stream_iterator.h:
@@ -837,6 +836,12 @@ libglad.a:
 
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si.h:
 
+/usr/include/c++/16/bits/streambuf_iterator.h:
+
+/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/math.h:
+
+/usr/include/bits/long-double.h:
+
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/ext/type_traits.h:
 
 /usr/include/bits/types/struct_timespec.h:
@@ -850,8 +855,6 @@ libglad.a:
 /usr/include/bits/types/__FILE.h:
 
 /usr/include/c++/16/bits/istream.tcc:
-
-/usr/include/bits/long-double.h:
 
 /usr/include/c++/16/limits:
 
@@ -1073,6 +1076,10 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 
 /usr/include/bits/stdint-least.h:
 
+/usr/include/c++/16/bits/sstream.tcc:
+
+/home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/units.h:
+
 /usr/include/c++/16/bits/functexcept.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/compat_macros.h:
@@ -1092,10 +1099,6 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 /usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/16/bits/algorithmfwd.h:
-
-/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit.h:
-
-/usr/include/bits/select.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit_symbol_formatting.h:
 
@@ -1128,6 +1131,10 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/chrono.h:
 
 /usr/include/c++/16/bits/node_handle.h:
+
+/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit.h:
+
+/usr/include/bits/select.h:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h:
 
@@ -1376,7 +1383,3 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o:
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/16/bits/specfun.h:
-
-/home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/units.h:
-
-/usr/include/c++/16/bits/sstream.tcc:
