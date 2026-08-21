@@ -8,6 +8,7 @@
 #include "../include/GUI/RocketRender.h"
 #include "../include/Enviroment/Atmosphere.h"
 #include "../include/Enviroment/Atmo_layer_termosphere.h"
+#include "../include/Enviroment/Atmo_layer_isa.h"
 
 int main_m(int argc, char** argv){
     Earth earth;
@@ -39,6 +40,7 @@ int main_m(int argc, char** argv){
 int main(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
+   Atmo_layer_isa isa;
    
 //    atm.temperature = delta<K>(293.15); // ??
 //    atm.pressure = 101325.0 * Pa;
@@ -49,10 +51,12 @@ int main(int argc, char** argv) {
 //     std::cout << atm.get_temperature() << '\n' ; 
 
 
-    atm.set_tempeture(86000 * m);
-    std::cout << atm.get_temperature() << '\n' ; 
-    atm.set_tempeture(87000*m);
-     std::cout << atm.get_temperature() << '\n' ; 
+    // atm.set_tempeture(86000 * m);
+    // std::cout << atm.get_temperature() << '\n' ; 
+    // atm.set_tempeture(87000*m);
+    //  std::cout << atm.get_temperature() << '\n' ; 
+
+    isa.print_temp_pressure();
 
 
 } 

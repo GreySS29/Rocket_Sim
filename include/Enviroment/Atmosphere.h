@@ -14,6 +14,7 @@ class Atmosphere {
     Atmosphere() : temperature(delta<K>(288.15)) {};
 
     void set_tempeture(quantity<m> geometric_altitude);
+    
 
     //get
     quantity<K> get_temperature() const { return temperature;};

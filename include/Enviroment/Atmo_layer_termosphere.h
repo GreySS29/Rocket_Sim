@@ -4,7 +4,6 @@
 
 class Atmo_layer_termosphere
 {
-    
     public:
     //profile Bates–Jacchia  T(z) = T_i - (T_i - To) exp [ - (z-zo) / H_t ]
     quantity<K> get_temp_termo(quantity<km> geometric_altitude) {
@@ -13,9 +12,6 @@ class Atmo_layer_termosphere
         const auto exponent = - (geometric_altitude - z_base) / H_t ; 
         return T_i - (T_i - temp_z_base) * mp_units::exp(exponent);
     }
-
-
-
 
     private:
     // data from Jacchia-70/71
