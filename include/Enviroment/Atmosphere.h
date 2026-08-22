@@ -20,8 +20,8 @@ class Atmosphere {
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const {
         std::cout << "temp" << temperature << '\t'
-        << "press" << pressure << '\t';
-       // << "density" << density << '\n'
+        << "press" << pressure << '\t'
+        << "density" << density << '\n';
     }
 
     private:
@@ -29,15 +29,16 @@ class Atmosphere {
     Atmo_layer_termosphere layer_termosphere;
     quantity<K> temperature;
     quantity<Pa> pressure;
-    quantity<kg / m3> density() const {
-        constexpr auto R_air                  = 287.05 * J / (kg * K);
-        return pressure / (R_air * temperature);}
+    quantity<kg / m3> density;
+    
     //double speedOfSound;         // a, m/s
 
     //for < 86 km 
     quantity<m> get_geopotential_altitude (quantity<m> geometric_altitude) const{
         return (Earth::mean_radius * geometric_altitude) / (Earth::mean_radius + geometric_altitude);}
 
+    void set_density() {
+        density = pressure / (Dry_air_specific_gas_constant * temperature);}
 
 
 

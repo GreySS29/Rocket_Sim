@@ -42,21 +42,14 @@ int main(int argc, char** argv) {
    Atmosphere atm;
    Atmo_layer_isa isa;
    
-//    atm.temperature = delta<K>(293.15); // ??
-//    atm.pressure = 101325.0 * Pa;
 
-//    auto rho = atm.density();
-//    quantity<m> geom_al = 85000 * m;
-//    atm.set_tempeture(geom_al);
-//     std::cout << atm.get_temperature() << '\n' ; 
+    quantity<m> altitude = delta<m>(71000);
+    atm.set_tempeture(altitude);
+    atm.get_status();
 
+    
 
-    // atm.set_tempeture(86000 * m);
-    // std::cout << atm.get_temperature() << '\n' ; 
-    // atm.set_tempeture(87000*m);
-    //  std::cout << atm.get_temperature() << '\n' ; 
-
-    isa.print_temp_pressure();
+    
 
 
 } 

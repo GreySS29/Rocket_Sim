@@ -11,8 +11,14 @@ using namespace mp_units::si::unit_symbols; // not the best solition
 //Earth
 constexpr double G = 6.674e-11; //gravity const: 6.674 × 10⁻¹¹ Н·m²/kg²
 const double RADIUS_E = 6'371'000.0;//m
+constexpr auto Standard_gravity = 9.80665 * m / pow<2>(s);
 
 //Atmosphere
+constexpr auto Sea_level_temperature  = delta<K>(288.15);
+constexpr auto Sea_level_pressure = 101325 * Pa;
+constexpr auto Dry_air_specific_gas_constant = 287.052 * pow<2>(m) / (pow<2>(s) * K);
+
+
 
 
 

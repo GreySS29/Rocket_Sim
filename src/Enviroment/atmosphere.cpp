@@ -8,10 +8,18 @@ void Atmosphere::set_tempeture(quantity<m> geometric_altitude){
         throw std::domain_error("Negative geopotential altitude");
         }
         else if (geometric_altitude <= isa_boundary){
-        temperature = layer_isa.compute_temperature(get_geopotential_altitude(geometric_altitude));
-        //pressure = layer_isa.compute_pressure();
 
-        }
+            const quantity<m> geopot_altitude = get_geopotential_altitude(geometric_altitude);
+            size_t layer = layer_isa.find_layer(geopot_altitude);
+            std::cout<< layer<< '\n';
+
+
+            temperature = layer_isa.compute_temperature(layer,geopot_altitude);
+            pressure = layer_isa.compute_pressure(layer,temperature,geopot_altitude);
+            set_density();
+     
+
+        } 
         else if (geometric_altitude<=termpsphere_boundary){
             temperature = layer_termosphere.get_temp_termo(geometric_altitude);
         }
