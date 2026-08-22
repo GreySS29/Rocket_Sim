@@ -18,6 +18,11 @@ class Atmosphere {
 
     //get
     quantity<K> get_temperature() const { return temperature;};
+    void get_status () const {
+        std::cout << "temp" << temperature << '\t'
+        << "press" << pressure << '\t';
+       // << "density" << density << '\n'
+    }
 
     private:
     Atmo_layer_isa layer_isa;
