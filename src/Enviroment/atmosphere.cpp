@@ -1,6 +1,6 @@
 #include "../../include/Enviroment/Atmosphere.h"
 
-void Atmosphere::set_tempeture(quantity<m> geometric_altitude){
+void Atmosphere::update(quantity<m> geometric_altitude){
         quantity isa_boundary = delta<m>(86'000);
         quantity termpsphere_boundary = delta<m>(500'000); // temporary
         quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
@@ -21,7 +21,9 @@ void Atmosphere::set_tempeture(quantity<m> geometric_altitude){
 
         } 
         else if (geometric_altitude<=termpsphere_boundary){
-            temperature = layer_termosphere.get_temp_termo(geometric_altitude);
+            temperature = layer_termosphere.compute_temperature(geometric_altitude);
+            pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,mol_mass);
+            set_density();
         }
         else if (geometric_altitude<exosprhehe_boundary){
             std::cerr << "Not func exosphere";

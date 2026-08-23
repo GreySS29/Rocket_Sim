@@ -35,18 +35,17 @@ int main_m(int argc, char** argv){
 }
 
 
-
-
 int main(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
    Atmo_layer_isa isa;
+   Atmo_layer_termosphere term;
    
 
-    quantity<m> altitude = delta<m>(71000);
-    atm.set_tempeture(altitude);
+    quantity<m> altitude = delta<m>(450000);
+    atm.update(altitude);
     atm.get_status();
-
+  
     
 
     

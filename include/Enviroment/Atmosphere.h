@@ -2,19 +2,22 @@
 #include "../Earth.h"
 #include "Atmo_layer_isa.h"
 #include "Atmo_layer_termosphere.h"
-
-
-
-
-
+#include <vector>
 
 class Atmosphere {
     public:
 
     Atmosphere() : temperature(delta<K>(288.15)) {};
 
-    void set_tempeture(quantity<m> geometric_altitude);
+    void update(quantity<m> geometric_altitude);
     
+    // this is rougly approximation !
+    const std::vector<std::pair<quantity<km>,quantity<kg/mol>>> mol_mass {
+        {delta<km>(150) , delta<kg/mol>(0.02897)},
+        {delta<km>(200) , delta<kg/mol>(0.020)},
+        {delta<km>(500) , delta<kg/mol>(0.016)},
+        {delta<km>(800) , delta<kg/mol>(0.005)},
+    };
 
     //get
     quantity<K> get_temperature() const { return temperature;};
@@ -39,8 +42,6 @@ class Atmosphere {
 
     void set_density() {
         density = pressure / (Dry_air_specific_gas_constant * temperature);}
-
-
 
     
 };
