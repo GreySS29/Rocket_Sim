@@ -4,6 +4,10 @@ void Atmosphere::update(quantity<m> geometric_altitude){
         quantity isa_boundary = delta<m>(86'000);
         quantity termpsphere_boundary = delta<m>(500'000); // temporary
         quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
+
+        molar_mass = get_atmo_mol_mass(geometric_altitude);
+
+
         if(geometric_altitude < 0 * m){
         throw std::domain_error("Negative geopotential altitude");
         }
@@ -21,8 +25,9 @@ void Atmosphere::update(quantity<m> geometric_altitude){
 
         } 
         else if (geometric_altitude<=termpsphere_boundary){
+            
             temperature = layer_termosphere.compute_temperature(geometric_altitude);
-            pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,mol_mass);
+            pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,molar_mass);
             set_density();
         }
         else if (geometric_altitude<exosprhehe_boundary){

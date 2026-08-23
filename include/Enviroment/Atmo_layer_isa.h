@@ -27,6 +27,7 @@ inline constexpr std::array<Atmo_layer_isa, 8> atmo_layers = {{
 
 }};
 
+//Tb + L(H-Hb)
 inline constexpr  std::array<quantity<K>, atmo_layers.size()> layer_base_temp = []{
     std::array<quantity<K>, atmo_layers.size()> temps{};
         temps[0] = Sea_level_temperature;
