@@ -67,10 +67,6 @@ inline constexpr  std::array<quantity<Pa>, atmo_layers.size()> layer_base_press 
         return press;
 }();
 
-// quantity<Pa> get_last_press_isa (){
-//     return layer_base_press.back();
-// }
-
 
 inline const size_t Atmo_layer_isa::find_layer (quantity<m> geopot_al){
     size_t res = 0;
