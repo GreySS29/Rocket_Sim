@@ -38,14 +38,12 @@ class Atmosphere {
         return (Earth::mean_radius * geometric_altitude) / (Earth::mean_radius + geometric_altitude);}
     void set_density() {
         density = pressure*molar_mass / (Gaz_constant * temperature);}
-    void set_sonic_velosity () {
-        sonic_velosity =  mp_units::sqrt(Heat_capacity_ratio*pressure/density); 
-    }
+    void set_sonic_velosity ();
 
     // This is a simple template for calculating the molar mass  of the atmosphere in each layer up to an altitude of 500 km
     // quation: piecewise linear approximation
     // M1 + ((M2-M1) / (z2-z1)) * (z-z1)
-    const quantity<kg/mol> get_atmo_mol_mass(const quantity<km> geometric_altitude);
+    void set_atmo_mol_mass(const quantity<km> geometric_altitude);
     
 
     
