@@ -1,7 +1,7 @@
 #pragma once
 #include "Physic_object.h"
 
-
+//AccelerationVec gravity   = make_vec<isq::acceleration, m / s2>(0., -9.81, 0.);
 
 class Earth : public Physic_object
 {

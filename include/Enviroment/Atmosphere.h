@@ -3,6 +3,12 @@
 #include "Atmo_layer_isa.h"
 #include "Atmo_layer_termosphere.h"
 #include <vector>
+#include "../Vec3_mp.h"
+
+
+
+
+
 
 class Atmosphere {
 
@@ -24,6 +30,8 @@ class Atmosphere {
     quantity<kg / m3> density;
     quantity<kg/mol> molar_mass;
     quantity<m/s> sonic_velosity;
+    VelocityVec wind_velosity = make_vec<isq::velocity, m / s>(0., 1., 0.);
+
 
     // this is rougly approximation !
     const std::vector<std::pair<quantity<km>,quantity<kg/mol>>> mol_mass {
@@ -36,6 +44,8 @@ class Atmosphere {
     //for < 86 km 
     quantity<m> get_geopotential_altitude (quantity<m> geometric_altitude) const{
         return (Earth::mean_radius * geometric_altitude) / (Earth::mean_radius + geometric_altitude);}
+
+        
     void set_density() {
         density = pressure*molar_mass / (Gaz_constant * temperature);}
     void set_sonic_velosity ();

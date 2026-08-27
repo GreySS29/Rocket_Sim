@@ -32,11 +32,12 @@ void Atmosphere::update(quantity<m> geometric_altitude){
 
 
     void Atmosphere::get_status () const {
-        std::cout << "temp" << temperature << '\t'
-        << "press" << pressure << '\t'
-        << "density" << density << '\t'
-        << "molar_mass" << molar_mass << '\n'
-        << "super_sonic" << sonic_velosity << '\n';
+        std::cout << "temp: " << temperature << '\t'
+        << "press: " << pressure << '\t'
+        << "dens: " << density << '\t'
+        << "molar_mass: " << molar_mass << '\n'
+        << "super_sonic: " << sonic_velosity << '\t'
+        << "wind_vel: " << wind_velosity << '\n';
     }
 
 

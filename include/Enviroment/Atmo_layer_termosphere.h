@@ -17,10 +17,8 @@ class Atmo_layer_termosphere
     quantity<Pa> compute_pressure (quantity<km> geometric_altitude, quantity<K> temperature, 
         const auto& mol_mass){
         
-        
         const auto h_base = atmo_layers.back().base_altitude;
         const auto dh = (geometric_altitude - h_base);
-        
         const auto exponent = - ((Standard_gravity *  mol_mass * dh) / (Gaz_constant*temperature));
 
         return layer_base_press.back() * mp_units::exp(exponent);
@@ -39,11 +37,6 @@ class Atmo_layer_termosphere
         return  1.0/0.0291 *km * mp_units::exp(exponent); 
     }
 
-    
-
-   
-    
-
     //very rough calculation . F10.7(F) quantities was chosen roughly too. 
     //T_e = 383 + 3.32\,\bar F_{10.7} + 1.8\,(F_{10.7}-\bar F_{10.7}),(Jacchia-70/71, CIRA) 
     constexpr quantity<K> get_exospheric_temp(){
@@ -55,8 +48,6 @@ class Atmo_layer_termosphere
     constexpr quantity<K> T_i     = T_c + T_const;
     return T_i;
     }
-
-
 
 };
 
