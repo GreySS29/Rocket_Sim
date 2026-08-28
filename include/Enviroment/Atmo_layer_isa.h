@@ -7,7 +7,7 @@ struct Atmo_layer_isa {
 
     inline const size_t find_layer (quantity<m> geopot_al);  
     inline const quantity<K> compute_temperature (const size_t layer, const quantity<m> geopot_al);
-    inline const quantity<Pa> compute_pressure(const size_t layer,quantity<K>& temperature, const quantity<m> geopot_al );
+    inline const quantity<Pa> compute_pressure(const size_t layer,quantity<K>& temperature, const quantity<m> geopot_al,const quantity<kg/mol> molar_mass );
     inline void print_layer_temp_press ();
     
     quantity<m> base_altitude;
@@ -88,12 +88,12 @@ inline const quantity<K> Atmo_layer_isa::compute_temperature(const size_t layer,
 
 // L!=0 --->  P = Pb * (T / Tb) ^ (-g / R*Lb)
 // L = 0 ---> P = Pb exp ( -g*(h-h_b) / R*Tb)
-inline const quantity<Pa> Atmo_layer_isa::compute_pressure(const size_t layer,quantity<K>& temperature, const quantity<m> geopot_al ){
+inline const quantity<Pa> Atmo_layer_isa::compute_pressure(const size_t layer,quantity<K>& temperature, const quantity<m> geopot_al, const quantity<kg/mol> molar_mass){
    
     if (atmo_layers[layer].lapse_rate != delta<K/m>(0)){ 
 
-        double exponent =(-Standard_gravity / (Dry_air_specific_gas_constant * atmo_layers[layer].lapse_rate))
-        .numerical_value_in(mp_units::one);;
+        double exponent =((-Standard_gravity * molar_mass) / (Gaz_constant * atmo_layers[layer].lapse_rate))
+        .numerical_value_in(mp_units::one);
         double temp_ratio =(temperature / layer_base_temp[layer])
         .numerical_value_in(mp_units::one);
 
@@ -101,7 +101,7 @@ inline const quantity<Pa> Atmo_layer_isa::compute_pressure(const size_t layer,qu
     } 
   
         const auto allt = geopot_al - atmo_layers[layer].base_altitude;
-        const auto exponent = - (Standard_gravity * allt / (Dry_air_specific_gas_constant*layer_base_temp[layer]));
+        const auto exponent = - (Standard_gravity * allt * molar_mass / (Gaz_constant*layer_base_temp[layer]));
 
         return layer_base_press[layer] * mp_units::exp(exponent);
     

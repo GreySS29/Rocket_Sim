@@ -17,7 +17,9 @@ class Atmosphere {
 
     public:
 
-    Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure) {};
+    Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure) {
+        //test with Tables of the U.S. Standard Atmosphere, 1976
+    };
     void update(quantity<m>& geometric_altitude);
     
     //get
@@ -60,15 +62,34 @@ class Atmosphere {
     // quation: piecewise linear approximation
     // M1 + ((M2-M1) / (z2-z1)) * (z-z1)
     void set_atmo_mol_mass(const quantity<km> geometric_altitude);
-    void set_viscosity() {
-        quantity<K> t_base = delta<K>(273.15);
-        quantity<K> sutherland_const = delta<K>(110.4);
-        quantity<Pa*s> v_base = 1.716e-5 * Pa*s;
 
-        const auto comp1 =  mp_units::pow<3,2>(temperature / t_base); 
-        const auto comp2 = (t_base + sutherland_const) / (temperature+sutherland_const);
-        viscosity = v_base * comp1 *comp2;
+    // μ = μ0 * (T/T0)^3/2 * (T0+110.4)/(T+110.4);
+    void set_viscosity();
+
+    void set_temperature_pressure(quantity<m>& geometric_altitude){
+        quantity isa_boundary = atmo_layers.back().base_altitude;
+        quantity termpsphere_boundary = delta<m>(500'000); // temporary
+        quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
+
+        if(geometric_altitude < 0 * m){
+            throw std::domain_error("Negative geopotential altitude");}
+            else if (geometric_altitude <= isa_boundary){
+                const quantity<m> geopot_altitude = get_geopotential_altitude(geometric_altitude);
+                size_t layer = layer_isa.find_layer(geopot_altitude);
+                temperature = layer_isa.compute_temperature(layer,geopot_altitude);
+                pressure = layer_isa.compute_pressure(layer,temperature,geopot_altitude,molar_mass);
+            } 
+            else if (geometric_altitude<=termpsphere_boundary){
+                temperature = layer_termosphere.compute_temperature(geometric_altitude);
+                pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,molar_mass);
+            }
+            else if (geometric_altitude<exosprhehe_boundary){
+                std::cerr << "Not func exosphere";
+            }
+            else std::cerr << "Not correct function was used";
+
     }
+
   
 
     

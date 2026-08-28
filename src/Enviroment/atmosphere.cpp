@@ -3,45 +3,12 @@
 
 //mass_mol-> temperature->pressure->density->sonic_vel
 void Atmosphere::update(quantity<m>& geometric_altitude){
-        
-        quantity isa_boundary = delta<m>(86'000);
-        quantity termpsphere_boundary = delta<m>(500'000); // temporary
-        quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
-
         set_atmo_mol_mass(geometric_altitude);
-
-        if(geometric_altitude < 0 * m){throw std::domain_error("Negative geopotential altitude");}
-            else if (geometric_altitude <= isa_boundary){
-                const quantity<m> geopot_altitude = get_geopotential_altitude(geometric_altitude);
-                size_t layer = layer_isa.find_layer(geopot_altitude);
-                temperature = layer_isa.compute_temperature(layer,geopot_altitude);
-                pressure = layer_isa.compute_pressure(layer,temperature,geopot_altitude);
-            } 
-            else if (geometric_altitude<=termpsphere_boundary){
-                temperature = layer_termosphere.compute_temperature(geometric_altitude);
-                pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,molar_mass);
-            }
-            else if (geometric_altitude<exosprhehe_boundary){
-                std::cerr << "Not func exosphere";
-            }
-            else std::cerr << "Not correct function was used";
-
+        set_temperature_pressure(geometric_altitude);
         set_viscosity();
         set_density();
         set_sonic_velosity();
-    };
-
-
-    void Atmosphere::get_status () const {
-        std::cout << "temp: " << temperature << '\t'
-        << "press: " << pressure << '\t'
-        << "dens: " << density << '\t'
-        << "molar_mass: " << molar_mass << '\n'
-        << "viscosity: " << viscosity << '\t'
-        << "super_sonic: " << sonic_velosity << '\t'
-        << "wind_vel: " << wind_velosity << '\n';
     }
-
 
     void Atmosphere::set_atmo_mol_mass(const quantity<km> geometric_altitude){
         if(geometric_altitude < mol_mass[0].first) {
@@ -64,6 +31,29 @@ void Atmosphere::update(quantity<m>& geometric_altitude){
         } 
     }
 
+    void Atmosphere::set_temperature_pressure(quantity<m>& geometric_altitude){
+        quantity isa_boundary = atmo_layers.back().base_altitude;
+        quantity termpsphere_boundary = delta<m>(500'000); // temporary
+        quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
+
+        if(geometric_altitude < 0 * m){
+            throw std::domain_error("Negative geopotential altitude");}
+            else if (geometric_altitude <= isa_boundary){
+                const quantity<m> geopot_altitude = get_geopotential_altitude(geometric_altitude);
+                size_t layer = layer_isa.find_layer(geopot_altitude);
+                temperature = layer_isa.compute_temperature(layer,geopot_altitude);
+                pressure = layer_isa.compute_pressure(layer,temperature,geopot_altitude,molar_mass);
+            } 
+            else if (geometric_altitude<=termpsphere_boundary){
+                temperature = layer_termosphere.compute_temperature(geometric_altitude);
+                pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,molar_mass);
+            }
+            else if (geometric_altitude<exosprhehe_boundary){
+                std::cerr << "Not func exosphere";
+            }
+            else std::cerr << "Not correct function was used";
+
+    }
 
      void Atmosphere::set_sonic_velosity () {
         double heat_capacity_ratio = 1.4; 
@@ -74,6 +64,28 @@ void Atmosphere::update(quantity<m>& geometric_altitude){
             std::cout << "HCR" << heat_capacity_ratio<<'\n';
         }
         sonic_velosity =  mp_units::sqrt(heat_capacity_ratio*pressure/density); 
+    }
+
+    void Atmosphere::set_viscosity() { 
+        quantity<K> t_base = delta<K>(273.15);
+        quantity<K> sutherland_const = delta<K>(110.4);
+        quantity<Pa*s> v_base = 1.716e-5 * Pa*s;
+
+        const auto comp1 =  mp_units::pow<3,2>(temperature / t_base); 
+        const auto comp2 = (t_base + sutherland_const) / (temperature+sutherland_const);
+        viscosity = v_base * comp1 *comp2;
+    }
+
+
+
+    void Atmosphere::get_status () const {
+        std::cout << "temp: " << temperature << '\t'
+        << "press: " << pressure << '\t'
+        << "dens: " << density << '\t'
+        << "molar_mass: " << molar_mass << '\n'
+        << "viscosity: " << viscosity << '\t'
+        << "super_sonic: " << sonic_velosity << '\t'
+        << "wind_vel: " << wind_velosity << '\n';
     }
 
     void Atmosphere::print_to_log(std::ofstream&ofs, quantity<m>& geometric_altitude) const{
