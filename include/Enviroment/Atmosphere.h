@@ -30,7 +30,8 @@ class Atmosphere {
     quantity<kg / m3> density;
     quantity<kg/mol> molar_mass;
     quantity<m/s> sonic_velosity;
-    VelocityVec wind_velosity = make_vec<isq::velocity, m / s>(0., 1., 0.);
+    VelocityVec wind_velosity = make_vec<isq::velocity, m / s>(0., 0., 0.);
+    quantity<Pa*s> viscosity;
 
 
     // this is rougly approximation !
@@ -54,6 +55,15 @@ class Atmosphere {
     // quation: piecewise linear approximation
     // M1 + ((M2-M1) / (z2-z1)) * (z-z1)
     void set_atmo_mol_mass(const quantity<km> geometric_altitude);
+    void set_viscosity() {
+        quantity<K> t_base = delta<K>(273.15);
+        quantity<K> sutherland_const = delta<K>(110.4);
+        quantity<Pa*s> v_base = 1.716e-5 * Pa*s;
+
+        const auto comp1 =  mp_units::pow<3,2>(temperature / t_base); 
+        const auto comp2 = (t_base + sutherland_const) / (temperature+sutherland_const);
+        viscosity = v_base * comp1 *comp2;
+    }
     
 
     

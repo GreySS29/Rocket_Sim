@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
    Atmo_layer_termosphere term;
    
 
-    quantity<m> altitude = delta<m>(220000);
+    quantity<m> altitude = delta<m>(25000);
     atm.update(altitude);
     atm.get_status();
     

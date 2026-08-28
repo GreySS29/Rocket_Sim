@@ -26,6 +26,7 @@ void Atmosphere::update(quantity<m> geometric_altitude){
             }
             else std::cerr << "Not correct function was used";
 
+        set_viscosity();
         set_density();
         set_sonic_velosity();
     };
@@ -36,6 +37,7 @@ void Atmosphere::update(quantity<m> geometric_altitude){
         << "press: " << pressure << '\t'
         << "dens: " << density << '\t'
         << "molar_mass: " << molar_mass << '\n'
+        << "viscosity: " << viscosity << '\t'
         << "super_sonic: " << sonic_velosity << '\t'
         << "wind_vel: " << wind_velosity << '\n';
     }
