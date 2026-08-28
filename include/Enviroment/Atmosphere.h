@@ -4,6 +4,9 @@
 #include "Atmo_layer_termosphere.h"
 #include <vector>
 #include "../Vec3_mp.h"
+#include <fstream>
+#include <iomanip>
+
 
 
 
@@ -15,11 +18,13 @@ class Atmosphere {
     public:
 
     Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure) {};
-    void update(quantity<m> geometric_altitude);
+    void update(quantity<m>& geometric_altitude);
     
     //get
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const;
+    void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
+
 
     
     private:
@@ -64,7 +69,7 @@ class Atmosphere {
         const auto comp2 = (t_base + sutherland_const) / (temperature+sutherland_const);
         viscosity = v_base * comp1 *comp2;
     }
-    
+  
 
     
 };

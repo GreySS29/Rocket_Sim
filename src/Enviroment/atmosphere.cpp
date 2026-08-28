@@ -2,7 +2,7 @@
 
 
 //mass_mol-> temperature->pressure->density->sonic_vel
-void Atmosphere::update(quantity<m> geometric_altitude){
+void Atmosphere::update(quantity<m>& geometric_altitude){
         
         quantity isa_boundary = delta<m>(86'000);
         quantity termpsphere_boundary = delta<m>(500'000); // temporary
@@ -76,4 +76,14 @@ void Atmosphere::update(quantity<m> geometric_altitude){
         sonic_velosity =  mp_units::sqrt(heat_capacity_ratio*pressure/density); 
     }
 
-   
+    void Atmosphere::print_to_log(std::ofstream&ofs, quantity<m>& geometric_altitude) const{
+        ofs << std::fixed << std::setprecision(2);
+        ofs << "Alt: " << geometric_altitude << " | "
+        <<"T: " << temperature << " | "
+        << "P: " << pressure << " | "
+        << "D: " << density << " | "
+        << "M: " << molar_mass << " | "
+        << "Visc: " << viscosity << " | "
+        << "V_a: " << sonic_velosity << " | "
+        << "V_w: " << wind_velosity << '\n';
+    }

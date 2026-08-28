@@ -10,8 +10,9 @@
 #include "../include/Enviroment/Atmo_layer_termosphere.h"
 #include "../include/Enviroment/Atmo_layer_isa.h"
 
-int main_m(int argc, char** argv){
+int main(int argc, char** argv){
     Earth earth;
+    Atmosphere atm;
     Fabric fabric;
     Launch_bay launch_bay;
     RocketRender render;
@@ -20,6 +21,21 @@ int main_m(int argc, char** argv){
 
     std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
     launch_bay.launch_falcon9(earth,rocket,render);
+
+
+
+    std::ofstream ofs("../Log/atm.txt");
+
+        if (!ofs.is_open()) {
+            std::cout << "log doesn't exist\n";
+            
+        }
+    
+    for (size_t i =0; i< render.trajectory.size(); ++i){
+        quantity<m> all = render.trajectory[i].second * m;
+        atm.update(all);
+        atm.print_to_log(ofs,all);
+    }
 
 //    std::unique_ptr<Rocket> rocket = fabric.create_def_rock(earth);
 //    launch_bay.launch_def_rock(earth,rocket);
@@ -35,7 +51,7 @@ int main_m(int argc, char** argv){
 }
 
 
-int main(int argc, char** argv) {
+int main_m(int argc, char** argv) {
    Earth earth;
    Atmosphere atm;
    Atmo_layer_isa isa;
@@ -44,7 +60,8 @@ int main(int argc, char** argv) {
 
     quantity<m> altitude = delta<m>(25000);
     atm.update(altitude);
-    atm.get_status();
+   
+    
     
   
     
