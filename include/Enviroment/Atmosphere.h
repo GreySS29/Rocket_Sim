@@ -6,6 +6,7 @@
 #include "../Vec3_mp.h"
 #include <fstream>
 #include <iomanip>
+#include <mp-units/math.h>
 
 
 
@@ -17,10 +18,13 @@ class Atmosphere {
 
     public:
 
-    Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure) {
-        //test with Tables of the U.S. Standard Atmosphere, 1976
+    Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure){
+        if(!check()) {throw std::runtime_error("Wrong Atmosphere inizialization");}
+        update(0*m);
     };
-    void update(quantity<m>& geometric_altitude);
+
+    //mass_mol-> temperature->pressure->viscosity->density->sonic_vel
+    void update(quantity<m> geometric_altitude);
     
     //get
     quantity<K> get_temperature() const { return temperature;};
@@ -28,7 +32,6 @@ class Atmosphere {
     void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
 
 
-    
     private:
     Atmo_layer_isa layer_isa;
     Atmo_layer_termosphere layer_termosphere;
@@ -36,7 +39,7 @@ class Atmosphere {
     quantity<Pa> pressure;
     quantity<kg / m3> density;
     quantity<kg/mol> molar_mass;
-    quantity<m/s> sonic_velosity;
+    quantity<m/s> sonic_velocity;
     VelocityVec wind_velosity = make_vec<isq::velocity, m / s>(0., 0., 0.);
     quantity<Pa*s> viscosity;
 
@@ -53,7 +56,6 @@ class Atmosphere {
     quantity<m> get_geopotential_altitude (quantity<m> geometric_altitude) const{
         return (Earth::mean_radius * geometric_altitude) / (Earth::mean_radius + geometric_altitude);}
 
-        
     void set_density() {
         density = pressure*molar_mass / (Gaz_constant * temperature);}
     void set_sonic_velosity ();
@@ -66,31 +68,9 @@ class Atmosphere {
     // μ = μ0 * (T/T0)^3/2 * (T0+110.4)/(T+110.4);
     void set_viscosity();
 
-    void set_temperature_pressure(quantity<m>& geometric_altitude){
-        quantity isa_boundary = atmo_layers.back().base_altitude;
-        quantity termpsphere_boundary = delta<m>(500'000); // temporary
-        quantity exosprhehe_boundary = delta<m>(1'000'000); // not specifically
+    void set_temperature_pressure(quantity<m>& geometric_altitude);
 
-        if(geometric_altitude < 0 * m){
-            throw std::domain_error("Negative geopotential altitude");}
-            else if (geometric_altitude <= isa_boundary){
-                const quantity<m> geopot_altitude = get_geopotential_altitude(geometric_altitude);
-                size_t layer = layer_isa.find_layer(geopot_altitude);
-                temperature = layer_isa.compute_temperature(layer,geopot_altitude);
-                pressure = layer_isa.compute_pressure(layer,temperature,geopot_altitude,molar_mass);
-            } 
-            else if (geometric_altitude<=termpsphere_boundary){
-                temperature = layer_termosphere.compute_temperature(geometric_altitude);
-                pressure = layer_termosphere.compute_pressure(geometric_altitude,temperature,molar_mass);
-            }
-            else if (geometric_altitude<exosprhehe_boundary){
-                std::cerr << "Not func exosphere";
-            }
-            else std::cerr << "Not correct function was used";
-
-    }
-
+    //ISA Compliance Check: After adding the correct version of the overlay calculation, the new height should appear.
+    bool check();
   
-
-    
 };

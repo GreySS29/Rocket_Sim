@@ -10,7 +10,7 @@
 #include "../include/Enviroment/Atmo_layer_termosphere.h"
 #include "../include/Enviroment/Atmo_layer_isa.h"
 
-int main(int argc, char** argv){
+int main_m(int argc, char** argv){
     Earth earth;
     Atmosphere atm;
     Fabric fabric;
@@ -51,22 +51,27 @@ int main(int argc, char** argv){
 }
 
 
-int main_m(int argc, char** argv) {
-   Earth earth;
-   Atmosphere atm;
-   Atmo_layer_isa isa;
-   Atmo_layer_termosphere term;
+int main(int argc, char** argv) {
+
+    try
+    {
+        Earth earth;
+        Atmosphere atm;
+        Atmo_layer_isa isa;
+        Atmo_layer_termosphere term;
+
+        atm.update(50000 *m);
+        atm.get_status();
    
 
-    quantity<m> altitude = delta<m>(25000);
-    atm.update(altitude);
-   
-    
-    
-  
-    
+        //quantity<m> altitude = delta<m>(25000);
+    // atm.update(altitude);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        return 1;
+    }
 
-    
-
-
+    return 0;
 } 

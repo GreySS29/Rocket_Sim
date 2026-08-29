@@ -1,5 +1,6 @@
 #pragma once
 #include "Physic_object.h"
+#include <cmath>
 
 //AccelerationVec gravity   = make_vec<isq::acceleration, m / s2>(0., -9.81, 0.);
 
