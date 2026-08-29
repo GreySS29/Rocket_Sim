@@ -6,7 +6,7 @@
 #include "../Earth.h"
 #include "../Gravity_temp.h"
 
-#include <memory>
+
 
 
 

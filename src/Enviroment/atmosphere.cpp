@@ -102,11 +102,6 @@ void Atmosphere::print_to_log(std::ofstream&ofs, quantity<m>& geometric_altitude
 
     bool Atmosphere::check(){
 
-    constexpr auto eps_T = delta<K> (0.01);   
-    constexpr auto eps_P = 0.5 * Pa;   
-    constexpr auto eps_rho = 1e-4 * (kg/m3);
-    constexpr auto eps_v = 0.01 * (m/s);
-
     update(10000 * m);
     
     if (mp_units::abs(temperature - delta<K>(223.252)) > eps_T

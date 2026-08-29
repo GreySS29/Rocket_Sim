@@ -6,12 +6,6 @@
 #include "../Vec3_mp.h"
 #include <fstream>
 #include <iomanip>
-#include <mp-units/math.h>
-
-
-
-
-
 
 
 class Atmosphere {
@@ -29,6 +23,7 @@ class Atmosphere {
     //get
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const;
+    VelocityVec get_wind_vel() const{return wind_velosity;};
     void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
 
 
