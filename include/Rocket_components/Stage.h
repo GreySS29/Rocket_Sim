@@ -6,7 +6,7 @@
 #include "../Earth.h"
 #include "../Gravity_temp.h"
 
-#include <memory>
+
 
 
 
@@ -19,6 +19,7 @@ class Stage : public Physic_object {
     std::unique_ptr<Tank> tank;
     Vector3D velocity; //m.s
     Vector3D acceleration; //m/s2
+    // number of Mach 
 
     public:
     Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t) :

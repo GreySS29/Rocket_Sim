@@ -6,3 +6,5 @@ double Earth::get_air_density(double height) const {
     return AIR_DENSITY_SURFACE * std::exp(-height/8500); //exp==pow
 };
 
+
+

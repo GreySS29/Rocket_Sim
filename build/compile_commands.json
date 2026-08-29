@@ -1,212 +1,224 @@
 [
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/cc  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include  -o CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o -c /home/greys/Documents/Doc/C+/openGL/glad/src/glad.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/cc  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include  -o CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o -c /home/greys/Documents/Doc/C+/openGL/glad/src/glad.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c",
   "output": "CMakeFiles/glad.dir/home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/earth.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/earth.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/earth.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/earth.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/earth.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/earth.cpp",
   "output": "CMakeFiles/Rock_core.dir/src/earth.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/stage.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/stage.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/stage.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/stage.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/stage.cpp",
   "output": "CMakeFiles/Rock_core.dir/src/stage.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/rocket.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/rocket.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/rocket.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/rocket.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/rocket.cpp",
   "output": "CMakeFiles/Rock_core.dir/src/rocket.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/fabric.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/fabric.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/fabric.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/fabric.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/fabric.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/fabric.cpp",
   "output": "CMakeFiles/Rock_core.dir/src/fabric.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/launch_bay.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/launch_bay.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/launch_bay.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/launch_bay.cpp",
   "output": "CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/display.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/display.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/display.cpp",
-  "output": "CMakeFiles/Rock_core.dir/src/display.cpp.o"
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/display.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/display.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/src/main.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/rocket_render.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/rocket_render.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp",
+  "output": "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
+},
+{
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_sim.dir/src/main.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/main.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/main.cpp",
   "output": "CMakeFiles/Rock_sim.dir/src/main.cpp.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/context.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/context.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/context.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/context.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/init.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/init.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/init.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/init.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/input.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/input.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/input.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/input.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/monitor.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/monitor.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/monitor.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/platform.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/platform.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/platform.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/platform.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/vulkan.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/vulkan.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/vulkan.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/window.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/window.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/window.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/window.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/egl_context.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/egl_context.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/egl_context.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/osmesa_context.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/osmesa_context.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/osmesa_context.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_init.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_init.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/null_init.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_monitor.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_monitor.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/null_monitor.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_window.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_window.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/null_window.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_joystick.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/null_joystick.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/null_joystick.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_module.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_module.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/posix_module.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_time.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_time.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/posix_time.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_thread.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_thread.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/posix_thread.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_init.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_init.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/x11_init.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_monitor.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_monitor.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/x11_monitor.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_window.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/x11_window.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/x11_window.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/xkb_unicode.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/xkb_unicode.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/xkb_unicode.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/glx_context.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/glx_context.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/glx_context.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_init.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_init.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_init.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/wl_init.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/wl_init.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_monitor.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_monitor.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_monitor.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/wl_monitor.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/wl_monitor.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_window.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/wl_window.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/wl_window.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/wl_window.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/linux_joystick.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/linux_joystick.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/linux_joystick.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_poll.c",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src",
+  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/openGL/glfw/src -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/greys/Documents/Doc/C+/openGL/glfw/src/posix_poll.c",
   "file": "/home/greys/Documents/Doc/C+/openGL/glfw/src/posix_poll.c",
   "output": "glfw-build/src/CMakeFiles/glfw.dir/posix_poll.c.o"
 },
 {
-  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/tests",
-  "command": "/usr/bin/c++  -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/../../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -std=c++23 -o CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp",
-  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/test_stage_launch.cpp",
+  "directory": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/tests",
+  "command": "/usr/bin/c++ -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1 -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include -std=c++23 -o CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/test_stage_launch.cpp",
+  "file": "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/test_stage_launch.cpp",
   "output": "tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o"
 }
 ]

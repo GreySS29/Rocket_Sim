@@ -1,2 +1,2 @@
-/usr/bin/ar qc libRock_core.a CMakeFiles/Rock_core.dir/src/earth.cpp.o CMakeFiles/Rock_core.dir/src/stage.cpp.o CMakeFiles/Rock_core.dir/src/rocket.cpp.o CMakeFiles/Rock_core.dir/src/fabric.cpp.o CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o CMakeFiles/Rock_core.dir/src/display.cpp.o
+/usr/bin/ar qc libRock_core.a CMakeFiles/Rock_core.dir/src/earth.cpp.o CMakeFiles/Rock_core.dir/src/stage.cpp.o CMakeFiles/Rock_core.dir/src/rocket.cpp.o CMakeFiles/Rock_core.dir/src/fabric.cpp.o CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o
 /usr/bin/ranlib libRock_core.a

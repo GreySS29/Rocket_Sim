@@ -56,13 +56,5 @@ class Rocket  {
    void print_status_flight() const;
    void print_status_flight_short() const;
    void print_status_flight_short(std::ofstream& ofs, int time) const;
-
-
-   //for render
-   
-
-//    friend std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket);
-
-
 };
 

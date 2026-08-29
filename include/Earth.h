@@ -1,16 +1,17 @@
 #pragma once
 #include "Physic_object.h"
+#include <cmath>
+#include <memory>
+
+//AccelerationVec gravity   = make_vec<isq::acceleration, m / s2>(0., -9.81, 0.);
 
 class Earth : public Physic_object
 {
-    private:
-    const double RADIUS_E = 6371000.0; //m
-    const double ATMOSPHERE_HEIGHT = 100000.0;//m 
-    const double AIR_DENSITY_SURFACE = 1.225; // kg/m3
-    const double MU_EARTH = 3.986004418e14; // м^3/с^2
-    
+ 
 
     public:
+
+    inline static constexpr quantity<m> mean_radius = 6'371'000 * m;
     Earth () :Physic_object ({0,0,0}, 5.972E+24) {};
 
     Vector3D surfacePoint(double height_above_surface) const // for objects' construction 
@@ -40,6 +41,17 @@ class Earth : public Physic_object
 
     const double get_orbital_velocity(double target) const
      { return std::sqrt(MU_EARTH / (RADIUS_E + target));};
+
+
+
+    private:
+    const double RADIUS_E = 6371000.0; //m
+    const double ATMOSPHERE_HEIGHT = 100000.0;//m 
+    const double AIR_DENSITY_SURFACE = 1.225; // kg/m3
+    const double MU_EARTH = 3.986004418e14; // м^3/с^2
+    
+    inline static constexpr quantity<m> equatorial_radius =6'378'137 * m;
+    inline static constexpr quantity<m> polar_radius =6'356'752.3 * m;
 
 
 

@@ -2,7 +2,7 @@
 
 void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , RocketRender& roc_render)
 {
-
+// remove to log class
    std::ofstream ofs("../Log/log.txt");
 
     if (!ofs.is_open()) {
@@ -67,8 +67,8 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
       }
     
    
-      roc_render.put_force_buffer(ofs_force);
-    rocket->print_status(); 
+   roc_render.put_force_buffer(ofs_force);
+   rocket->print_status(); 
 
     
 };

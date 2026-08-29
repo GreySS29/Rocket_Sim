@@ -126,24 +126,24 @@ glfw-build/src/CMakeFiles/glfw.dir/wl_init.c.o: \
  /usr/include/bits/mman-linux.h /usr/include/bits/mman-shared.h \
  /usr/include/bits/mman_ext.h /usr/include/sys/timerfd.h \
  /usr/include/bits/timerfd.h /usr/include/assert.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/wayland-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/wayland-client-protocol.h \
  /usr/include/wayland-client.h /usr/include/wayland-client-core.h \
  /usr/include/wayland-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-shell-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-decoration-unstable-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/viewporter-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/relative-pointer-unstable-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/pointer-constraints-unstable-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/fractional-scale-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-activation-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/idle-inhibit-unstable-v1-client-protocol.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/wayland-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-shell-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-decoration-unstable-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/viewporter-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/relative-pointer-unstable-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/pointer-constraints-unstable-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/fractional-scale-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-activation-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/idle-inhibit-unstable-v1-client-protocol.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/wayland-client-protocol-code.h \
  /usr/include/wayland-util.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-shell-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-decoration-unstable-v1-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/viewporter-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/relative-pointer-unstable-v1-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/pointer-constraints-unstable-v1-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/fractional-scale-v1-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/xdg-activation-v1-client-protocol-code.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/src/idle-inhibit-unstable-v1-client-protocol-code.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-shell-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-decoration-unstable-v1-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/viewporter-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/relative-pointer-unstable-v1-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/pointer-constraints-unstable-v1-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/fractional-scale-v1-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/xdg-activation-v1-client-protocol-code.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/src/idle-inhibit-unstable-v1-client-protocol-code.h

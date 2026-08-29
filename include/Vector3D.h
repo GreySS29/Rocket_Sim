@@ -2,6 +2,7 @@
 #include <math.h>
 #include <assert.h>
 #include <iostream>
+#include <mp-units/systems/si.h>
 
 class Vector3D {
     public:
@@ -10,6 +11,8 @@ class Vector3D {
     Vector3D(double x=0, double y=0, double z=0) : x(x), y(y),z(z) { //{0,0,0}  - place above sea's level
        
     };
+
+
 
     Vector3D operator+(const Vector3D& other) const{
         return Vector3D(x+other.x, y+other.y, z+other.z);
@@ -60,3 +63,4 @@ class Vector3D {
         return Vector3D(x/mag, y/mag, z/mag);
     }
 };
+

@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/install_manifest.txt\"")
+if (NOT EXISTS "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/install_manifest.txt\"")
 endif()
 
-file(READ "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/build/glfw-build/install_manifest.txt" files)
+file(READ "/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/glfw-build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
