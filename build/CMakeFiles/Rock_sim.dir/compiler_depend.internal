@@ -107,6 +107,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Gravity_temp.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h

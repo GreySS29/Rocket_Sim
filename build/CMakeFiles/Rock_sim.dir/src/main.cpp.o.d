@@ -338,4 +338,5 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/isq/light_and_radiation.h \
  /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/isq/thermodynamics.h \
  /home/greys/Documents/Doc/C+/mp-units/src/utility/include/mp-units/utility/cartesian_vector.h \
- /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/utility/representation.h
+ /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/utility/representation.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/Flight_parameters.h

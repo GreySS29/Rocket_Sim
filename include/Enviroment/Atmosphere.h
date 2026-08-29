@@ -24,6 +24,10 @@ class Atmosphere {
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const;
     VelocityVec get_wind_vel() const{return wind_velosity;};
+    quantity<m/s> get_sonic_velocity() const{return sonic_velocity;};
+    quantity<Pa> get_pressure() const {return pressure;};
+    quantity<kg / m3> get_density() const {return density;};
+    quantity<Pa*s> get_viscosity() const {return viscosity;};
     void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
 
 

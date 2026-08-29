@@ -106,6 +106,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Gravity_temp.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
@@ -800,6 +801,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /usr/include/c++/16/bits/nested_exception.h:
 
+/usr/include/c++/16/bits/move.h:
+
 /usr/include/c++/16/version:
 
 /usr/include/asm-generic/int-ll64.h:
@@ -827,6 +830,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/c++/16/bits/exception_ptr.h:
 
 /usr/include/c++/16/bits/chrono_io.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h:
 
@@ -953,8 +958,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/ext/inplace_vector.h:
 
 /usr/include/c++/16/bits/intcmp.h:
-
-/usr/include/c++/16/bits/move.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/prefix_utils.h:
 
@@ -1100,8 +1103,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/ostream.h:
 
-/usr/include/assert.h:
-
 /usr/include/math.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h:
@@ -1241,6 +1242,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/c++/16/bits/ptr_traits.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/chrono.h:
+
+/usr/include/assert.h:
 
 /usr/include/c++/16/ext/string_conversions.h:
 

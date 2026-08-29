@@ -7,9 +7,7 @@
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
 #include "../include/Enviroment/Atmosphere.h"
-#include "../include/Enviroment/Atmo_layer_termosphere.h"
-#include "../include/Enviroment/Atmo_layer_isa.h"
-
+#include "../include/Rocket_components/Flight_parameters.h"
 int main_m(int argc, char** argv){
     Earth earth;
     Atmosphere atm;
@@ -57,11 +55,25 @@ int main(int argc, char** argv) {
     {
         Earth earth;
         Atmosphere atm;
-        Atmo_layer_isa isa;
-        Atmo_layer_termosphere term;
+        Flight_parameters flp(atm);
 
-        atm.update(50000 *m);
+
+        atm.update(56668 *m);
         atm.get_status();
+        Vector3D vel {1874.8,734.67,0.};
+
+        // atm.update(19116 *m);
+        // atm.get_status();
+        // Vector3D vel {391.8,513.67,0.};
+
+        flp.set_real_velocity(vel);
+        flp.set_mach_number();
+        flp.set_dynamic_pressure();
+        flp.set_reynolds_number(70 * m);
+        std::cout<<flp.get_real_velocity() << '\n'
+        <<flp.get_mach_number()<<'\n'
+        <<flp.get_dynamic_pressure() << '\n'
+        <<flp.get_reynolds_number() << '\n';
    
 
         //quantity<m> altitude = delta<m>(25000);
