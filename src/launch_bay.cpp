@@ -5,22 +5,30 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
 // remove to log class
    std::ofstream ofs("../Log/log.txt");
 
-    if (!ofs.is_open()) {
-        std::cout << "log doesn't exist\n";
-        return;
-    }
+      if (!ofs.is_open()) {
+         std::cout << "log doesn't exist\n";
+         return;
+      }
 
-    std::ofstream ofs_force("../Log/force.txt");
+   std::ofstream ofs_force("../Log/force.txt");
 
-    if (!ofs_force.is_open()) {
-        std::cout << "log doesn't exist\n";
-        return;
-    }
+      if (!ofs_force.is_open()) {
+         std::cout << "log doesn't exist\n";
+         return;
+      }
+
+   std::ofstream ofs_atmo("../Log/atm.txt");
+
+      if (!ofs_atmo.is_open()) {
+         std::cout << "log doesn't exist\n";
+         
+      }
 
 
 
     
     rocket->print_status();
+    earth.get_status();
 
     const int max_steps = 537;
     const int separation_time = 160;
@@ -34,14 +42,18 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
         else if(step >40 && step <=60 && step%2==0) rocket->set_direction(120.0-step); //70
         else if(step >20 && step <=40 && step%2==0) rocket->set_direction(110.0-step); //80
         double t = step* PACE;
-        
+
+        quantity<m> altitude = rocket->get_position_above_face().y * m;
+        earth.update(altitude);
         rocket ->run(earth,PACE, roc_render);
         
         
-        if(step % 20 == 0) {
-      rocket ->print_status_flight_short(ofs, step);
-         }
         
+        if(step % 10 == 0) {
+            rocket ->print_status_flight_short(ofs, step);
+            
+            earth.print_atmo_status(ofs_atmo,altitude);
+         }
         
         last_step = t; 
      }
@@ -59,10 +71,14 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
 
       double t = step* PACE;
         
+      quantity<m> altitude = rocket->get_position_above_face().y * m;
+      earth.update(altitude);
       rocket ->run(earth,PACE,roc_render);
       
-      if(step % 30 == 0) {
-      rocket ->print_status_flight_short(ofs, step);
+      if(step % 20 == 0) {
+         rocket ->print_status_flight_short(ofs, step);
+         quantity<m> altitude = rocket->get_position_above_face().y * m;
+            earth.print_atmo_status(ofs_atmo,altitude);
          }
       }
     

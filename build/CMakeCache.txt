@@ -31,7 +31,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -57,7 +57,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/cc
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -1233,7 +1233,7 @@ PKG_FONTCONFIG_STATIC_LIBS:INTERNAL=
 PKG_FONTCONFIG_STATIC_LIBS_L:INTERNAL=
 PKG_FONTCONFIG_STATIC_LIBS_OTHER:INTERNAL=
 PKG_FONTCONFIG_STATIC_LIBS_PATHS:INTERNAL=
-PKG_FONTCONFIG_VERSION:INTERNAL=2.18.2
+PKG_FONTCONFIG_VERSION:INTERNAL=2.18.3
 PKG_FONTCONFIG_fontconfig_INCLUDEDIR:INTERNAL=
 PKG_FONTCONFIG_fontconfig_LIBDIR:INTERNAL=
 PKG_FONTCONFIG_fontconfig_PREFIX:INTERNAL=
@@ -1275,12 +1275,12 @@ Wayland_wayland-client_INCLUDEDIR:INTERNAL=/usr/include
 Wayland_wayland-client_LIBDIR:INTERNAL=/usr/lib
 Wayland_wayland-client_MODULE_NAME:INTERNAL=wayland-client
 Wayland_wayland-client_PREFIX:INTERNAL=/usr
-Wayland_wayland-client_VERSION:INTERNAL=1.25.0
+Wayland_wayland-client_VERSION:INTERNAL=1.26.0
 Wayland_wayland-cursor_INCLUDEDIR:INTERNAL=/usr/include
 Wayland_wayland-cursor_LIBDIR:INTERNAL=/usr/lib
 Wayland_wayland-cursor_MODULE_NAME:INTERNAL=wayland-cursor
 Wayland_wayland-cursor_PREFIX:INTERNAL=/usr
-Wayland_wayland-cursor_VERSION:INTERNAL=1.25.0
+Wayland_wayland-cursor_VERSION:INTERNAL=1.26.0
 Wayland_wayland-egl_INCLUDEDIR:INTERNAL=/usr/include
 Wayland_wayland-egl_LIBDIR:INTERNAL=/usr/lib
 Wayland_wayland-egl_MODULE_NAME:INTERNAL=wayland-egl

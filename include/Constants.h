@@ -12,6 +12,7 @@ using namespace mp_units::si::unit_symbols; // not the best solition
 constexpr double G = 6.674e-11; //gravity const: 6.674 × 10⁻¹¹ Н·m²/kg²
 const double RADIUS_E = 6'371'000.0;//m
 constexpr auto Standard_gravity = 9.80665 * m / pow<2>(s);
+static constexpr quantity<m> mean_radius = 6'371'000 * m;
 
 //Atmosphere
 constexpr auto Sea_level_temperature  = delta<K>(288.15);
