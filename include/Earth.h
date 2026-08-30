@@ -46,6 +46,7 @@ class Earth : public Physic_object
     void update (quantity<m> altitude) {atm_->update(altitude);};
     void get_status () const { atm_->get_status();};
     void print_atmo_status (std::ofstream& ofs,quantity<m> altitude) const { atm_ ->print_to_log(ofs,altitude);};
+    const Atmosphere& get_Atmo_parameters() const { return *atm_;};
 
     const double get_orbital_velocity(double target) const
      { return std::sqrt(MU_EARTH / (RADIUS_E + target));};

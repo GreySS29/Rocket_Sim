@@ -6,19 +6,20 @@
 #include "../include/Launch_bay.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
-#include "../include/Enviroment/Atmosphere.h"
 #include "../include/Rocket_components/Flight_parameters.h"
+#include "../include/GUI/Log.h"
 int main(int argc, char** argv){
+    Log log;
     Earth earth;
-    Atmosphere atm;
     Fabric fabric;
     Launch_bay launch_bay;
     RocketRender render;
+    Flight_parameters flp(earth.get_Atmo_parameters());
     
     
 
     std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
-    launch_bay.launch_falcon9(earth,rocket,render);
+    launch_bay.launch_falcon9(earth,rocket,render,log);
 
 
 //    std::unique_ptr<Rocket> rocket = fabric.create_def_rock(earth);

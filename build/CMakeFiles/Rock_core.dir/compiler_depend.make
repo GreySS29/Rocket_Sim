@@ -2284,6 +2284,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: /home/greys/Documents/Doc/C+/my_p
   /home/greys/Documents/Doc/C+/mp-units/src/utility/include/mp-units/utility/cartesian_vector.h \
   /home/greys/Documents/Doc/C+/openGL/glad/include/KHR/khrplatform.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
@@ -3517,6 +3518,8 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h
 
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h:
 

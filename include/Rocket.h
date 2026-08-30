@@ -10,13 +10,15 @@ class Rocket  {
     std::unique_ptr<Stage> booster_;
     std::unique_ptr<Stage> upper_stage_;
     Payload payload_;
+
+    
     
     public:
     Rocket (std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload ) :
     
          booster_(std::move(booster)),
          upper_stage_(std::move(upper_stage)),
-         payload_(payload)
+         payload_(payload),
          {
          };
 
@@ -50,6 +52,7 @@ class Rocket  {
 
     void set_direction(double angle) { active()->set_direction(angle);};
     Vector3D get_direction() const { return active() ->get_thrust_direction();} 
+
 
    static std::unique_ptr<Rocket> create_rocket(std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload, const Earth& earth);
    void print_status() const;

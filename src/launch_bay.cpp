@@ -1,32 +1,7 @@
 #include "../include/Launch_bay.h"
 
-void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , RocketRender& roc_render)
+void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , RocketRender& roc_render, Log& log)
 {
-// remove to log class
-   std::ofstream ofs("../Log/log.txt");
-
-      if (!ofs.is_open()) {
-         std::cout << "log doesn't exist\n";
-         return;
-      }
-
-   std::ofstream ofs_force("../Log/force.txt");
-
-      if (!ofs_force.is_open()) {
-         std::cout << "log doesn't exist\n";
-         return;
-      }
-
-   std::ofstream ofs_atmo("../Log/atm.txt");
-
-      if (!ofs_atmo.is_open()) {
-         std::cout << "log doesn't exist\n";
-         
-      }
-
-
-
-    
     rocket->print_status();
     earth.get_status();
 
@@ -47,12 +22,10 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
         earth.update(altitude);
         rocket ->run(earth,PACE, roc_render);
         
-        
-        
         if(step % 10 == 0) {
-            rocket ->print_status_flight_short(ofs, step);
+            rocket ->print_status_flight_short(log.ofs_flight, step);
             
-            earth.print_atmo_status(ofs_atmo,altitude);
+            earth.print_atmo_status(log.ofs_atmo,altitude);
          }
         
         last_step = t; 
@@ -76,17 +49,16 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
       rocket ->run(earth,PACE,roc_render);
       
       if(step % 20 == 0) {
-         rocket ->print_status_flight_short(ofs, step);
+         rocket ->print_status_flight_short(log.ofs_flight, step);
          quantity<m> altitude = rocket->get_position_above_face().y * m;
-            earth.print_atmo_status(ofs_atmo,altitude);
+            earth.print_atmo_status(log.ofs_atmo,altitude);
          }
       }
     
    
-   roc_render.put_force_buffer(ofs_force);
+   roc_render.put_force_buffer(log.ofs_force);
    rocket->print_status(); 
 
-    
 };
 
 void Launch_bay::launch_def_rock(Earth& earth,std::unique_ptr<Rocket>& rocket, RocketRender& roc_render)

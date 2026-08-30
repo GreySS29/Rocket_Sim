@@ -338,5 +338,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Fabric.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Launch_bay.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Log.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Display.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/Flight_parameters.h

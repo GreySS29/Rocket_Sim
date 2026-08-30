@@ -12,7 +12,7 @@ class Flight_parameters
     quantity<Pa> get_dynamic_pressure() const {return dynamic_pressure;};
   
 
-    Flight_parameters(Atmosphere& atm_r) : atm(atm_r) {};
+    Flight_parameters(const Atmosphere& atm_r) : atm(atm_r) {};
 
 
 
