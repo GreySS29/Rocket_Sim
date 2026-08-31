@@ -19,13 +19,14 @@ class Stage : public Physic_object {
     std::unique_ptr<Tank> tank;
     Vector3D velocity; //m.s
     Vector3D acceleration; //m/s2
-    // number of Mach 
+    quantity<m> length;
 
     public:
-    Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t) :
+    Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t , quantity<m> len) :
         Physic_object{position, eng->get_mass() + t->get_mass(), c_d, area}, 
         engine(std::move(eng)),
-        tank(std::move(t)) // give this object to Stage
+        tank(std::move(t)), // give this object to Stage
+        length(len)
         {
             velocity = Vector3D(0,0,0);
             acceleration = Vector3D(0,0,0);
@@ -41,6 +42,7 @@ class Stage : public Physic_object {
     double get_thrust() const {return engine->get_thrust();}
     double get_fuel_mass() const { return tank -> get_fuel_mass();}
     Vector3D get_thrust_direction() const {return engine->get_thrust_direction();}
+    quantity<m> get_length() const {return length;};
 
 
     //setters
@@ -57,7 +59,7 @@ class Stage : public Physic_object {
     
 
 
-    static std::unique_ptr<Stage> creat_stage(double position_h,double c_d , double area, Engine&, Tank&, const Earth& earth);
+    static std::unique_ptr<Stage> creat_stage(double position_h,double c_d , double area, Engine&, Tank&, const Earth& earth, quantity<m> lenght);
     void launch_stage(const Earth&, double pace);  
     Vector3D run_engine(bool command);
     

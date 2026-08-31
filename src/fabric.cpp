@@ -20,7 +20,8 @@ std::unique_ptr<Rocket> Fabric::create_def_rock (const Earth& earth)
         10.0, // Area
         engine,
         tank,
-        earth
+        earth,
+        20*m
     );
 
     //upper_stage
@@ -39,7 +40,8 @@ std::unique_ptr<Rocket> Fabric::create_def_rock (const Earth& earth)
         10.0, // Area
         engine_up, 
         tank_up, 
-        earth
+        earth,
+        10 * m
     );
     
     Payload payload {earth.surfacePoint(25.0),
@@ -69,7 +71,8 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         10,
         engine,
         tank, 
-        earth
+        earth,
+        40*m
     );
 
     //upper_stage
@@ -88,7 +91,8 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         10,
         engine_up,
         tank_up,
-        earth
+        earth,
+        30*m
     );
     
     Payload payload {earth.surfacePoint(25.0),

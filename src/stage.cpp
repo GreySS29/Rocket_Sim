@@ -3,14 +3,15 @@
 
 
 
- std::unique_ptr<Stage> Stage::creat_stage(double position_h, double c_d , double area, Engine& eng, Tank& t , const Earth& earth)
+ std::unique_ptr<Stage> Stage::creat_stage(double position_h, double c_d , double area, Engine& eng, Tank& t , const Earth& earth , quantity<m> lenght)
  {
     std::unique_ptr<Stage> stage = std::make_unique<Stage> (
         earth.surfacePoint(position_h),
         c_d, 
         area,
         std::make_unique<Engine>(eng),
-        std::make_unique<Tank>(t)
+        std::make_unique<Tank>(t),
+        lenght
     );
     return stage;
 }

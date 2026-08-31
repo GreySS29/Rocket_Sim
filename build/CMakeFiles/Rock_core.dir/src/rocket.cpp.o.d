@@ -339,4 +339,5 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: \
  /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h
+ /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/Flight_parameters.h

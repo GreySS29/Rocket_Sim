@@ -14,7 +14,6 @@ int main(int argc, char** argv){
     Fabric fabric;
     Launch_bay launch_bay;
     RocketRender render;
-    Flight_parameters flp(earth.get_Atmo_parameters());
     
     
 
@@ -25,7 +24,7 @@ int main(int argc, char** argv){
 //    std::unique_ptr<Rocket> rocket = fabric.create_def_rock(earth);
 //    launch_bay.launch_def_rock(earth,rocket);
         
-    //render.print();
+    // render.print();
     // Display display {render};
     // Display::setInstance(display);
     // display.setAnimationSpeed(10.0);

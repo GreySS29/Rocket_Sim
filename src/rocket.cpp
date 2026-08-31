@@ -8,7 +8,8 @@ std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, st
     std::unique_ptr<Rocket> rocket = std::make_unique<Rocket> (
         std::move(booster),
         std::move(upper_stage),
-        payload
+        payload,
+        earth.get_Atmo_parameters()
     );
     
     return rocket;
@@ -28,6 +29,8 @@ void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
     Vector3D vel = active()->get_velocity();
     active()->update_position(vel, pace);
 
+    flight_p_.update_flight_par(vel, get_length());
+
     //fill vector RocketRender
     roc_render.add_G_force(G_force);
     roc_render.add_A_force(A_force);
@@ -44,7 +47,8 @@ void Rocket::print_status() const{
     "Position: " << active()->get_position_above_surface()<<'\n'<<
     "Acceleration: " << active()->get_acceleration().magnitude() << " m/sec2 \n" <<
     "Velocity: " << active()->get_velocity().magnitude() << " m/sec (" 
-    << active()->get_velocity().magnitude()*3.6 << " km/h)\n";
+    << active()->get_velocity().magnitude()*3.6 << " km/h)\n"
+    << "Lenght :" << get_length() << '\n';
 
     if(booster_!=nullptr) {
         cout << "Booster" << '\n';
@@ -92,8 +96,11 @@ void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
         active()->get_acceleration() << "||" <<
         "D: "<< active()->get_thrust_direction() << '\n'<<
         "M: " <<get_mass() << " kg" << "||"  <<
-        "F: " << active() ->get_fuel_mass() << " kg\n" <<
-        "=========================\n";
+        "F: " << active() ->get_fuel_mass() << " kg\t";
+
+        flight_p_.print_parameters(ofs); 
+
+        ofs << "=========================\n";
 }
 
 // std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket){

@@ -4,21 +4,25 @@
 #include <fstream>
 #include <vector>
 #include "GUI/RocketRender.h"
+#include "Rocket_components/Flight_parameters.h"
 
 class Rocket  {
     private:
     std::unique_ptr<Stage> booster_;
     std::unique_ptr<Stage> upper_stage_;
     Payload payload_;
+    Flight_parameters flight_p_;
+
 
     
     
     public:
-    Rocket (std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload ) :
+    Rocket (std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload,const Atmosphere& atm_r ) :
     
          booster_(std::move(booster)),
          upper_stage_(std::move(upper_stage)),
          payload_(payload),
+         flight_p_{atm_r}
          {
          };
 
@@ -33,7 +37,15 @@ class Rocket  {
     if (booster_)
         return booster_->get_mass() + upper_stage_->get_mass() + payload_.get_mass();
     return upper_stage_->get_mass() + payload_.get_mass();
-}
+    }
+
+
+    quantity<m> get_length() const {
+        if (booster_)
+            return booster_->get_length() + upper_stage_->get_length();
+        return upper_stage_->get_length();
+    }
+
 
     Vector3D get_velocity() const {return active()->get_velocity();};
     Vector3D get_acceleration() const {return  active()->get_acceleration();}

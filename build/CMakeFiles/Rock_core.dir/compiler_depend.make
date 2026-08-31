@@ -1851,6 +1851,7 @@ CMakeFiles/Rock_core.dir/src/fabric.cpp.o: /home/greys/Documents/Doc/C+/my_proge
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Vector3D.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
@@ -2298,6 +2299,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: /home/greys/Documents/Doc/C+/my_p
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Vector3D.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
@@ -2742,6 +2744,7 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: /home/greys/Documents/Doc/C+/my_proge
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Vector3D.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
@@ -3520,6 +3523,8 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h:
 
