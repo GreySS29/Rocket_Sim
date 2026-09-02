@@ -1,6 +1,7 @@
 #pragma once
 #include "../Enviroment/Atmosphere.h"
 #include "../Rocket.h" 
+#include "Skin_drag.h"
 
 class Flight_parameters
 {
@@ -47,6 +48,11 @@ class Flight_parameters
         << "R :" << get_reynolds_number() << '\n';
     }
 
+    // void print_parameters () const  {
+    //     skindrag.set_laminar_flow_fraction(reynolds_number);
+    //     std::cout << skindrag.laminar_flow_fraction << '\n';
+    // }
+
 
 
 
@@ -56,6 +62,9 @@ class Flight_parameters
     quantity<Pa> dynamic_pressure;
     quantity<one> reynolds_number;
     const Atmosphere& atm;
+    Skin_drag skindrag;
+
+
 
 
 

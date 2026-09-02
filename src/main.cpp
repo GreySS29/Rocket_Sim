@@ -6,9 +6,9 @@
 #include "../include/Launch_bay.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
-#include "../include/Rocket_components/Flight_parameters.h"
 #include "../include/GUI/Log.h"
-int main(int argc, char** argv){
+#include "../include/Flight_parameters/Skin_drag.h"
+int main_m(int argc, char** argv){
     Log log;
     Earth earth;
     Fabric fabric;
@@ -35,34 +35,18 @@ int main(int argc, char** argv){
 }
 
 
-int main_m(int argc, char** argv) {
+int main(int argc, char** argv) {
 
     try
     {
         Earth earth;
-        // Flight_parameters flp(atm);
+        Skin_drag skg;
+        const quantity<one> reyn = 600000.;
+        skg.set_laminar_flow_fraction(reyn);
+        std::cout<<skg.get_laminar_flow_fraction()<<'\n';
+        
 
 
-        // atm.update(56668 *m);
-        // atm.get_status();
-        // Vector3D vel {1874.8,734.67,0.};
-
-        // // atm.update(19116 *m);
-        // // atm.get_status();
-        // // Vector3D vel {391.8,513.67,0.};
-
-        // flp.set_real_velocity(vel);
-        // flp.set_mach_number();
-        // flp.set_dynamic_pressure();
-        // flp.set_reynolds_number(70 * m);
-        // std::cout<<flp.get_real_velocity() << '\n'
-        // <<flp.get_mach_number()<<'\n'
-        // <<flp.get_dynamic_pressure() << '\n'
-        // <<flp.get_reynolds_number() << '\n';
-   
-
-        //quantity<m> altitude = delta<m>(25000);
-    // atm.update(altitude);
     }
     catch(const std::exception& e)
     {

@@ -99,6 +99,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Enviroment/Atmo_layer_termosphere.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Enviroment/Atmosphere.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Display.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
@@ -107,7 +109,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Gravity_temp.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Engine.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
@@ -830,17 +831,17 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /usr/include/c++/16/array:
 
-/usr/include/c++/16/bits/exception_ptr.h:
-
-/usr/include/c++/16/bits/chrono_io.h:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Flight_parameters.h:
-
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h:
 
 /usr/include/c++/16/bits/functional_hash.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h:
+
+/usr/lib/libc.so.6:
+
+/usr/include/c++/16/tuple:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h:
 
@@ -853,6 +854,16 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Constants.h:
+
+/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/constexpr_math.h:
+
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/16/bits/std_function.h:
+
+/usr/include/c++/16/bits/exception.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/utility/include/mp-units/utility/cartesian_vector.h:
 
@@ -895,10 +906,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/lib/crti.o:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/value_cast.h:
-
-/usr/include/asm/posix_types_64.h:
-
-/home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/constants.h:
 
 /usr/include/c++/16/string_view:
 
@@ -943,6 +950,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/isq/information_science_and_technology.h:
 
 /usr/include/c++/16/limits:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/ratio.h:
 
@@ -1020,21 +1029,17 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /usr/include/bits/pthreadtypes.h:
 
-/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/constexpr_math.h:
-
-/usr/include/stdint.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/16/bits/std_function.h:
-
-/usr/include/c++/16/bits/exception.h:
-
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit_conversion.h:
 
 /usr/include/c++/16/ext/concurrence.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/ext/format.h:
+
+/usr/lib/libdl.a:
+
+/usr/include/c++/16/bits/mofunc_impl.h:
+
+/usr/include/bits/uintn-identity.h:
 
 /usr/include/c++/16/bits/stl_vector.h:
 
@@ -1053,12 +1058,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/requires_hosted.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/ext/prime.h:
-
-/usr/lib/libc.so.6:
-
-/usr/include/c++/16/tuple:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Earth.h:
 
@@ -1123,12 +1122,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/c++/16/bits/cxxabi_forced.h:
 
 /usr/include/c++/16/bits/funcwrap.h:
-
-/usr/lib/libdl.a:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/include/c++/16/bits/mofunc_impl.h:
 
 /usr/include/GL/glext.h:
 
@@ -1246,6 +1239,14 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/chrono.h:
 
+/home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/si/constants.h:
+
+/usr/include/asm/posix_types_64.h:
+
+/usr/include/c++/16/bits/chrono_io.h:
+
+/usr/include/c++/16/bits/exception_ptr.h:
+
 /usr/include/asm/types.h:
 
 /usr/include/assert.h:
@@ -1265,6 +1266,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/bits/endianness.h:
 
 /usr/include/c++/16/cstdlib:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h:
 
 /usr/include/bits/errno.h:
 

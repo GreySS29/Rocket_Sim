@@ -4,7 +4,7 @@
 #include <fstream>
 #include <vector>
 #include "GUI/RocketRender.h"
-#include "Rocket_components/Flight_parameters.h"
+#include "Flight_parameters/Flight_parameters.h"
 
 class Rocket  {
     private:

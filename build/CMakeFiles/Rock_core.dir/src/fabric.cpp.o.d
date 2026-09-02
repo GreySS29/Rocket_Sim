@@ -341,4 +341,5 @@ CMakeFiles/Rock_core.dir/src/fabric.cpp.o: \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
  /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/Flight_parameters.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Flight_parameters.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Skin_drag.h
