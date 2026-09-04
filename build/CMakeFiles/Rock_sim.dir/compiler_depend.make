@@ -100,7 +100,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Enviroment/Atmosphere.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Display.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
@@ -517,10 +517,6 @@ libRock_core.a:
 
 /usr/lib/libc_nonshared.a:
 
-/usr/lib32/libXext.so.6:
-
-/usr/lib/libXxf86vm.so.1:
-
 /usr/lib/libXrender.so.1:
 
 /usr/lib/libmvec.so.1:
@@ -837,6 +833,12 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h:
 
+/usr/lib32/libXext.so.6:
+
+/usr/lib/libXxf86vm.so.1:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h:
+
 /usr/lib/libc.so.6:
 
 /usr/include/c++/16/tuple:
@@ -854,16 +856,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Constants.h:
-
-/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/constexpr_math.h:
-
-/usr/include/stdint.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/16/bits/std_function.h:
-
-/usr/include/c++/16/bits/exception.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/utility/include/mp-units/utility/cartesian_vector.h:
 
@@ -951,8 +943,6 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
 /usr/include/c++/16/limits:
 
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h:
-
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/ratio.h:
 
 /usr/include/c++/16/debug/debug.h:
@@ -1028,6 +1018,16 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 /usr/lib/libc.so:
 
 /usr/include/bits/pthreadtypes.h:
+
+/home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/bits/constexpr_math.h:
+
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/16/bits/std_function.h:
+
+/usr/include/c++/16/bits/exception.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/core/include/mp-units/framework/unit_conversion.h:
 

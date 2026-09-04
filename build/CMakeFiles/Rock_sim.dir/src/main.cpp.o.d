@@ -337,7 +337,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
  /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Flight_parameters.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Skin_drag.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Friction_drag.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Fabric.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Launch_bay.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Log.h \

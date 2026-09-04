@@ -1840,7 +1840,7 @@ CMakeFiles/Rock_core.dir/src/fabric.cpp.o: /home/greys/Documents/Doc/C+/my_proge
   /home/greys/Documents/Doc/C+/openGL/glad/include/KHR/khrplatform.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Constants.h \
@@ -2287,7 +2287,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: /home/greys/Documents/Doc/C+/my_p
   /home/greys/Documents/Doc/C+/openGL/glad/include/KHR/khrplatform.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h \
@@ -2735,7 +2735,7 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: /home/greys/Documents/Doc/C+/my_proge
   /home/greys/Documents/Doc/C+/mp-units/src/utility/include/mp-units/utility/cartesian_vector.h \
   /home/greys/Documents/Doc/C+/openGL/glad/include/KHR/khrplatform.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h \
-  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Constants.h \
@@ -3529,6 +3529,8 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h:
 
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Friction_drag.h:
+
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Fabric.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/fabric.cpp:
@@ -3928,8 +3930,6 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /home/greys/Documents/Doc/C+/mp-units/src/systems/include/mp-units/systems/isq/information_science_and_technology.h:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Skin_drag.h:
 
 /usr/include/c++/16/limits:
 

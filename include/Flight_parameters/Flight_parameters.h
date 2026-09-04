@@ -1,7 +1,7 @@
 #pragma once
 #include "../Enviroment/Atmosphere.h"
 #include "../Rocket.h" 
-#include "Skin_drag.h"
+#include "Friction_drag.h"
 
 class Flight_parameters
 {
@@ -62,7 +62,7 @@ class Flight_parameters
     quantity<Pa> dynamic_pressure;
     quantity<one> reynolds_number;
     const Atmosphere& atm;
-    Skin_drag skindrag;
+    Friction_drag fgrag;
 
 
 

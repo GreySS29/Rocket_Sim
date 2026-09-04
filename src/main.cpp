@@ -7,7 +7,7 @@
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
 #include "../include/GUI/Log.h"
-#include "../include/Flight_parameters/Skin_drag.h"
+#include "../include/Flight_parameters/Friction_drag.h"
 int main_m(int argc, char** argv){
     Log log;
     Earth earth;
@@ -40,10 +40,15 @@ int main(int argc, char** argv) {
     try
     {
         Earth earth;
-        Skin_drag skg;
+        Friction_drag frd;
         const quantity<one> reyn = 600000.;
-        skg.set_laminar_flow_fraction(reyn);
-        std::cout<<skg.get_laminar_flow_fraction()<<'\n';
+        const quantity<one> mach = 3.5;
+        frd.set_prop_coeff(reyn);
+        frd.set_Fl_M(mach);
+        frd.set_Ft_M(mach);
+        std::cout<<frd.get_prop_coeff()<<'\n'
+        << "Fl_M :" << frd.get_Fl_M() <<'\n'
+        << "Ft_M :" << frd.get_Ft_M() <<'\n';
         
 
 
