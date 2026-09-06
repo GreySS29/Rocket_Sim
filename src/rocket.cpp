@@ -29,7 +29,7 @@ void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
     Vector3D vel = active()->get_velocity();
     active()->update_position(vel, pace);
 
-    flight_p_.update_flight_par(vel, get_length());
+    flight_p_.update_flight_par(vel, get_length(), earth.get_air_density(), get_a_wet());
 
     //fill vector RocketRender
     roc_render.add_G_force(G_force);

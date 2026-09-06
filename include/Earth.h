@@ -8,22 +8,19 @@
 
 class Earth : public Physic_object
 {
- 
 
     public:
 
-    
-
     Earth () :Physic_object ({0,0,0}, 5.972E+24), atm_(std::make_unique<Atmosphere>()) {}
 
-    
 
     Vector3D surfacePoint(double height_above_surface) const // for objects' construction 
     {
         return position + Vector3D{0,RADIUS_E+height_above_surface,0};
     };
 
-    double get_air_density(double height) const; 
+    double get_air_density(double height) const;  // old
+    quantity <kg/m3> get_air_density() const {return atm_->get_density();};
     
     Vector3D get_dragForce_vec(const auto* object) const
     {

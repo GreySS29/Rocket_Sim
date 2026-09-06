@@ -39,6 +39,12 @@ class Rocket  {
     return upper_stage_->get_mass() + payload_.get_mass();
     }
 
+    quantity<m2> get_a_wet() const {
+    if(booster_)
+        return booster_->get_a_wet() + upper_stage_->get_a_wet() + payload_.get_a_wet();
+    return upper_stage_->get_a_wet() + payload_.get_a_wet();
+    }
+
 
     quantity<m> get_length() const {
         if (booster_)
