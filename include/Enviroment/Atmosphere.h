@@ -1,19 +1,23 @@
 #pragma once
-#include "../Earth.h"
-#include "Atmo_layer_isa.h"
-#include "Atmo_layer_termosphere.h"
-#include <vector>
-#include "../Vec3_mp.h"
+
 #include <fstream>
 #include <iomanip>
+#include <iostream>
+#include <vector>
+
+#include "Atmo_layer_isa.h"
+#include "Atmo_layer_termosphere.h"
+#include "../Vec3_mp.h"
+
+
 
 
 class Atmosphere {
 
     public:
 
-    Atmosphere() : temperature(Sea_level_temperature), pressure(Sea_level_pressure){
-        if(!check()) {throw std::runtime_error("Wrong Atmosphere inizialization");}
+    Atmosphere(){
+        if(!check()) {throw std::runtime_error("Wrong Atmosphere initialization");};
         update(0*m);
     };
 
@@ -24,6 +28,10 @@ class Atmosphere {
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const;
     VelocityVec get_wind_vel() const{return wind_velosity;};
+    quantity<m/s> get_sonic_velocity() const{return sonic_velocity;};
+    quantity<Pa> get_pressure() const {return pressure;};
+    quantity<kg / m3> get_density() const {return density;};
+    quantity<Pa*s> get_viscosity() const {return viscosity;};
     void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
 
 
@@ -49,7 +57,7 @@ class Atmosphere {
 
     //for < 86 km 
     quantity<m> get_geopotential_altitude (quantity<m> geometric_altitude) const{
-        return (Earth::mean_radius * geometric_altitude) / (Earth::mean_radius + geometric_altitude);}
+        return (mean_radius * geometric_altitude) / (mean_radius + geometric_altitude);}
 
     void set_density() {
         density = pressure*molar_mass / (Gaz_constant * temperature);}

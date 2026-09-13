@@ -61,7 +61,6 @@ void Atmosphere::set_temperature_pressure(quantity<m>& geometric_altitude){
     if (temperature > delta<K>(300) && temperature < delta<K>(3000)) {
         double t_k = temperature.numerical_value_in(mp_units::si::kelvin);
         heat_capacity_ratio = 1.4 - 0.1*((t_k - 300)/2700);
-        std::cout << "HCR" << heat_capacity_ratio<<'\n';
     }
     sonic_velocity =  mp_units::sqrt(heat_capacity_ratio*pressure/density); 
 }
