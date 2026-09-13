@@ -103,6 +103,16 @@ void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
         ofs << "=========================\n";
 }
 
+void Rocket::print_status_flight_stand(std::ofstream& ofs , int time) const{
+        ofs << std::fixed << std::setprecision(2);
+        ofs << "Time : " << time <<  "  |" <<
+        "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "V: " << active()->get_velocity().magnitude() << " m/s " <<  '\t' <<
+        "D: "<< active()->get_thrust_direction() << '\t'<<
+        "F: " << active() ->get_fuel_mass() << " kg\n";
+        
+}
+
 // std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket){
 //     ofs << rocket.print_status_flight_short();
 

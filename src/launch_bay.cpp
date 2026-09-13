@@ -5,7 +5,7 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
     rocket->print_status();
     earth.get_status();
 
-    const int max_steps = 537;
+    const int max_steps = 700;
     const int separation_time = 160;
     const int PACE = 1;
     int last_step = 0;
@@ -22,11 +22,12 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
         earth.update(altitude);
         rocket ->run(earth,PACE, roc_render);
         
-        if(step % 10 == 0) {
+      //   if(step % 10 == 0) {
             rocket ->print_status_flight_short(log.ofs_flight, step);
+            rocket ->print_status_flight_stand(log.ofs_stand, step);
             
             earth.print_atmo_status(log.ofs_atmo,altitude);
-         }
+         // }
         
         last_step = t; 
      }
@@ -48,11 +49,12 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
       earth.update(altitude);
       rocket ->run(earth,PACE,roc_render);
       
-      if(step % 20 == 0) {
+      // if(step % 20 == 0) {
          rocket ->print_status_flight_short(log.ofs_flight, step);
-         quantity<m> altitude = rocket->get_position_above_face().y * m;
+         rocket ->print_status_flight_stand(log.ofs_stand, step);
+         //quantity<m> altitude = rocket->get_position_above_face().y * m;
             earth.print_atmo_status(log.ofs_atmo,altitude);
-         }
+         // }
       }
     
    

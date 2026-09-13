@@ -25,10 +25,10 @@ int main(int argc, char** argv){
 //    launch_bay.launch_def_rock(earth,rocket);
         
     
-    Display display {render};
-    Display::setInstance(display);
-    display.setAnimationSpeed(10.0);
-    display.run(argc, argv);
+    // Display display {render};
+    // Display::setInstance(display);
+    // display.setAnimationSpeed(10.0);
+    // display.run(argc, argv);
 
     return 0;
     

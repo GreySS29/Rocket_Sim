@@ -1,0 +1,2 @@
+cd build ; ./Rock_sim ; cd ..
+time cmake --build build
