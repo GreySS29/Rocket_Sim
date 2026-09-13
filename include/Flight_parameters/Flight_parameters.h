@@ -59,6 +59,7 @@ class Flight_parameters
     // void print_parameters () const  {
     //     skindrag.set_laminar_flow_fraction(reynolds_number);
     //     std::cout << skindrag.laminar_flow_fraction << '\n';
+    
     // }
 
 
@@ -77,7 +78,7 @@ class Flight_parameters
 
 
 
-    
+   
 
     
 };
