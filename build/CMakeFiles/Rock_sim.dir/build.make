@@ -97,12 +97,17 @@ Rock_sim: CMakeFiles/Rock_sim.dir/src/main.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/build.make
 Rock_sim: CMakeFiles/Rock_sim.dir/compiler_depend.ts
 Rock_sim: libRock_core.a
+Rock_sim: /usr/lib/libboost_thread.so.1.92.0
 Rock_sim: libglad.a
 Rock_sim: glfw-build/src/libglfw3.a
 Rock_sim: /usr/lib/librt.a
 Rock_sim: /usr/lib/libm.so
 Rock_sim: /usr/lib/libGLX.so
 Rock_sim: /usr/lib/libOpenGL.so
+Rock_sim: /usr/lib/libboost_atomic.so.1.92.0
+Rock_sim: /usr/lib/libboost_chrono.so.1.92.0
+Rock_sim: /usr/lib/libboost_date_time.so.1.92.0
+Rock_sim: /usr/lib/libboost_container.so.1.92.0
 Rock_sim: CMakeFiles/Rock_sim.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Rock_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rock_sim.dir/link.txt --verbose=$(VERBOSE)

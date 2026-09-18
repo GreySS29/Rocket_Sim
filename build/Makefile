@@ -397,6 +397,30 @@ src/GUI/rocket_render.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s
 .PHONY : src/GUI/rocket_render.cpp.s
 
+src/Panel/server.o: src/Panel/server.cpp.o
+.PHONY : src/Panel/server.o
+
+# target to build an object file
+src/Panel/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o
+.PHONY : src/Panel/server.cpp.o
+
+src/Panel/server.i: src/Panel/server.cpp.i
+.PHONY : src/Panel/server.i
+
+# target to preprocess a source file
+src/Panel/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.i
+.PHONY : src/Panel/server.cpp.i
+
+src/Panel/server.s: src/Panel/server.cpp.s
+.PHONY : src/Panel/server.s
+
+# target to generate assembly for a file
+src/Panel/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.s
+.PHONY : src/Panel/server.cpp.s
+
 src/earth.o: src/earth.cpp.o
 .PHONY : src/earth.o
 
@@ -576,6 +600,9 @@ help:
 	@echo "... src/GUI/rocket_render.o"
 	@echo "... src/GUI/rocket_render.i"
 	@echo "... src/GUI/rocket_render.s"
+	@echo "... src/Panel/server.o"
+	@echo "... src/Panel/server.i"
+	@echo "... src/Panel/server.s"
 	@echo "... src/earth.o"
 	@echo "... src/earth.i"
 	@echo "... src/earth.s"

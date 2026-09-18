@@ -8,7 +8,8 @@
 #include "../include/GUI/RocketRender.h"
 #include "../include/GUI/Log.h"
 #include "../include/Flight_parameters/Friction_drag.h"
-int main(int argc, char** argv){
+#include "../include/Panel/Server.h"
+int main_n(int argc, char** argv){
     Log log;
     Earth earth;
     Fabric fabric;
@@ -57,6 +58,8 @@ int main_m(int argc, char** argv) {
         // << "Ft_M :" << frd.get_Ft_M() <<'\n'
         // << "skin coef : " << frd.get_skin_friction_coefficient() << '\n'
         // << "friction_drag : " << frd.get_friction_drag() << '\n';
+
+        //negative friction force!!!!
         
 
 
@@ -69,3 +72,28 @@ int main_m(int argc, char** argv) {
 
     return 0;
 } 
+
+int main() {
+    RocketServer server(5555, [](const std::string& cmd){
+        // Optional: parse JSON / validate here
+        // This runs in session threads; keep it light.
+    });
+
+    server.start();
+
+    bool simRunning = true;
+    while (simRunning) {
+        std::string cmd;
+        while (server.pollCommand(cmd)) {
+            // Apply command to simulation state
+            // Example: parse {"cmd":"throttle","value":0.75}
+            std::cout << "Got command: " << cmd << "\n";
+        }
+
+        // stepPhysics();
+        // renderOpenGL();
+    }
+
+    server.stop();
+    return 0;
+}

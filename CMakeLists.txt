@@ -20,6 +20,7 @@ add_subdirectory(
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system thread)
 
 add_library(glad STATIC
     ${CMAKE_SOURCE_DIR}/../../openGL/glad/src/glad.c
@@ -38,6 +39,7 @@ add_library(Rock_core STATIC
     src/GUI/display.cpp
     src/GUI/rocket_render.cpp
     src/Enviroment/atmosphere.cpp
+    src/Panel/server.cpp
     
 )
 
@@ -53,12 +55,15 @@ target_link_libraries(Rock_core PUBLIC
     GLU
     glut
     mp-units::mp-units
+    
 )
 
 add_executable(Rock_sim src/main.cpp)
 
 target_link_libraries(Rock_sim PRIVATE
     Rock_core
+    Boost::system
+    Boost::thread
 )
 
 target_compile_features(Rock_core PUBLIC cxx_std_23)
