@@ -22,7 +22,7 @@ class Friction_drag {
     
 
 
-
+    //for testing 
     void check () {
         Friction_drag frd;
         //for 14 km falcon 9 
@@ -43,7 +43,7 @@ class Friction_drag {
         << "friction_drag : " << frd.get_friction_drag() << '\n';
         
     }
-
+    //for testing 
     void check_2(const quantity<one>& reynolds_number,const quantity<one>& n_mach,quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet) {
         set_prop_coeff(reynolds_number);
         set_Fl_M(n_mach);
@@ -108,7 +108,7 @@ class Friction_drag {
 
      void set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet)
      {
-        friction_drag = 0.5 * density * velocity * velocity * skin_friction_coefficient * a_wet;
+        friction_drag = 0.5 * density * velocity * velocity * mp_units::abs(skin_friction_coefficient) * a_wet;
      }
 
 

@@ -9,7 +9,7 @@
 #include "../include/GUI/Log.h"
 #include "../include/Flight_parameters/Friction_drag.h"
 #include "../include/Panel/Server.h"
-int main_n(int argc, char** argv){
+int main(int argc, char** argv){
     Log log;
     Earth earth;
     Fabric fabric;
@@ -73,7 +73,11 @@ int main_m(int argc, char** argv) {
     return 0;
 } 
 
-int main() {
+
+//sudo ss -tlpn | grep :5555   
+
+
+int main_s() {
     RocketServer server(5555, [](const std::string& cmd){
         // Optional: parse JSON / validate here
         // This runs in session threads; keep it light.
