@@ -84,8 +84,13 @@ using Clock = std::chrono::steady_clock;
 
 int main() {
 
-
+    Earth earth;
+    Fabric fabric;
+    Launch_bay launch_bay;
     Panel_data panel_data;
+    RocketRender render;
+    std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
+    
     
     RocketServer server(5555, [](const std::string& cmd){
         // Optional: parse JSON / validate here
@@ -103,6 +108,7 @@ int main() {
     auto currentTime = Clock::now();
     const double dt = 1.0;
     double accumulator = 0.0;
+    double total_time = 0.0;
 
 while (simRunning) {
 
@@ -138,17 +144,19 @@ while (simRunning) {
         accumulator += frameTime;
 
         while (accumulator >= dt) {
-            
-            
-            std::cout << " one pace\n";
 
-            // sim.update(dt);
+            std::cout<<total_time << "|";
+            launch_bay.launch_falcon9_from_panel(earth,rocket,render, dt*5 , panel_data.angle); // time 5 
 
             accumulator -= dt;
+            total_time+=dt;
         }
     }
 
-    //if it ground ---break
+    if(rocket->get_position_above_face().y<0){
+                std::cout << "Rocket came down";
+                break;
+            }
 
     std::this_thread::sleep_for(std::chrono::milliseconds(5));
 }

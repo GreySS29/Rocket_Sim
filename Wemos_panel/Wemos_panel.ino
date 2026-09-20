@@ -3,15 +3,15 @@
 
 
 constexpr unsigned long SERIAL_BAUD    = 115200;
-constexpr int           ENC_MIN        = -180;
-constexpr int           ENC_MAX        = 180;
+constexpr int           ENC_MIN        = -90;
+constexpr int           ENC_MAX        = 90;
 constexpr int           ENC_STEP_DEG   = 5;    
 constexpr unsigned long LCD_REFRESH_MS = 50;
 constexpr unsigned long DEBOUNCE_MS    = 50;
 constexpr unsigned long DEBUG_PRINT_MS = 1000;
 
 
-int  angle        = 0;
+int  angle        = 90;
 bool displayDirty = true;
 
 //encoder
@@ -23,8 +23,8 @@ static const int8_t ENC_TABLE[16] = {0,-1,1,0, 1,0,0,-1, -1,0,0,1, 0,1,-1,0};
 void IRAM_ATTR encoderISR() {
   encState = ((encState << 2) | (digitalRead(ENCODER_CLK) << 1) | digitalRead(ENCODER_DT)) & 0x0F;
   encAccum += ENC_TABLE[encState];
-  if (encAccum >= 4)       { encSteps++; encAccum = 0; }
-  else if (encAccum <= -4) { encSteps--; encAccum = 0; }
+  if (encAccum >= 4)       { encSteps--; encAccum = 0; }
+  else if (encAccum <= -4) { encSteps++; encAccum = 0; }
 }
 
 

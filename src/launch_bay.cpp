@@ -104,3 +104,5 @@ void Launch_bay::launch_def_rock(Earth& earth,std::unique_ptr<Rocket>& rocket, R
 
     rocket->print_status(); 
 };
+
+

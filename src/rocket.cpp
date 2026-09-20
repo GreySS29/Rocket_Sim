@@ -81,7 +81,8 @@ void Rocket::print_status_flight_short() const{
         "V: " << active()->get_velocity() << " m/s " <<  "||" <<
         "A: " << active()->get_acceleration() << " m/s2 "<< "||" <<
         //"D: "<< booster_->get_thrust_direction() << '\n'<<
-        "M: " <<get_mass() << " kg" << "||" ;
+        "M: " <<get_mass() << " kg" << "||" <<
+        "D: "<< active()->get_thrust_direction() << '\n';
         //"F: " << booster_ ->get_fuel_mass() << " kg\n";
         std::cout << "=========================\n";
 }
