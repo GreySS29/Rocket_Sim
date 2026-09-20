@@ -106,6 +106,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Panel_data.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h
@@ -114,6 +115,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Sim_state.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Vector3D.h
  /usr/include/GL/freeglut_std.h
  /usr/include/GL/gl.h

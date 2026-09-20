@@ -41,6 +41,13 @@ Button buttons[] = {
   {BTN_2, "Button 2", HIGH, HIGH, 0},
 };
 
+void onButtonPressed(const char* name) {
+  char msg[17];
+  snprintf(msg, sizeof(msg), "%s pressed", name);
+  Serial.println(msg);
+  showButtonMessage(msg);
+}
+
 
 void handleEncoder() {
   noInterrupts();

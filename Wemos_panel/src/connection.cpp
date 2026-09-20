@@ -61,9 +61,9 @@ void sendTelemetry(int angle, int btn1, int btn2)
     }
 
     String message =
-    "ANG=" + String(angle) +
-    ";BT1=" + String(btn1) +
-    ";BT2=" + String(btn2);
+    String(angle) +
+    ";" + String(btn1) +
+    ";" + String(btn2);
 
     Serial.print("Sending: ");
     Serial.println(message);

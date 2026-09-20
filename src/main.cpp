@@ -1,5 +1,5 @@
-#include "iostream"
-
+#include <iostream>
+#include <chrono>
 #include "../include/Earth.h"
 #include "../include/Rocket.h"
 #include "../include/Fabric.h"
@@ -9,7 +9,10 @@
 #include "../include/GUI/Log.h"
 #include "../include/Flight_parameters/Friction_drag.h"
 #include "../include/Panel/Server.h"
-int main(int argc, char** argv){
+#include "../include/Panel/Panel_data.h"
+#include "../include/Sim_state.h"
+
+int main_s(int argc, char** argv){
     Log log;
     Earth earth;
     Fabric fabric;
@@ -77,7 +80,13 @@ int main_m(int argc, char** argv) {
 //sudo ss -tlpn | grep :5555   
 
 
-int main_s() {
+using Clock = std::chrono::steady_clock;
+
+int main() {
+
+
+    Panel_data panel_data;
+    
     RocketServer server(5555, [](const std::string& cmd){
         // Optional: parse JSON / validate here
         // This runs in session threads; keep it light.
@@ -85,19 +94,64 @@ int main_s() {
 
     server.start();
 
+
     bool simRunning = true;
-    while (simRunning) {
-        std::string cmd;
-        while (server.pollCommand(cmd)) {
-            // Apply command to simulation state
-            // Example: parse {"cmd":"throttle","value":0.75}
-            std::cout << "Got command: " << cmd << "\n";
+    Sim_state state = Sim_state::Base;
+    bool abortRequested = false;
+
+    using Clock = std::chrono::steady_clock;
+    auto currentTime = Clock::now();
+    const double dt = 1.0;
+    double accumulator = 0.0;
+
+while (simRunning) {
+
+    std::string cmd;
+    while (server.pollCommand(cmd)) {
+        panel_data.parse(cmd);
+
+        if (panel_data.launch == 0 && state == Sim_state::Base) {
+            std::cout << "launching\n";
+            state = Sim_state::Running;
         }
 
-        // stepPhysics();
-        // renderOpenGL();
+        
+        if (panel_data.abort == 0) {
+            abortRequested = true;
+        }
     }
 
+    
+    if (state == Sim_state::Running && abortRequested) {
+        std::cout << "aborting\n";
+        state = Sim_state::Aborted;
+        
+    }
+
+    
+    if (state == Sim_state::Running) {
+        auto newTime = Clock::now();
+        double frameTime = std::chrono::duration<double>(newTime - currentTime).count();
+        currentTime = newTime;
+
+        if (frameTime > 0.25) frameTime = 0.25;  
+        accumulator += frameTime;
+
+        while (accumulator >= dt) {
+            
+            
+            std::cout << " one pace\n";
+
+            // sim.update(dt);
+
+            accumulator -= dt;
+        }
+    }
+
+    //if it ground ---break
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(5));
+}
     server.stop();
     return 0;
 }

@@ -15,7 +15,7 @@ void RocketServer::start() {
     if (running_) return;
     running_ = true;
     acceptThread_ = std::thread(&RocketServer::acceptLoop, this);
-    std::cout << "Server listening on port 5555";
+    std::cout << "Server listening on port 5555\n";
 }
 
 void RocketServer::stop() {

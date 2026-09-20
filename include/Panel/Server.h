@@ -20,6 +20,9 @@ public:
     // Called by main loop to consume commands
     bool pollCommand(std::string& outCmd);
 
+
+    
+
 private:
     void acceptLoop();
     void sessionThread(boost::asio::ip::tcp::socket socket);

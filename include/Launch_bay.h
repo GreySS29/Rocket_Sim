@@ -9,6 +9,7 @@ class Launch_bay {
 
     public:
     void launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket ,RocketRender&, Log& log);
+    
     void launch_def_rock(Earth& earth,std::unique_ptr<Rocket>& rocket,RocketRender&);
 };
 
