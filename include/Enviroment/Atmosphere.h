@@ -7,7 +7,7 @@
 
 #include "Atmo_layer_isa.h"
 #include "Atmo_layer_termosphere.h"
-#include "../Vec3_mp.h"
+
 
 
 
@@ -27,7 +27,6 @@ class Atmosphere {
     //get
     quantity<K> get_temperature() const { return temperature;};
     void get_status () const;
-    VelocityVec get_wind_vel() const{return wind_velosity;};
     quantity<m/s> get_sonic_velocity() const{return sonic_velocity;};
     quantity<Pa> get_pressure() const {return pressure;};
     quantity<kg / m3> get_density() const {return density;};
@@ -43,7 +42,6 @@ class Atmosphere {
     quantity<kg / m3> density;
     quantity<kg/mol> molar_mass;
     quantity<m/s> sonic_velocity;
-    VelocityVec wind_velosity = make_vec<isq::velocity, m / s>(0., 0., 0.);
     quantity<Pa*s> viscosity;
 
 
