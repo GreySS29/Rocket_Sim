@@ -9,12 +9,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(MP_UNITS_API_CONTRACTS NONE CACHE STRING "")
 
 add_subdirectory(
-    "${CMAKE_SOURCE_DIR}/../../openGL/glfw"
+    "${CMAKE_SOURCE_DIR}/../openGL/glfw"
     "${CMAKE_BINARY_DIR}/glfw-build"
 )
 
 add_subdirectory(
-    "${CMAKE_SOURCE_DIR}/../../mp-units/src"
+    "${CMAKE_SOURCE_DIR}/../mp-units/src"
     "${CMAKE_BINARY_DIR}/mp-units-build"
 )
 
@@ -23,11 +23,11 @@ find_package(GLUT REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
 
 add_library(glad STATIC
-    ${CMAKE_SOURCE_DIR}/../../openGL/glad/src/glad.c
+    ${CMAKE_SOURCE_DIR}/../openGL/glad/src/glad.c
 )
 
 target_include_directories(glad PUBLIC
-    ${CMAKE_SOURCE_DIR}/../../openGL/glad/include
+    ${CMAKE_SOURCE_DIR}/../openGL/glad/include
 )
 
 add_library(Rock_core STATIC
