@@ -77,12 +77,12 @@ void Rocket::print_status() const{
 
 void Rocket::print_status_flight_short() const{
      std::cout << std::fixed << std::setprecision(2);
-        std::cout << "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        std::cout << "A: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "D" << active() ->get_position_above_surface().x << " m" << '\t' <<
         "V: " << active()->get_velocity() << " m/s " <<  "||" <<
-        "A: " << active()->get_acceleration() << " m/s2 "<< "||" <<
-        //"D: "<< booster_->get_thrust_direction() << '\n'<<
+        // "A: " << active()->get_acceleration() << " m/s2 "<< "||" <<
         "M: " <<get_mass() << " kg" << "||" <<
-        "D: "<< active()->get_thrust_direction() << '\n';
+        "A: "<< active()->get_thrust_direction() << '\n';
         //"F: " << booster_ ->get_fuel_mass() << " kg\n";
         std::cout << "=========================\n";
 }
