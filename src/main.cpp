@@ -10,7 +10,7 @@
 #include "../include/Flight_parameters/Friction_drag.h"
 #include "../include/Panel/Server.h"
 #include "../include/Panel/Panel_data.h"
-#include "../include/Sim_state.h"
+#include "../include/Panel/Sim_state.h"
 
 int main_s(int argc, char** argv){
     Log log;

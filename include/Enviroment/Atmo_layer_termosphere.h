@@ -1,5 +1,5 @@
 #pragma once
-#include "../Constants.h"
+
 
 
 class Atmo_layer_termosphere
