@@ -1,14 +1,14 @@
 #include "connection.hpp"
 #include "comm_panel.hpp"
 
-//const char* WIFI_SSID = "U+Net8540";
-//const char* WIFI_PASSWORD = "6#9522K082";
+const char* WIFI_SSID = "U+Net8540";
+const char* WIFI_PASSWORD = "6#9522K082";
 
-const char* WIFI_SSID = "A16 Ser";
-const char* WIFI_PASSWORD = "98761234";
+//const char* WIFI_SSID = "A16 Ser";
+//const char* WIFI_PASSWORD = "98761234";
 
-//const char* SERVER_IP = "192.168.219.107";
-const char* SERVER_IP = "10.80.49.23";
+const char* SERVER_IP = "192.168.219.100";
+//const char* SERVER_IP = "10.80.49.23";
 const uint16_t SERVER_PORT = 5555;
 
 WiFiClient client;

@@ -888,7 +888,7 @@ mp-units_BINARY_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/bu
 mp-units_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-mp-units_SOURCE_DIR:STATIC=/home/greys/Documents/Doc/C+/mp-units/src
+mp-units_SOURCE_DIR:STATIC=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src
 
 //Path to a library.
 pkgcfg_lib_PC_GLUT_glut:FILEPATH=/usr/lib/libglut.so

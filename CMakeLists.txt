@@ -14,7 +14,7 @@ add_subdirectory(
 )
 
 add_subdirectory(
-    "${CMAKE_SOURCE_DIR}/../../mp-units/src"
+    "${CMAKE_SOURCE_DIR}/external/mp-units/src"
     "${CMAKE_BINARY_DIR}/mp-units-build"
 )
 

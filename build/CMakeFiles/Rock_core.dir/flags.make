@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DMP_UNITS_API_CONTRACTS=0 -DMP_UNITS_API_NO_CRTP=1 -DMP_UNITS_API_STD_FORMAT=1 -DMP_UNITS_API_THROWING_CONSTRAINTS=0 -DMP_UNITS_HOSTED=1
 
-CXX_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/mp-units/src/utility/include
+CXX_INCLUDES = -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include -I/home/greys/Documents/Doc/C+/openGL/glfw/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/systems/include -I/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/utility/include
 
 CXX_FLAGS = -std=c++23
 

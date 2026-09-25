@@ -35,7 +35,7 @@ void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
     roc_render.add_G_force(G_force);
     roc_render.add_A_force(A_force);
     roc_render.add_F_force(F_total);
-    roc_render.add_trajectory(this->get_position().x, this->get_position_above_face().y);
+    roc_render.add_trajectory(this->get_position_above_face().x, this->get_position_above_face().y);
   
 }
 
@@ -91,6 +91,7 @@ void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
         ofs << std::fixed << std::setprecision(2);
         ofs << "Time : " << time <<  "  |" <<
         "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "S:" << active() ->get_position_above_surface().x << " m"   << '\t' <<
         "V: " << active()->get_velocity().magnitude() << " m/s " <<  "/" <<
         active()->get_velocity()<< "||"
         "A: " << active()->get_acceleration().magnitude() << " m/s2 "<< "/" <<
