@@ -1,4 +1,4 @@
-# Install script for directory: /home/greys/Documents/Doc/C+/mp-units/src
+# Install script for directory: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -2,14 +2,16 @@
 #include <algorithm>
 #include <sstream>
 #include <iomanip>
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
 
+#define STB_EASY_FONT_IMPLEMENTATION
+#include "../../include/GUI/stb_easy_font.h"
 
 Display::Display(RocketRender& render)
     : rocket(render)
-    , currentStep(0)
-    , animating(false)
 {}
-
 
 Display* Display::instancePtr = nullptr;
 
@@ -21,9 +23,33 @@ Display& Display::instance() {
     return *instancePtr;
 }
 
-// void Display::setTrajectory(const std::vector<std::pair<double,double>>& traj) {
-//     rocket.trajectory = traj;
-// }
+void Display::framebufferSizeCallback(GLFWwindow* /*win*/, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+void Display::createWindow(int width, int height, const char* title)
+{
+    if (!glfwInit()) {
+        std::cerr << "GLFW: init failed\n";
+        std::exit(EXIT_FAILURE);
+    }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+
+    window = glfwCreateWindow(width, height, title, nullptr, nullptr);
+    if (!window) {
+        std::cerr << "GLFW: window creation failed\n";
+        glfwTerminate();
+        std::exit(EXIT_FAILURE);
+    }
+
+    glfwMakeContextCurrent(window);
+    glfwSwapInterval(1);
+
+    glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
+}
 
 void Display::startAnimation()
 {
@@ -33,54 +59,166 @@ void Display::startAnimation()
 
     currentStep = 0;
     animating = true;
-
-    const int delayMs = static_cast<int>(
-        1000.0 / animationSpeed
-    );
-
-    glutTimerFunc(delayMs, timerWrapper, 0);
+    lastStepTimestamp = glfwGetTime();
 }
 
-void Display::run(int argc, char** argv) {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    glutInitWindowSize(1200, 800);
-    glutCreateWindow("2D Rocket Flight");
-
-    glutDisplayFunc(displayWrapper);
-
-    startAnimation();
-    glutMainLoop();
-}
-
-void Display::displayWrapper() {
-    Display::instance().display();
-}
-
-void Display::timerWrapper(int)
+void Display::initLiveWindow(int width, int height)
 {
-    auto& d = Display::instance();
+    mode = Mode::Live;
+    createWindow(width, height, "2D Rocket Flight - Live");
 
-    if (!d.animating) {
+   
+    glfwSwapInterval(0);
+
+    currentStep = 0;
+}
+
+bool Display::renderLiveFrame()
+{
+    if (!window) {
+        return false;
+    }
+
+    if (glfwWindowShouldClose(window)) {
+        return false;
+    }
+
+    if (!rocket.trajectory.empty()) {
+        currentStep = rocket.trajectory.size() - 1;
+    }
+
+    glfwPollEvents();
+    display();
+    glfwSwapBuffers(window);
+
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+    }
+
+    return !glfwWindowShouldClose(window);
+}
+
+void Display::closeLiveWindow()
+{
+    if (window) {
+        glfwDestroyWindow(window);
+        glfwTerminate();
+        window = nullptr;
+    }
+}
+
+void Display::run(int /*argc*/, char** /*argv*/, Mode m) {
+    mode = m;
+
+    const char* title = (mode == Mode::Auto)
+        ? "2D Rocket Flight - Auto"
+        : "2D Rocket Flight - Manual (Left/Right, Space)";
+
+    createWindow(1200, 800, title);
+
+   
+    startAnimation();
+
+    while (!glfwWindowShouldClose(window)) {
+        update();
+        display();
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+
+        if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+            glfwSetWindowShouldClose(window, GLFW_TRUE);
+        }
+    }
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
+}
+
+void Display::update()
+{
+    if (mode == Mode::Auto) {
+        updateAuto();
+    } else {
+        updateManual();
+    }
+}
+
+void Display::updateAuto()
+{
+    if (!animating) {
         return;
     }
 
-    const auto& traj = d.rocket.trajectory;
+    const auto& traj = rocket.trajectory;
+    const double stepDuration = 1.0 / animationSpeed;
 
-    if (d.currentStep + 1 < traj.size()) {
-        ++d.currentStep;
-
-        glutPostRedisplay();
-
-        const int delayMs = static_cast<int>(
-            1000.0 / d.animationSpeed
-        );
-
-        glutTimerFunc(delayMs, timerWrapper, 0);
+    double now = glfwGetTime();
+    while (now - lastStepTimestamp >= stepDuration) {
+        if (currentStep + 1 < traj.size()) {
+            ++currentStep;
+            lastStepTimestamp += stepDuration;
+        } else {
+            animating = false;
+            break;
+        }
     }
-    else {
-        d.animating = false;
+}
+
+void Display::updateManual()
+{
+    const auto& traj = rocket.trajectory;
+    if (traj.empty()) {
+        return;
     }
+
+    const bool keySpace = glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS;
+    const bool keyRight = glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS
+                       || glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS;
+    const bool keyLeft  = glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS
+                       || glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS;
+
+    // Space 
+    if (keySpace && !prevKeySpace) {
+        animating = !animating;
+        if (animating) {
+            
+            lastStepTimestamp = glfwGetTime();
+        }
+    }
+
+    if (animating) {
+        
+        const double stepDuration = 1.0 / animationSpeed;
+        double now = glfwGetTime();
+
+        while (now - lastStepTimestamp >= stepDuration) {
+            if (currentStep + 1 < traj.size()) {
+                ++currentStep;
+                lastStepTimestamp += stepDuration;
+            } else {
+                animating = false; 
+                break;
+            }
+        }
+    } else {
+        
+        if (keyRight && !prevKeyRight) {
+            if (currentStep + 1 < traj.size()) {
+                ++currentStep;
+            }
+        }
+
+        if (keyLeft && !prevKeyLeft) {
+            if (currentStep > 0) {
+                --currentStep;
+            }
+        }
+    }
+
+    prevKeySpace = keySpace;
+    prevKeyRight = keyRight;
+    prevKeyLeft  = keyLeft;
 }
 
 void Display::setAnimationSpeed(double speed)
@@ -96,6 +234,63 @@ void Display::drawGround(double x0, double x1) const {
     glEnd();
 }
 
+
+
+void Display::beginScreenSpace(int windowWidth, int windowHeight) const
+{
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    glOrtho(0.0, windowWidth, windowHeight, 0.0, -1.0, 1.0);
+
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+
+    glViewport(0, 0, windowWidth, windowHeight);
+}
+
+void Display::endScreenSpace() const
+{
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void Display::worldToWindowPixel(double wx, double wy, double& px, double& py) const
+{
+    GLint viewport[4];
+    GLdouble modelview[16], projection[16];
+    glGetIntegerv(GL_VIEWPORT, viewport);
+    glGetDoublev(GL_MODELVIEW_MATRIX, modelview);
+    glGetDoublev(GL_PROJECTION_MATRIX, projection);
+
+    GLdouble winX = 0.0, winY = 0.0, winZ = 0.0;
+    gluProject(wx, wy, 0.0, modelview, projection, viewport, &winX, &winY, &winZ);
+
+    int windowWidth, windowHeight;
+    glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
+
+    px = winX;
+    py = windowHeight - winY;
+}
+
+void Display::drawText(double pixelX, double pixelY, const std::string& text) const
+{
+    static char buffer[99999];
+    int numQuads = stb_easy_font_print(
+        static_cast<float>(pixelX), static_cast<float>(pixelY),
+        const_cast<char*>(text.c_str()), nullptr,
+        buffer, sizeof(buffer));
+
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(2, GL_FLOAT, 16, buffer);
+    glDrawArrays(GL_QUADS, 0, numQuads * 4);
+    glDisableClientState(GL_VERTEX_ARRAY);
+}
+
 void Display::drawHeightScale(double y0, double y1, double x) const {
     glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_LINES);
@@ -106,6 +301,9 @@ void Display::drawHeightScale(double y0, double y1, double x) const {
     constexpr int ticks = 5;
     const double step = (y1 - y0) / ticks;
 
+    std::vector<double> px(ticks + 1), py(ticks + 1);
+    std::vector<std::string> labels(ticks + 1);
+
     for (int i = 0; i <= ticks; ++i) {
         double h = y0 + step * i;
 
@@ -114,12 +312,18 @@ void Display::drawHeightScale(double y0, double y1, double x) const {
         glVertex2d(x + 2.0, h);
         glEnd();
 
-        glRasterPos2d(x + 5.0, h - 2.0);
-        std::string label = std::to_string(static_cast<int>(h));
-        for (char c : label) {
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, c);
-        }
+        worldToWindowPixel(x + 5.0, h - 2.0, px[i], py[i]);
+        labels[i] = std::to_string(static_cast<int>(h));
     }
+
+    int ww, wh;
+    glfwGetFramebufferSize(window, &ww, &wh);
+
+    beginScreenSpace(ww, wh);
+    for (int i = 0; i <= ticks; ++i) {
+        drawText(px[i], py[i], labels[i]);
+    }
+    endScreenSpace();
 }
 
 void Display::drawTimeScale(size_t pointCount, double dt, double x0, double x1, double y) const {
@@ -136,6 +340,9 @@ void Display::drawTimeScale(size_t pointCount, double dt, double x0, double x1, 
     double stepTime = totalTime / ticks;
     double stepX = (x1 - x0) / ticks;
 
+    std::vector<double> px(ticks + 1), py(ticks + 1);
+    std::vector<std::string> labels(ticks + 1);
+
     for (int i = 0; i <= ticks; ++i) {
         double t = stepTime * i;
         double x = x0 + stepX * i;
@@ -145,15 +352,93 @@ void Display::drawTimeScale(size_t pointCount, double dt, double x0, double x1, 
         glVertex2f((float)x, (float)y + 2.0f);
         glEnd();
 
-        glRasterPos2f((float)(x - 4.0), (float)(y - 6.0));
         std::ostringstream stream;
         stream << std::fixed << std::setprecision(1) << t;
-        std::string label = stream.str();
+        labels[i] = stream.str();
 
-        for (char c : label) {
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, c);
+        worldToWindowPixel(x - 4.0, y - 6.0, px[i], py[i]);
+    }
+
+    int ww, wh;
+    glfwGetFramebufferSize(window, &ww, &wh);
+
+    beginScreenSpace(ww, wh);
+    for (int i = 0; i <= ticks; ++i) {
+        drawText(px[i], py[i], labels[i]);
+    }
+    endScreenSpace();
+}
+
+std::string Display::formatNumber(double value, int precision) const
+{
+    std::ostringstream stream;
+    stream << std::fixed << std::setprecision(precision) << value;
+    return stream.str();
+}
+
+
+//data panel
+
+void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) const
+{
+    const auto& traj = rocket.trajectory;
+
+    beginScreenSpace(windowWidth, windowHeight);
+
+    
+    glColor3f(0.12f, 0.12f, 0.16f);
+    glBegin(GL_QUADS);
+    glVertex2d(0.0, 0.0);
+    glVertex2d(panelWidth, 0.0);
+    glVertex2d(panelWidth, windowHeight);
+    glVertex2d(0.0, windowHeight);
+    glEnd();
+
+    if (!traj.empty()) {
+        const std::size_t idx = std::min(currentStep, traj.size() - 1);
+        const double dt = 1.0;
+
+        const double time     = static_cast<double>(idx) * dt;
+        const double height   = traj[idx].second;
+        const double distance = traj[idx].first;
+
+        double speed = 0.0;
+        if (idx > 0) {
+            const double dx = traj[idx].first  - traj[idx - 1].first;
+            const double dy = traj[idx].second - traj[idx - 1].second;
+            speed = std::sqrt(dx * dx + dy * dy) / dt;
+        }
+
+        double x = 14.0;
+        double y = 20.0;
+        const double lineHeight = 22.0;
+
+        drawText(x, y, "Rocket data");
+        y += lineHeight + 8.0;
+
+        drawText(x, y, "Time:     " + formatNumber(time) + " s");
+        y += lineHeight;
+
+        drawText(x, y, "Height:   " + formatNumber(height) + " m");
+        y += lineHeight;
+
+        drawText(x, y, "Distance: " + formatNumber(distance) + " m");
+        y += lineHeight;
+
+        drawText(x, y, "Speed:    " + formatNumber(speed) + " m/s");
+        y += lineHeight;
+
+        drawText(x, y,
+            "Step:     " + std::to_string(idx + 1) + " / " + std::to_string(traj.size()));
+        y += lineHeight;
+
+        if (mode == Mode::Manual) {
+            drawText(x, y, std::string("State:    ") + (animating ? "Playing" : "Paused"));
+            y += lineHeight;
         }
     }
+
+    endScreenSpace();
 }
 
 void Display::display() const
@@ -164,28 +449,18 @@ void Display::display() const
     const auto& traj = rocket.trajectory;
 
     if (traj.empty()) {
-        glutSwapBuffers();
         return;
     }
 
-    const double dt = 1.0;
+    int windowWidth = 0, windowHeight = 0;
+    glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
 
-    const int windowWidth  = glutGet(GLUT_WINDOW_WIDTH);
-    const int windowHeight = glutGet(GLUT_WINDOW_HEIGHT);
+    const int panelWidth = std::min(260, windowWidth / 4);
+    const int graphWidth = windowWidth - panelWidth;
 
-    constexpr double mainFraction = 0.75;
+    //Graph
 
-    const int mainWidth  =
-        static_cast<int>(windowWidth * mainFraction);
-
-    const int graphWidth =
-        windowWidth - mainWidth;
-
-    // =========================================================
-    // Левая часть: анимация положения ракеты X-Y
-    // =========================================================
-
-    glViewport(0, 0, mainWidth, windowHeight);
+    glViewport(panelWidth, 0, graphWidth, windowHeight);
 
     double minX = traj.front().first;
     double maxX = traj.front().first;
@@ -203,7 +478,6 @@ void Display::display() const
     double rangeX = maxX - minX;
     double rangeY = maxY - minY;
 
-    // Если ракета летит почти вертикально
     if (rangeX < 1.0) {
         rangeX = 1.0;
     }
@@ -228,7 +502,7 @@ void Display::display() const
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    // Земля
+    // Ground
     glColor3f(0.0f, 0.5f, 0.0f);
 
     glBegin(GL_LINES);
@@ -236,7 +510,7 @@ void Display::display() const
     glVertex2d(maxX + marginX, 0.0);
     glEnd();
 
-    // Пройденная траектория
+    // pass traj
     glColor3f(0.1f, 0.5f, 1.0f);
 
     glBegin(GL_LINE_STRIP);
@@ -253,7 +527,7 @@ void Display::display() const
 
     glEnd();
 
-    // Ракета
+    // rock
     const auto& current = traj[lastPoint];
 
     glColor3f(1.0f, 0.1f, 0.1f);
@@ -264,87 +538,7 @@ void Display::display() const
     glVertex2d(current.first, current.second);
     glEnd();
 
-    // =========================================================
-    // Правая часть: полный график высоты от времени
-    // =========================================================
+  
 
-    glViewport(mainWidth, 0, graphWidth, windowHeight);
-
-    const double timeMin = 0.0;
-    const double timeMax =
-        static_cast<double>(traj.size() - 1) * dt;
-
-    const double heightMin = minY;
-    const double heightMax = maxY;
-
-    const double timeRange =
-        std::max(timeMax - timeMin, 1.0);
-
-    const double heightRange =
-        std::max(heightMax - heightMin, 1.0);
-
-    const double timeMargin   = timeRange * 0.10;
-    const double heightMargin = heightRange * 0.10;
-
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-
-    gluOrtho2D(
-        timeMin - timeMargin,
-        timeMax + timeMargin,
-        heightMin - heightMargin,
-        heightMax + heightMargin
-    );
-
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-
-    // Оси графика
-    glColor3f(0.0f, 0.0f, 0.0f);
-
-    glBegin(GL_LINES);
-
-    // Ось времени
-    glVertex2d(
-        timeMin - timeMargin,
-        0.0
-    );
-
-    glVertex2d(
-        timeMax + timeMargin,
-        0.0
-    );
-
-    // Ось высоты
-    glVertex2d(
-        0.0,
-        heightMin - heightMargin
-    );
-
-    glVertex2d(
-        0.0,
-        heightMax + heightMargin
-    );
-
-    glEnd();
-
-    // Полный график высоты от времени
-    rocket.drawHeightOverTime(dt);
-
-    // Текущая точка на графике
-    const double currentTime =
-        static_cast<double>(lastPoint) * dt;
-
-    const double currentHeight =
-        traj[lastPoint].second;
-
-    glColor3f(1.0f, 0.0f, 0.0f);
-
-    glPointSize(8.0f);
-
-    glBegin(GL_POINTS);
-    glVertex2d(currentTime, currentHeight);
-    glEnd();
-
-    glutSwapBuffers();
+    drawDataPanel(panelWidth, windowWidth, windowHeight);
 }

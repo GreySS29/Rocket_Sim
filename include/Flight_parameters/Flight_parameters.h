@@ -23,7 +23,7 @@ class Flight_parameters
         set_dynamic_pressure();
         set_reynolds_number(length);
         friction_drag = fdrag.calculate_friction_drag(reynolds_number,mach_number, density, mp_units::abs(magnitude(real_velocity)), a_wet);
-        fdrag.check_2(reynolds_number,mach_number, density, mp_units::abs(magnitude(real_velocity)), a_wet);
+        // fdrag.check_2(reynolds_number,mach_number, density, mp_units::abs(magnitude(real_velocity)), a_wet);
     }
 
 

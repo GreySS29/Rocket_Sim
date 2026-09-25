@@ -12,7 +12,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         15000.0,
         395700.0
     };
-    std::unique_ptr<Stage> booster = Stage::creat_stage(
+    std::unique_ptr<Stage> booster = Stage::create_stage(
         5.0,
         0.3,
         10,
@@ -33,7 +33,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         10000.0,
         92670.0
     };
-    std::unique_ptr<Stage> upper_stage = Stage::creat_stage(
+    std::unique_ptr<Stage> upper_stage = Stage::create_stage(
         15.0,
         0.3,
         10,

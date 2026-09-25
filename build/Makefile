@@ -301,6 +301,174 @@ Rock_sim_tests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Rock_sim_tests.dir/build.make tests/CMakeFiles/Rock_sim_tests.dir/build
 .PHONY : Rock_sim_tests/fast
 
+external/imgui/backends/imgui_impl_glfw.o: external/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+external/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.o
+
+external/imgui/backends/imgui_impl_glfw.i: external/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.i
+
+external/imgui/backends/imgui_impl_glfw.s: external/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.s
+
+external/imgui/backends/imgui_impl_opengl2.o: external/imgui/backends/imgui_impl_opengl2.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_opengl2.o
+
+# target to build an object file
+external/imgui/backends/imgui_impl_opengl2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_opengl2.cpp.o
+
+external/imgui/backends/imgui_impl_opengl2.i: external/imgui/backends/imgui_impl_opengl2.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_opengl2.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_opengl2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_opengl2.cpp.i
+
+external/imgui/backends/imgui_impl_opengl2.s: external/imgui/backends/imgui_impl_opengl2.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_opengl2.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_opengl2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_opengl2.cpp.s
+
+external/imgui/backends/imgui_impl_opengl3.o: external/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+external/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_opengl3.cpp.o
+
+external/imgui/backends/imgui_impl_opengl3.i: external/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_opengl3.cpp.i
+
+external/imgui/backends/imgui_impl_opengl3.s: external/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_opengl3.cpp.s
+
+external/imgui/imgui.o: external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.o
+
+# target to build an object file
+external/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.cpp.o
+
+external/imgui/imgui.i: external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.i
+
+# target to preprocess a source file
+external/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.cpp.i
+
+external/imgui/imgui.s: external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.s
+
+# target to generate assembly for a file
+external/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.cpp.s
+
+external/imgui/imgui_draw.o: external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.o
+
+# target to build an object file
+external/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.cpp.o
+
+external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.i
+
+# target to preprocess a source file
+external/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.cpp.i
+
+external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+external/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.cpp.s
+
+external/imgui/imgui_tables.o: external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.o
+
+# target to build an object file
+external/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.cpp.o
+
+external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.i
+
+# target to preprocess a source file
+external/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.cpp.i
+
+external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+external/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.cpp.s
+
+external/imgui/imgui_widgets.o: external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.o
+
+# target to build an object file
+external/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.cpp.o
+
+external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+external/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.cpp.i
+
+external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+external/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_sim.dir/build.make CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.cpp.s
+
 home/greys/Documents/Doc/C+/openGL/glad/src/glad.o: home/greys/Documents/Doc/C+/openGL/glad/src/glad.c.o
 .PHONY : home/greys/Documents/Doc/C+/openGL/glad/src/glad.o
 
@@ -373,6 +541,30 @@ src/GUI/display.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/display.cpp.s
 .PHONY : src/GUI/display.cpp.s
 
+src/GUI/main_window.o: src/GUI/main_window.cpp.o
+.PHONY : src/GUI/main_window.o
+
+# target to build an object file
+src/GUI/main_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o
+.PHONY : src/GUI/main_window.cpp.o
+
+src/GUI/main_window.i: src/GUI/main_window.cpp.i
+.PHONY : src/GUI/main_window.i
+
+# target to preprocess a source file
+src/GUI/main_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.i
+.PHONY : src/GUI/main_window.cpp.i
+
+src/GUI/main_window.s: src/GUI/main_window.cpp.s
+.PHONY : src/GUI/main_window.s
+
+# target to generate assembly for a file
+src/GUI/main_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.s
+.PHONY : src/GUI/main_window.cpp.s
+
 src/GUI/rocket_render.o: src/GUI/rocket_render.cpp.o
 .PHONY : src/GUI/rocket_render.o
 
@@ -396,6 +588,30 @@ src/GUI/rocket_render.s: src/GUI/rocket_render.cpp.s
 src/GUI/rocket_render.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s
 .PHONY : src/GUI/rocket_render.cpp.s
+
+src/Panel/server.o: src/Panel/server.cpp.o
+.PHONY : src/Panel/server.o
+
+# target to build an object file
+src/Panel/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o
+.PHONY : src/Panel/server.cpp.o
+
+src/Panel/server.i: src/Panel/server.cpp.i
+.PHONY : src/Panel/server.i
+
+# target to preprocess a source file
+src/Panel/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.i
+.PHONY : src/Panel/server.cpp.i
+
+src/Panel/server.s: src/Panel/server.cpp.s
+.PHONY : src/Panel/server.s
+
+# target to generate assembly for a file
+src/Panel/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rock_core.dir/build.make CMakeFiles/Rock_core.dir/src/Panel/server.cpp.s
+.PHONY : src/Panel/server.cpp.s
 
 src/earth.o: src/earth.cpp.o
 .PHONY : src/earth.o
@@ -564,6 +780,27 @@ help:
 	@echo "... mp-units-core"
 	@echo "... mp-units-systems"
 	@echo "... mp-units-utility"
+	@echo "... external/imgui/backends/imgui_impl_glfw.o"
+	@echo "... external/imgui/backends/imgui_impl_glfw.i"
+	@echo "... external/imgui/backends/imgui_impl_glfw.s"
+	@echo "... external/imgui/backends/imgui_impl_opengl2.o"
+	@echo "... external/imgui/backends/imgui_impl_opengl2.i"
+	@echo "... external/imgui/backends/imgui_impl_opengl2.s"
+	@echo "... external/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... external/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... external/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... external/imgui/imgui.o"
+	@echo "... external/imgui/imgui.i"
+	@echo "... external/imgui/imgui.s"
+	@echo "... external/imgui/imgui_draw.o"
+	@echo "... external/imgui/imgui_draw.i"
+	@echo "... external/imgui/imgui_draw.s"
+	@echo "... external/imgui/imgui_tables.o"
+	@echo "... external/imgui/imgui_tables.i"
+	@echo "... external/imgui/imgui_tables.s"
+	@echo "... external/imgui/imgui_widgets.o"
+	@echo "... external/imgui/imgui_widgets.i"
+	@echo "... external/imgui/imgui_widgets.s"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.o"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.i"
 	@echo "... home/greys/Documents/Doc/C+/openGL/glad/src/glad.s"
@@ -573,9 +810,15 @@ help:
 	@echo "... src/GUI/display.o"
 	@echo "... src/GUI/display.i"
 	@echo "... src/GUI/display.s"
+	@echo "... src/GUI/main_window.o"
+	@echo "... src/GUI/main_window.i"
+	@echo "... src/GUI/main_window.s"
 	@echo "... src/GUI/rocket_render.o"
 	@echo "... src/GUI/rocket_render.i"
 	@echo "... src/GUI/rocket_render.s"
+	@echo "... src/Panel/server.o"
+	@echo "... src/Panel/server.i"
+	@echo "... src/Panel/server.s"
 	@echo "... src/earth.o"
 	@echo "... src/earth.i"
 	@echo "... src/earth.s"

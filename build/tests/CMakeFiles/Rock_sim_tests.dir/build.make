@@ -101,6 +101,7 @@ tests/Rock_sim_tests: libglad.a
 tests/Rock_sim_tests: glfw-build/src/libglfw3.a
 tests/Rock_sim_tests: /usr/lib/librt.a
 tests/Rock_sim_tests: /usr/lib/libm.so
+tests/Rock_sim_tests: /usr/lib/libGLU.so
 tests/Rock_sim_tests: /usr/lib/libGLX.so
 tests/Rock_sim_tests: /usr/lib/libOpenGL.so
 tests/Rock_sim_tests: tests/CMakeFiles/Rock_sim_tests.dir/link.txt

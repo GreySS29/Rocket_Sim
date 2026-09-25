@@ -35,7 +35,7 @@ void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
     roc_render.add_G_force(G_force);
     roc_render.add_A_force(A_force);
     roc_render.add_F_force(F_total);
-    roc_render.add_trajectory(this->get_position().x, this->get_position_above_face().y);
+    roc_render.add_trajectory(this->get_position_above_face().x, this->get_position_above_face().y);
   
 }
 
@@ -77,11 +77,12 @@ void Rocket::print_status() const{
 
 void Rocket::print_status_flight_short() const{
      std::cout << std::fixed << std::setprecision(2);
-        std::cout << "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        std::cout << "A: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "D" << active() ->get_position_above_surface().x << " m" << '\t' <<
         "V: " << active()->get_velocity() << " m/s " <<  "||" <<
-        "A: " << active()->get_acceleration() << " m/s2 "<< "||" <<
-        //"D: "<< booster_->get_thrust_direction() << '\n'<<
-        "M: " <<get_mass() << " kg" << "||" ;
+        // "A: " << active()->get_acceleration() << " m/s2 "<< "||" <<
+        "M: " <<get_mass() << " kg" << "||" <<
+        "A: "<< active()->get_thrust_direction() << '\n';
         //"F: " << booster_ ->get_fuel_mass() << " kg\n";
         std::cout << "=========================\n";
 }
@@ -90,6 +91,7 @@ void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
         ofs << std::fixed << std::setprecision(2);
         ofs << "Time : " << time <<  "  |" <<
         "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "S:" << active() ->get_position_above_surface().x << " m"   << '\t' <<
         "V: " << active()->get_velocity().magnitude() << " m/s " <<  "/" <<
         active()->get_velocity()<< "||"
         "A: " << active()->get_acceleration().magnitude() << " m/s2 "<< "/" <<
@@ -101,6 +103,16 @@ void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
         flight_p_.print_parameters(ofs); 
 
         ofs << "=========================\n";
+}
+
+void Rocket::print_status_flight_stand(std::ofstream& ofs , int time) const{
+        ofs << std::fixed << std::setprecision(2);
+        ofs << "Time : " << time <<  "  |" <<
+        "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
+        "V: " << active()->get_velocity().magnitude() << " m/s " <<  '\t' <<
+        "D: "<< active()->get_thrust_direction() << '\t'<<
+        "F: " << active() ->get_fuel_mass() << " kg\n";
+        
 }
 
 // std::ofstream& operator<<(std::ofstream& ofs, const Rocket& rocket){

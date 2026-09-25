@@ -1,8 +1,10 @@
 #pragma once
 #include "../Rocket_components/Stage.h"
+#include <GL/gl.h>       // ← вместо glad
+#include <GL/glu.h>
 #include <vector>
 #include <fstream>
-#include <GL/glut.h>
+
 
 using std::vector;
 class RocketRender {
@@ -38,21 +40,6 @@ class RocketRender {
     void print_trajectory () const;
 
 
-
-    // void draw_force(vector<Vector3D> force) const {
-    //     if (force.size() < 2) 
-    //     {
-    //         std::cerr << "No data"<<'\n';
-    //         return;
-    //     }
-
-    //     glColor3f(0.0f, 0.0f, 1.0f);
-    //     glBegin(GL_LINE_STRIP);
-    //     for (const auto& p : force) {
-    //         glVertex2f(static_cast<float>(p.first), static_cast<float>(p.second));
-    //     }
-    //     glEnd();
-    // }
 
     
 

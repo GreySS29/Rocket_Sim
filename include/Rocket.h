@@ -1,9 +1,9 @@
 #pragma once
-#include "Rocket_components/Stage.h"
 #include <iomanip>
 #include <fstream>
 #include <vector>
 #include "GUI/RocketRender.h"
+#include "Rocket_components/Stage.h"
 #include "Flight_parameters/Flight_parameters.h"
 
 class Rocket  {
@@ -13,9 +13,6 @@ class Rocket  {
     Payload payload_;
     Flight_parameters flight_p_;
 
-
-    
-    
     public:
     Rocket (std::unique_ptr<Stage> booster, std::unique_ptr<Stage> upper_stage, Payload payload,const Atmosphere& atm_r ) :
     
@@ -77,5 +74,6 @@ class Rocket  {
    void print_status_flight() const;
    void print_status_flight_short() const;
    void print_status_flight_short(std::ofstream& ofs, int time) const;
+   void print_status_flight_stand(std::ofstream& ofs, int time) const;
 };
 
