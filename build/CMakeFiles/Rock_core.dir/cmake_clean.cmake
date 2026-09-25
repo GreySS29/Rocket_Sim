@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o"
   "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o.d"
+  "CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o"
+  "CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o"
   "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o.d"
   "CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o"

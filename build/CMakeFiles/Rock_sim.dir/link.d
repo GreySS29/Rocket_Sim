@@ -3,17 +3,23 @@ Rock_sim: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   CMakeFiles/Rock_sim.dir/src/main.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o \
+  CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o \
   libRock_core.a \
   /usr/lib/libboost_thread.so.1.92.0 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a \
   libglad.a \
   glfw-build/src/libglfw3.a \
   /usr/lib/librt.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a \
+  /usr/lib/libGLU.so \
   /usr/lib/libGLX.so \
   /usr/lib/libOpenGL.so \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGL.so \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGLU.so \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libglut.so \
   /usr/lib/libboost_atomic.so.1.92.0 \
   /usr/lib/libboost_chrono.so.1.92.0 \
   /usr/lib/libboost_date_time.so.1.92.0 \
@@ -52,16 +58,9 @@ Rock_sim: \
   /usr/lib/libGLdispatch.so.0 \
   /usr/lib32/libX11.so.6 \
   /usr/lib/libX11.so.6 \
-  /usr/lib/libXrandr.so.2 \
-  /usr/lib32/libXxf86vm.so.1 \
-  /usr/lib/libXxf86vm.so.1 \
-  /usr/lib/libXi.so.6 \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib32/libxcb.so.1 \
   /usr/lib/libxcb.so.1 \
-  /usr/lib32/libXext.so.6 \
-  /usr/lib/libXext.so.6 \
-  /usr/lib/libXrender.so.1 \
   /usr/lib32/libXau.so.6 \
   /usr/lib/libXau.so.6 \
   /usr/lib32/libXdmcp.so.6 \
@@ -75,9 +74,25 @@ Rock_sim: \
 
 CMakeFiles/Rock_sim.dir/src/main.cpp.o:
 
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o:
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o:
+
 libRock_core.a:
 
 /usr/lib/libboost_thread.so.1.92.0:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a:
 
 libglad.a:
 
@@ -87,15 +102,11 @@ glfw-build/src/libglfw3.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a:
 
+/usr/lib/libGLU.so:
+
 /usr/lib/libGLX.so:
 
 /usr/lib/libOpenGL.so:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGL.so:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libGLU.so:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libglut.so:
 
 /usr/lib/libboost_atomic.so.1.92.0:
 
@@ -173,25 +184,11 @@ glfw-build/src/libglfw3.a:
 
 /usr/lib/libX11.so.6:
 
-/usr/lib/libXrandr.so.2:
-
-/usr/lib32/libXxf86vm.so.1:
-
-/usr/lib/libXxf86vm.so.1:
-
-/usr/lib/libXi.so.6:
-
 /usr/lib/ld-linux-x86-64.so.2:
 
 /usr/lib32/libxcb.so.1:
 
 /usr/lib/libxcb.so.1:
-
-/usr/lib32/libXext.so.6:
-
-/usr/lib/libXext.so.6:
-
-/usr/lib/libXrender.so.1:
 
 /usr/lib32/libXau.so.6:
 

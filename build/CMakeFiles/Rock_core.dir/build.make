@@ -170,10 +170,24 @@ CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/rocket_render.cpp -o CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.s
 
+CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o: CMakeFiles/Rock_core.dir/flags.make
+CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/main_window.cpp
+CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o: CMakeFiles/Rock_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o -MF CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o.d -o CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/main_window.cpp
+
+CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/main_window.cpp > CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.i
+
+CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/main_window.cpp -o CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.s
+
 CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o: CMakeFiles/Rock_core.dir/flags.make
 CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp
 CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o: CMakeFiles/Rock_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o -MF CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o.d -o CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Enviroment/atmosphere.cpp
 
 CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.s: cmake_force
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o: CMakeFiles/Rock_core.dir/flags.make
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Panel/server.cpp
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o: CMakeFiles/Rock_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o -MF CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o.d -o CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Panel/server.cpp
 
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.i: cmake_force
@@ -207,6 +221,7 @@ Rock_core_OBJECTS = \
 "CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o" \
+"CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o" \
 "CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o"
 
@@ -220,11 +235,12 @@ libRock_core.a: CMakeFiles/Rock_core.dir/src/fabric.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o
+libRock_core.a: CMakeFiles/Rock_core.dir/src/GUI/main_window.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/Enviroment/atmosphere.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o
 libRock_core.a: CMakeFiles/Rock_core.dir/build.make
 libRock_core.a: CMakeFiles/Rock_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libRock_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libRock_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Rock_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rock_core.dir/link.txt --verbose=$(VERBOSE)
 

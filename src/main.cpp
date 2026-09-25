@@ -4,6 +4,7 @@
 #include "../include/Rocket.h"
 #include "../include/Fabric.h"
 #include "../include/Launch_bay.h"
+#include "../include/GUI/MainWindow.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
 #include "../include/GUI/Log.h"
@@ -12,7 +13,7 @@
 #include "../include/Panel/Panel_data.h"
 #include "../include/Panel/Sim_state.h"
 
-int main_s(int argc, char** argv){
+int main(int argc, char** argv){
     Log log;
     Earth earth;
     Fabric fabric;
@@ -29,10 +30,12 @@ int main_s(int argc, char** argv){
 //    launch_bay.launch_def_rock(earth,rocket);
         
     
-    // Display display {render};
-    // Display::setInstance(display);
-    // display.setAnimationSpeed(10.0);
-    // display.run(argc, argv);
+    Display display {render};
+    Display::setInstance(display);
+    display.setAnimationSpeed(10.0);
+
+    MainWindow menu(display);
+    menu.run();
 
     return 0;
     
@@ -82,7 +85,7 @@ int main_m(int argc, char** argv) {
 
 using Clock = std::chrono::steady_clock;
 
-int main() {
+int main_s() {
 
     Earth earth;
     Fabric fabric;

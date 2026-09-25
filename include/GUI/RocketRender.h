@@ -1,8 +1,10 @@
 #pragma once
 #include "../Rocket_components/Stage.h"
+#include <GL/gl.h>       // ← вместо glad
+#include <GL/glu.h>
 #include <vector>
 #include <fstream>
-#include <GL/glut.h>
+
 
 using std::vector;
 class RocketRender {

@@ -2,43 +2,15 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/display.cpp \
  /usr/include/stdc-predef.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/Display.h \
- /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
+ /usr/include/c++/16/vector /usr/include/c++/16/bits/requires_hosted.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/GL/glu.h \
- /usr/include/c++/16/stdlib.h /usr/include/c++/16/cstdlib \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h \
- /usr/include/c++/16/pstl/pstl_config.h /usr/include/stdlib.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
- /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
- /usr/include/bits/types/timer_t.h /usr/include/endian.h \
- /usr/include/bits/endian.h /usr/include/bits/endianness.h \
- /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
- /usr/include/sys/select.h /usr/include/bits/select.h \
- /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
- /usr/include/bits/types/struct_timeval.h \
- /usr/include/bits/types/struct_timespec.h \
- /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
- /usr/include/bits/pthreadtypes-arch.h \
- /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
- /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/c++/16/bits/std_abs.h \
- /usr/include/c++/16/vector /usr/include/c++/16/bits/requires_hosted.h \
+ /usr/include/c++/16/pstl/pstl_config.h \
  /usr/include/c++/16/bits/stl_algobase.h \
  /usr/include/c++/16/bits/cpp_type_traits.h \
  /usr/include/c++/16/bits/version.h /usr/include/c++/16/type_traits \
@@ -85,10 +57,59 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /usr/include/c++/16/bits/range_access.h \
  /usr/include/c++/16/bits/erase_if.h /usr/include/c++/16/bits/vector.tcc \
  /usr/include/c++/16/bits/memory_resource.h /usr/include/c++/16/cstddef \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
  /usr/include/c++/16/bits/uses_allocator.h \
  /usr/include/c++/16/bits/uses_allocator_args.h /usr/include/c++/16/tuple \
  /usr/include/c++/16/bits/formatfwd.h /usr/include/c++/16/utility \
  /usr/include/c++/16/bits/stl_relops.h /usr/include/c++/16/bits/intcmp.h \
+ /usr/include/c++/16/string /usr/include/c++/16/bits/stringfwd.h \
+ /usr/include/c++/16/bits/char_traits.h \
+ /usr/include/c++/16/bits/postypes.h /usr/include/c++/16/cwchar \
+ /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
+ /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h \
+ /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
+ /usr/include/bits/types/mbstate_t.h \
+ /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
+ /usr/include/bits/types/__locale_t.h \
+ /usr/include/c++/16/bits/localefwd.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/16/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/16/iosfwd \
+ /usr/include/c++/16/cctype /usr/include/ctype.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/time64.h /usr/include/bits/endian.h \
+ /usr/include/bits/endianness.h /usr/include/c++/16/bits/ostream_insert.h \
+ /usr/include/c++/16/bits/cxxabi_forced.h \
+ /usr/include/c++/16/bits/basic_string.h /usr/include/c++/16/string_view \
+ /usr/include/c++/16/bits/string_view.tcc \
+ /usr/include/c++/16/ext/string_conversions.h /usr/include/c++/16/cstdlib \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/struct_timespec.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h \
+ /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
+ /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h /usr/include/c++/16/bits/std_abs.h \
+ /usr/include/c++/16/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/bits/types/struct_FILE.h \
+ /usr/include/bits/types/cookie_io_functions_t.h \
+ /usr/include/bits/stdio_lim.h /usr/include/c++/16/cerrno \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/bits/types/error_t.h /usr/include/c++/16/bits/charconv.h \
+ /usr/include/c++/16/bits/basic_string.tcc \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/RocketRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/Stage.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Physic_object.h \
@@ -114,23 +135,10 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /usr/include/c++/16/tr1/riemann_zeta.tcc /usr/include/assert.h \
  /usr/include/c++/16/iostream /usr/include/c++/16/ostream \
  /usr/include/c++/16/bits/ostream.h /usr/include/c++/16/ios \
- /usr/include/c++/16/iosfwd /usr/include/c++/16/bits/stringfwd.h \
- /usr/include/c++/16/bits/postypes.h /usr/include/c++/16/cwchar \
- /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h \
- /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
- /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/c++/16/exception \
- /usr/include/c++/16/bits/exception_ptr.h \
+ /usr/include/c++/16/exception /usr/include/c++/16/bits/exception_ptr.h \
  /usr/include/c++/16/bits/cxxabi_init_exception.h \
  /usr/include/c++/16/typeinfo /usr/include/c++/16/bits/nested_exception.h \
- /usr/include/c++/16/bits/char_traits.h \
- /usr/include/c++/16/bits/localefwd.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/16/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/16/cctype \
- /usr/include/ctype.h /usr/include/c++/16/bits/ios_base.h \
- /usr/include/c++/16/ext/atomicity.h \
+ /usr/include/c++/16/bits/ios_base.h /usr/include/c++/16/ext/atomicity.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
@@ -149,22 +157,7 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/atomic_word.h \
  /usr/include/sys/single_threaded.h \
  /usr/include/c++/16/bits/locale_classes.h \
- /usr/include/c++/16/bits/functexcept.h /usr/include/c++/16/string \
- /usr/include/c++/16/bits/ostream_insert.h \
- /usr/include/c++/16/bits/cxxabi_forced.h \
- /usr/include/c++/16/bits/basic_string.h /usr/include/c++/16/string_view \
- /usr/include/c++/16/bits/string_view.tcc \
- /usr/include/c++/16/ext/string_conversions.h /usr/include/c++/16/cstdio \
- /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
- /usr/include/bits/types/__fpos64_t.h \
- /usr/include/bits/types/struct_FILE.h \
- /usr/include/bits/types/cookie_io_functions_t.h \
- /usr/include/bits/stdio_lim.h /usr/include/c++/16/cerrno \
- /usr/include/errno.h /usr/include/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/bits/types/error_t.h /usr/include/c++/16/bits/charconv.h \
- /usr/include/c++/16/bits/basic_string.tcc \
+ /usr/include/c++/16/bits/functexcept.h \
  /usr/include/c++/16/bits/locale_classes.tcc \
  /usr/include/c++/16/system_error \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/error_constants.h \
@@ -190,7 +183,9 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /usr/include/c++/16/bits/enable_special_members.h \
  /usr/include/c++/16/span /usr/include/c++/16/bits/monostate.h \
  /usr/include/c++/16/bits/unicode.h /usr/include/c++/16/cstdint \
- /usr/include/c++/16/bits/stl_algo.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/c++/16/bits/stl_algo.h \
  /usr/include/c++/16/bits/algorithmfwd.h \
  /usr/include/c++/16/bits/stl_heap.h \
  /usr/include/c++/16/bits/uniform_int_dist.h \
@@ -340,5 +335,11 @@ CMakeFiles/Rock_core.dir/src/GUI/display.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_termosphere.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Utility/Gravity_temp.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
+ /usr/include/GL/glu.h \
+ /home/greys/Documents/Doc/C+/openGL/glfw/include/GLFW/glfw3.h \
  /usr/include/c++/16/algorithm /usr/include/c++/16/bits/ranges_algo.h \
- /usr/include/c++/16/pstl/glue_algorithm_defs.h
+ /usr/include/c++/16/pstl/glue_algorithm_defs.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/stb_easy_font.h \
+ /usr/include/c++/16/stdlib.h

@@ -332,9 +332,8 @@ CMakeFiles/Rock_core.dir/src/rocket.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_termosphere.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/../Utility/Gravity_temp.h \
- /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h /usr/include/c++/16/stdlib.h \
+ /usr/include/GL/glu.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Flight_parameters.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Friction_drag.h

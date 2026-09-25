@@ -86,14 +86,126 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/main.cpp -o CMakeFiles/Rock_sim.dir/src/main.cpp.s
 
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui.cpp > CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_draw.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_draw.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_draw.cpp > CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_draw.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_tables.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_tables.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_tables.cpp > CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_tables.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_widgets.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_widgets.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_widgets.cpp > CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui_widgets.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_glfw.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_glfw.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_glfw.cpp > CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_glfw.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl3.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl3.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl3.cpp > CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl3.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.s
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o: CMakeFiles/Rock_sim.dir/flags.make
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl2.cpp
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o: CMakeFiles/Rock_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o -MF CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o.d -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o -c /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl2.cpp
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl2.cpp > CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.i
+
+CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/backends/imgui_impl_opengl2.cpp -o CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.s
+
 # Object files for target Rock_sim
 Rock_sim_OBJECTS = \
-"CMakeFiles/Rock_sim.dir/src/main.cpp.o"
+"CMakeFiles/Rock_sim.dir/src/main.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o" \
+"CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o"
 
 # External object files for target Rock_sim
 Rock_sim_EXTERNAL_OBJECTS =
 
 Rock_sim: CMakeFiles/Rock_sim.dir/src/main.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/imgui_tables.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/imgui_widgets.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o
+Rock_sim: CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o
 Rock_sim: CMakeFiles/Rock_sim.dir/build.make
 Rock_sim: CMakeFiles/Rock_sim.dir/compiler_depend.ts
 Rock_sim: libRock_core.a
@@ -102,6 +214,7 @@ Rock_sim: libglad.a
 Rock_sim: glfw-build/src/libglfw3.a
 Rock_sim: /usr/lib/librt.a
 Rock_sim: /usr/lib/libm.so
+Rock_sim: /usr/lib/libGLU.so
 Rock_sim: /usr/lib/libGLX.so
 Rock_sim: /usr/lib/libOpenGL.so
 Rock_sim: /usr/lib/libboost_atomic.so.1.92.0
@@ -109,7 +222,7 @@ Rock_sim: /usr/lib/libboost_chrono.so.1.92.0
 Rock_sim: /usr/lib/libboost_date_time.so.1.92.0
 Rock_sim: /usr/lib/libboost_container.so.1.92.0
 Rock_sim: CMakeFiles/Rock_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Rock_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Rock_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rock_sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
