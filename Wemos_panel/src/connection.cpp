@@ -48,6 +48,7 @@ bool connectToServer()
     if (client.connect(SERVER_IP, SERVER_PORT))
     {
         Serial.println("TCP connection established");
+        client.print("PANEL\n");   
         return true;
     }
 
@@ -55,42 +56,18 @@ bool connectToServer()
     return false;
 }
 
-
 void sendTelemetry(int angle, int btn1, int btn2)
 {
     if (!client.connected())
     {
         client.stop();
-        if (!connectToServer()){return;}
+        if (!connectToServer()) { return; }
     }
 
-    String message =
-    String(angle) +
-    ";" + String(btn1) +
-    ";" + String(btn2);
+    String message = String(angle) + ";" + String(btn1) + ";" + String(btn2);
 
     Serial.print("Sending: ");
     Serial.println(message);
 
     client.println(message);
-
-    unsigned long timeout = millis();
-
-    while (!client.available())
-    {
-        if (millis() - timeout > 2000)
-        {
-            Serial.println("Server response timeout");
-            client.stop();
-            return;
-        }
-
-        delay(1);
-    }
-
-    String response = client.readStringUntil('\n');
-    response.trim();
-
-    Serial.print("Server response: ");
-    Serial.println(response);
 }

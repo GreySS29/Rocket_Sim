@@ -1579,6 +1579,7 @@ CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o
 
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Panel/server.cpp
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
@@ -3485,6 +3486,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h

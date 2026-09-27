@@ -1574,6 +1574,7 @@ CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o: /home/greys/Documents/Doc/
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h
 
 CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o: /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Panel/server.cpp \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
@@ -3477,6 +3478,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: /home/greys/Documents/Doc/C+/my_p
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Payload.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h \
@@ -5591,6 +5593,10 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 
 /usr/include/bits/termios-baud.h:
 
+/usr/include/boost/asio/any_io_executor.hpp:
+
+/usr/include/bits/thread-shared-types.h:
+
 /usr/include/c++/16/bits/allocator.h:
 
 /usr/include/boost/asio/detail/throw_error.hpp:
@@ -6355,6 +6361,8 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 
 /usr/include/c++/16/bits/uniform_int_dist.h:
 
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h:
+
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h:
 
 /usr/include/c++/16/bits/unordered_map.h:
@@ -6870,7 +6878,3 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 /usr/include/boost/asio/ip/basic_resolver_query.hpp:
 
 /usr/include/bits/unistd_ext.h:
-
-/usr/include/bits/thread-shared-types.h:
-
-/usr/include/boost/asio/any_io_executor.hpp:

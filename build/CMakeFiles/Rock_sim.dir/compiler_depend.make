@@ -1372,6 +1372,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Display.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/MainWindow.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
@@ -2743,6 +2744,8 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 
 /usr/include/boost/asio/bind_immediate_executor.hpp:
 
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h:
+
 /usr/include/boost/asio/any_completion_handler.hpp:
 
 /usr/include/c++/16/bits/locale_conv.h:
@@ -2812,10 +2815,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/framework/reference_concepts.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/framework/reference.h:
-
-/usr/include/boost/asio/basic_writable_pipe.hpp:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/avx512vbmi2vlintrin.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/framework/quantity_spec_conversion.h:
 
@@ -3531,6 +3530,10 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui.cpp.o:
 
 /usr/include/bits/syscall.h:
 
+/usr/include/c++/16/complex:
+
+/usr/include/bits/select.h:
+
 /usr/include/c++/16/bits/stdexcept_throwfwd.h:
 
 /usr/include/boost/asio/detail/reactive_null_buffers_op.hpp:
@@ -3963,6 +3966,10 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/imgui/imgui.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/avx512vbmi2vlintrin.h:
+
+/usr/include/boost/asio/basic_writable_pipe.hpp:
+
 /usr/include/c++/16/tr1/legendre_function.tcc:
 
 /usr/include/boost/asio/detail/reactive_descriptor_service.hpp:
@@ -4132,10 +4139,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o:
 /usr/include/boost/asio/detail/event.hpp:
 
 /usr/include/boost/asio/detail/eventfd_select_interrupter.hpp:
-
-/usr/include/bits/select.h:
-
-/usr/include/c++/16/complex:
 
 /usr/include/boost/system/error_condition.hpp:
 

@@ -1380,6 +1380,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Stage.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Display.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/Log.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/MainWindow.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h

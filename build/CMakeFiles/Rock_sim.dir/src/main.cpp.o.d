@@ -341,6 +341,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Fabric.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Launch_bay.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Log.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/ExDataGUI.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/MainWindow.h \
  /home/greys/Documents/Doc/C+/openGL/glfw/include/GLFW/glfw3.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Display.h \
