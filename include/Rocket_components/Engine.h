@@ -18,7 +18,7 @@ public:
           {}
 
     double get_thrust() const { return thrust_; }
-    double get_fuel_consumption() const { return fuel_consumption_; }
+    double get_fuel_consumption(double pace) const { return fuel_consumption_ * pace; }
     Vector3D get_thrust_vec(){ return thrust_direction_ * thrust_;}
     Vector3D get_thrust_direction() const {return thrust_direction_;}
     

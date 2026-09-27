@@ -9,6 +9,7 @@
 #include <atomic>
 #include <functional>
 #include "../GUI/ExDataGUI.h"
+#include "Session.h"
 
 class Server {
 public:
@@ -24,21 +25,18 @@ public:
     bool pollCommand(std::string& outCmd);
     void sendTelemetry(ExDataGUI& data);
 
+    static void trimLineEnding(std::string& s) {
+    while (!s.empty() && (s.back() == '\r' || s.back() == '\n')) {
+        s.pop_back();
+    }
+    }
+
 
     
 
 private:
     std::queue<std::string> cmdQueue_;
     std::mutex queueMutex_;
-
-    struct Session {
-        boost::asio::ip::tcp::socket socket;
-        std::mutex writeMutex;
-        bool telemetryClient{true}; // false - it is only panel 
-        explicit Session(boost::asio::ip::tcp::socket s) :
-            socket(std::move(s)) {}
-    };
-    
     std::vector<std::shared_ptr<Session>> sessions_;
     std::mutex sessionsMutex_;
 

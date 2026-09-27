@@ -279,16 +279,25 @@ void Display::worldToWindowPixel(double wx, double wy, double& px, double& py) c
 void Display::drawText(double pixelX, double pixelY, const std::string& text) const
 {
     static char buffer[99999];
+
+    const float scale = 1.6f; 
+
+    glPushMatrix();
+    glTranslatef(static_cast<float>(pixelX), static_cast<float>(pixelY), 0.0f);
+    glScalef(scale, scale, 1.0f);
+
     int numQuads = stb_easy_font_print(
-        static_cast<float>(pixelX), static_cast<float>(pixelY),
+        0.0f, 0.0f,
         const_cast<char*>(text.c_str()), nullptr,
         buffer, sizeof(buffer));
 
-    glColor3f(0.0f, 0.0f, 0.0f);
+    glColor3f(1.0f, 1.0f, 1.0f);
     glEnableClientState(GL_VERTEX_ARRAY);
     glVertexPointer(2, GL_FLOAT, 16, buffer);
     glDrawArrays(GL_QUADS, 0, numQuads * 4);
     glDisableClientState(GL_VERTEX_ARRAY);
+
+    glPopMatrix();
 }
 
 void Display::drawHeightScale(double y0, double y1, double x) const {
@@ -402,16 +411,16 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
         const double height   = traj[idx].second;
         const double distance = traj[idx].first;
 
-        double speed = 0.0;
-        if (idx > 0) {
-            const double dx = traj[idx].first  - traj[idx - 1].first;
-            const double dy = traj[idx].second - traj[idx - 1].second;
-            speed = std::sqrt(dx * dx + dy * dy) / dt;
-        }
+        double speed = rocket.velocity;
+        double angle = rocket.angle;
+        double mass = rocket.mass;
 
-        double x = 14.0;
-        double y = 20.0;
-        const double lineHeight = 22.0;
+        std::string separate = rocket.separating ? "separated" : "booster exist";
+    
+
+        double x = 40.0;
+        double y = 80.0;
+        const double lineHeight = 40.0;
 
         drawText(x, y, "Rocket data");
         y += lineHeight + 8.0;
@@ -428,9 +437,15 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
         drawText(x, y, "Speed:    " + formatNumber(speed) + " m/s");
         y += lineHeight;
 
-        drawText(x, y,
-            "Step:     " + std::to_string(idx + 1) + " / " + std::to_string(traj.size()));
+        drawText(x, y, "Angle:    " + formatNumber(angle) + " *");
         y += lineHeight;
+
+        drawText(x, y, "Mass:    " + formatNumber(mass) + " *");
+        y += lineHeight;
+
+        drawText(x, y, "Separate:    " + separate + " ");
+        y += lineHeight;
+
 
         if (mode == Mode::Manual) {
             drawText(x, y, std::string("State:    ") + (animating ? "Playing" : "Paused"));

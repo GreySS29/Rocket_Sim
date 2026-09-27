@@ -17,11 +17,12 @@ std::unique_ptr<Rocket> Rocket::create_rocket(std::unique_ptr<Stage> booster, st
 
 
 
-void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
+void Rocket::run(const Earth& earth , double pace, RocketRender& roc_render)
 {
+
     Vector3D G_force = gravity_vec(earth, *this);
     Vector3D A_force = earth.get_dragForce_vec(active());
-    Vector3D F_total = active()->run_engine(true)+ // vector thrust_vorce (reduce tank fluel_mass and mass_stage)
+    Vector3D F_total = active()->run_engine(true, pace)+ // vector thrust_vorce (reduce tank fluel_mass and mass_stage)
         G_force+A_force;
         
     active()->set_acceleration(F_total, get_mass());
@@ -36,6 +37,8 @@ void Rocket::run(const Earth& earth , double pace,RocketRender& roc_render)
     roc_render.add_A_force(A_force);
     roc_render.add_F_force(F_total);
     roc_render.add_trajectory(this->get_position_above_face().x, this->get_position_above_face().y);
+    roc_render.add_mass(get_mass());
+    roc_render.add_velocity(this->get_velocity().magnitude());
   
 }
 

@@ -1581,6 +1581,7 @@ CMakeFiles/Rock_core.dir/src/Panel/server.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/Panel/server.cpp
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/ExDataGUI.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Session.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h

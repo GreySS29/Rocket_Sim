@@ -21,6 +21,7 @@ class Stage : public Physic_object {
     Vector3D acceleration_; //m/s2
     quantity<m> length_;
     quantity<m2> a_wet_;  //Wetted area
+    bool empty_tank_;
 
     public:
     Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t , quantity<m> len , quantity<m2> area_wet) :
@@ -28,7 +29,8 @@ class Stage : public Physic_object {
         engine_(std::move(eng)),
         tank_(std::move(t)), // give this object to Stage
         length_(len),
-        a_wet_(area_wet)
+        a_wet_(area_wet),
+        empty_tank_(false)
         {
             velocity_ = Vector3D(0,0,0);
             acceleration_ = Vector3D(0,0,0);
@@ -43,6 +45,7 @@ class Stage : public Physic_object {
     Vector3D get_thrust_direction() const {return engine_->get_thrust_direction();}
     quantity<m> get_length() const {return length_;};
     quantity<m2> get_a_wet() const {return a_wet_;};
+    bool empty_tank() const {return empty_tank_;};
 
 
     //setters
@@ -58,7 +61,7 @@ class Stage : public Physic_object {
     
     static std::unique_ptr<Stage> create_stage(double position_h,double c_d , double area, Engine&, Tank&, const Earth& earth, quantity<m> lenght, quantity<m2> area_wet);
     void launch_stage(const Earth&, double pace);  
-    Vector3D run_engine(bool command);
+    Vector3D run_engine(bool command, double pace);
     
 
 

@@ -12,6 +12,10 @@ class RocketRender {
     public:
 
     vector<std::pair<double,double>> trajectory;
+    double angle {};
+    bool separating {};
+    double velocity {};
+    double mass{};
     vector<Vector3D> g_force;
     vector<Vector3D> a_force;
     vector<Vector3D> f_force;
@@ -24,6 +28,10 @@ class RocketRender {
     void add_G_force (Vector3D& vec){g_force.push_back(vec);}
     void add_A_force (Vector3D& vec){ a_force.push_back(vec);}
     void add_F_force (Vector3D& vec){f_force.push_back(vec);}
+    void add_angle (double ang) {angle = ang;}
+    void set_separating (bool tank) {separating = tank;}
+    void add_velocity (double vel) {velocity = vel;}
+    void add_mass (double mas) {mass = mas;}
 
     vector<std::pair<double,double>> get_max_min_traj () const ; // will be not nessessary 
 

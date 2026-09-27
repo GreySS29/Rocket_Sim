@@ -1387,6 +1387,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Panel_data.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Session.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Sim_state.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h

@@ -48,48 +48,76 @@ void Server::sessionThread(boost::asio::ip::tcp::socket socket) {
     try {
         boost::asio::streambuf buffer;
         std::istream is(&buffer);
+        
+        std::string line;
+        bool identified = false;
 
-        if (boost::asio::read_until(session->socket, buffer , "\n")>0)
-        {
-            std::string line;
+        for (int attempts = 0; attempts < 5 && !identified; ++attempts) {
+            if (boost::asio::read_until(session->socket, buffer, "\n") == 0) break;
             std::getline(is, line);
+            trimLineEnding(line);
+
+            if (line.empty()) continue; // пропускаем пустые строки, пробуем снова
+
             if (line == "PANEL") {
                 session->telemetryClient = false;
+                identified = true;
+            } else if (line == "TELEMETRY") {
+                session->telemetryClient = true;
+                identified = true;
+            } else {
+                std::cerr << "Unknown identifier, len=" << line.size() << ": [" << line << "]\n";
+                boost::system::error_code ec;
+                session->socket.close(ec);
+                return;
             }
         }
 
-        {
-        std::lock_guard<std::mutex>lock(sessionsMutex_);
-        sessions_.push_back(session);
+        if (!identified) {
+            boost::system::error_code ec;
+            session->socket.close(ec);
+            return;
         }
 
-        //reading commands 
+        {
+    std::lock_guard<std::mutex> lock(sessionsMutex_);
+    sessions_.push_back(session);
+    }
+    session->startWriter(); 
+
+    if (session->telemetryClient) {
+        // Только детектируем дисконнект, ничего не парсим и не кладём в очередь
         while (running_ && session->socket.is_open()) {
-           
+            char discard[256];
+            boost::system::error_code ec;
+            size_t n = session->socket.read_some(boost::asio::buffer(discard), ec);
+            if (ec || n == 0) break; // клиент закрыл соединение или ошибка
+            // данные просто игнорируем
+        }
+    } else {
+        // PANEL — читаем и парсим команды построчно
+        while (running_ && session->socket.is_open()) {
             auto n = boost::asio::read_until(session->socket, buffer, "\n");
             if (n == 0) break;
 
             std::string line;
             std::getline(is, line);
+            trimLineEnding(line);
             if (line.empty()) continue;
 
-            if(!session->telemetryClient){
-                 if (onCommand_) {
+            if (onCommand_) {
                 onCommand_(line);
             }
-            }
-           
-            {
             std::lock_guard<std::mutex> lock(queueMutex_);
             cmdQueue_.push(line);
-            }
         }
-    } catch (const boost::system::system_error& e) {
-    if (e.code() == boost::asio::error::eof) {
-        std::cerr << "Client disconnected (EOF)\n";
-    } else {
-        std::cerr << "Socket error: " << e.what() << " (code: " << e.code() << ")\n";
     }
+    } catch (const boost::system::system_error& e) {
+        if (e.code() == boost::asio::error::eof) {
+            std::cerr << "Client disconnected (EOF)\n";
+        } else {
+            std::cerr << "Socket error: " << e.what() << " (code: " << e.code() << ")\n";
+        }
     } catch (const std::exception& e) {
         std::cerr << "Client disconnected or error: " << e.what() << "\n";
     }
@@ -97,9 +125,9 @@ void Server::sessionThread(boost::asio::ip::tcp::socket socket) {
     {
     std::lock_guard<std::mutex> lock(sessionsMutex_); // delete session from vector
     std::erase_if(sessions_, [&session](const std::shared_ptr<Session>& s) {
-    return s == session;
-    });
-}
+        return s == session; });
+    }
+
 }
 
 bool Server::pollCommand(std::string& outCmd) {
@@ -122,13 +150,7 @@ void Server::sendTelemetry(ExDataGUI& data) {
     for (auto& session : currentSessions) {
         if (!session->telemetryClient) continue;
         if (!session->socket.is_open()) continue;
-
-        std::lock_guard<std::mutex> wlock(session->writeMutex);
-        try {
-           size_t written = boost::asio::write(session->socket, boost::asio::buffer(msg));
-            std::cerr << "[telemetry] sent " << written << " bytes: " << msg << "\n"; // temp
-        } catch (const std::exception& e) {
-            std::cerr << "disconnect: " << e.what() << "\n";
-        }
+        session->enqueue(msg); 
     }
 }
+

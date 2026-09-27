@@ -1379,6 +1379,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Panel_data.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Server.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Session.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Sim_state.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
@@ -2606,10 +2607,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 
 /usr/include/c++/16/condition_variable:
 
-/usr/include/boost/asio/basic_waitable_timer.hpp:
-
-/usr/include/boost/asio/ip/address_v4_iterator.hpp:
-
 /usr/include/boost/asio/basic_datagram_socket.hpp:
 
 /usr/include/boost/asio/as_tuple.hpp:
@@ -2684,8 +2681,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 
 /usr/include/asm/ioctl.h:
 
-/usr/include/boost/asio/detail/impl/reactive_descriptor_service.ipp:
-
 /usr/include/c++/16/pstl/glue_algorithm_defs.h:
 
 /usr/include/asm/bitsperlong.h:
@@ -2719,6 +2714,12 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 /usr/include/boost/asio/detail/impl/posix_event.ipp:
 
 /usr/include/arpa/inet.h:
+
+/usr/include/boost/asio/detail/impl/reactive_descriptor_service.ipp:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Panel/Session.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/systems/include/mp-units/systems/si.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/float.h:
 
@@ -2763,8 +2764,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/systems/include/mp-units/systems/si/chrono.h:
 
 /usr/include/sys/wait.h:
-
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/systems/include/mp-units/systems/si.h:
 
 /usr/include/boost/asio/impl/buffered_read_stream.hpp:
 
@@ -2927,10 +2926,6 @@ libRock_core.a:
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/x86gprintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/usermsrintrin.h:
-
-/usr/include/boost/asio/defer.hpp:
-
-/usr/include/boost/asio/execution_context.hpp:
 
 /usr/include/sys/syscall.h:
 
@@ -4015,6 +4010,14 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o:
 /usr/include/asm/sockios.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/avxvnniintrin.h:
+
+/usr/include/boost/asio/basic_waitable_timer.hpp:
+
+/usr/include/boost/asio/execution_context.hpp:
+
+/usr/include/boost/asio/defer.hpp:
+
+/usr/include/boost/asio/ip/address_v4_iterator.hpp:
 
 /usr/include/GL/gl.h:
 
