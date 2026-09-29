@@ -1,5 +1,5 @@
 build/
-external/mp-units
+external/
 bin/
 obj/
 *.o

@@ -13,7 +13,7 @@
 #include "../include/Panel/Server.h"
 #include "../include/Panel/Panel_data.h"
 #include "../include/Panel/Sim_state.h"
-//sudo ss -tlpn | grep :5555   
+  
 
 using Clock = std::chrono::steady_clock;
 void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
