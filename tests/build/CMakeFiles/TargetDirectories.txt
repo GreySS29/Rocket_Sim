@@ -1,3 +1,0 @@
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/build/CMakeFiles/Rock_sim_tests.dir
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/build/CMakeFiles/edit_cache.dir
-/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/Rocket_sim_0.2v/tests/build/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Rock_sim_tests.dir/link.d CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o -o Rock_sim_tests  -lRock_core
