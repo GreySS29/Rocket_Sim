@@ -4,7 +4,7 @@
 class Tank : public Physic_object
 {
     private:
-    double fuel_mass_;
+    double fuel_mass_; //kg
 
     public:
     Tank(Vector3D pos, double mass, double fuel_m) : 

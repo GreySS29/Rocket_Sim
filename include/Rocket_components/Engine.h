@@ -27,6 +27,7 @@ public:
     double angle_rad = angle_deg * std::numbers::pi / 180.0;  // degrees to radian 
     thrust_direction_ = Vector3D{std::cos(angle_rad), std::sin(angle_rad), 0.0};
     return thrust_direction_;
+    //calculate consumprtion from impulse
 }
 
     

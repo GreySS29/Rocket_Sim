@@ -3037,6 +3037,7 @@ CMakeFiles/Rock_core.dir/src/fabric.cpp.o: /home/greys/Documents/Doc/C+/my_proge
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket_components/Tank.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Formulas.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glext.h \
   /usr/include/GL/glu.h \
@@ -4699,6 +4700,8 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: /home/greys/Documents/Doc/C+/my_progec
 
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/stage.cpp:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Formulas.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h:
 

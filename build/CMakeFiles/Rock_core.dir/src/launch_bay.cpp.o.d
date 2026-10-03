@@ -339,5 +339,6 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: \
  /usr/include/GL/glu.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Flight_parameters.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Friction_drag.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Utility/Formulas.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/Log.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/ExDataGUI.h
