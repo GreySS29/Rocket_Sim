@@ -333,4 +333,5 @@ CMakeFiles/Rock_core.dir/src/stage.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/utility/representation.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/../Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/../Enviroment/Atmo_layer_termosphere.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/../Enviroment/../GUI/AtmosphereRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket_components/../Utility/Gravity_temp.h

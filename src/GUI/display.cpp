@@ -427,12 +427,47 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
         double angle = rocket.angle;
         double mass = rocket.mass;
 
+        //Atmosphere
+        std::string temperature = std::format(
+        "Temperature: {::N[.2f]}",rocket.atmorender.temperature
+        );
+
+        const double tempC =
+         rocket.atmorender.temperature.numerical_value_in(si::kelvin) - 273.15;
+
+
+        std::string pressure = std::format(
+        "Pressure: {::N[.2f]}",rocket.atmorender.pressure
+        );
+        const double density =
+            rocket.atmorender.density.numerical_value_in(
+            si::kilogram / pow<3>(si::metre));
+            std::string densityStr =
+            "Density: " + formatNumber(density, 4) + " kg/m^3";
+
+
         std::string separate = rocket.separating ? "separated" : "booster exist";
     
 
         double x = 40.0;
         double y = 80.0;
         const double lineHeight = 40.0;
+
+        drawText(x, y, "Atmosphere :");
+        y += lineHeight;
+
+        drawText(x, y, "Temperature : " + formatNumber(tempC) + " `C");
+        y += lineHeight;
+
+        drawText(x, y, temperature);
+        y += lineHeight;
+
+        drawText(x, y, pressure);
+        y += lineHeight;
+
+        drawText(x, y, densityStr);
+        y += lineHeight;
+        y += lineHeight;
 
         drawText(x, y, "Rocket data");
         y += lineHeight + 8.0;
@@ -449,12 +484,13 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
         drawText(x, y, "Speed:    " + formatNumber(speed) + " m/s");
         y += lineHeight;
 
-        drawText(x, y, "Angle:    " + formatNumber(angle) + " *");
+        drawText(x, y, "Angle:    " + formatNumber(angle) + " deg");
         y += lineHeight;
 
-        drawText(x, y, "Mass:    " + formatNumber(mass) + " *");
+        drawText(x, y, "Mass:     " + formatNumber(mass) + " kg");
         y += lineHeight;
 
+        
 
 
 
@@ -482,7 +518,7 @@ void Display::display() const
     int windowWidth = 0, windowHeight = 0;
     glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
 
-    const int panelWidth = std::min(260, windowWidth / 4);
+    const int panelWidth = std::min(300, windowWidth / 4);
     const int graphWidth = windowWidth - panelWidth;
 
     glViewport(panelWidth, 0, graphWidth, windowHeight);

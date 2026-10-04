@@ -7,12 +7,14 @@
 #include "../include/GUI/MainWindow.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
+#include "../include/GUI/AtmosphereRender.h"
 #include "../include/GUI/Log.h"
 #include "../include/GUI/ExDataGUI.h"
 #include "../include/Flight_parameters/Friction_drag.h"
 #include "../include/Panel/Server.h"
 #include "../include/Panel/Panel_data.h"
 #include "../include/Panel/Sim_state.h"
+
   
 
 using Clock = std::chrono::steady_clock;

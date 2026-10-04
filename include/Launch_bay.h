@@ -6,6 +6,7 @@
 #include "GUI/RocketRender.h"
 #include "GUI/ExDataGUI.h"
 
+
 class Launch_bay {
 
     public:
@@ -19,8 +20,14 @@ class Launch_bay {
             }
         }
         rocket ->set_direction(angle);
+        quantity<m> altitude = rocket->get_position_above_face().y * m;
+        earth.update(altitude);
+
         rocket ->run(earth,PACE, roc_render);
+
         roc_render.add_angle(angle);
+        roc_render.add_atmo_parameters(earth.get_temperature(),earth.get_pressure(),earth.get_air_density());
+
         exdata.set_data(rocket->get_position_above_face().y , rocket->get_position_above_face().x ,rocket->get_velocity().magnitude(),rocket->get_mass(), angle);
         //rocket ->print_status_flight_short();
     };

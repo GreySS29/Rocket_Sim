@@ -8,6 +8,7 @@
 #include "../Utility/Vec3_mp.h"
 #include "Atmo_layer_isa.h"
 #include "Atmo_layer_termosphere.h"
+#include "../GUI/AtmosphereRender.h"
 
 
 
@@ -34,6 +35,7 @@ class Atmosphere {
     quantity<kg / m3> get_density() const {return density;};
     quantity<Pa*s> get_viscosity() const {return viscosity;};
     void print_to_log(std::ofstream&ofs,quantity<m>& geometric_altitude) const;
+
 
 
     private:

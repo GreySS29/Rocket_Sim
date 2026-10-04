@@ -334,7 +334,7 @@ CMakeFiles/Rock_core.dir/src/GUI/rocket_render.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/utility/representation.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Enviroment/Atmo_layer_termosphere.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Enviroment/../GUI/AtmosphereRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/GUI/../../include/GUI/../Rocket_components/../Utility/Gravity_temp.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h
+ /usr/include/GL/glu.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h

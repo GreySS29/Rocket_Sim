@@ -328,6 +328,7 @@ tests/CMakeFiles/Rock_sim_tests.dir/test_stage_launch.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/utility/representation.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Enviroment/Atmo_layer_termosphere.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Enviroment/../GUI/AtmosphereRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Rocket_components/Stage.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Rocket_components/Engine.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/tests/../include/Rocket_components/Payload.h \

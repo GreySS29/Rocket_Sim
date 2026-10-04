@@ -39,6 +39,9 @@ void Rocket::run(const Earth& earth , double pace, RocketRender& roc_render)
     roc_render.add_trajectory(this->get_position_above_face().x, this->get_position_above_face().y);
     roc_render.add_mass(get_mass());
     roc_render.add_velocity(this->get_velocity().magnitude());
+
+    //fill atmoshpereRender
+    
   
 }
 

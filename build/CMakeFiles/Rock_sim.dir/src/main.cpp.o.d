@@ -326,6 +326,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/external/mp-units/src/core/include/mp-units/utility/representation.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Enviroment/Atmo_layer_isa.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Enviroment/Atmo_layer_termosphere.h \
+ /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Enviroment/../GUI/AtmosphereRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Rocket.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/RocketRender.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/Stage.h \
@@ -333,9 +334,8 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/Payload.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/Tank.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/GUI/../Rocket_components/../Utility/Gravity_temp.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/GL/glu.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/../../openGL/glad/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Flight_parameters.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Flight_parameters/Friction_drag.h \
  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/src/../include/Fabric.h \
