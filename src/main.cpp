@@ -39,7 +39,7 @@ void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
  
     using Clock = std::chrono::steady_clock;
     auto currentTime = Clock::now();
-    const double dt = 1.0;
+    const double dt = 0.01;
     double accumulator = 0.0;
     double total_time = 0.0;
  
@@ -74,11 +74,11 @@ void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
             double frameTime = std::chrono::duration<double>(newTime - currentTime).count();
             currentTime = newTime;
  
-            if (frameTime > 0.25) frameTime = 0.25;
+            if (frameTime > 0.025) frameTime = 0.025;
             accumulator += frameTime;
  
             while (accumulator >= dt) {
-                launch_bay.launch_falcon9_from_panel(earth, rocket, render, dt*5 , panel_data.angle, exdata);
+                launch_bay.launch_falcon9_from_panel(earth, rocket, render, dt*2, panel_data.angle, exdata);
                 server.sendTelemetry(exdata);
                 accumulator -= dt;
                 total_time += dt;
@@ -108,7 +108,7 @@ int main()
    
     Display display(render);
     Display::setInstance(display);
-    display.setAnimationSpeed(30.0);
+    display.setAnimationSpeed(1.0);
  
     MainWindow menu;
     const MainWindow::Choice choice = menu.run();

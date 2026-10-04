@@ -1384,6 +1384,7 @@ CMakeFiles/Rock_sim.dir/src/main.cpp.o: /home/greys/Documents/Doc/C+/my_progect/
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Physic_object.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Constants.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Formulas.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Vector3D.h \
   /home/greys/Documents/Doc/C+/openGL/glfw/include/GLFW/glfw3.h \
   /usr/include/GL/gl.h \
@@ -2607,6 +2608,8 @@ CMakeFiles/Rock_sim.dir/external/imgui/imgui_draw.cpp.o:
 
 /usr/include/c++/16/condition_variable:
 
+/usr/include/c++/16/climits:
+
 /usr/include/boost/asio/basic_datagram_socket.hpp:
 
 /usr/include/boost/asio/as_tuple.hpp:
@@ -3108,10 +3111,6 @@ libRock_core.a:
 /usr/include/boost/system/detail/snprintf.hpp:
 
 /usr/include/c++/16/compare:
-
-/usr/include/boost/asio/basic_streambuf_fwd.hpp:
-
-/usr/include/bits/errno.h:
 
 /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Flight_parameters/Flight_parameters.h:
 
@@ -4011,6 +4010,10 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_glfw.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/avxvnniintrin.h:
 
+/usr/include/bits/errno.h:
+
+/usr/include/boost/asio/basic_streambuf_fwd.hpp:
+
 /usr/include/boost/asio/basic_waitable_timer.hpp:
 
 /usr/include/boost/asio/execution_context.hpp:
@@ -4204,8 +4207,6 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl3.cpp.o:
 /usr/include/boost/asio/detail/impl/scheduler.ipp:
 
 /usr/include/boost/asio/impl/system_context.ipp:
-
-/usr/include/c++/16/climits:
 
 /usr/include/boost/asio/ip/impl/network_v6.hpp:
 
@@ -4876,6 +4877,8 @@ CMakeFiles/Rock_sim.dir/external/imgui/backends/imgui_impl_opengl2.cpp.o:
 /usr/include/c++/16/bits/out_ptr.h:
 
 /usr/include/c++/16/bits/parse_numbers.h:
+
+/home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Formulas.h:
 
 /usr/include/c++/16/bits/quoted_string.h:
 

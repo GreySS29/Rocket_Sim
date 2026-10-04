@@ -14,7 +14,7 @@ class Launch_bay {
         if (!roc_render.separating) // bad idea temp 
         {
             if (rocket->booster_tank()) {
-                std::unique_ptr<Stage> booster_single = rocket->separate_booster(); // ptr просто дропаем, ок
+                std::unique_ptr<Stage> booster_single = rocket->separate_booster(); 
                 roc_render.separating = true;
             }
         }

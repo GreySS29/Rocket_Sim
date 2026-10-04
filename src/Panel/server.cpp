@@ -86,16 +86,15 @@ void Server::sessionThread(boost::asio::ip::tcp::socket socket) {
     session->startWriter(); 
 
     if (session->telemetryClient) {
-        // Только детектируем дисконнект, ничего не парсим и не кладём в очередь
         while (running_ && session->socket.is_open()) {
             char discard[256];
             boost::system::error_code ec;
             size_t n = session->socket.read_some(boost::asio::buffer(discard), ec);
-            if (ec || n == 0) break; // клиент закрыл соединение или ошибка
-            // данные просто игнорируем
+            if (ec || n == 0) break; 
+          
         }
     } else {
-        // PANEL — читаем и парсим команды построчно
+        
         while (running_ && session->socket.is_open()) {
             auto n = boost::asio::read_until(session->socket, buffer, "\n");
             if (n == 0) break;

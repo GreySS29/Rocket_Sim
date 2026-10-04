@@ -3485,6 +3485,7 @@ CMakeFiles/Rock_core.dir/src/launch_bay.cpp.o: /home/greys/Documents/Doc/C+/my_p
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/GUI/RocketRender.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Launch_bay.h \
   /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Rocket.h \
+  /home/greys/Documents/Doc/C+/my_progect/Rocket_Sim/include/Utility/Formulas.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glext.h \
   /usr/include/GL/glu.h \

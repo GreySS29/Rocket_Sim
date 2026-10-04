@@ -22,6 +22,11 @@ public:
     void closeLiveWindow();
 
     void startAnimation(); // Auto
+        // axes
+    double viewMinX = 0.0, viewMaxX = 1.0;
+    double viewMinY = 0.0, viewMaxY = 1.0;
+    bool boundsFixed = false;
+    static constexpr double targetHeight = 100000.0;
 
 private:
     Display() = delete;
@@ -37,16 +42,20 @@ private:
 
     static void framebufferSizeCallback(GLFWwindow* win, int width, int height);
 
+    void draw_target_line(double y, double x0, double x1) const;
+    void drawText(double pixelX, double pixelY, const std::string& text,float r = 1.0f, float g = 1.0f, float b = 1.0f) const;
     void drawGround(double x0, double x1) const;
-    void drawHeightScale(double y0, double y1, double x) const;
-    void drawTimeScale(size_t pointCount, double dt, double x0, double x1, double y) const;
     void drawDataPanel(int panelWidth, int windowWidth, int windowHeight) const;
     std::string formatNumber(double value, int precision = 1) const;
+    void setViewBounds(double minX, double maxX, double minY, double maxY);
+    void computeBounds();
+    void drawAxes(int panelWidth, int windowWidth, int windowHeight) const;
+
+
 
     void beginScreenSpace(int windowWidth, int windowHeight) const;
     void endScreenSpace() const;
     void worldToWindowPixel(double wx, double wy, double& px, double& py) const;
-    void drawText(double pixelX, double pixelY, const std::string& text) const;
 
     GLFWwindow* window = nullptr;
     RocketRender& rocket;
