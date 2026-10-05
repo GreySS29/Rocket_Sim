@@ -56,7 +56,7 @@ void Display::startAnimation()
     if (rocket.trajectory.empty()) {
         return;
     }
-
+    computeBounds();
     currentStep = 0;
     animating = true;
     lastStepTimestamp = glfwGetTime();
@@ -88,6 +88,7 @@ bool Display::renderLiveFrame()
     }
 
     glfwPollEvents();
+    computeBounds();
     display();
     glfwSwapBuffers(window);
 
@@ -234,6 +235,62 @@ void Display::drawGround(double x0, double x1) const {
     glEnd();
 }
 
+void Display::draw_target_line(double y, double x0, double x1) const {
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glBegin(GL_LINES);
+    glVertex2d(x0, y);
+    glVertex2d(x1, y);
+    glEnd();
+}
+
+void Display::drawAxes(int panelWidth, int windowWidth, int windowHeight) const
+{
+    constexpr int ticks = 5;
+    const float axisX = static_cast<float>(panelWidth) + 6.0f;   // фикс. пиксель по x
+    const float axisY = static_cast<float>(windowHeight) - 24.0f; // фикс. пиксель по y
+
+    struct Tick { double px, py; std::string label; };
+    std::vector<Tick> yTicks, xTicks;
+
+    // позиции считаем, пока активны проекция и viewport графика
+    for (int i = 0; i <= ticks; ++i) {
+        double h = viewMinY + (viewMaxY - viewMinY) * i / ticks;
+        double px, py;
+        worldToWindowPixel(viewMinX, h, px, py);
+        yTicks.push_back({px, py, std::to_string(static_cast<int>(h))});
+
+        double d = viewMinX + (viewMaxX - viewMinX) * i / ticks;
+        worldToWindowPixel(d, viewMinY, px, py);
+        xTicks.push_back({px, py, std::to_string(static_cast<int>(d))});
+    }
+
+    beginScreenSpace(windowWidth, windowHeight);
+
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glBegin(GL_LINES);
+    // оси
+    glVertex2f(axisX, 0.0f);                       glVertex2f(axisX, static_cast<float>(windowHeight));
+    glVertex2f(static_cast<float>(panelWidth), axisY);
+    glVertex2f(static_cast<float>(windowWidth), axisY);
+    // риски
+    for (const auto& t : yTicks) {
+        glVertex2f(axisX - 4.0f, static_cast<float>(t.py));
+        glVertex2f(axisX + 4.0f, static_cast<float>(t.py));
+    }
+    for (const auto& t : xTicks) {
+        glVertex2f(static_cast<float>(t.px), axisY - 4.0f);
+        glVertex2f(static_cast<float>(t.px), axisY + 4.0f);
+    }
+    glEnd();
+
+    // подписи (чёрные)
+    for (const auto& t : yTicks)
+        drawText(axisX + 8.0, t.py - 6.0, t.label + " m", 0.0f, 0.0f, 0.0f);
+    for (const auto& t : xTicks)
+        drawText(t.px - 10.0, axisY + 6.0, t.label, 0.0f, 0.0f, 0.0f);
+
+    endScreenSpace();
+}
 
 
 void Display::beginScreenSpace(int windowWidth, int windowHeight) const
@@ -276,98 +333,62 @@ void Display::worldToWindowPixel(double wx, double wy, double& px, double& py) c
     py = windowHeight - winY;
 }
 
-void Display::drawText(double pixelX, double pixelY, const std::string& text) const
+void Display::drawText(double pixelX, double pixelY, const std::string& text,
+                       float r, float g, float b) const
 {
     static char buffer[99999];
+    const float scale = 1.6f;
+
+    glPushMatrix();
+    glTranslatef(static_cast<float>(pixelX), static_cast<float>(pixelY), 0.0f);
+    glScalef(scale, scale, 1.0f);
+
     int numQuads = stb_easy_font_print(
-        static_cast<float>(pixelX), static_cast<float>(pixelY),
+        0.0f, 0.0f,
         const_cast<char*>(text.c_str()), nullptr,
         buffer, sizeof(buffer));
 
-    glColor3f(0.0f, 0.0f, 0.0f);
+    glColor3f(r, g, b);
     glEnableClientState(GL_VERTEX_ARRAY);
     glVertexPointer(2, GL_FLOAT, 16, buffer);
     glDrawArrays(GL_QUADS, 0, numQuads * 4);
     glDisableClientState(GL_VERTEX_ARRAY);
+
+    glPopMatrix();
 }
 
-void Display::drawHeightScale(double y0, double y1, double x) const {
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glBegin(GL_LINES);
-    glVertex2d(x, y0);
-    glVertex2d(x, y1);
-    glEnd();
-
-    constexpr int ticks = 5;
-    const double step = (y1 - y0) / ticks;
-
-    std::vector<double> px(ticks + 1), py(ticks + 1);
-    std::vector<std::string> labels(ticks + 1);
-
-    for (int i = 0; i <= ticks; ++i) {
-        double h = y0 + step * i;
-
-        glBegin(GL_LINES);
-        glVertex2d(x - 2.0, h);
-        glVertex2d(x + 2.0, h);
-        glEnd();
-
-        worldToWindowPixel(x + 5.0, h - 2.0, px[i], py[i]);
-        labels[i] = std::to_string(static_cast<int>(h));
-    }
-
-    int ww, wh;
-    glfwGetFramebufferSize(window, &ww, &wh);
-
-    beginScreenSpace(ww, wh);
-    for (int i = 0; i <= ticks; ++i) {
-        drawText(px[i], py[i], labels[i]);
-    }
-    endScreenSpace();
+void Display::setViewBounds(double minX, double maxX, double minY, double maxY)
+{
+    viewMinX = minX; viewMaxX = maxX;
+    viewMinY = minY; viewMaxY = maxY;
+    boundsFixed = true;   
 }
 
-void Display::drawTimeScale(size_t pointCount, double dt, double x0, double x1, double y) const {
-    if (pointCount == 0) return;
+void Display::computeBounds()
+{
+    if (boundsFixed || rocket.trajectory.empty()) return;
 
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glBegin(GL_LINES);
-    glVertex2f((float)x0, (float)y);
-    glVertex2f((float)x1, (float)y);
-    glEnd();
+    const auto& traj = rocket.trajectory;
+    double minX = traj.front().first, maxX = minX;
+    double minY = traj.front().second, maxY = minY;
 
-    const int ticks = 5;
-    double totalTime = (pointCount - 1) * dt;
-    double stepTime = totalTime / ticks;
-    double stepX = (x1 - x0) / ticks;
-
-    std::vector<double> px(ticks + 1), py(ticks + 1);
-    std::vector<std::string> labels(ticks + 1);
-
-    for (int i = 0; i <= ticks; ++i) {
-        double t = stepTime * i;
-        double x = x0 + stepX * i;
-
-        glBegin(GL_LINES);
-        glVertex2f((float)x, (float)y - 2.0f);
-        glVertex2f((float)x, (float)y + 2.0f);
-        glEnd();
-
-        std::ostringstream stream;
-        stream << std::fixed << std::setprecision(1) << t;
-        labels[i] = stream.str();
-
-        worldToWindowPixel(x - 4.0, y - 6.0, px[i], py[i]);
+    for (const auto& p : traj) {
+        minX = std::min(minX, p.first);
+        maxX = std::max(maxX, p.first);
+        minY = std::min(minY, p.second);
+        maxY = std::max(maxY, p.second);
     }
 
-    int ww, wh;
-    glfwGetFramebufferSize(window, &ww, &wh);
+    minY = std::min(minY, 0.0);
+    maxY = std::max(maxY, targetHeight);
 
-    beginScreenSpace(ww, wh);
-    for (int i = 0; i <= ticks; ++i) {
-        drawText(px[i], py[i], labels[i]);
-    }
-    endScreenSpace();
+    const double mx = std::max(maxX - minX, 1.0) * 0.10;
+    const double my = std::max(maxY - minY, 1.0) * 0.10;
+
+    viewMinX = minX - mx;  viewMaxX = maxX + mx;
+    viewMinY = minY - my;  viewMaxY = maxY + my;
 }
+
 
 std::string Display::formatNumber(double value, int precision) const
 {
@@ -396,22 +417,57 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
 
     if (!traj.empty()) {
         const std::size_t idx = std::min(currentStep, traj.size() - 1);
-        const double dt = 1.0;
+        const double dt = 0.1;
 
-        const double time     = static_cast<double>(idx) * dt;
+        const double time     = static_cast<double>(idx) * dt / 10 ;
         const double height   = traj[idx].second;
         const double distance = traj[idx].first;
 
-        double speed = 0.0;
-        if (idx > 0) {
-            const double dx = traj[idx].first  - traj[idx - 1].first;
-            const double dy = traj[idx].second - traj[idx - 1].second;
-            speed = std::sqrt(dx * dx + dy * dy) / dt;
-        }
+        double speed = rocket.velocity;
+        double angle = rocket.angle;
+        double mass = rocket.mass;
 
-        double x = 14.0;
-        double y = 20.0;
-        const double lineHeight = 22.0;
+        //Atmosphere
+        std::string temperature = std::format(
+        "Temperature: {::N[.2f]}",rocket.atmorender.temperature
+        );
+
+        const double tempC =
+         rocket.atmorender.temperature.numerical_value_in(si::kelvin) - 273.15;
+
+
+        std::string pressure = std::format(
+        "Pressure: {::N[.2f]}",rocket.atmorender.pressure
+        );
+        const double density =
+            rocket.atmorender.density.numerical_value_in(
+            si::kilogram / pow<3>(si::metre));
+            std::string densityStr =
+            "Density: " + formatNumber(density, 4) + " kg/m^3";
+
+
+        std::string separate = rocket.separating ? "separated" : "booster exist";
+    
+
+        double x = 40.0;
+        double y = 80.0;
+        const double lineHeight = 40.0;
+
+        drawText(x, y, "Atmosphere :");
+        y += lineHeight;
+
+        drawText(x, y, "Temperature : " + formatNumber(tempC) + " `C");
+        y += lineHeight;
+
+        drawText(x, y, temperature);
+        y += lineHeight;
+
+        drawText(x, y, pressure);
+        y += lineHeight;
+
+        drawText(x, y, densityStr);
+        y += lineHeight;
+        y += lineHeight;
 
         drawText(x, y, "Rocket data");
         y += lineHeight + 8.0;
@@ -428,9 +484,19 @@ void Display::drawDataPanel(int panelWidth, int windowWidth, int windowHeight) c
         drawText(x, y, "Speed:    " + formatNumber(speed) + " m/s");
         y += lineHeight;
 
-        drawText(x, y,
-            "Step:     " + std::to_string(idx + 1) + " / " + std::to_string(traj.size()));
+        drawText(x, y, "Angle:    " + formatNumber(angle) + " deg");
         y += lineHeight;
+
+        drawText(x, y, "Mass:     " + formatNumber(mass) + " kg");
+        y += lineHeight;
+
+        
+
+
+
+        drawText(x, y, "Separate:    " + separate + " ");
+        y += lineHeight;
+
 
         if (mode == Mode::Manual) {
             drawText(x, y, std::string("State:    ") + (animating ? "Playing" : "Paused"));
@@ -447,98 +513,42 @@ void Display::display() const
     glClear(GL_COLOR_BUFFER_BIT);
 
     const auto& traj = rocket.trajectory;
-
-    if (traj.empty()) {
-        return;
-    }
+    if (traj.empty()) return;
 
     int windowWidth = 0, windowHeight = 0;
     glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
 
-    const int panelWidth = std::min(260, windowWidth / 4);
+    const int panelWidth = std::min(300, windowWidth / 4);
     const int graphWidth = windowWidth - panelWidth;
-
-    //Graph
 
     glViewport(panelWidth, 0, graphWidth, windowHeight);
 
-    double minX = traj.front().first;
-    double maxX = traj.front().first;
-    double minY = traj.front().second;
-    double maxY = traj.front().second;
-
-    for (const auto& point : traj) {
-        minX = std::min(minX, point.first);
-        maxX = std::max(maxX, point.first);
-
-        minY = std::min(minY, point.second);
-        maxY = std::max(maxY, point.second);
-    }
-
-    double rangeX = maxX - minX;
-    double rangeY = maxY - minY;
-
-    if (rangeX < 1.0) {
-        rangeX = 1.0;
-    }
-
-    if (rangeY < 1.0) {
-        rangeY = 1.0;
-    }
-
-    const double marginX = rangeX * 0.10;
-    const double marginY = rangeY * 0.10;
-
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-
-    gluOrtho2D(
-        minX - marginX,
-        maxX + marginX,
-        minY - marginY,
-        maxY + marginY
-    );
+    gluOrtho2D(viewMinX, viewMaxX, viewMinY, viewMaxY);   // фиксированные границы
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    // Ground
-    glColor3f(0.0f, 0.5f, 0.0f);
+    drawGround(viewMinX, viewMaxX);
+    draw_target_line(targetHeight, viewMinX, viewMaxX);
 
-    glBegin(GL_LINES);
-    glVertex2d(minX - marginX, 0.0);
-    glVertex2d(maxX + marginX, 0.0);
-    glEnd();
+    const std::size_t lastPoint = std::min(currentStep, traj.size() - 1);
 
-    // pass traj
     glColor3f(0.1f, 0.5f, 1.0f);
-
     glBegin(GL_LINE_STRIP);
-
-    const std::size_t lastPoint =
-        std::min(currentStep, traj.size() - 1);
-
-    for (std::size_t i = 0; i <= lastPoint; ++i) {
-        glVertex2d(
-            traj[i].first,
-            traj[i].second
-        );
-    }
-
+    for (std::size_t i = 0; i <= lastPoint; ++i)
+        glVertex2d(traj[i].first, traj[i].second);
     glEnd();
 
-    // rock
     const auto& current = traj[lastPoint];
-
     glColor3f(1.0f, 0.1f, 0.1f);
-
     glPointSize(10.0f);
-
     glBegin(GL_POINTS);
     glVertex2d(current.first, current.second);
     glEnd();
 
-  
-
+    // оси (ещё в viewport графика), затем панель
+    drawAxes(panelWidth, windowWidth, windowHeight);
     drawDataPanel(panelWidth, windowWidth, windowHeight);
 }

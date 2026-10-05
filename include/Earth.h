@@ -17,8 +17,14 @@ class Earth : public Physic_object
     void get_status () const { atm_->get_status();};
     double get_air_density(double height) const;  // old
     quantity <kg/m3> get_air_density() const {return atm_->get_density();};
+    quantity <K> get_temperature() const {return atm_->get_temperature();}
+    quantity <Pa> get_pressure() const {return atm_->get_pressure();}
     const Atmosphere& get_Atmo_parameters() const { return *atm_;};
     const double get_orbital_velocity(double target) const { return std::sqrt(MU_EARTH / (RADIUS_E + target));};
+
+
+
+
     Vector3D get_dragForce_vec(const auto* object) const{
     double density = get_air_density(object->get_position_above_surface().y);
     if (density <=0) return Vector3D(0,0,0);
@@ -46,6 +52,7 @@ class Earth : public Physic_object
     
      //print
     void print_atmo_status (std::ofstream& ofs,quantity<m> altitude) const { atm_ ->print_to_log(ofs,altitude);};
+
 
 
     private:

@@ -2,35 +2,35 @@
 #include <iostream>
 #include <sstream>
 
-RocketServer::RocketServer(unsigned short port, CommandHandler handler)
+Server::Server(unsigned short port, CommandHandler handler)
     : acceptor_(io_, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
     , onCommand_(std::move(handler))
 {}
 
-RocketServer::~RocketServer() {
+Server::~Server() {
     stop();
 }
 
-void RocketServer::start() {
+void Server::start() {
     if (running_) return;
     running_ = true;
-    acceptThread_ = std::thread(&RocketServer::acceptLoop, this);
+    acceptThread_ = std::thread(&Server::acceptLoop, this);
     std::cout << "Server listening on port 5555\n";
 }
 
-void RocketServer::stop() {
+void Server::stop() {
     if (!running_) return;
     running_ = false;
     io_.stop();
     if (acceptThread_.joinable()) acceptThread_.join();
 }
 
-void RocketServer::acceptLoop() {
+void Server::acceptLoop() {
     while (running_) {
         try {
             boost::asio::ip::tcp::socket socket(io_);
             acceptor_.accept(socket);
-            std::thread(&RocketServer::sessionThread, this, std::move(socket)).detach();
+            std::thread(&Server::sessionThread, this, std::move(socket)).detach();
         } catch (const std::exception& e) {
             if (running_) {
                 std::cerr << "Accept error: " << e.what() << "\n";
@@ -39,39 +39,117 @@ void RocketServer::acceptLoop() {
     }
 }
 
-void RocketServer::sessionThread(boost::asio::ip::tcp::socket socket) {
+void Server::sessionThread(boost::asio::ip::tcp::socket socket) {
+    
+    
+    auto session = std::make_shared<Session>(std::move(socket));
+    
+
     try {
         boost::asio::streambuf buffer;
         std::istream is(&buffer);
+        
+        std::string line;
+        bool identified = false;
 
-        while (running_ && socket.is_open()) {
-            // Read until newline
-            auto n = boost::asio::read_until(socket, buffer, "\n");
+        for (int attempts = 0; attempts < 5 && !identified; ++attempts) {
+            if (boost::asio::read_until(session->socket, buffer, "\n") == 0) break;
+            std::getline(is, line);
+            trimLineEnding(line);
+
+            if (line.empty()) continue; // пропускаем пустые строки, пробуем снова
+
+            if (line == "PANEL") {
+                session->telemetryClient = false;
+                identified = true;
+            } else if (line == "TELEMETRY") {
+                session->telemetryClient = true;
+                identified = true;
+            } else {
+                std::cerr << "Unknown identifier, len=" << line.size() << ": [" << line << "]\n";
+                boost::system::error_code ec;
+                session->socket.close(ec);
+                return;
+            }
+        }
+
+        if (!identified) {
+            boost::system::error_code ec;
+            session->socket.close(ec);
+            return;
+        }
+
+        {
+    std::lock_guard<std::mutex> lock(sessionsMutex_);
+    sessions_.push_back(session);
+    }
+    session->startWriter(); 
+
+    if (session->telemetryClient) {
+        while (running_ && session->socket.is_open()) {
+            char discard[256];
+            boost::system::error_code ec;
+            size_t n = session->socket.read_some(boost::asio::buffer(discard), ec);
+            if (ec || n == 0) break; 
+          
+        }
+    } else {
+        
+        while (running_ && session->socket.is_open()) {
+            auto n = boost::asio::read_until(session->socket, buffer, "\n");
             if (n == 0) break;
 
             std::string line;
             std::getline(is, line);
+            trimLineEnding(line);
             if (line.empty()) continue;
 
             if (onCommand_) {
                 onCommand_(line);
             }
-
-            // Push to queue for main loop
-            {
-                std::lock_guard<std::mutex> lock(queueMutex_);
-                cmdQueue_.push(line);
-            }
+            std::lock_guard<std::mutex> lock(queueMutex_);
+            cmdQueue_.push(line);
         }
-    } catch (const std::exception&) {
-        // Client disconnected or error; just exit thread
     }
+    } catch (const boost::system::system_error& e) {
+        if (e.code() == boost::asio::error::eof) {
+            std::cerr << "Client disconnected (EOF)\n";
+        } else {
+            std::cerr << "Socket error: " << e.what() << " (code: " << e.code() << ")\n";
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Client disconnected or error: " << e.what() << "\n";
+    }
+
+    {
+    std::lock_guard<std::mutex> lock(sessionsMutex_); // delete session from vector
+    std::erase_if(sessions_, [&session](const std::shared_ptr<Session>& s) {
+        return s == session; });
+    }
+
 }
 
-bool RocketServer::pollCommand(std::string& outCmd) {
+bool Server::pollCommand(std::string& outCmd) {
     std::lock_guard<std::mutex> lock(queueMutex_);
     if (cmdQueue_.empty()) return false;
     outCmd = std::move(cmdQueue_.front());
     cmdQueue_.pop();
     return true;
 }
+
+void Server::sendTelemetry(ExDataGUI& data) {
+    std::string msg = data.serializeExDataGUI();
+
+    std::vector<std::shared_ptr<Session>> currentSessions;
+    {
+        std::lock_guard<std::mutex> lock(sessionsMutex_);
+        currentSessions = sessions_;
+    }
+
+    for (auto& session : currentSessions) {
+        if (!session->telemetryClient) continue;
+        if (!session->socket.is_open()) continue;
+        session->enqueue(msg); 
+    }
+}
+

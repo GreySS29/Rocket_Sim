@@ -5,7 +5,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
     //booster
     Engine engine {earth.surfacePoint(5.0),
         15000.0,
-        7600000.0, 
+        7600000.0, // 7.6 MN
         2440.0
     };
     Tank tank {earth.surfacePoint(10.0), 
@@ -49,6 +49,60 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         0.3,
         10,
         105 * m2
+    };
+
+
+    return Rocket::create_rocket(std::move(booster),std::move(upper_stage),payload,earth);
+};
+
+std::unique_ptr<Rocket> Fabric::create_nuri (const Earth& earth){
+    //booster
+    Engine engine {earth.surfacePoint(5.0),
+        3000.0,
+        2942000.0, 
+        286.5 
+    };
+    Tank tank {earth.surfacePoint(7.0), 
+        7000.0,
+        145500.0
+    };
+    std::unique_ptr<Stage> booster = Stage::create_stage(
+        5.0,
+        0.2,
+        calculate_surface_area(21.6, 3.5),
+        engine,
+        tank, 
+        earth,
+        21.6*m,
+        237.5 * m2
+    );
+
+    //upper_stage
+    Engine engine_up {earth.surfacePoint(15.0),
+        2000.0,
+        788000.0, 
+        254.9
+    };
+    Tank tank_up {earth.surfacePoint(20.0),
+        4000.0,
+        37700.0
+    };
+    std::unique_ptr<Stage> upper_stage = Stage::create_stage(
+        15.0,
+        0.2,
+        calculate_surface_area(15.6, 2.5),
+        engine_up,
+        tank_up,
+        earth,
+        15.6*m,
+        127.4 * m2
+    );
+    
+    Payload payload {earth.surfacePoint(25.0),
+        4000,
+        0.2,
+        calculate_surface_area(3.5, 2.6),
+        28.6 * m2
     };
 
 

@@ -51,7 +51,7 @@ class Vector3D {
         return std::sqrt(x*x+y*y+z*z);
     }
     
-     friend std::ostream& operator<<(std::ostream& os, const Vector3D& vec){
+    friend std::ostream& operator<<(std::ostream& os, const Vector3D& vec){
     os << '(' << vec.x << ", " << vec.y << ", " << vec.z << ')';
     return os;}
 

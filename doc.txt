@@ -1,2 +1,4 @@
 cd build ; ./Rock_sim ; cd ..
 time cmake --build build
+
+sudo ss -tlpn | grep :5555 

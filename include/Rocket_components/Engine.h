@@ -18,7 +18,7 @@ public:
           {}
 
     double get_thrust() const { return thrust_; }
-    double get_fuel_consumption() const { return fuel_consumption_; }
+    double get_fuel_consumption(double pace) const { return fuel_consumption_ * pace; }
     Vector3D get_thrust_vec(){ return thrust_direction_ * thrust_;}
     Vector3D get_thrust_direction() const {return thrust_direction_;}
     
@@ -27,6 +27,7 @@ public:
     double angle_rad = angle_deg * std::numbers::pi / 180.0;  // degrees to radian 
     thrust_direction_ = Vector3D{std::cos(angle_rad), std::sin(angle_rad), 0.0};
     return thrust_direction_;
+    //calculate consumprtion from impulse
 }
 
     

@@ -1,4 +1,5 @@
 #pragma once
+//#define MP_UNITS_ENABLE_FORMAT 1 
 #include <mp-units/systems/si.h>
 #include <mp-units/math.h>
 #include <math.h>
@@ -7,7 +8,7 @@ using namespace mp_units;
 using namespace mp_units::si::unit_symbols; // not the best solition 
 
 
-
+constexpr double pi_double = 3.14159265358979323846;
 
 //Earth
 constexpr double G = 6.674e-11; //gravity const: 6.674 × 10⁻¹¹ Н·m²/kg²

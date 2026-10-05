@@ -42,12 +42,13 @@ class Rocket  {
     return upper_stage_->get_a_wet() + payload_.get_a_wet();
     }
 
-
     quantity<m> get_length() const {
         if (booster_)
             return booster_->get_length() + upper_stage_->get_length();
         return upper_stage_->get_length();
     }
+
+    bool booster_tank() {return booster_->empty_tank();}
 
 
     Vector3D get_velocity() const {return active()->get_velocity();};

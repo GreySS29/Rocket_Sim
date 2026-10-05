@@ -1,9 +1,10 @@
 #pragma once
 #include "../Rocket_components/Stage.h"
-#include <GL/gl.h>       // ← вместо glad
+//#include <GL/gl.h>       //
 #include <GL/glu.h>
 #include <vector>
 #include <fstream>
+#include "AtmosphereRender.h"
 
 
 using std::vector;
@@ -12,9 +13,14 @@ class RocketRender {
     public:
 
     vector<std::pair<double,double>> trajectory;
+    double angle {};
+    bool separating {};
+    double velocity {};
+    double mass{};
     vector<Vector3D> g_force;
     vector<Vector3D> a_force;
     vector<Vector3D> f_force;
+    AtmosphereRender atmorender;
 
     //constr
     RocketRender(){};
@@ -24,6 +30,16 @@ class RocketRender {
     void add_G_force (Vector3D& vec){g_force.push_back(vec);}
     void add_A_force (Vector3D& vec){ a_force.push_back(vec);}
     void add_F_force (Vector3D& vec){f_force.push_back(vec);}
+    void add_angle (double ang) {angle = ang;}
+    void set_separating (bool tank) {separating = tank;}
+    void add_velocity (double vel) {velocity = vel;}
+    void add_mass (double mas) {mass = mas;}
+
+    void add_atmo_parameters(const quantity<K>& temp,const quantity<Pa>& pres,const quantity<kg/m3>& dens){
+        atmorender.set_temperature(temp);
+        atmorender.set_pressure(pres);
+        atmorender.set_density(dens);
+    }
 
     vector<std::pair<double,double>> get_max_min_traj () const ; // will be not nessessary 
 

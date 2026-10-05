@@ -35,7 +35,7 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 
    
     Vector3D F_total = 
-        run_engine(true)+ // reduce tank fluel_mass and mass_stage
+        run_engine(true,pace)+ // reduce tank fluel_mass and mass_stage
         gravity_vec(earth,*this)+
         earth.get_dragForce_vec(this);
 
@@ -52,11 +52,14 @@ void Stage ::launch_stage(const Earth& earth , double pace)
 }
 
 //reduce tank and stage mass for 1 second 
-Vector3D Stage::run_engine(bool command) {
+Vector3D Stage::run_engine(bool command, double pace) {
      if(command==true) {
-        if(tank_->get_fuel_mass()==0) return Vector3D {0,0,0};
-        tank_->reduce_fuel_mass(engine_->get_fuel_consumption());
-        reduce_mass(engine_->get_fuel_consumption()); 
+        if(tank_->get_fuel_mass() < engine_->get_fuel_consumption(pace)) 
+        {   empty_tank_ = true;
+            return Vector3D {0,0,0};
+        }
+        tank_->reduce_fuel_mass(engine_->get_fuel_consumption(pace));
+        reduce_mass(engine_->get_fuel_consumption(pace));  // should be auto after tank reduce fuel_mass
         return engine_->get_thrust_vec();
     }
         

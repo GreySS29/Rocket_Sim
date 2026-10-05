@@ -7,23 +7,29 @@
 #include "../include/GUI/MainWindow.h"
 #include "../include/GUI/Display.h"
 #include "../include/GUI/RocketRender.h"
+#include "../include/GUI/AtmosphereRender.h"
 #include "../include/GUI/Log.h"
+#include "../include/GUI/ExDataGUI.h"
 #include "../include/Flight_parameters/Friction_drag.h"
 #include "../include/Panel/Server.h"
 #include "../include/Panel/Panel_data.h"
 #include "../include/Panel/Sim_state.h"
 
+  
 
+using Clock = std::chrono::steady_clock;
 void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
                         RocketRender& render, Display& display)
 {
+    ExDataGUI exdata;
+
     std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
  
     display.initLiveWindow();
  
     Panel_data panel_data;
  
-    RocketServer server(5555, [](const std::string& /*cmd*/) {
+    Server server(5555, [](const std::string& /*cmd*/) {
         // Optional: parse JSON / validate here.
         // This runs in session threads; keep it light.
     });
@@ -35,7 +41,7 @@ void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
  
     using Clock = std::chrono::steady_clock;
     auto currentTime = Clock::now();
-    const double dt = 1.0;
+    const double dt = 0.01;
     double accumulator = 0.0;
     double total_time = 0.0;
  
@@ -70,12 +76,12 @@ void runLiveSimulation(Earth& earth, Fabric& fabric, Launch_bay& launch_bay,
             double frameTime = std::chrono::duration<double>(newTime - currentTime).count();
             currentTime = newTime;
  
-            if (frameTime > 0.25) frameTime = 0.25;
+            if (frameTime > 0.025) frameTime = 0.025;
             accumulator += frameTime;
  
             while (accumulator >= dt) {
-                launch_bay.launch_falcon9_from_panel(earth, rocket, render, dt*5 , panel_data.angle);
- 
+                launch_bay.launch_falcon9_from_panel(earth, rocket, render, dt*2, panel_data.angle, exdata);
+                server.sendTelemetry(exdata);
                 accumulator -= dt;
                 total_time += dt;
             }
@@ -104,7 +110,7 @@ int main()
    
     Display display(render);
     Display::setInstance(display);
-    display.setAnimationSpeed(30.0);
+    display.setAnimationSpeed(1.0);
  
     MainWindow menu;
     const MainWindow::Choice choice = menu.run();
@@ -176,91 +182,91 @@ int main_m(int argc, char** argv) {
 } 
 
 
-//sudo ss -tlpn | grep :5555   
 
 
-using Clock = std::chrono::steady_clock;
 
-int main_D() {
 
-    Earth earth;
-    Fabric fabric;
-    Launch_bay launch_bay;
-    Panel_data panel_data;
-    RocketRender render;
-    std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
+
+// int main_D() {
+
+//     Earth earth;
+//     Fabric fabric;
+//     Launch_bay launch_bay;
+//     Panel_data panel_data;
+//     RocketRender render;
+//     std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
     
     
-    RocketServer server(5555, [](const std::string& cmd){
-        // Optional: parse JSON / validate here
-        // This runs in session threads; keep it light.
-    });
+//     Server server(5555, [](const std::string& cmd){
+//         // Optional: parse JSON / validate here
+//         // This runs in session threads; keep it light.
+//     });
 
-    server.start();
+//     server.start();
 
 
-    bool simRunning = true;
-    Sim_state state = Sim_state::Base;
-    bool abortRequested = false;
+//     bool simRunning = true;
+//     Sim_state state = Sim_state::Base;
+//     bool abortRequested = false;
 
-    using Clock = std::chrono::steady_clock;
-    auto currentTime = Clock::now();
-    const double dt = 1.0;
-    double accumulator = 0.0;
-    double total_time = 0.0;
+//     using Clock = std::chrono::steady_clock;
+//     auto currentTime = Clock::now();
+//     const double dt = 1.0;
+//     double accumulator = 0.0;
+//     double total_time = 0.0;
 
-while (simRunning) {
+// while (simRunning) {
 
-    std::string cmd;
-    while (server.pollCommand(cmd)) {
-        panel_data.parse(cmd);
+//     std::string cmd;
+//     while (server.pollCommand(cmd)) {
+//         panel_data.parse(cmd);
 
-        if (panel_data.launch == 0 && state == Sim_state::Base) {
-            std::cout << "launching\n";
-            state = Sim_state::Running;
-        }
+//         if (panel_data.launch == 0 && state == Sim_state::Base) {
+//             std::cout << "launching\n";
+//             state = Sim_state::Running;
+//         }
 
         
-        if (panel_data.abort == 0) {
-            abortRequested = true;
-        }
-    }
+//         if (panel_data.abort == 0) {
+//             abortRequested = true;
+//         }
+//     }
 
     
-    if (state == Sim_state::Running && abortRequested) {
-        std::cout << "aborting\n";
-        state = Sim_state::Aborted;
+//     if (state == Sim_state::Running && abortRequested) {
+//         std::cout << "aborting\n";
+//         state = Sim_state::Aborted;
         
-    }
+//     }
 
     
-    if (state == Sim_state::Running) {
-        auto newTime = Clock::now();
-        double frameTime = std::chrono::duration<double>(newTime - currentTime).count();
-        currentTime = newTime;
+//     if (state == Sim_state::Running) {
+//         auto newTime = Clock::now();
+//         double frameTime = std::chrono::duration<double>(newTime - currentTime).count();
+//         currentTime = newTime;
 
-        if (frameTime > 0.25) frameTime = 0.25;  
-        accumulator += frameTime;
+//         if (frameTime > 0.25) frameTime = 0.25;  
+//         accumulator += frameTime;
 
-        while (accumulator >= dt) {
+//         while (accumulator >= dt) {
 
-            std::cout<<total_time << "|";
-            launch_bay.launch_falcon9_from_panel(earth,rocket,render, dt*5 , panel_data.angle); // time 5 
+//             std::cout<<total_time << "|";
+//             launch_bay.launch_falcon9_from_panel(earth,rocket,render, dt*5 , panel_data.angle); // time 5 
 
-            accumulator -= dt;
-            total_time+=dt;
-        }
-    }
+//             accumulator -= dt;
+//             total_time+=dt;
+//         }
+//     }
 
-    if(rocket->get_position_above_face().y<0){
-                std::cout << "Rocket came down";
-                break;
-            }
+//     if(rocket->get_position_above_face().y<0){
+//                 std::cout << "Rocket came down";
+//                 break;
+//             }
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(5));
-}
-    server.stop();
-    return 0;
-}
+//     std::this_thread::sleep_for(std::chrono::milliseconds(5));
+// }
+//     server.stop();
+//     return 0;
+// }
 
 
