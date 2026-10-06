@@ -118,8 +118,6 @@ int main()
     switch (choice) {
         case MainWindow::Choice::Auto:
         case MainWindow::Choice::Manual: {
-            // Auto и Manual используют одну и ту же предрасчитанную
-            // траекторию — отличается только то, как её потом листают.
             std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
             launch_bay.launch_falcon9(earth, rocket, render, log);
  
@@ -137,7 +135,7 @@ int main()
  
         case MainWindow::Choice::Exit:
         default:
-            break; // закрыли меню/нажали Exit — просто выходим
+            break; 
     }
  
     return 0;
