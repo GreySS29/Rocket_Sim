@@ -62,5 +62,16 @@ This part was implemented using Boost.Asio for network communication. It demonst
 
 ## Screenshots
 
+###Launching a rocket using board_panel
+![s1](Doc/v0.5/images/Flight/1.png)
+![s2](Doc/v0.5/images/Flight/2.png)
+![s3](Doc/v0.5/images/Flight/3.png)
+![s4](Doc/v0.5/images/Flight/4.png)
+![s5](Doc/v0.5/images/Flight/5.png)
+
+###Board_panel 
+![board](Doc/v0.5/images/Board_panel.jpg)
+
+
 
 
