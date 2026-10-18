@@ -125,7 +125,7 @@ void setup() {
   initDisplay();
   updateAngleDisplay(angle);
 
-  Serial.println("\nWeMos TCP telemetry client");
+  Serial.println("\nWeMos TCP telemetry client"); 
 
   connectToWiFi();
   connectToServer();
