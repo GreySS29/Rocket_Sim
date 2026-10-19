@@ -44,10 +44,6 @@ class Flight_parameters
     }
 
     
-
-    
-    
-
     void print_parameters (std::ofstream& ofs) const {
         ofs << "Vr :" << get_real_velocity() << '\t' 
         << "Mach :" << get_mach_number() << '\t'
