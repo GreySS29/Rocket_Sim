@@ -42,8 +42,8 @@ class Friction_drag {
     };
     
     void set_prop_coeff(const quantity<one>& reynolds_number);
-    void set_Fl_M(const quantity<one>& n_mach);//Blasius formula, polynomial correction 
-    void set_Ft_M(const quantity<one>& n_mach);// temporary decision with interpolation 
+    void set_Fl_M(const quantity<one>& n_mach);     //Blasius formula, polynomial correction 
+    void set_Ft_M(const quantity<one>& n_mach);     // temporary decision with interpolation 
     void set_skin_friction_coefficient(const quantity<one>& reynolds_number);
     void set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet);
 
