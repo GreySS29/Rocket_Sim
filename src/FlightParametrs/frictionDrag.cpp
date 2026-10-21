@@ -1,6 +1,6 @@
-#include "../../include/Flight_parameters/Friction_drag.h"
+#include "../../include/Flight_parameters/FrictionDrag.h"
 
-quantity<N> Friction_drag::calculate_friction_drag(const quantity<one>& reynolds_number,const quantity<one>& n_mach, 
+quantity<N> FrictionDrag::calculate_friction_drag(const quantity<one>& reynolds_number,const quantity<one>& n_mach, 
     const quantity<kg/m3>& density, const quantity<m/s>& velocity, const quantity<m2>& a_wet){
     set_prop_coeff(reynolds_number);
     set_Fl_M(n_mach);
@@ -10,9 +10,9 @@ quantity<N> Friction_drag::calculate_friction_drag(const quantity<one>& reynolds
     return get_friction_drag();
 }
 
-void Friction_drag::check(){ //for test
+void FrictionDrag::check(){ //for test
 
-    Friction_drag frd;
+    FrictionDrag frd;
     //for 14 km falcon 9 
     const quantity<one> reyn = 591480423.51;
     const quantity<one> mach = 1.75;
@@ -31,7 +31,7 @@ void Friction_drag::check(){ //for test
     << "friction_drag : " << frd.get_friction_drag() << '\n';        
 }
 
-void Friction_drag::check_2(const quantity<one>& reynolds_number,
+void FrictionDrag::check_2(const quantity<one>& reynolds_number,
     const quantity<one>& n_mach,
     const quantity<kg / m3> density,
     const quantity<m/s> velocity,
@@ -50,19 +50,19 @@ void Friction_drag::check_2(const quantity<one>& reynolds_number,
 
 //Private
 
-void Friction_drag::set_prop_coeff(const quantity<one>& reynolds_number){
+void FrictionDrag::set_prop_coeff(const quantity<one>& reynolds_number){
     prop_coeff = std::min(сritical_Reynolds_number/reynolds_number , unity);
 }
 
 //Blasius formula, polynomial correction 
-void Friction_drag::set_Fl_M(const quantity<one>& n_mach){ 
+void FrictionDrag::set_Fl_M(const quantity<one>& n_mach){ 
     Fl_M = mp_units::abs(1 - (0.689 * n_mach) - 
     (0.0343 * mp_units::pow<2>(n_mach)) + 
     (0.0061 * mp_units::pow<3>(n_mach)) - 
     (0.000278 * mp_units::pow<4>(n_mach))); 
 }
 
-void Friction_drag::set_Ft_M(const quantity<one>& n_mach){ // temporary decision with interpolation 
+void FrictionDrag::set_Ft_M(const quantity<one>& n_mach){ // temporary decision with interpolation 
     for(size_t i =1; i < tbl_Fl_M.size(); ++i){
         if (n_mach<tbl_Fl_M[i].first) {
             quantity<one> t = (n_mach - tbl_Fl_M[i-1].first) / (tbl_Fl_M[i].first-tbl_Fl_M[i-1].first);
@@ -74,13 +74,13 @@ void Friction_drag::set_Ft_M(const quantity<one>& n_mach){ // temporary decision
     Ft_M = tbl_Fl_M.back().second / tbl_Fl_M[0].second;
 }
 
-void Friction_drag::set_skin_friction_coefficient(const quantity<one>& reynolds_number){
+void FrictionDrag::set_skin_friction_coefficient(const quantity<one>& reynolds_number){
     quantity <one> laminar_part = prop_coeff * (1.328 / mp_units::sqrt(сritical_Reynolds_number)) + (1 - prop_coeff);
     quantity<one> turbulent_part = (0.074 / mp_units::pow<1, 5>(reynolds_number)) - (0.074 / mp_units::pow<1, 5>(сritical_Reynolds_number));  
     skin_friction_coefficient = laminar_part * Fl_M * Ft_M * turbulent_part;
 }
 
-void Friction_drag::set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet)
+void FrictionDrag::set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet)
 {
     friction_drag = 0.5 * density * velocity * velocity * 
     mp_units::abs(skin_friction_coefficient) * a_wet;

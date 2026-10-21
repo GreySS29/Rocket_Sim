@@ -68,7 +68,7 @@ class Flight_parameters
     quantity<one> reynolds_number;
     quantity<N> friction_drag;
     const Atmosphere& atm;
-    Friction_drag fdrag;
+    FrictionDrag fdrag;
 
 
 

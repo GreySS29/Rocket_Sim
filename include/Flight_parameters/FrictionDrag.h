@@ -2,7 +2,7 @@
 #include "../Utility/Constants.h"
 #include <array>
 
-class Friction_drag {
+class FrictionDrag {
     public:
 
     quantity<N> calculate_friction_drag(const quantity<one>& reynolds_number,
