@@ -20,6 +20,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         tank, 
         earth,
         40*m,
+        3.7 * m,
         511 * m2
     );
 
@@ -41,6 +42,7 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         tank_up,
         earth,
         30*m,
+        3.7 * m, //didn't check 
         230 * m2
     );
     

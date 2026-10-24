@@ -17,6 +17,7 @@ class PressureDrag{
     quantity<one> DPressure;
 
     //for Sref = 10.75 m2  / It's falcon9 only 
+    //linear interpolation from a table / mach - coef
     static constexpr std::array<std::pair <quantity<one>, quantity<one>> , 11>  tbl_Cd_nose_Falcon9 {
         {
             {0.0 , 0.035},
@@ -32,6 +33,10 @@ class PressureDrag{
             {5.0 , 0.075},
 
         }
+    }
+    //0.12 + 0.13M^2 , M<1 || 0.25/M, M>1
+    quantity<one> get_CdBase (quantity<one> mach) {
+        return (M<1) 0.12 + (0.13 * mach *mach) : 0.25/mach ; 
     }
 
 }

@@ -20,15 +20,19 @@ class Stage : public Physic_object {
     Vector3D velocity_; //m.s
     Vector3D acceleration_; //m/s2
     quantity<m> length_;
+    quantity<m> diameter_; 
     quantity<m2> a_wet_;  //Wetted area
     bool empty_tank_;
 
+
     public:
-    Stage (Vector3D position,double c_d, double area, std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t , quantity<m> len , quantity<m2> area_wet) :
+    Stage (Vector3D position,double c_d, double area, 
+            std::unique_ptr<Engine> eng, std::unique_ptr<Tank> t , quantity<m> len , quantity<m> diameter, quantity<m2> area_wet) :
         Physic_object{position, eng->get_mass() + t->get_mass(), c_d, area}, 
         engine_(std::move(eng)),
         tank_(std::move(t)), // give this object to Stage
         length_(len),
+        diameter_(diameter),
         a_wet_(area_wet),
         empty_tank_(false)
         {
@@ -47,6 +51,11 @@ class Stage : public Physic_object {
     quantity<m2> get_a_wet() const {return a_wet_;};
     bool empty_tank() const {return empty_tank_;};
 
+    //midship section area
+    quantity<one> get_sRef () {
+        return (mp_units::pi * diameter_) / 4.0;
+    }
+
 
     //setters
     void set_velocity(double pace) { velocity_+=acceleration_ * pace;}
@@ -59,7 +68,8 @@ class Stage : public Physic_object {
 
     }
     
-    static std::unique_ptr<Stage> create_stage(double position_h,double c_d , double area, Engine&, Tank&, const Earth& earth, quantity<m> lenght, quantity<m2> area_wet);
+    static std::unique_ptr<Stage> create_stage(double position_h,double c_d , double area, Engine&, Tank&, 
+        const Earth& earth, quantity<m> lenght, quantity<m> diameter, quantity<m2> area_wet);
     void launch_stage(const Earth&, double pace);  
     Vector3D run_engine(bool command, double pace);
     
