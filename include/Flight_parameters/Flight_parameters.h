@@ -1,7 +1,7 @@
 #pragma once
 #include "../Enviroment/Atmosphere.h"
 #include "../Rocket.h" 
-#include "Friction_drag.h"
+#include "FrictionDrag.h"
 
 class Flight_parameters
 {

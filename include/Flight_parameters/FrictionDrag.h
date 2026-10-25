@@ -1,6 +1,7 @@
 #pragma once
 #include "../Utility/Constants.h"
 #include <array>
+#include <iostream>
 
 class FrictionDrag {
     public:
@@ -12,7 +13,7 @@ class FrictionDrag {
         const quantity<m2>& a_wet);
     
     //for testing 
-    void check () 
+    void check () ;
     void check_2(const quantity<one>& reynolds_number,
         const quantity<one>& n_mach,
         const quantity<kg / m3> density,
@@ -48,10 +49,10 @@ class FrictionDrag {
     void set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet);
 
 
-    // quantity<one> get_prop_coeff() const {return prop_coeff;};
-    // quantity<one> get_Fl_M() const {return Fl_M;};
-    // quantity<one> get_Ft_M() const {return Ft_M;};
-    // quantity<one> get_skin_friction_coefficient() const {return skin_friction_coefficient;};
+    quantity<one> get_prop_coeff() const {return prop_coeff;};
+    quantity<one> get_Fl_M() const {return Fl_M;};
+    quantity<one> get_Ft_M() const {return Ft_M;};
+    quantity<one> get_skin_friction_coefficient() const {return skin_friction_coefficient;};
     quantity<N> get_friction_drag() const {return friction_drag;};
 
 };

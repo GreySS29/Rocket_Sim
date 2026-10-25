@@ -52,8 +52,8 @@ class Stage : public Physic_object {
     bool empty_tank() const {return empty_tank_;};
 
     //midship section area
-    quantity<one> get_sRef () {
-        return (mp_units::pi * diameter_) / 4.0;
+    quantity<m> get_sRef () {
+        return (pi_double * diameter_) / 4.0;
     }
 
 

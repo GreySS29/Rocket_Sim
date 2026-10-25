@@ -44,7 +44,7 @@ add_library(Rock_core STATIC
     src/GUI/rocket_render.cpp
     src/GUI/main_window.cpp
     src/Enviroment/atmosphere.cpp
-    src/FlightParametrs.cpp
+    src/FlightParametrs/frictionDrag.cpp
     src/Panel/server.cpp
     
     

@@ -7,14 +7,35 @@ class PressureDrag{
     public:
 
     quantity<one> get_DPressue(quantity<one>& mach){
-        return CdNose+CdBase;
+        return cdNose_+cdBase_;
+    };
+
+    void set_Cdnose(const quantity<one>& mach) {
+    const auto& t = tbl_Cd_nose_Falcon9;
+
+    if (mach <= t.front().first) { cdNose_ = t.front().second; return; }
+    if (mach >= t.back().first)  { cdNose_ = t.back().second;  return; }
+
+    for (std::size_t i = 1; i < t.size(); ++i) {
+        if (mach <= t[i].first) {
+            const auto& [m0, c0] = t[i - 1];
+            const auto& [m1, c1] = t[i];
+            cdNose_ = c0 + (c1 - c0) * ((mach - m0) / (m1 - m0));
+            return;
+        }
+    }
+}
+
+
+    quantity<one> get_cdNose() const {
+        return cdNose_;
     }
 
 
     private:
-    quantity<one> CdNose;
-    quantity<one> CdBase;
-    quantity<one> DPressure;
+    quantity<one> cdNose_;
+    quantity<one> cdBase_;
+    quantity<one> dPressure_;
 
     //for Sref = 10.75 m2  / It's falcon9 only 
     //linear interpolation from a table / mach - coef
@@ -33,10 +54,13 @@ class PressureDrag{
             {5.0 , 0.075},
 
         }
-    }
+    };
     //0.12 + 0.13M^2 , M<1 || 0.25/M, M>1
-    quantity<one> get_CdBase (quantity<one> mach) {
-        return (M<1) 0.12 + (0.13 * mach *mach) : 0.25/mach ; 
-    }
+    void set_CdBase (const quantity<one>& mach) {
+        if (mach<1 * one) cdBase_ =  0.12 + (0.13 * mach *mach);
+        else cdBase_ = 0.25/mach ; 
+    };
 
-}
+    
+
+};
