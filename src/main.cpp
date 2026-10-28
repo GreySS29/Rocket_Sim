@@ -150,9 +150,7 @@ int main(int argc, char** argv) {
         Earth earth;
         FrictionDrag frd; 
         PressureDrag prD;
-        quantity<one> mach = 5. * one;
-        prD.set_Cdnose(mach);
-        std::cout<<prD.get_cdNose()<< '\n';
+        
    
 
 

@@ -2,45 +2,49 @@
 #include "../Enviroment/Atmosphere.h"
 #include "../Rocket.h" 
 #include "FrictionDrag.h"
+#include "PressureDrag.h"
 
 class Flight_parameters
 {
 
     public:
 
-    VelocityVec get_real_velocity()const {return real_velocity;};
-    quantity<one> get_mach_number()const {return mach_number; };
-    quantity<Pa> get_dynamic_pressure() const {return dynamic_pressure;};
-    quantity<one> get_reynolds_number() const {return reynolds_number;};
-    quantity<N> get_friction_drag() const {return friction_drag;};
+    VelocityVec get_real_velocity()const {return real_velocity_;};
+    quantity<one> get_mach_number()const {return mach_number_; };
+    quantity<Pa> get_dynamic_pressure() const {return dynamic_pressure_;};
+    quantity<one> get_reynolds_number() const {return reynolds_number_;};
+    quantity<N> get_friction_drag() const {return friction_drag_;};
+    quantity<one> get_pressure_drag() const {return pressure_drag_;}
     
 
-    Flight_parameters(const Atmosphere& atm_r) : atm(atm_r) {};
+    Flight_parameters(const Atmosphere& atm_r) : atm_(atm_r) {};
 
     void update_flight_par (Vector3D rocket_vel, quantity<m> length , quantity<kg/m3> density, quantity<m2> a_wet) {
         set_real_velocity(rocket_vel);
         set_mach_number();
         set_dynamic_pressure();
         set_reynolds_number(length);
-        friction_drag = fdrag.calculate_friction_drag(reynolds_number,mach_number, density, mp_units::abs(magnitude(real_velocity)), a_wet);
+        friction_drag_ = fdrag_.calculate_friction_drag(reynolds_number_,mach_number_, density, mp_units::abs(magnitude(real_velocity_)), a_wet);
         // fdrag.check_2(reynolds_number,mach_number, density, mp_units::abs(magnitude(real_velocity)), a_wet);
+        pressure_drag_ = pdrag_.calculate_pressure_drag(mach_number_);
+
     }
 
 
     void set_real_velocity(Vector3D rocket_vel){
         VelocityVec rocket_speed = make_vec<isq::velocity, m / s>(rocket_vel.x,rocket_vel.y,rocket_vel.z);
-        real_velocity = rocket_speed - atm.get_wind_vel();
+        real_velocity_ = rocket_speed - atm_.get_wind_vel();
     }
     void set_mach_number(){
-        mach_number = magnitude(real_velocity) / atm.get_sonic_velocity();
+        mach_number_ = magnitude(real_velocity_) / atm_.get_sonic_velocity();
     }
 
     void set_dynamic_pressure(){
-        dynamic_pressure = 0.5 * atm.get_density() * mp_units::pow<2>(magnitude(real_velocity));
+        dynamic_pressure_ = 0.5 * atm_.get_density() * mp_units::pow<2>(magnitude(real_velocity_));
     }
 
     void set_reynolds_number(quantity<m> lenght) {
-        reynolds_number = (atm.get_density() * magnitude(real_velocity) * lenght) / atm.get_viscosity();
+        reynolds_number_ = (atm_.get_density() * magnitude(real_velocity_) * lenght) / atm_.get_viscosity();
     }
 
     
@@ -49,7 +53,8 @@ class Flight_parameters
         << "Mach :" << get_mach_number() << '\t'
         << "Q :" << get_dynamic_pressure() << '\t'
         << "R :" << get_reynolds_number() << '\t'
-        << "Dfric :" << get_friction_drag() << '\n';
+        << "Dfric :" << get_friction_drag() << '\t'
+        << "Dpress :" << get_pressure_drag() << '\n';
     }
 
     // void print_parameters () const  {
@@ -62,13 +67,15 @@ class Flight_parameters
 
 
     private:
-    VelocityVec real_velocity;
-    quantity<one> mach_number;
-    quantity<Pa> dynamic_pressure;
-    quantity<one> reynolds_number;
-    quantity<N> friction_drag;
-    const Atmosphere& atm;
-    FrictionDrag fdrag;
+    VelocityVec real_velocity_;
+    quantity<one> mach_number_;
+    quantity<Pa> dynamic_pressure_;
+    quantity<one> reynolds_number_;
+    quantity<N> friction_drag_;
+    quantity<one> pressure_drag_;
+    const Atmosphere& atm_;
+    FrictionDrag fdrag_;
+    PressureDrag pdrag_;
 
 
 
