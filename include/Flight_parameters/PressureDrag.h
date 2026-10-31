@@ -6,7 +6,7 @@
 class PressureDrag{
     public:
 
-    quantity<one> get_DPressue(){
+    quantity<one> get_DPressue() const{
         return dPressure_;
     };
 
@@ -18,11 +18,22 @@ class PressureDrag{
         return cdBase_;
     }
 
-    quantity<one> calculate_pressure_drag(const quantity<one>& mach){
+    quantity<one> calculate_pressure_drag(const quantity<one>& mach, const Stage* stage){
         set_CdBase(mach);
         set_CdNose(mach);
-        set_dPressure();
+        set_dPressure(stage);
         return get_DPressue();
+    }
+
+    void check(const Stage* stage) {
+        PressureDrag prd;
+        // for 14 km falcon 9
+        const quantity<one> mach = 0.5;
+        prd.calculate_pressure_drag(mach, stage);
+        std::cout << "C__base : " << prd.get_cdBase() << '\n'
+        << "C_base_eff : " << prd.get_Cdbase_eff(stage) << '\n'
+        << "C__nose : " << prd.get_cdNose() << '\n'
+        << "D__pres : " <<prd.get_DPressue() << '\n';
     }
 
     private:
@@ -46,12 +57,11 @@ class PressureDrag{
             {3.0 , 0.085},
             {5.0 , 0.075},
 
-        }
-    };
+        }   };
 
-    void set_dPressure(){
+    void set_dPressure(const Stage* stage){
 
-        dPressure_=cdNose_+cdBase_;
+        dPressure_=cdNose_+get_Cdbase_eff(stage);
     }
 
     //0.12 + 0.13M^2 , M<1 || 0.25/M, M>1
@@ -79,6 +89,17 @@ class PressureDrag{
             }
         }
     }
+
+    //effective base square. depend on status of engines // only falcon (9 merlin) 
+    quantity<one> get_Cdbase_eff(const Stage* stage)
+    {
+        const quantity<m2> Seff =
+            (stage->empty_tank() ? 0.8 : 0.2) * stage->get_sRef();
+
+        return get_cdBase() * (Seff / stage->get_sRef());
+    }
+
+
 
     
 

@@ -147,9 +147,14 @@ int main(int argc, char** argv) {
 
     try
     {
+        Log log;
         Earth earth;
-        FrictionDrag frd; 
-        PressureDrag prD;
+        Fabric fabric;
+        RocketRender render;
+        Launch_bay launch_bay;
+        std::unique_ptr<Rocket> rocket = fabric.create_falcon9(earth);
+         launch_bay.launch_falcon9(earth, rocket, render, log);
+        
         
    
 

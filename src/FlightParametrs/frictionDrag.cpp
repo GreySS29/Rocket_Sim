@@ -1,52 +1,49 @@
 #include "../../include/Flight_parameters/FrictionDrag.h"
 
-quantity<N> FrictionDrag::calculate_friction_drag(const quantity<one>& reynolds_number,const quantity<one>& n_mach, 
-    const quantity<kg/m3>& density, const quantity<m/s>& velocity, const quantity<m2>& a_wet){
+quantity<one> FrictionDrag::calculate_friction_drag(const quantity<one>& reynolds_number,const quantity<one>& n_mach, const Stage* stage,
+    const quantity<m2>& a_wet){
     set_prop_coeff(reynolds_number);
     set_Fl_M(n_mach);
     set_Ft_M(n_mach);
     set_skin_friction_coefficient(reynolds_number);
-    set_friction_drag(density,velocity,a_wet);
+    set_friction_drag(stage,a_wet);
     return get_friction_drag();
 }
 
-void FrictionDrag::check(){ //for test
+// void FrictionDrag::check(){ //for test
 
-    FrictionDrag frd;
-    //for 14 km falcon 9 
-    const quantity<one> reyn = 591480423.51;
-    const quantity<one> mach = 1.75;
-    const quantity<kg/m3> density = 0.23 * kg/m3;
-    const quantity<m/s> velocity = 516.07 * m/s;
-    const quantity<m2> a_wet = 846 * m2;
-    frd.set_prop_coeff(reyn);
-    frd.set_Fl_M(mach);
-    frd.set_Ft_M(mach);
-    frd.set_skin_friction_coefficient(reyn);
-    frd.set_friction_drag(density,velocity,a_wet);
-    std::cout<<frd.get_prop_coeff()<<'\n'
-    << "Fl_M :" << frd.get_Fl_M() <<'\n'
-    << "Ft_M :" << frd.get_Ft_M() <<'\n'
-    << "skin coef : " << frd.get_skin_friction_coefficient() << '\n'
-    << "friction_drag : " << frd.get_friction_drag() << '\n';        
-}
+//     FrictionDrag frd;
+//     //for 14 km falcon 9 
+//     const quantity<one> reyn = 591480423.51;
+//     const quantity<one> mach = 1.75;
+//     const quantity<m2> a_wet = 846 * m2;
+//     frd.set_prop_coeff(reyn);
+//     frd.set_Fl_M(mach);
+//     frd.set_Ft_M(mach);
+//     frd.set_skin_friction_coefficient(reyn);
+//     frd.set_friction_drag(stage,a_wet);
+//     std::cout<<frd.get_prop_coeff()<<'\n'
+//     << "Fl_M :" << frd.get_Fl_M() <<'\n'
+//     << "Ft_M :" << frd.get_Ft_M() <<'\n'
+//     << "skin coef : " << frd.get_skin_friction_coefficient() << '\n'
+//     << "friction_drag : " << frd.get_friction_drag() << '\n';        
+// }
 
-void FrictionDrag::check_2(const quantity<one>& reynolds_number,
-    const quantity<one>& n_mach,
-    const quantity<kg / m3> density,
-    const quantity<m/s> velocity,
-    const quantity<m2> a_wet) {
-        set_prop_coeff(reynolds_number);
-        set_Fl_M(n_mach);
-        set_Ft_M(n_mach);
-        set_skin_friction_coefficient(reynolds_number);
-        set_friction_drag(density,velocity,a_wet);
-        std::cout<<"proportion :" <<get_prop_coeff()<<'\n'
-        << "Fl_M :" << get_Fl_M() <<'\n';
-        // << "Ft_M :" << get_Ft_M() <<'\n'
-        // << "skin coef : " << get_skin_friction_coefficient() << '\n'
-        // << "friction_drag : " << get_friction_drag() << '\n';
-}
+// void FrictionDrag::check_2(const quantity<one>& reynolds_number,
+//     const quantity<one>& n_mach,
+//     const Stage* stage,
+//     const quantity<m2> a_wet) {
+//         set_prop_coeff(reynolds_number);
+//         set_Fl_M(n_mach);
+//         set_Ft_M(n_mach);
+//         set_skin_friction_coefficient(reynolds_number);
+//         set_friction_drag(stage,a_wet);
+//         std::cout<<"proportion :" <<get_prop_coeff()<<'\n'
+//         << "Fl_M :" << get_Fl_M() <<'\n';
+//         // << "Ft_M :" << get_Ft_M() <<'\n'
+//         // << "skin coef : " << get_skin_friction_coefficient() << '\n'
+//         // << "friction_drag : " << get_friction_drag() << '\n';
+// }
 
 //Private
 
@@ -74,16 +71,20 @@ void FrictionDrag::set_Ft_M(const quantity<one>& n_mach){ // temporary decision 
     Ft_M = tbl_Fl_M.back().second / tbl_Fl_M[0].second;
 }
 
-void FrictionDrag::set_skin_friction_coefficient(const quantity<one>& reynolds_number){
-    quantity <one> laminar_part = prop_coeff * (1.328 / mp_units::sqrt(сritical_Reynolds_number)) + (1 - prop_coeff);
-    quantity<one> turbulent_part = (0.074 / mp_units::pow<1, 5>(reynolds_number)) - (0.074 / mp_units::pow<1, 5>(сritical_Reynolds_number));  
-    skin_friction_coefficient = laminar_part * Fl_M * Ft_M * turbulent_part;
+void FrictionDrag::set_skin_friction_coefficient(const quantity<one>& Re)
+{
+    const quantity<one> A = сritical_Reynolds_number *
+        (0.074 / mp_units::pow<1,5>(сritical_Reynolds_number) - 1.328 / mp_units::sqrt(сritical_Reynolds_number));
+
+    if (Re < сritical_Reynolds_number)
+        skin_friction_coefficient = Fl_M * 1.328 / mp_units::sqrt(Re);
+    else
+        skin_friction_coefficient = Ft_M * 0.074 / mp_units::pow<1,5>(Re) - Fl_M * A / Re;
 }
 
-void FrictionDrag::set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet)
+void FrictionDrag::set_friction_drag( const Stage* stage,const quantity<m2> a_wet)
 {
-    friction_drag = 0.5 * density * velocity * velocity * 
-    mp_units::abs(skin_friction_coefficient) * a_wet;
+    friction_drag = skin_friction_coefficient * (a_wet / stage->get_sRef());
 }
 
 

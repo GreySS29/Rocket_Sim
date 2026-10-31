@@ -2,23 +2,22 @@
 #include "../Utility/Constants.h"
 #include <array>
 #include <iostream>
+#include "../Rocket_components/Stage.h"
 
 class FrictionDrag {
     public:
 
-    quantity<N> calculate_friction_drag(const quantity<one>& reynolds_number,
+    quantity<one> calculate_friction_drag(const quantity<one>& reynolds_number,
         const quantity<one>& n_mach, 
-        const quantity<kg/m3>& density,
-        const quantity<m/s>& velocity,
+        const Stage* stage,
         const quantity<m2>& a_wet);
     
     //for testing 
-    void check () ;
-    void check_2(const quantity<one>& reynolds_number,
-        const quantity<one>& n_mach,
-        const quantity<kg / m3> density,
-        const quantity<m/s> velocity, 
-        const quantity<m2> a_wet); 
+    // void check () ;
+    // void check_2(const quantity<one>& reynolds_number,
+    //     const quantity<one>& n_mach,
+    //     const Stage& stage,
+    //     const quantity<m2> a_wet); 
 
     private:
 
@@ -30,7 +29,7 @@ class FrictionDrag {
     quantity<one> Ft_M;                             // Turbulent compressibility correction factor
     quantity<one> Fl_M; 	                        // Laminar compressibility correction factor
     quantity<one> skin_friction_coefficient;
-    quantity<N> friction_drag;
+    quantity<one> friction_drag;
 
     static constexpr std::array< std::pair <quantity<one>, quantity<one>>, 7 > tbl_Fl_M { 
         {{0. , 0.0391}, 
@@ -46,13 +45,13 @@ class FrictionDrag {
     void set_Fl_M(const quantity<one>& n_mach);     //Blasius formula, polynomial correction 
     void set_Ft_M(const quantity<one>& n_mach);     // temporary decision with interpolation 
     void set_skin_friction_coefficient(const quantity<one>& reynolds_number);
-    void set_friction_drag(quantity<kg / m3> density, quantity<m/s> velocity, quantity<m2> a_wet);
+    void set_friction_drag(const Stage* stage, quantity<m2> a_wet);
 
 
     quantity<one> get_prop_coeff() const {return prop_coeff;};
     quantity<one> get_Fl_M() const {return Fl_M;};
     quantity<one> get_Ft_M() const {return Ft_M;};
     quantity<one> get_skin_friction_coefficient() const {return skin_friction_coefficient;};
-    quantity<N> get_friction_drag() const {return friction_drag;};
+    quantity<one> get_friction_drag() const {return friction_drag;};
 
 };
