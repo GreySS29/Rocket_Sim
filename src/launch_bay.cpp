@@ -34,12 +34,13 @@ void Launch_bay::launch_falcon9(Earth& earth, std::unique_ptr<Rocket>& rocket , 
 
       
     std::cout << "time of separate Booster : " << last_step << '\n';
+    log.ofs_flight << "\ntime of separate Booster : " << last_step << '\n';
     std::unique_ptr<Stage> booster_single =rocket->separate_booster();  
     rocket->set_direction(30.0); 
     rocket->print_status();
 
 
-     for(int step=last_step; step<=max_steps; ++step)
+     for(int step=last_step+1; step<=max_steps; ++step)
      {
       if(step >440 && step <460 && step%2==0 ) rocket->set_direction(470.0-step);
 

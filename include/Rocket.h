@@ -48,7 +48,11 @@ class Rocket  {
         return upper_stage_->get_length();
     }
 
-    bool booster_tank() {return booster_->empty_tank();}
+    bool booster_tank() {
+        if(booster_)
+            return booster_->empty_tank();
+        return upper_stage_->empty_tank();
+        }
 
 
     Vector3D get_velocity() const {return active()->get_velocity();};

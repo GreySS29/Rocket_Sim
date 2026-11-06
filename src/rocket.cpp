@@ -30,7 +30,7 @@ void Rocket::run(const Earth& earth , double pace, RocketRender& roc_render)
     Vector3D vel = active()->get_velocity();
     active()->update_position(vel, pace);
 
-    flight_p_.update_flight_par(vel, get_length(), earth.get_air_density(), get_a_wet());
+    flight_p_.update_flight_par(vel, get_length(), earth.get_air_density(), get_a_wet(),active(), active()->get_position_above_surface().y);
 
     //fill vector RocketRender
     roc_render.add_G_force(G_force);
@@ -94,7 +94,7 @@ void Rocket::print_status_flight_short() const{
 }
 
 void Rocket::print_status_flight_short(std::ofstream& ofs , int time) const{
-        ofs << std::fixed << std::setprecision(2);
+        ofs << std::fixed << std::setprecision(4);
         ofs << "Time : " << time <<  "  |" <<
         "H: " << active()->get_position_above_surface().y << " m "  << '\t' <<
         "S:" << active() ->get_position_above_surface().x << " m"   << '\t' <<
