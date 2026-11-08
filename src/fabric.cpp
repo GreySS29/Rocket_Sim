@@ -16,11 +16,11 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         5.0,
         0.3,
         10,
+        3.7 * m,
         engine,
         tank, 
         earth,
         40*m,
-        3.7 * m,
         511 * m2
     );
 
@@ -38,19 +38,23 @@ std::unique_ptr<Rocket> Fabric::create_falcon9 (const Earth& earth){
         15.0,
         0.3,
         10,
+        3.7 * m, //didn't check 
         engine_up,
         tank_up,
         earth,
         30*m,
-        3.7 * m, //didn't check 
+        
         230 * m2
     );
     
-    Payload payload {earth.surfacePoint(25.0),
+    Payload payload {
+        earth.surfacePoint(25.0),
         5000,
         0.3,
         10,
-        105 * m2
+        105 * m2,
+        5.2 * m
+        
     };
 
 
